@@ -4,6 +4,8 @@ using System.Collections;
 public class Controller2 : MonoBehaviour {
 
 	public float maxSpeed = 10f;
+	public bool ghostMode = false;
+	public bool alive = false;
 //	public bool facingRight = true;
 //	
 //	Animator anim;
@@ -16,35 +18,30 @@ public class Controller2 : MonoBehaviour {
 	}
 	
 	void Update(){
-//		bool shoot = Input.GetButton ("Fire1");
-//		shoot |= Input.GetButtonDown("Fire2");
-//		if (shoot)
-//		{
-//			Weapon weapon = GetComponent<Weapon>();
-//			if (weapon != null)
-//			{
-//				// false because the player is not an enemy
-//				weapon.Attack(false);
-//			}
-//		}
-		
+
+		setGhostMode ();
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
 
-		Move ();
+		if (!ghostMode) {
+			move (moveHorizontal, moveVertical);
+		} else {
+
+		}
 
 	}
 
-	void Move()
+	void move(float x,float y)
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
 		
 		//anim.SetFloat ("Speed", Mathf.Abs(moveHorizontal));
 		
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveHorizontal * maxSpeed, moveVertical * maxSpeed);
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (x * maxSpeed, y * maxSpeed);
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
 //		else if (moveHorizontal < 0 && facingRight)
@@ -52,7 +49,13 @@ public class Controller2 : MonoBehaviour {
 		
 	}
 
-	
+	void setGhostMode() {
+		if (Input.GetKeyDown (KeyCode.X)){
+			ghostMode = !ghostMode;
+			Debug.Log(ghostMode);
+		}
+	}
+
 //	void Flip()
 //	{
 //		facingRight = ! facingRight;
