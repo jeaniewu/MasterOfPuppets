@@ -5,7 +5,8 @@ public class Controller2 : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public bool ghostMode = false;
-	public bool alive = false;
+
+
 //	public bool facingRight = true;
 //	
 //	Animator anim;
@@ -19,7 +20,7 @@ public class Controller2 : MonoBehaviour {
 	
 	void Update(){
 
-		setGhostMode ();
+		checkGhostMode ();
 
 	}
 	
@@ -30,9 +31,7 @@ public class Controller2 : MonoBehaviour {
 
 		if (!ghostMode) {
 			move (moveHorizontal, moveVertical);
-		} else {
-
-		}
+		} 
 
 	}
 
@@ -41,7 +40,7 @@ public class Controller2 : MonoBehaviour {
 		
 		//anim.SetFloat ("Speed", Mathf.Abs(moveHorizontal));
 		
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (x * maxSpeed, y * maxSpeed);
+		transform.position += new Vector3(x,y,0).normalized * Time.deltaTime * maxSpeed;
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
 //		else if (moveHorizontal < 0 && facingRight)
@@ -49,12 +48,14 @@ public class Controller2 : MonoBehaviour {
 		
 	}
 
-	void setGhostMode() {
+	void checkGhostMode() {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
 			Debug.Log(ghostMode);
 		}
 	}
+
+
 
 //	void Flip()
 //	{
