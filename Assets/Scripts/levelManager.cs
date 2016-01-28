@@ -17,10 +17,10 @@ public class levelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isGhostMode ()) {
-			highlight(dolls[dollIndex]);
+			highlight(dolls[Mathf.Abs(dollIndex)]);
 			selectPlayer ();
 		} else {
-			notHighlight (dolls [dollIndex]);
+			notHighlight (dolls [Mathf.Abs(dollIndex)]);
 		}
 
 	}
@@ -33,6 +33,7 @@ public class levelManager : MonoBehaviour {
 	void initPlayer(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
+		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 	}
 
 	void updateDolls(){
@@ -41,15 +42,15 @@ public class levelManager : MonoBehaviour {
 
 	void selectPlayer(){
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			notHighlight(dolls[dollIndex]);
-			dollIndex= Mathf.Abs((dollIndex - 1) % dolls.Length);
-			highlight(dolls[dollIndex]);
+			notHighlight(dolls[Mathf.Abs(dollIndex)]);
+			dollIndex= (dollIndex - 1) % dolls.Length;
+			highlight(dolls[Mathf.Abs(dollIndex)]);
 		} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			notHighlight(dolls[dollIndex]);
+			notHighlight(dolls[Mathf.Abs(dollIndex)]);
 			dollIndex= (dollIndex + 1) % dolls.Length;
-			highlight(dolls[dollIndex]);
+			highlight(dolls[Mathf.Abs(dollIndex)]);
 		} else if (Input.GetKeyDown (KeyCode.Z)){
-			possess(player,dolls[dollIndex]);
+			possess(player,dolls[Mathf.Abs(dollIndex)]);
 			dollIndex = 0;
 		}
 	}
@@ -57,6 +58,7 @@ public class levelManager : MonoBehaviour {
 	void possess(GameObject player, GameObject doll){
 		player.GetComponent<Controller2> ().ghostMode = false;
 		player.GetComponent<Controller2> ().enabled = false;
+		player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.tag = "Doll";
 		doll.tag = "Player";
 		notHighlight(doll);
