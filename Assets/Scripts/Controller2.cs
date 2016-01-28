@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class Boundary {
+	//create a separate class to make the code useable
+	public float xMin, xMax, yMin, yMax;
+}
+
 public class Controller2 : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public bool ghostMode = false;
 
-
-//	public bool facingRight = true;
+	public Boundary boundary;
+	
+	//	public bool facingRight = true;
 //	
 //	Animator anim;
 	
@@ -26,21 +33,29 @@ public class Controller2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
 
 		if (!ghostMode) {
-			move (moveHorizontal, moveVertical);
+			move ();
 		} 
 
 	}
 
-	void move(float x,float y)
+	void move()
 	{
+
+
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
 		
-		//anim.SetFloat ("Speed", Mathf.Abs(moveHorizontal));
+		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
 		
-		transform.position += new Vector3(x,y,0).normalized * Time.deltaTime * maxSpeed;
+		GetComponent<Rigidbody2D>().position = new Vector3 
+			(
+				Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, boundary.xMin, boundary.xMax), 
+				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
+				0.0f
+				);
+
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
 //		else if (moveHorizontal < 0 && facingRight)
@@ -51,7 +66,6 @@ public class Controller2 : MonoBehaviour {
 	void checkGhostMode() {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
-			Debug.Log(ghostMode);
 		}
 	}
 
