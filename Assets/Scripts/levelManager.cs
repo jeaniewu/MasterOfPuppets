@@ -40,6 +40,10 @@ public class levelManager : MonoBehaviour {
 		dolls = GameObject.FindGameObjectsWithTag ("Doll");
 	}
 
+	void updateCamera(){
+		Camera.main.GetComponent<CameraFollow> ().findPlayer ();
+	}
+
 	void selectPlayer(){
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			notHighlight(dolls[Mathf.Abs(dollIndex)]);
@@ -64,6 +68,7 @@ public class levelManager : MonoBehaviour {
 		notHighlight(doll);
 		initPlayer();
 		updateDolls();
+		updateCamera();
 	}
 
 	void highlight (GameObject doll){
