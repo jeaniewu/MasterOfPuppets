@@ -41,6 +41,7 @@ public class levelManager : MonoBehaviour {
 	}
 
 	void updateCamera(){
+
 		Camera.main.GetComponent<CameraFollow> ().findPlayer ();
 	}
 
