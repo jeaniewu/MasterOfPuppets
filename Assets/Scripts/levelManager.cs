@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class levelManager : MonoBehaviour {
 
 	public GameObject[] dolls;
 	public GameObject player;
-
+	
 	public int dollIndex = 0;
+	public int radius;
+
+	private List<GameObject> container = new List<GameObject> ();
 
 	void Start () {
-		updateDolls ();
 		initPlayer ();
 
 	}
@@ -25,6 +28,10 @@ public class levelManager : MonoBehaviour {
 
 	}
 
+	void FixedUpdate(){
+		updateDolls ();
+	}
+
 	bool isGhostMode ()
 	{
 		return player.GetComponent<Controller2>().ghostMode;
@@ -37,7 +44,14 @@ public class levelManager : MonoBehaviour {
 	}
 
 	void updateDolls(){
-		dolls = GameObject.FindGameObjectsWithTag ("Doll");
+		//dolls = GameObject.FindGameObjectsWithTag ("Doll");
+		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, radius, 1 << 8);
+		container.Clear ();
+		for (int i = 0; i < circle.Length; i ++) {
+			if(!container.Contains(circle [i].gameObject))
+				container.Add( circle [i].gameObject);
+		}
+		dolls = container.ToArray ();
 	}
 
 	void updateCamera(){

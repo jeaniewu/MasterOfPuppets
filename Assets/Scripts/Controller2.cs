@@ -38,6 +38,15 @@ public class Controller2 : MonoBehaviour {
 			move ();
 		} 
 
+		//		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, rayDistance);
+		//		if (hit.collider != null) {
+		//			Debug.DrawRay (ray.origin, ray.direction * 100, Color.yellow);
+		//		}
+		
+		//		RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -Vector2.up, rayDistance);
+		//
+		//		Debug.Log( hits.Length );
+
 	}
 
 	void move()
