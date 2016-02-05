@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class jail : MonoBehaviour {
+public class jailManager : MonoBehaviour {
 
 	public GameObject[] jails;
 
