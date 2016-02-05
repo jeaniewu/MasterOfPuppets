@@ -20,17 +20,16 @@ public class levelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isGhostMode ()) {
-			highlight(dolls[Mathf.Abs(dollIndex)]);
-			selectPlayer ();
+				updateDolls ();
+				if (dolls.Length >0)
+					selectPlayer ();
 		} else {
-			notHighlight (dolls [Mathf.Abs(dollIndex)]);
+			if (dolls.Length > 0)
+				notHighlight (dolls [Mathf.Abs(dollIndex)]);
 		}
 
 	}
-
-	void FixedUpdate(){
-		updateDolls ();
-	}
+	
 
 	bool isGhostMode ()
 	{
@@ -48,7 +47,7 @@ public class levelManager : MonoBehaviour {
 		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, radius, 1 << 8);
 		container.Clear ();
 		for (int i = 0; i < circle.Length; i ++) {
-			if(!container.Contains(circle [i].gameObject))
+			if(!container.Contains(circle [i].gameObject) && circle[i].gameObject.transform != player.transform)
 				container.Add( circle [i].gameObject);
 		}
 		dolls = container.ToArray ();
@@ -60,6 +59,7 @@ public class levelManager : MonoBehaviour {
 	}
 
 	void selectPlayer(){
+		highlight(dolls[Mathf.Abs(dollIndex)]);
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			notHighlight(dolls[Mathf.Abs(dollIndex)]);
 			dollIndex= (dollIndex - 1) % dolls.Length;
@@ -82,7 +82,6 @@ public class levelManager : MonoBehaviour {
 		doll.tag = "Player";
 		notHighlight(doll);
 		initPlayer();
-		updateDolls();
 		updateCamera();
 	}
 
