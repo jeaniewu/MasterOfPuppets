@@ -5,12 +5,12 @@ public class buttonTrigger : MonoBehaviour {
 
 	public GameObject levelManager;
 
-	private bool triggered;
+	public string trigger;
+
 
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
-		triggered = false;
 	}
 	
 	// Update is called once per frame
@@ -19,16 +19,20 @@ public class buttonTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		levelManager.GetComponent<jailManager> ().disableJail ();
-		triggered = true;
+		if (trigger == "jail") {
+			levelManager.GetComponent<jailManager> ().disableJail ();
+		} else if (trigger == "exit") {
+			levelManager.GetComponent<generateExit> ().enableExit ();
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		levelManager.GetComponent<jailManager> ().enableJail ();
-		triggered = false;
+		if (trigger == "jail") {
+			levelManager.GetComponent<jailManager> ().enableJail ();
+		} else if (trigger == "exit") {
+			levelManager.GetComponent<generateExit> ().disableExit ();
+		}
 	}
 
-	public bool isTriggered(){
-		return triggered;
-	}
+
 }

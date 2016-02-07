@@ -15,9 +15,14 @@ public class generateExit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (triggers [0].GetComponent<buttonTrigger>().isTriggered () && 
-		    triggers [1].GetComponent<buttonTrigger>().isTriggered ()) {
-			checkpoint.SetActive(true);
-		}
+
+	}
+
+	public void disableExit(){
+		checkpoint.SetActive(false);
+	}
+	
+	public void enableExit(){
+		checkpoint.SetActive(true);
 	}
 }
