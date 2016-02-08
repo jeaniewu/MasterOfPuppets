@@ -62,6 +62,8 @@ public class levelManager : MonoBehaviour {
 
 				foreach (RaycastHit2D hit in hits){
 					if (hit.collider != null) {
+						if (hit.collider.CompareTag("impenetrable"))
+							break;
 						if (!container.Contains (hit.collider.gameObject) && hit.transform != player.transform)
 							container.Add (hit.collider.gameObject); //add doll to the list
 					}
