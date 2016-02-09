@@ -108,7 +108,7 @@ public class Controller2 : MonoBehaviour {
 		if (hit.collider != null) {
 			Debug.Log(hit.collider.name);
 			if(hit.collider.name.Equals("Lever"))
-				hit.collider.gameObject.GetComponent<Lever>().switchLever();
+				hit.collider.gameObject.GetComponent<Trigger>().switchTrigger();
 
 		}
 
