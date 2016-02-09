@@ -8,7 +8,6 @@ public class levelManager : MonoBehaviour {
 	public GameObject player;
 	
 	public int dollIndex = 0;
-	public int radius;
 
 	private List<GameObject> container = new List<GameObject> ();
 	private bool dollsUpdated = false; 
@@ -56,8 +55,9 @@ public class levelManager : MonoBehaviour {
 
 			for (int delta_degree = 1; delta_degree < 360; delta_degree ++) {
 				Quaternion q = Quaternion.AngleAxis (delta_degree, Vector3.forward);
-				Vector3 d = player.transform.right * radius;
-				RaycastHit2D[] hits = Physics2D.RaycastAll (player.transform.position, q * d, radius, 1 << LayerMask.NameToLayer ("Doll"));
+				Vector3 d = player.transform.right * player.GetComponent<Controller2> ().radius;
+				RaycastHit2D[] hits = 
+					Physics2D.RaycastAll (player.transform.position, q * d, player.GetComponent<Controller2> ().radius, 1 << LayerMask.NameToLayer ("Doll"));
 				Debug.DrawRay (player.transform.position, q * d, Color.green,0.2f);
 
 				foreach (RaycastHit2D hit in hits){
@@ -74,7 +74,7 @@ public class levelManager : MonoBehaviour {
 			Debug.Log ("updating");
 			dollsUpdated = true;
 		}
-//		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, radius, 1 << 8);
+//		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, player.radius, 1 << 8);
 //		container.Clear ();
 //
 //		for (int i = 0; i < circle.Length; i ++) {
@@ -130,18 +130,4 @@ public class levelManager : MonoBehaviour {
 		doll.GetComponent<Highlight> ().higlighted = false;	
 	}
 
-	void rotate(){
-//		Quaternion q = Quaternion.AngleAxis (delta_degree, Vector3.forward);
-//		var direction = Vector3.right;
-//		//RaycastHit hit;
-//		
-//		//if (Physics.Raycast (player.transform.position, direction, out hit)) {
-//		Debug.DrawRay(player.transform.position, direction*10, Color.green);
-		//}
-		//direction = q * direction;
-
-		Quaternion q = Quaternion.AngleAxis(100*Time.time, Vector3.forward);
-		Vector3  d = player.transform.right *radius;
-		Debug.DrawRay (player.transform.position,q*d,Color.green);
-	}
 }
