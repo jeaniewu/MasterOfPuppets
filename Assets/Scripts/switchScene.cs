@@ -16,7 +16,8 @@ public class switchScene : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Application.LoadLevel(nextScene);
+		if (other.gameObject.CompareTag("Player"))
+			Application.LoadLevel(nextScene);
 	}
 
 	void setNextScene(string s){

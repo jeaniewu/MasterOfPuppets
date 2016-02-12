@@ -106,7 +106,6 @@ public class Controller2 : MonoBehaviour {
 		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
 
 		if (hit.collider != null) {
-			Debug.Log(hit.collider.name);
 			if(hit.collider.name.Equals("Lever"))
 				hit.collider.gameObject.GetComponent<Trigger>().switchTrigger();
 

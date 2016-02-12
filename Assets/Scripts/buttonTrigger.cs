@@ -6,7 +6,7 @@ public class buttonTrigger : Trigger {
 
 	// Use this for initialization
 	void Start () {
-		//levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
+
 	}
 	
 	// Update is called once per frame
@@ -15,16 +15,16 @@ public class buttonTrigger : Trigger {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		switchTriggerOn ();
+		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
+			if (other.gameObject.GetComponent<dollType>().type.Equals(specialDoll))
+				switchTriggerOn ();
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		switchTriggerOff ();
-//		if (trigger == "jail") {
-//			levelManager.GetComponent<jailManager> ().enableJail ();
-//		} else if (trigger == "exit") {
-//			levelManager.GetComponent<generateExit> ().disableExit ();
-//		}
+		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
+			switchTriggerOff ();
+		}
 	}
 
 

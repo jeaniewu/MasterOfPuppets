@@ -14,11 +14,19 @@ public class receiveSignalFloor : receiveSignal {
 	}
 	
 	public override void activate(){
-		Debug.Log ("activate");
 		if (GetComponent<Floor> ().floorNumber== 1) {
-			GetComponent<Floor> ().floorNumber ++;
+			Invoke ("ascend", 2f);
 		} else if (GetComponent<Floor> ().floorNumber == 2) {
-			GetComponent<Floor> ().floorNumber --;
+			Invoke ("descend", 2f);
 		}
+	}
+
+	void ascend(){
+		Debug.Log ("goo");
+		GetComponent<Floor> ().ascend();
+	}
+
+	void descend(){
+		GetComponent<Floor> ().descend();
 	}
 }

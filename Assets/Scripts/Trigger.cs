@@ -6,15 +6,17 @@ public class Trigger : MonoBehaviour {
 	public GameObject[] toSwitches;
 
 	public bool isOn;
+	public string specialDoll;
 
 
 	void Start () {
 		isOn = false;
+		specialDoll = "normal";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	public void switchTriggerOn(){
