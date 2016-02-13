@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class buttonTrigger : MonoBehaviour {
+public class buttonTrigger : Trigger {
 
-	public GameObject levelManager;
-
-	private bool triggered;
 
 	// Use this for initialization
 	void Start () {
-		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
-		triggered = false;
+
 	}
 	
 	// Update is called once per frame
@@ -19,16 +15,17 @@ public class buttonTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		levelManager.GetComponent<jailManager> ().disableJail ();
-		triggered = true;
+		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
+			if (other.gameObject.GetComponent<dollType>().type.Equals(specialDoll))
+				switchTriggerOn ();
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		levelManager.GetComponent<jailManager> ().enableJail ();
-		triggered = false;
+		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
+			switchTriggerOff ();
+		}
 	}
 
-	public bool isTriggered(){
-		return triggered;
-	}
+
 }
