@@ -73,6 +73,7 @@ public class levelManager : MonoBehaviour {
 			dolls = container.ToArray ();
 			Debug.Log ("updating");
 			dollsUpdated = true;
+			dollIndex = 0;
 		}
 //		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, player.radius, 1 << 8);
 //		container.Clear ();
@@ -103,8 +104,8 @@ public class levelManager : MonoBehaviour {
 			highlight(dolls[Mathf.Abs(dollIndex)]);
 		} else if (Input.GetKeyDown (KeyCode.Z)){
 			possess(player,dolls[Mathf.Abs(dollIndex)]);
-			dollIndex = 0;
 		}
+
 	}
 
 	// switch control of the player to the doll, as well as update the environment

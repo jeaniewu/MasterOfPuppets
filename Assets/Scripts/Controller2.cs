@@ -34,6 +34,8 @@ public class Controller2 : MonoBehaviour {
 	void Update(){
 
 		checkGhostMode ();
+		if (Input.GetKeyDown (KeyCode.R))
+			Application.LoadLevel (Application.loadedLevel);
 
 	}
 	
