@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Boundary {
@@ -35,7 +36,7 @@ public class Controller2 : MonoBehaviour {
 
 		checkGhostMode ();
 		if (Input.GetKeyDown (KeyCode.R))
-			Application.LoadLevel (Application.loadedLevel);
+			SceneManager.LoadScene (Application.loadedLevel);
 
 	}
 	
