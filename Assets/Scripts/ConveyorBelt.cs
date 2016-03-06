@@ -4,10 +4,12 @@ using System.Collections;
 public class ConveyorBelt : MonoBehaviour {
 
 	public string direction;
+	public bool isDirChange;
 	public int speed;
 
 	// Use this for initialization
 	void Start () {
+		isDirChange = false;
 	}
 	
 	// Update is called once per frame
