@@ -19,6 +19,7 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
+
 	
 	//	public bool facingRight = true;
 //	
