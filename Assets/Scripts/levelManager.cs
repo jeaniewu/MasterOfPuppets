@@ -20,11 +20,13 @@ public class levelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isGhostMode ()) {
+			player.GetComponent<BoxCollider2D> ().enabled = false;
 			updateDolls (); //find the dolls you can possess
 			if (dolls.Length > 0)
 				selectPlayer ();
 
 		} else {
+			player.GetComponent<BoxCollider2D> ().enabled = true;
 			dollsUpdated = false;
 			if (dolls.Length > 0)
 				notHighlight (dolls [Mathf.Abs(dollIndex)]);
@@ -111,6 +113,7 @@ public class levelManager : MonoBehaviour {
 	// switch control of the player to the doll, as well as update the environment
 	void possess(GameObject player, GameObject doll){
 		dollsUpdated = false;
+		player.GetComponent<BoxCollider2D> ().enabled = true;
 		player.GetComponent<Controller2> ().ghostMode = false;
 		player.GetComponent<Controller2> ().enabled = false;
 		player.GetComponent<Rigidbody2D> ().isKinematic = true;

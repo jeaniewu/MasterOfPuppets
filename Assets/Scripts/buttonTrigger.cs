@@ -22,7 +22,7 @@ public class buttonTrigger : Trigger {
 			if (!objects.Contains (other.gameObject)) 
 				objects.Add (other.gameObject);
 			switchTriggerOn ();
-			Debug.Log ("ON");
+			Debug.Log ("On");
 		}
 	}
 
