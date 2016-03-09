@@ -21,18 +21,23 @@ public class Trigger : MonoBehaviour {
 
 	public void switchTriggerOn(){
 		isOn = true;
+		Debug.Log ("on");
 		foreach (GameObject toSwitch in toSwitches)
 			toSwitch.GetComponent<receiveSignal>().activate ();
 	}
 
 	public void switchTriggerOff(){
 		isOn = false;
+		Debug.Log ("off");
 		foreach (GameObject toSwitch in toSwitches)
 			toSwitch.GetComponent<receiveSignal>().deactivate ();
 	}
 
-	public void switchTrigger(){
-		foreach (GameObject toSwitch in toSwitches)
-			toSwitch.GetComponent<receiveSignal> ().activate ();
+	public virtual void switchTrigger(){
+		if (isOn) {
+			switchTriggerOff ();
+		} else if (!isOn) {
+			switchTriggerOn ();
+		}
 	}
 }
