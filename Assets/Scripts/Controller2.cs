@@ -2,18 +2,15 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class Boundary {
-	//create a separate class to make the code useable
-	public float xMin, xMax, yMin, yMax;
-}
 
 public class Controller2 : MonoBehaviour {
 
-	public float maxSpeed = 10f;
+	public GameObject levelManager;
+
+	private float maxSpeed = 10f;
 	public bool ghostMode = false;
-	public int radius;
-	public Boundary boundary;
+	private int radius;
+	private DollManager.Boundary boundary;
 
 	public RaycastHit2D hit;
 
@@ -28,7 +25,11 @@ public class Controller2 : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+
+		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
+		boundary = levelManager.GetComponent<DollManager>().boundary;
+		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
+		radius = levelManager.GetComponent<DollManager> ().radius;
 		//anim = GetComponent<Animator>();
 		
 	}

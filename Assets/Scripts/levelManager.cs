@@ -57,9 +57,9 @@ public class levelManager : MonoBehaviour {
 
 			for (int delta_degree = 1; delta_degree < 360; delta_degree ++) {
 				Quaternion q = Quaternion.AngleAxis (delta_degree, Vector3.forward);
-				Vector3 d = player.transform.right * player.GetComponent<Controller2> ().radius;
+				Vector3 d = player.transform.right * GetComponent<DollManager>().radius;
 				RaycastHit2D[] hits = 
-					Physics2D.RaycastAll (player.transform.position, q * d, player.GetComponent<Controller2> ().radius, 1 << LayerMask.NameToLayer ("Doll"));
+					Physics2D.RaycastAll (player.transform.position, q * d, GetComponent<DollManager>().radius, 1 << LayerMask.NameToLayer ("Doll"));
 				Debug.DrawRay (player.transform.position, q * d, Color.green,0.2f);
 
 				foreach (RaycastHit2D hit in hits){
