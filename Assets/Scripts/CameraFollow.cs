@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float xMargin = 1f; // Distance in the x axis the player can move before the camera follows.
+	public float maxSpeed = 10f;
+	public float xMargin = 1f; // Distance in the x axis the player can move before the camera follows.
     public float yMargin = 1f; // Distance in the y axis the player can move before the camera follows.
     public float xSmooth = 8f; // How smoothly the camera catches up with it's target movement in the x axis.
     public float ySmooth = 8f; // How smoothly the camera catches up with it's target movement in the y axis.
     public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
+	public float xMovementBound;
+	public float yMovementBound;
 
     private Transform m_Player; // Reference to the player's transform.
+	public GameObject player;
 
 
     private void Awake()
     {
         // Setting up the reference.
-        m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player");
+        m_Player = player.transform;
     }
 
 
@@ -38,7 +43,15 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        TrackPlayer();
+		if (Input.GetKey (KeyCode.C)) {
+			player.GetComponent<Controller2> ().enabled = false;
+			moveCamera ();
+		} else {
+			player.GetComponent<Controller2> ().enabled = true;
+			TrackPlayer();
+		}
+
+
     }
 
 
@@ -71,7 +84,27 @@ public class CameraFollow : MonoBehaviour
     }
 
 	public void findPlayer(){
-		m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player");
+		m_Player = player.transform;
+	}
+
+	private void moveCamera(){
+		Debug.Log ("move");
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+
+		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
+
+		transform.position = new Vector3 
+			(
+				Mathf.Clamp(transform.position.x, m_Player.position.x-xMovementBound, m_Player.position.x+xMovementBound), 
+				Mathf.Clamp(transform.position.y, m_Player.position.y-yMovementBound, m_Player.position.y+yMovementBound),
+				transform.position.z
+			);
+
+		Debug.Log (moveHorizontal);
+		Debug.Log (moveVertical);
+
 	}
 }
 
