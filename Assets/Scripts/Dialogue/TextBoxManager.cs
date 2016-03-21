@@ -15,7 +15,7 @@ public class TextBoxManager : MonoBehaviour
     public int currentLine;
     public int endAtLine;
 
-    public Controller player;
+	public GameObject player;
     // Use this for initialization
 
     public bool isActive;
@@ -23,7 +23,7 @@ public class TextBoxManager : MonoBehaviour
     void Start()
     {
 
-        player = FindObjectOfType<Controller>();    
+		player = GameObject.FindGameObjectWithTag ("Player");   
 
         if (textFile != null)
         {
@@ -78,7 +78,7 @@ public class TextBoxManager : MonoBehaviour
 
         if (stopPlayerMovement)
         {
-            player.canMove = false;
+			player.GetComponent<Controller2> ().enabled = false;
             
             
         }
@@ -90,7 +90,7 @@ public class TextBoxManager : MonoBehaviour
         textBox.SetActive(false);
         isActive = false;
 
-        player.canMove = true;
+		player.GetComponent<Controller2> ().enabled = true; 
 
     }
 

@@ -68,6 +68,8 @@ public class Controller2 : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
+
+		//GetComponent<Rigidbody2D>().velocity = new Vector2(moveHorizontal * maxSpeed, moveVertical * maxSpeed);
 		
 		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
 		
