@@ -53,20 +53,19 @@ public class TextBoxManager : MonoBehaviour
         {
            
 			player.GetComponent<Controller2> ().enabled = false;
+			theText.text = textLines[currentLine];
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				currentLine += 1;
+			}
+
+			if (currentLine >= endAtLine)
+			{
+				DisableTextBox();
+			}
 
         }
-
-        theText.text = textLines[currentLine];
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            currentLine += 1;
-        }
-
-        if (currentLine >= endAtLine)
-        {
-            DisableTextBox();
-        }
+			
     }
 
     public void EnableTextBox()

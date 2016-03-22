@@ -29,7 +29,6 @@ public class Controller2 : MonoBehaviour {
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
-		radius = levelManager.GetComponent<DollManager> ().radius;
 		//anim = GetComponent<Animator>();
 		
 	}
@@ -113,8 +112,7 @@ public class Controller2 : MonoBehaviour {
 		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
 
 		if (hit.collider != null) {
-			if(hit.collider.name.Equals("Lever"))
-				hit.collider.gameObject.GetComponent<Trigger>().switchTrigger();
+			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
 
 		}
 
