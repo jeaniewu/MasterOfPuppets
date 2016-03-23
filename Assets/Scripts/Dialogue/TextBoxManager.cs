@@ -49,24 +49,23 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isActive)
+        if (isActive)
         {
            
-            return;
+			player.GetComponent<Controller2> ().enabled = false;
+			theText.text = textLines[currentLine];
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				currentLine += 1;
+			}
+
+			if (currentLine >= endAtLine)
+			{
+				DisableTextBox();
+			}
 
         }
-
-        theText.text = textLines[currentLine];
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            currentLine += 1;
-        }
-
-        if (currentLine > endAtLine)
-        {
-            DisableTextBox();
-        }
+			
     }
 
     public void EnableTextBox()
@@ -74,14 +73,6 @@ public class TextBoxManager : MonoBehaviour
       
         textBox.SetActive(true);
         isActive = true;
-
-
-        if (stopPlayerMovement)
-        {
-			player.GetComponent<Controller2> ().enabled = false;
-            
-            
-        }
 
     }
 
