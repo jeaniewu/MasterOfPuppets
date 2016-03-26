@@ -26,7 +26,7 @@ public class dialogueTrigger : Trigger {
 
 	public override void switchTrigger(){
 		//Debug.Log ("size: " + size);
-		Debug.Log ("pointer: " + pointer);
+		//Debug.Log ("pointer: " + pointer);
 
 		if (pointer < texts.Length) {
 			theTextBox.ReloadScript (texts[pointer]);
