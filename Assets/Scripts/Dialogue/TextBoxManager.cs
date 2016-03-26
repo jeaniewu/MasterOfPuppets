@@ -54,7 +54,7 @@ public class TextBoxManager : MonoBehaviour
            
 			player.GetComponent<Controller2> ().enabled = false;
 			theText.text = textLines[currentLine];
-			if (Input.GetKeyDown(KeyCode.Space))
+			if (Input.GetKeyDown(KeyCode.Z))
 			{
 				currentLine += 1;
 			}
@@ -70,29 +70,25 @@ public class TextBoxManager : MonoBehaviour
 
     public void EnableTextBox()
     {
-      
         textBox.SetActive(true);
         isActive = true;
-
+		theText.text = textLines[currentLine];
     }
 
     public void DisableTextBox()
     {
         textBox.SetActive(false);
         isActive = false;
-
 		player.GetComponent<Controller2> ().enabled = true; 
 
     }
 
-    public void ReloadScript(TextAsset theText)
+    public void ReloadScript(TextAsset textInput)
     {
-        if (theText != null)
+        if (textInput != null)
         {
             textLines = new string[1];
-            textLines = (theText.text.Split('\n'));
-
-
+            textLines = (textInput.text.Split('\n'));
         }
     }
 }
