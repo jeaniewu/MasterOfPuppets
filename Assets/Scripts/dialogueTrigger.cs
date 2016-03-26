@@ -11,10 +11,8 @@ public class dialogueTrigger : Trigger {
 	public TextBoxManager theTextBox;
 
 	public TextAsset[] texts;
-	public TextAsset theText;
 	public int pointer;
 	public bool loop;
-	public int size;
 	// Use this for initialization
 	void Start () {
 		pointer = 0;
@@ -30,9 +28,8 @@ public class dialogueTrigger : Trigger {
 		//Debug.Log ("size: " + size);
 		Debug.Log ("pointer: " + pointer);
 
-		if (pointer < size) {
-			theText = texts [pointer];
-			theTextBox.ReloadScript (theText);
+		if (pointer < texts.Length) {
+			theTextBox.ReloadScript (texts[pointer]);
 			theTextBox.currentLine = startLine;
 			theTextBox.endAtLine = endLine;
 			Invoke ("enable", 0.1f);
