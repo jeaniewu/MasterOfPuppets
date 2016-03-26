@@ -113,7 +113,6 @@ public class Controller2 : MonoBehaviour {
 
 		if (hit.collider != null) {
 			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
-
 		}
 
 

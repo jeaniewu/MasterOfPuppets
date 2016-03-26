@@ -21,10 +21,14 @@ public class dialogueTrigger : Trigger {
 	}
 
 	public override void switchTrigger(){
-		Debug.Log ("Macarena!");
 		theTextBox.ReloadScript(theText);
 		theTextBox.currentLine = startLine;
 		theTextBox.endAtLine = endLine;
+		Invoke("enable", 0.1f);
+	}
+
+	public void enable(){
 		theTextBox.EnableTextBox();
 	}
+
 }
