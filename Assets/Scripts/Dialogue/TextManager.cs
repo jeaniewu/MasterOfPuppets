@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestManager : MonoBehaviour {
+public class TextManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
