@@ -1,0 +1,1141 @@
+fileFormatVersion: 2
+guid: c6bc3db21f83ced43811e1ebd9202c56
+timeCreated: 1459028617
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: front view walk (1)_0
+    21300002: front view walk (1)_1
+    21300004: front view walk (1)_2
+    21300006: front view walk (1)_3
+    21300008: front view walk (1)_4
+    21300010: front view walk (1)_5
+    21300012: front view walk (1)_6
+    21300014: front view walk (1)_7
+    21300016: front view walk (1)_8
+    21300018: front view walk (1)_9
+    21300020: front view walk (1)_10
+    21300022: front view walk (1)_11
+    21300024: front view walk (1)_12
+    21300026: front view walk (1)_13
+    21300028: front view walk (1)_14
+    21300030: front view walk (1)_15
+    21300032: front view walk (1)_16
+    21300034: front view walk (1)_17
+    21300036: front view walk (1)_18
+    21300038: front view walk (1)_19
+    21300040: front view walk (1)_20
+    21300042: front view walk (1)_21
+    21300044: front view walk (1)_22
+    21300046: front view walk (1)_23
+    21300048: front view walk (1)_24
+    21300050: front view walk (1)_25
+    21300052: front view walk (1)_26
+    21300054: front view walk (1)_27
+    21300056: front view walk (1)_28
+    21300058: front view walk (1)_29
+    21300060: front view walk (1)_30
+    21300062: front view walk (1)_31
+    21300064: front view walk (1)_32
+    21300066: front view walk (1)_33
+    21300068: front view walk (1)_34
+    21300070: front view walk (1)_35
+    21300072: front view walk (1)_36
+    21300074: front view walk (1)_37
+    21300076: front view walk (1)_38
+    21300078: front view walk (1)_39
+    21300080: front view walk (1)_40
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: front view walk (1)_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 348
+        width: 91
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 72}
+        - {x: 5.5, y: 69}
+        - {x: -35.5, y: 68}
+        - {x: -45.5, y: 46}
+        - {x: -45.5, y: -29}
+        - {x: -15.5, y: -64}
+        - {x: 1.5, y: -72}
+        - {x: 40.5, y: -72}
+        - {x: 43.5, y: -53}
+        - {x: 43.5, y: 47}
+        - {x: 20.5, y: 72}
+      - - {x: 40.5, y: 54}
+        - {x: 38.5, y: 53}
+        - {x: 38.5, y: 40}
+        - {x: 42.5, y: 31}
+        - {x: 45.5, y: 31}
+        - {x: 45.5, y: 48}
+        - {x: 42.5, y: 54}
+    - name: front view walk (1)_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 459
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: front view walk (1)_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 348
+        width: 91
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 72.5}
+        - {x: -45.5, y: 57.5}
+        - {x: -45.5, y: -36.5}
+        - {x: -34.5, y: -72.5}
+        - {x: 43.5, y: -72.5}
+        - {x: 43.5, y: 72.5}
+      - - {x: 41.5, y: 51.5}
+        - {x: 39.5, y: 50.5}
+        - {x: 39.5, y: 37.5}
+        - {x: 42.5, y: 30.5}
+        - {x: 44.5, y: 28.5}
+        - {x: 45.5, y: 28.5}
+        - {x: 45.5, y: 48.5}
+        - {x: 43.5, y: 51.5}
+    - name: front view walk (1)_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 348
+        width: 91
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38.5, y: -3}
+        - {x: 42.5, y: 5}
+        - {x: 42.5, y: 35}
+        - {x: 22.5, y: 72}
+        - {x: -26.5, y: 72}
+        - {x: -45.5, y: 61}
+        - {x: -45.5, y: -29}
+        - {x: -35.5, y: -65}
+        - {x: -5.5, y: -72}
+        - {x: 26.5, y: -72}
+        - {x: 36.5, y: -51}
+        - {x: 31.5, y: -12}
+        - {x: 36.5, y: -8}
+      - - {x: 42.5, y: 51}
+        - {x: 39.5, y: 51}
+        - {x: 39.5, y: 37}
+        - {x: 40.5, y: 30}
+        - {x: 44.5, y: 28}
+        - {x: 45.5, y: 28}
+        - {x: 45.5, y: 48}
+    - name: front view walk (1)_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 348
+        width: 90
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 72}
+        - {x: -18, y: 72}
+        - {x: -45, y: 55}
+        - {x: -45, y: -12}
+        - {x: -29, y: -72}
+        - {x: 26, y: -72}
+        - {x: 35, y: -52}
+        - {x: 42, y: -14}
+        - {x: 42, y: 45}
+      - - {x: 40, y: 49}
+        - {x: 40, y: 39}
+        - {x: 41, y: 28}
+        - {x: 44, y: 27}
+        - {x: 45, y: 27}
+        - {x: 45, y: 48}
+        - {x: 43, y: 50}
+    - name: front view walk (1)_5
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 348
+        width: 90
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 71.5}
+        - {x: -45, y: 59.5}
+        - {x: -45, y: -19.5}
+        - {x: -31, y: -70.5}
+        - {x: -21, y: -71.5}
+        - {x: 33, y: -71.5}
+        - {x: 41, y: -61.5}
+        - {x: 41, y: 71.5}
+      - - {x: 40, y: 48.5}
+        - {x: 40, y: 31.5}
+        - {x: 42, y: 26.5}
+        - {x: 45, y: 26.5}
+        - {x: 45, y: 47.5}
+        - {x: 43, y: 49.5}
+    - name: front view walk (1)_6
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 348
+        width: 91
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 71}
+        - {x: -45.5, y: 55}
+        - {x: -45.5, y: -1}
+        - {x: -23.5, y: -71}
+        - {x: 27.5, y: -71}
+        - {x: 40.5, y: -66}
+        - {x: 40.5, y: 71}
+      - - {x: 40.5, y: 47}
+        - {x: 40.5, y: 29}
+        - {x: 41.5, y: 25}
+        - {x: 45.5, y: 25}
+        - {x: 45.5, y: 46}
+        - {x: 43.5, y: 48}
+    - name: front view walk (1)_7
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 348
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 71}
+        - {x: -45, y: 56}
+        - {x: -45, y: 0}
+        - {x: -29, y: -57}
+        - {x: -24, y: -67}
+        - {x: -11, y: -71}
+        - {x: 27, y: -71}
+        - {x: 40, y: -40}
+        - {x: 40, y: 52}
+        - {x: 35, y: 71}
+      - - {x: 41, y: 47}
+        - {x: 40, y: 46}
+        - {x: 40, y: 26}
+        - {x: 41, y: 24}
+        - {x: 45, y: 24}
+        - {x: 45, y: 47}
+    - name: front view walk (1)_8
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 348
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 67}
+        - {x: 32, y: 70}
+        - {x: 29, y: 70}
+        - {x: 27, y: 71}
+        - {x: -20, y: 71}
+        - {x: -45, y: 64}
+        - {x: -45, y: -47}
+        - {x: -39, y: -71}
+        - {x: 21, y: -71}
+        - {x: 27, y: -52}
+        - {x: 40, y: -1}
+        - {x: 40, y: 38}
+      - - {x: 41, y: 44}
+        - {x: 41, y: 24}
+        - {x: 43, y: 22}
+        - {x: 45, y: 23}
+        - {x: 45, y: 44}
+        - {x: 44, y: 45}
+    - name: front view walk (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 348
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 71}
+        - {x: -45, y: 58}
+        - {x: -45, y: -23}
+        - {x: -36, y: -69}
+        - {x: -30, y: -71}
+        - {x: 29, y: -71}
+        - {x: 39, y: -31}
+        - {x: 39, y: 71}
+      - - {x: 40, y: 20}
+        - {x: 44, y: 20}
+        - {x: 45, y: 21}
+        - {x: 45, y: 43}
+        - {x: 42, y: 43}
+        - {x: 40, y: 42}
+    - name: front view walk (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 348
+        width: 91
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 70.5}
+        - {x: -45.5, y: 57.5}
+        - {x: -45.5, y: -56.5}
+        - {x: -43.5, y: -67.5}
+        - {x: -37.5, y: -70.5}
+        - {x: 20.5, y: -70.5}
+        - {x: 33.5, y: -64.5}
+        - {x: 39.5, y: -7.5}
+        - {x: 39.5, y: 70.5}
+      - - {x: 44.5, y: 41.5}
+        - {x: 40.5, y: 40.5}
+        - {x: 39.5, y: 31.5}
+        - {x: 39.5, y: 20.5}
+        - {x: 41.5, y: 19.5}
+        - {x: 44.5, y: 19.5}
+        - {x: 45.5, y: 21.5}
+        - {x: 45.5, y: 40.5}
+    - name: front view walk (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 348
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 69.5}
+        - {x: -46, y: 66.5}
+        - {x: -46, y: -60.5}
+        - {x: -22, y: -69.5}
+        - {x: 18, y: -69.5}
+        - {x: 42, y: -9.5}
+        - {x: 42, y: 69.5}
+      - - {x: 42, y: 39.5}
+        - {x: 40, y: 36.5}
+        - {x: 40, y: 20.5}
+        - {x: 41, y: 18.5}
+        - {x: 44, y: 18.5}
+        - {x: 45, y: 19.5}
+        - {x: 46, y: 25.5}
+        - {x: 46, y: 39.5}
+        - {x: 45, y: 40.5}
+    - name: front view walk (1)_12
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 348
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 69}
+        - {x: -46, y: 63}
+        - {x: -46, y: -19}
+        - {x: -31, y: -67}
+        - {x: -20, y: -69}
+        - {x: 11, y: -69}
+        - {x: 44, y: -12}
+        - {x: 45, y: -8}
+        - {x: 45, y: 69}
+      - - {x: 41, y: 39}
+        - {x: 40, y: 27}
+        - {x: 40, y: 18}
+        - {x: 42, y: 17}
+        - {x: 46, y: 18}
+        - {x: 46, y: 40}
+        - {x: 45, y: 40}
+    - name: front view walk (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 348
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 68}
+        - {x: -46, y: 66}
+        - {x: -46, y: -15}
+        - {x: -36, y: -68}
+        - {x: 22, y: -68}
+        - {x: 46, y: -31}
+        - {x: 46, y: 68}
+      - - {x: 39, y: 26}
+        - {x: 39, y: 17}
+        - {x: 45, y: 17}
+        - {x: 46, y: 20}
+        - {x: 46, y: 39}
+        - {x: 42, y: 38}
+    - name: front view walk (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 443
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: front view walk (1)_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 178
+        width: 93
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46.5, y: 62.5}
+        - {x: 40.5, y: 67.5}
+        - {x: -37.5, y: 67.5}
+        - {x: -46.5, y: 56.5}
+        - {x: -46.5, y: -42.5}
+        - {x: -32.5, y: -58.5}
+        - {x: -15.5, y: -67.5}
+        - {x: 7.5, y: -67.5}
+        - {x: 17.5, y: -52.5}
+        - {x: 39.5, y: 14.5}
+        - {x: 46.5, y: 42.5}
+      - - {x: 39.5, y: 22.5}
+        - {x: 39.5, y: 16.5}
+        - {x: 41.5, y: 15.5}
+        - {x: 46.5, y: 15.5}
+        - {x: 46.5, y: 38.5}
+        - {x: 44.5, y: 38.5}
+        - {x: 42.5, y: 37.5}
+    - name: front view walk (1)_16
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 179
+        width: 95
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 66}
+        - {x: -47.5, y: -35}
+        - {x: -45.5, y: -66}
+        - {x: 12.5, y: -66}
+        - {x: 45.5, y: 3}
+        - {x: 47.5, y: 19}
+        - {x: 47.5, y: 66}
+      - - {x: 45.5, y: 37}
+        - {x: 44.5, y: 37}
+        - {x: 42.5, y: 35}
+        - {x: 40.5, y: 31}
+        - {x: 38.5, y: 18}
+        - {x: 38.5, y: 16}
+        - {x: 40.5, y: 15}
+        - {x: 43.5, y: 16}
+        - {x: 47.5, y: 28}
+        - {x: 47.5, y: 35}
+    - name: front view walk (1)_17
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 179
+        width: 95
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 65.5}
+        - {x: -47.5, y: 57.5}
+        - {x: -47.5, y: -13.5}
+        - {x: -30.5, y: -65.5}
+        - {x: 1.5, y: -65.5}
+        - {x: 13.5, y: -50.5}
+        - {x: 47.5, y: 30.5}
+        - {x: 47.5, y: 65.5}
+      - - {x: 43.5, y: 35.5}
+        - {x: 37.5, y: 28.5}
+        - {x: 37.5, y: 16.5}
+        - {x: 39.5, y: 14.5}
+        - {x: 44.5, y: 14.5}
+        - {x: 47.5, y: 24.5}
+        - {x: 47.5, y: 35.5}
+    - name: front view walk (1)_18
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 179
+        width: 96
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 65}
+        - {x: -32, y: 65}
+        - {x: -43, y: 63}
+        - {x: -48, y: 51}
+        - {x: -48, y: -8}
+        - {x: -38, y: -59}
+        - {x: -24, y: -65}
+        - {x: 10, y: -65}
+        - {x: 36, y: 1}
+        - {x: 48, y: 41}
+        - {x: 48, y: 58}
+      - - {x: 42, y: 36}
+        - {x: 40, y: 32}
+        - {x: 38, y: 20}
+        - {x: 38, y: 15}
+        - {x: 42, y: 15}
+        - {x: 48, y: 23}
+        - {x: 48, y: 34}
+        - {x: 45, y: 36}
+    - name: front view walk (1)_19
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 179
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 40.5}
+        - {x: 48, y: 60.5}
+        - {x: 43, y: 64.5}
+        - {x: -48, y: 64.5}
+        - {x: -48, y: -53.5}
+        - {x: -35, y: -64.5}
+        - {x: 0, y: -64.5}
+        - {x: 4, y: -57.5}
+        - {x: 9, y: -48.5}
+        - {x: 38, y: 17.5}
+      - - {x: 37, y: 14.5}
+        - {x: 41, y: 14.5}
+        - {x: 47, y: 22.5}
+        - {x: 47, y: 36.5}
+        - {x: 43, y: 36.5}
+        - {x: 38, y: 31.5}
+        - {x: 37, y: 19.5}
+    - name: front view walk (1)_20
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 179
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 64.5}
+        - {x: -48, y: 60.5}
+        - {x: -48, y: -29.5}
+        - {x: -34, y: -64.5}
+        - {x: 3, y: -64.5}
+        - {x: 12, y: -52.5}
+        - {x: 48, y: 1.5}
+        - {x: 48, y: 64.5}
+      - - {x: 45, y: 36.5}
+        - {x: 41, y: 35.5}
+        - {x: 37, y: 24.5}
+        - {x: 37, y: 15.5}
+        - {x: 39, y: 13.5}
+        - {x: 42, y: 14.5}
+        - {x: 46, y: 25.5}
+        - {x: 47, y: 28.5}
+        - {x: 47, y: 34.5}
+    - name: front view walk (1)_21
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 178
+        width: 96
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65}
+        - {x: -48, y: -65}
+        - {x: 14, y: -65}
+        - {x: 48, y: 19}
+        - {x: 48, y: 65}
+      - - {x: 37, y: 15}
+        - {x: 41, y: 15}
+        - {x: 47, y: 23}
+        - {x: 47, y: 37}
+        - {x: 43, y: 37}
+        - {x: 38, y: 32}
+        - {x: 37, y: 20}
+    - name: front view walk (1)_22
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 178
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 65.5}
+        - {x: -32, y: 65.5}
+        - {x: -43, y: 63.5}
+        - {x: -48, y: 51.5}
+        - {x: -48, y: -3.5}
+        - {x: -37, y: -56.5}
+        - {x: -21, y: -65.5}
+        - {x: 2, y: -65.5}
+        - {x: 17, y: -56.5}
+        - {x: 48, y: 34.5}
+        - {x: 48, y: 60.5}
+      - - {x: 42, y: 36.5}
+        - {x: 40, y: 32.5}
+        - {x: 38, y: 20.5}
+        - {x: 38, y: 15.5}
+        - {x: 42, y: 15.5}
+        - {x: 48, y: 23.5}
+        - {x: 48, y: 34.5}
+        - {x: 45, y: 36.5}
+    - name: front view walk (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 178
+        width: 95
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 66}
+        - {x: -47.5, y: 62}
+        - {x: -47.5, y: -57}
+        - {x: -46.5, y: -64}
+        - {x: -39.5, y: -66}
+        - {x: 10.5, y: -66}
+        - {x: 47.5, y: 25}
+        - {x: 47.5, y: 66}
+      - - {x: 43.5, y: 36}
+        - {x: 37.5, y: 29}
+        - {x: 37.5, y: 17}
+        - {x: 39.5, y: 15}
+        - {x: 44.5, y: 15}
+        - {x: 47.5, y: 25}
+        - {x: 47.5, y: 36}
+    - name: front view walk (1)_24
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 178
+        width: 95
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 66.5}
+        - {x: -47.5, y: -64.5}
+        - {x: -38.5, y: -66.5}
+        - {x: 15.5, y: -66.5}
+        - {x: 47.5, y: 39.5}
+        - {x: 47.5, y: 66.5}
+      - - {x: 45.5, y: 37.5}
+        - {x: 44.5, y: 37.5}
+        - {x: 42.5, y: 35.5}
+        - {x: 40.5, y: 31.5}
+        - {x: 38.5, y: 18.5}
+        - {x: 38.5, y: 16.5}
+        - {x: 40.5, y: 15.5}
+        - {x: 43.5, y: 16.5}
+        - {x: 47.5, y: 28.5}
+        - {x: 47.5, y: 35.5}
+    - name: front view walk (1)_25
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 178
+        width: 93
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 67.5}
+        - {x: -46.5, y: 57.5}
+        - {x: -46.5, y: -2.5}
+        - {x: -32.5, y: -65.5}
+        - {x: -27.5, y: -67.5}
+        - {x: 15.5, y: -67.5}
+        - {x: 46.5, y: 11.5}
+        - {x: 46.5, y: 67.5}
+      - - {x: 39.5, y: 22.5}
+        - {x: 39.5, y: 16.5}
+        - {x: 41.5, y: 15.5}
+        - {x: 46.5, y: 15.5}
+        - {x: 46.5, y: 38.5}
+        - {x: 44.5, y: 38.5}
+        - {x: 42.5, y: 37.5}
+    - name: front view walk (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 178
+        width: 92
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 68}
+        - {x: -46, y: 64}
+        - {x: -46, y: -21}
+        - {x: -42, y: -62}
+        - {x: -32, y: -68}
+        - {x: 26, y: -68}
+        - {x: 46, y: -2}
+        - {x: 46, y: 68}
+      - - {x: 41, y: 34}
+        - {x: 39, y: 23}
+        - {x: 39, y: 18}
+        - {x: 41, y: 17}
+        - {x: 45, y: 17}
+        - {x: 46, y: 20}
+        - {x: 46, y: 38}
+        - {x: 43, y: 37}
+    - name: front view walk (1)_27
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 69}
+        - {x: -46, y: 69}
+        - {x: -46, y: -69}
+        - {x: 9, y: -69}
+        - {x: 21, y: -57}
+        - {x: 45, y: 32}
+        - {x: 45, y: 67}
+      - - {x: 41, y: 39}
+        - {x: 40, y: 27}
+        - {x: 40, y: 18}
+        - {x: 42, y: 17}
+        - {x: 46, y: 18}
+        - {x: 46, y: 40}
+        - {x: 45, y: 40}
+    - name: front view walk (1)_28
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 8
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 69.5}
+        - {x: -46, y: 62.5}
+        - {x: -46, y: -64.5}
+        - {x: -41, y: -69.5}
+        - {x: 20, y: -69.5}
+        - {x: 42, y: -16.5}
+        - {x: 42, y: 69.5}
+      - - {x: 42, y: 39.5}
+        - {x: 40, y: 36.5}
+        - {x: 40, y: 20.5}
+        - {x: 41, y: 18.5}
+        - {x: 44, y: 18.5}
+        - {x: 45, y: 19.5}
+        - {x: 46, y: 25.5}
+        - {x: 46, y: 39.5}
+        - {x: 45, y: 40.5}
+    - name: front view walk (1)_29
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 8
+        width: 91
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27.5, y: 70.5}
+        - {x: -5.5, y: 70.5}
+        - {x: -45.5, y: 57.5}
+        - {x: -45.5, y: -46.5}
+        - {x: -43.5, y: -60.5}
+        - {x: -26.5, y: -70.5}
+        - {x: 21.5, y: -70.5}
+        - {x: 35.5, y: -65.5}
+        - {x: 39.5, y: -16.5}
+        - {x: 39.5, y: 66.5}
+        - {x: 38.5, y: 67.5}
+      - - {x: 44.5, y: 41.5}
+        - {x: 40.5, y: 40.5}
+        - {x: 39.5, y: 31.5}
+        - {x: 39.5, y: 20.5}
+        - {x: 41.5, y: 19.5}
+        - {x: 44.5, y: 19.5}
+        - {x: 45.5, y: 21.5}
+        - {x: 45.5, y: 40.5}
+    - name: front view walk (1)_30
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 8
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 71}
+        - {x: -45, y: 59}
+        - {x: -45, y: 5}
+        - {x: -31, y: -70}
+        - {x: -25, y: -71}
+        - {x: 19, y: -71}
+        - {x: 39, y: -22}
+        - {x: 39, y: 71}
+      - - {x: 40, y: 20}
+        - {x: 44, y: 20}
+        - {x: 45, y: 21}
+        - {x: 45, y: 43}
+        - {x: 42, y: 43}
+        - {x: 40, y: 42}
+    - name: front view walk (1)_31
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 8
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 66}
+        - {x: 14, y: 71}
+        - {x: -12, y: 71}
+        - {x: -45, y: 57}
+        - {x: -45, y: -10}
+        - {x: -32, y: -71}
+        - {x: 35, y: -71}
+        - {x: 40, y: -29}
+        - {x: 40, y: 71}
+        - {x: 32, y: 71}
+        - {x: 29, y: 70}
+      - - {x: 41, y: 44}
+        - {x: 41, y: 24}
+        - {x: 43, y: 22}
+        - {x: 45, y: 23}
+        - {x: 45, y: 44}
+        - {x: 44, y: 45}
+    - name: front view walk (1)_32
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 8
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 71}
+        - {x: -45, y: 58}
+        - {x: -45, y: -12}
+        - {x: -29, y: -71}
+        - {x: 40, y: -71}
+        - {x: 40, y: 71}
+      - - {x: 41, y: 47}
+        - {x: 40, y: 46}
+        - {x: 40, y: 26}
+        - {x: 41, y: 24}
+        - {x: 45, y: 24}
+        - {x: 45, y: 47}
+    - name: front view walk (1)_33
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 8
+        width: 91
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 71}
+        - {x: -45.5, y: 55}
+        - {x: -45.5, y: 2}
+        - {x: -23.5, y: -68}
+        - {x: -18.5, y: -71}
+        - {x: 20.5, y: -71}
+        - {x: 38.5, y: -61}
+        - {x: 40.5, y: -21}
+        - {x: 40.5, y: 43}
+        - {x: 31.5, y: 71}
+      - - {x: 40.5, y: 47}
+        - {x: 40.5, y: 29}
+        - {x: 41.5, y: 25}
+        - {x: 45.5, y: 25}
+        - {x: 45.5, y: 46}
+        - {x: 43.5, y: 48}
+    - name: front view walk (1)_34
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 8
+        width: 90
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 71.5}
+        - {x: -45, y: 56.5}
+        - {x: -45, y: 0.5}
+        - {x: -24, y: -71.5}
+        - {x: 23, y: -71.5}
+        - {x: 36, y: -63.5}
+        - {x: 41, y: -19.5}
+        - {x: 41, y: 48.5}
+        - {x: 28, y: 71.5}
+      - - {x: 40, y: 48.5}
+        - {x: 40, y: 31.5}
+        - {x: 42, y: 26.5}
+        - {x: 45, y: 26.5}
+        - {x: 45, y: 47.5}
+        - {x: 43, y: 49.5}
+    - name: front view walk (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 8
+        width: 90
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 72}
+        - {x: -18, y: 72}
+        - {x: -45, y: 55}
+        - {x: -45, y: -12}
+        - {x: -29, y: -72}
+        - {x: 26, y: -72}
+        - {x: 35, y: -52}
+        - {x: 42, y: -14}
+        - {x: 42, y: 45}
+      - - {x: 40, y: 49}
+        - {x: 40, y: 39}
+        - {x: 41, y: 28}
+        - {x: 44, y: 27}
+        - {x: 45, y: 27}
+        - {x: 45, y: 48}
+        - {x: 43, y: 50}
+    - name: front view walk (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 8
+        width: 91
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38.5, y: -3}
+        - {x: 42.5, y: 5}
+        - {x: 42.5, y: 35}
+        - {x: 22.5, y: 72}
+        - {x: -26.5, y: 72}
+        - {x: -45.5, y: 61}
+        - {x: -45.5, y: -29}
+        - {x: -35.5, y: -65}
+        - {x: -5.5, y: -72}
+        - {x: 26.5, y: -72}
+        - {x: 36.5, y: -51}
+        - {x: 31.5, y: -12}
+        - {x: 36.5, y: -8}
+      - - {x: 42.5, y: 51}
+        - {x: 39.5, y: 51}
+        - {x: 39.5, y: 37}
+        - {x: 40.5, y: 30}
+        - {x: 44.5, y: 28}
+        - {x: 45.5, y: 28}
+        - {x: 45.5, y: 48}
+    - name: front view walk (1)_37
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 8
+        width: 91
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 72.5}
+        - {x: -45.5, y: 57.5}
+        - {x: -45.5, y: -36.5}
+        - {x: -34.5, y: -72.5}
+        - {x: 43.5, y: -72.5}
+        - {x: 43.5, y: 72.5}
+      - - {x: 41.5, y: 51.5}
+        - {x: 39.5, y: 50.5}
+        - {x: 39.5, y: 37.5}
+        - {x: 42.5, y: 30.5}
+        - {x: 44.5, y: 28.5}
+        - {x: 45.5, y: 28.5}
+        - {x: 45.5, y: 48.5}
+        - {x: 43.5, y: 51.5}
+    - name: front view walk (1)_38
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 8
+        width: 91
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 72}
+        - {x: 5.5, y: 69}
+        - {x: -35.5, y: 68}
+        - {x: -45.5, y: 46}
+        - {x: -45.5, y: -29}
+        - {x: -15.5, y: -64}
+        - {x: 1.5, y: -72}
+        - {x: 40.5, y: -72}
+        - {x: 43.5, y: -53}
+        - {x: 43.5, y: 47}
+        - {x: 20.5, y: 72}
+      - - {x: 40.5, y: 54}
+        - {x: 38.5, y: 53}
+        - {x: 38.5, y: 40}
+        - {x: 42.5, y: 31}
+        - {x: 45.5, y: 31}
+        - {x: 45.5, y: 48}
+        - {x: 42.5, y: 54}
+    - name: front view walk (1)_39
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 119
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: front view walk (1)_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 103
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

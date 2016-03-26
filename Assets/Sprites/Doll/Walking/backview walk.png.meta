@@ -1,0 +1,1613 @@
+fileFormatVersion: 2
+guid: c362aaeaf5d85394aa8b2b75fd7e4152
+timeCreated: 1459028597
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: backview walk_0
+    21300002: backview walk_1
+    21300004: backview walk_2
+    21300006: backview walk_3
+    21300008: backview walk_4
+    21300010: backview walk_5
+    21300012: backview walk_6
+    21300014: backview walk_7
+    21300016: backview walk_8
+    21300018: backview walk_9
+    21300020: backview walk_10
+    21300022: backview walk_11
+    21300024: backview walk_12
+    21300026: backview walk_13
+    21300028: backview walk_14
+    21300030: backview walk_15
+    21300032: backview walk_16
+    21300034: backview walk_17
+    21300036: backview walk_18
+    21300038: backview walk_19
+    21300040: backview walk_20
+    21300042: backview walk_21
+    21300044: backview walk_22
+    21300046: backview walk_23
+    21300048: backview walk_24
+    21300050: backview walk_25
+    21300052: backview walk_26
+    21300054: backview walk_27
+    21300056: backview walk_28
+    21300058: backview walk_29
+    21300060: backview walk_30
+    21300062: backview walk_31
+    21300064: backview walk_32
+    21300066: backview walk_33
+    21300068: backview walk_34
+    21300070: backview walk_35
+    21300072: backview walk_36
+    21300074: backview walk_37
+    21300076: backview walk_38
+    21300078: backview walk_39
+    21300080: backview walk_40
+    21300082: backview walk_41
+    21300084: backview walk_42
+    21300086: backview walk_43
+    21300088: backview walk_44
+    21300090: backview walk_45
+    21300092: backview walk_46
+    21300094: backview walk_47
+    21300096: backview walk_48
+    21300098: backview walk_49
+    21300100: backview walk_50
+    21300102: backview walk_51
+    21300104: backview walk_52
+    21300106: backview walk_53
+    21300108: backview walk_54
+    21300110: backview walk_55
+    21300112: backview walk_56
+    21300114: backview walk_57
+    21300116: backview walk_58
+    21300118: backview walk_59
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: backview walk_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 347
+        width: 105
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 81.5}
+        - {x: -50.5, y: 41.5}
+        - {x: -50.5, y: -48.5}
+        - {x: -33.5, y: -81.5}
+        - {x: 32.5, y: -81.5}
+        - {x: 50.5, y: -25.5}
+        - {x: 50.5, y: 75.5}
+        - {x: 29.5, y: 81.5}
+      - - {x: -42.5, y: -22.5}
+        - {x: -41.5, y: -25.5}
+        - {x: -38.5, y: -25.5}
+        - {x: -35.5, y: -22.5}
+        - {x: -35.5, y: -20.5}
+        - {x: -38.5, y: -19.5}
+      - - {x: -52.5, y: -7.5}
+        - {x: -52.5, y: -16.5}
+        - {x: -49.5, y: -15.5}
+        - {x: -48.5, y: -12.5}
+        - {x: -48.5, y: -8.5}
+        - {x: -50.5, y: -7.5}
+      - - {x: 47.5, y: 32.5}
+        - {x: 46.5, y: 30.5}
+        - {x: 46.5, y: 24.5}
+        - {x: 47.5, y: 22.5}
+        - {x: 51.5, y: 22.5}
+        - {x: 52.5, y: 23.5}
+        - {x: 52.5, y: 33.5}
+        - {x: 50.5, y: 33.5}
+      - - {x: -41.5, y: 60.5}
+        - {x: -43.5, y: 61.5}
+        - {x: -45.5, y: 61.5}
+        - {x: -50.5, y: 56.5}
+        - {x: -52.5, y: 39.5}
+        - {x: -52.5, y: 37.5}
+        - {x: -50.5, y: 36.5}
+        - {x: -48.5, y: 36.5}
+        - {x: -46.5, y: 38.5}
+        - {x: -43.5, y: 44.5}
+        - {x: -41.5, y: 57.5}
+    - name: backview walk_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 467
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 345
+        width: 103
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 82}
+        - {x: -49.5, y: -54}
+        - {x: -27.5, y: -82}
+        - {x: 28.5, y: -82}
+        - {x: 40.5, y: -76}
+        - {x: 50.5, y: -29}
+        - {x: 50.5, y: 82}
+      - - {x: -41.5, y: -23}
+        - {x: -39.5, y: -25}
+        - {x: -34.5, y: -22}
+        - {x: -35.5, y: -19}
+        - {x: -38.5, y: -19}
+        - {x: -41.5, y: -22}
+      - - {x: 47.5, y: 37}
+        - {x: 46.5, y: 35}
+        - {x: 46.5, y: 27}
+        - {x: 47.5, y: 26}
+        - {x: 50.5, y: 26}
+        - {x: 51.5, y: 27}
+        - {x: 51.5, y: 37}
+      - - {x: -45.5, y: 61}
+        - {x: -47.5, y: 61}
+        - {x: -51.5, y: 56}
+        - {x: -51.5, y: 37}
+        - {x: -46.5, y: 37}
+        - {x: -43.5, y: 48}
+        - {x: -43.5, y: 60}
+    - name: backview walk_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 476
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 345
+        width: 102
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 82}
+        - {x: -49, y: 47}
+        - {x: -49, y: -15}
+        - {x: -44, y: -77}
+        - {x: -21, y: -82}
+        - {x: 23, y: -82}
+        - {x: 50, y: -35}
+        - {x: 50, y: 75}
+        - {x: 20, y: 82}
+      - - {x: -37, y: -25}
+        - {x: -34, y: -24}
+        - {x: -34, y: -21}
+        - {x: -37, y: -20}
+        - {x: -39, y: -22}
+      - - {x: 47, y: 39}
+        - {x: 46, y: 37}
+        - {x: 46, y: 29}
+        - {x: 47, y: 28}
+        - {x: 50, y: 28}
+        - {x: 51, y: 29}
+        - {x: 51, y: 39}
+      - - {x: -48, y: 60}
+        - {x: -51, y: 56}
+        - {x: -51, y: 35}
+        - {x: -50, y: 35}
+        - {x: -47, y: 36}
+        - {x: -44, y: 52}
+        - {x: -44, y: 60}
+    - name: backview walk_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 345
+        width: 102
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 81.5}
+        - {x: -48, y: 40.5}
+        - {x: -48, y: -44.5}
+        - {x: -26, y: -81.5}
+        - {x: 15, y: -81.5}
+        - {x: 50, y: -25.5}
+        - {x: 50, y: 48.5}
+        - {x: 25, y: 81.5}
+      - - {x: -37, y: -22.5}
+        - {x: -37, y: -23.5}
+        - {x: -35, y: -25.5}
+        - {x: -34, y: -25.5}
+        - {x: -31, y: -22.5}
+        - {x: -31, y: -20.5}
+        - {x: -34, y: -19.5}
+      - - {x: 46, y: 40.5}
+        - {x: 46, y: 31.5}
+        - {x: 47, y: 30.5}
+        - {x: 51, y: 30.5}
+        - {x: 51, y: 41.5}
+        - {x: 49, y: 42.5}
+      - - {x: -51, y: 57.5}
+        - {x: -51, y: 33.5}
+        - {x: -47, y: 33.5}
+        - {x: -45, y: 46.5}
+        - {x: -45, y: 57.5}
+    - name: backview walk_6
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 460
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_7
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 345
+        width: 95
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 80.5}
+        - {x: -47.5, y: -52.5}
+        - {x: -39.5, y: -80.5}
+        - {x: 22.5, y: -80.5}
+        - {x: 47.5, y: -7.5}
+        - {x: 47.5, y: 53.5}
+        - {x: 12.5, y: 80.5}
+      - - {x: 43.5, y: 42.5}
+        - {x: 44.5, y: 39.5}
+        - {x: 47.5, y: 39.5}
+        - {x: 47.5, y: 44.5}
+        - {x: 45.5, y: 44.5}
+    - name: backview walk_8
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 345
+        width: 101
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: 35.5}
+        - {x: 46.5, y: 34.5}
+        - {x: 47.5, y: 35.5}
+        - {x: 49.5, y: 35.5}
+        - {x: 50.5, y: 36.5}
+        - {x: 50.5, y: 47.5}
+        - {x: 47.5, y: 48.5}
+        - {x: 45.5, y: 44.5}
+        - {x: 45.5, y: 37.5}
+        - {x: 45.5, y: 39.5}
+        - {x: 37.5, y: 57.5}
+        - {x: -2.5, y: 80.5}
+        - {x: -46.5, y: 80.5}
+        - {x: -46.5, y: -25.5}
+        - {x: -31.5, y: -74.5}
+        - {x: -12.5, y: -80.5}
+        - {x: 34.5, y: -80.5}
+        - {x: 46.5, y: -32.5}
+        - {x: 50.5, y: 11.5}
+        - {x: 50.5, y: 35.5}
+      - - {x: -41.5, y: -22.5}
+        - {x: -42.5, y: -27.5}
+        - {x: -39.5, y: -30.5}
+        - {x: -38.5, y: -30.5}
+        - {x: -35.5, y: -27.5}
+        - {x: -35.5, y: -24.5}
+        - {x: -38.5, y: -21.5}
+      - - {x: -48.5, y: 55.5}
+        - {x: -50.5, y: 53.5}
+        - {x: -50.5, y: 30.5}
+        - {x: -47.5, y: 31.5}
+        - {x: -45.5, y: 38.5}
+        - {x: -45.5, y: 54.5}
+    - name: backview walk_9
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 456
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_10
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 345
+        width: 93
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: 80.5}
+        - {x: -46.5, y: -31.5}
+        - {x: -30.5, y: -76.5}
+        - {x: -15.5, y: -80.5}
+        - {x: 32.5, y: -80.5}
+        - {x: 46.5, y: -18.5}
+        - {x: 46.5, y: 49.5}
+        - {x: 2.5, y: 80.5}
+      - - {x: 42.5, y: 47.5}
+        - {x: 42.5, y: 37.5}
+        - {x: 46.5, y: 37.5}
+        - {x: 46.5, y: 48.5}
+        - {x: 44.5, y: 48.5}
+    - name: backview walk_11
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 345
+        width: 100
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 80.5}
+        - {x: -45, y: -34.5}
+        - {x: -39, y: -80.5}
+        - {x: 50, y: -80.5}
+        - {x: 50, y: 80.5}
+      - - {x: -50, y: 48.5}
+        - {x: -50, y: 27.5}
+        - {x: -48, y: 25.5}
+        - {x: -45, y: 26.5}
+        - {x: -45, y: 47.5}
+        - {x: -47, y: 49.5}
+        - {x: -49, y: 49.5}
+      - - {x: 46, y: 42.5}
+        - {x: 46, y: 41.5}
+        - {x: 49, y: 38.5}
+        - {x: 50, y: 38.5}
+        - {x: 50, y: 44.5}
+        - {x: 48, y: 44.5}
+      - - {x: 46, y: 48.5}
+        - {x: 46, y: 46.5}
+        - {x: 48, y: 44.5}
+        - {x: 50, y: 44.5}
+        - {x: 50, y: 50.5}
+        - {x: 48, y: 50.5}
+    - name: backview walk_12
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 345
+        width: 94
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 47}
+        - {x: 34, y: 62}
+        - {x: -8, y: 80}
+        - {x: -47, y: 80}
+        - {x: -47, y: -68}
+        - {x: -43, y: -80}
+        - {x: 34, y: -80}
+        - {x: 44, y: -31}
+        - {x: 47, y: -16}
+        - {x: 47, y: 49}
+      - - {x: 43, y: 53}
+        - {x: 41, y: 52}
+        - {x: 41, y: 48}
+        - {x: 43, y: 47}
+        - {x: 47, y: 47}
+        - {x: 47, y: 53}
+    - name: backview walk_13
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 345
+        width: 101
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32.5, y: 79}
+        - {x: -48.5, y: 79}
+        - {x: -48.5, y: -11}
+        - {x: -16.5, y: -79}
+        - {x: 43.5, y: -79}
+        - {x: 50.5, y: -23}
+        - {x: 50.5, y: 64}
+        - {x: 43.5, y: 78}
+      - - {x: -50.5, y: 26}
+        - {x: -48.5, y: 22}
+        - {x: -44.5, y: 22}
+        - {x: -44.5, y: 45}
+        - {x: -48.5, y: 47}
+        - {x: -50.5, y: 46}
+      - - {x: 43.5, y: 55}
+        - {x: 43.5, y: 45}
+        - {x: 44.5, y: 44}
+        - {x: 50.5, y: 44}
+        - {x: 50.5, y: 55}
+    - name: backview walk_14
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 345
+        width: 101
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 78.5}
+        - {x: -28.5, y: 68.5}
+        - {x: -48.5, y: 74.5}
+        - {x: -50.5, y: 73.5}
+        - {x: -50.5, y: 16.5}
+        - {x: -29.5, y: -73.5}
+        - {x: -17.5, y: -78.5}
+        - {x: 42.5, y: -78.5}
+        - {x: 50.5, y: -52.5}
+        - {x: 50.5, y: 59.5}
+        - {x: 14.5, y: 78.5}
+      - - {x: -50.5, y: 44.5}
+        - {x: -50.5, y: 23.5}
+        - {x: -48.5, y: 20.5}
+        - {x: -44.5, y: 20.5}
+        - {x: -44.5, y: 38.5}
+        - {x: -45.5, y: 43.5}
+        - {x: -48.5, y: 44.5}
+      - - {x: 42.5, y: 57.5}
+        - {x: 42.5, y: 46.5}
+        - {x: 45.5, y: 45.5}
+        - {x: 47.5, y: 45.5}
+        - {x: 49.5, y: 46.5}
+        - {x: 49.5, y: 56.5}
+        - {x: 47.5, y: 57.5}
+    - name: backview walk_15
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 345
+        width: 101
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 78}
+        - {x: -50.5, y: 71}
+        - {x: -50.5, y: 23}
+        - {x: -26.5, y: -73}
+        - {x: -8.5, y: -78}
+        - {x: 43.5, y: -78}
+        - {x: 50.5, y: -52}
+        - {x: 50.5, y: 65}
+        - {x: 34.5, y: 78}
+      - - {x: -50.5, y: 25}
+        - {x: -47.5, y: 19}
+        - {x: -44.5, y: 19}
+        - {x: -43.5, y: 20}
+        - {x: -43.5, y: 25}
+        - {x: -45.5, y: 43}
+        - {x: -48.5, y: 44}
+        - {x: -50.5, y: 43}
+      - - {x: 43.5, y: 59}
+        - {x: 41.5, y: 56}
+        - {x: 41.5, y: 53}
+        - {x: 47.5, y: 53}
+        - {x: 47.5, y: 58}
+        - {x: 45.5, y: 59}
+    - name: backview walk_16
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 345
+        width: 102
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 77}
+        - {x: -51, y: 77}
+        - {x: -51, y: 22}
+        - {x: -19, y: -68}
+        - {x: 3, y: -77}
+        - {x: 30, y: -77}
+        - {x: 47, y: -63}
+        - {x: 51, y: -46}
+        - {x: 51, y: 59}
+      - - {x: -51, y: 42}
+        - {x: -51, y: 22}
+        - {x: -47, y: 18}
+        - {x: -43, y: 18}
+        - {x: -43, y: 28}
+        - {x: -44, y: 37}
+        - {x: -48, y: 42}
+    - name: backview walk_17
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 451
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_18
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 457
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_19
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 444
+        width: 5
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 175
+        width: 102
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 76.5}
+        - {x: -51, y: 75.5}
+        - {x: -51, y: 39.5}
+        - {x: -19, y: -68.5}
+        - {x: 3, y: -76.5}
+        - {x: 51, y: -76.5}
+        - {x: 51, y: 76.5}
+      - - {x: -49, y: 41.5}
+        - {x: -51, y: 40.5}
+        - {x: -51, y: 25.5}
+        - {x: -47, y: 17.5}
+        - {x: -44, y: 17.5}
+        - {x: -42, y: 19.5}
+        - {x: -45, y: 34.5}
+        - {x: -47, y: 39.5}
+      - - {x: 41, y: 61.5}
+        - {x: 40, y: 59.5}
+        - {x: 40, y: 53.5}
+        - {x: 41, y: 50.5}
+        - {x: 47, y: 50.5}
+        - {x: 47, y: 58.5}
+        - {x: 45, y: 61.5}
+    - name: backview walk_21
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 175
+        width: 102
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 76.5}
+        - {x: -35, y: 76.5}
+        - {x: -35, y: 73.5}
+        - {x: -31, y: 63.5}
+        - {x: -44, y: 71.5}
+        - {x: -51, y: 70.5}
+        - {x: -51, y: -24.5}
+        - {x: -15, y: -76.5}
+        - {x: 45, y: -76.5}
+        - {x: 51, y: -69.5}
+        - {x: 51, y: 60.5}
+        - {x: 19, y: 73.5}
+      - - {x: -51, y: 25.5}
+        - {x: -46, y: 15.5}
+        - {x: -42, y: 15.5}
+        - {x: -42, y: 25.5}
+        - {x: -46, y: 39.5}
+        - {x: -49, y: 39.5}
+        - {x: -51, y: 38.5}
+      - - {x: 42, y: 62.5}
+        - {x: 39, y: 61.5}
+        - {x: 39, y: 52.5}
+        - {x: 41, y: 51.5}
+        - {x: 47, y: 51.5}
+        - {x: 47, y: 57.5}
+        - {x: 46, y: 60.5}
+    - name: backview walk_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 175
+        width: 101
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 76.5}
+        - {x: -50.5, y: 45.5}
+        - {x: -44.5, y: 14.5}
+        - {x: -20.5, y: -54.5}
+        - {x: -10.5, y: -76.5}
+        - {x: 43.5, y: -76.5}
+        - {x: 50.5, y: -54.5}
+        - {x: 50.5, y: 66.5}
+        - {x: 15.5, y: 76.5}
+      - - {x: -47.5, y: 16.5}
+        - {x: -45.5, y: 14.5}
+        - {x: -42.5, y: 14.5}
+        - {x: -42.5, y: 22.5}
+        - {x: -47.5, y: 37.5}
+        - {x: -50.5, y: 37.5}
+        - {x: -50.5, y: 23.5}
+      - - {x: 41.5, y: 62.5}
+        - {x: 37.5, y: 62.5}
+        - {x: 37.5, y: 56.5}
+        - {x: 38.5, y: 51.5}
+        - {x: 44.5, y: 51.5}
+        - {x: 45.5, y: 53.5}
+        - {x: 45.5, y: 60.5}
+        - {x: 44.5, y: 61.5}
+    - name: backview walk_23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 174
+        width: 101
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: 77}
+        - {x: -50.5, y: 75}
+        - {x: -50.5, y: 32}
+        - {x: -45.5, y: 12}
+        - {x: -26.5, y: -21}
+        - {x: -13.5, y: -61}
+        - {x: -5.5, y: -70}
+        - {x: 14.5, y: -77}
+        - {x: 33.5, y: -77}
+        - {x: 50.5, y: -70}
+        - {x: 50.5, y: 77}
+      - - {x: -50.5, y: 24}
+        - {x: -46.5, y: 15}
+        - {x: -44.5, y: 13}
+        - {x: -41.5, y: 15}
+        - {x: -41.5, y: 23}
+        - {x: -47.5, y: 36}
+        - {x: -50.5, y: 36}
+    - name: backview walk_24
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 270
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_25
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 276
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_26
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 174
+        width: 98
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49, y: 77.5}
+        - {x: -49, y: 27.5}
+        - {x: -42, y: 5.5}
+        - {x: -10, y: -75.5}
+        - {x: 5, y: -77.5}
+        - {x: 33, y: -77.5}
+        - {x: 49, y: -62.5}
+        - {x: 49, y: 57.5}
+        - {x: 13, y: 77.5}
+      - - {x: -49, y: 16.5}
+        - {x: -46, y: 12.5}
+        - {x: -43, y: 13.5}
+        - {x: -43, y: 17.5}
+        - {x: -44, y: 24.5}
+        - {x: -47, y: 28.5}
+        - {x: -49, y: 28.5}
+      - - {x: 39, y: 63.5}
+        - {x: 36, y: 63.5}
+        - {x: 35, y: 62.5}
+        - {x: 35, y: 52.5}
+        - {x: 42, y: 52.5}
+        - {x: 43, y: 54.5}
+        - {x: 43, y: 60.5}
+        - {x: 42, y: 62.5}
+    - name: backview walk_27
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 276
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_28
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 266
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_29
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 174
+        width: 96
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 77.5}
+        - {x: -48, y: -14.5}
+        - {x: -18, y: -66.5}
+        - {x: -3, y: -77.5}
+        - {x: 32, y: -77.5}
+        - {x: 48, y: -64.5}
+        - {x: 48, y: 56.5}
+        - {x: 11, y: 77.5}
+      - - {x: -48, y: 13.5}
+        - {x: -47, y: 12.5}
+        - {x: -44, y: 13.5}
+        - {x: -44, y: 16.5}
+        - {x: -47, y: 20.5}
+        - {x: -48, y: 20.5}
+      - - {x: 35, y: 63.5}
+        - {x: 34, y: 61.5}
+        - {x: 34, y: 55.5}
+        - {x: 35, y: 53.5}
+        - {x: 38, y: 52.5}
+        - {x: 42, y: 52.5}
+        - {x: 42, y: 63.5}
+    - name: backview walk_30
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 276
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_31
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 174
+        width: 98
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 78}
+        - {x: -48, y: 76}
+        - {x: -48, y: 65}
+        - {x: -46, y: 61}
+        - {x: -45, y: 15}
+        - {x: -24, y: -73}
+        - {x: -14, y: -78}
+        - {x: 47, y: -78}
+        - {x: 49, y: -69}
+        - {x: 49, y: 58}
+        - {x: 10, y: 78}
+      - - {x: -49, y: 16}
+        - {x: -46, y: 12}
+        - {x: -43, y: 13}
+        - {x: -43, y: 17}
+        - {x: -44, y: 24}
+        - {x: -47, y: 28}
+        - {x: -49, y: 28}
+      - - {x: 39, y: 63}
+        - {x: 36, y: 63}
+        - {x: 35, y: 62}
+        - {x: 35, y: 52}
+        - {x: 42, y: 52}
+        - {x: 43, y: 54}
+        - {x: 43, y: 60}
+        - {x: 42, y: 62}
+    - name: backview walk_32
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 270
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_33
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 174
+        width: 95
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 79}
+        - {x: -25.5, y: 76}
+        - {x: -25.5, y: 70}
+        - {x: -24.5, y: 64}
+        - {x: -23.5, y: 63}
+        - {x: -22.5, y: 55}
+        - {x: -22.5, y: 57}
+        - {x: -36.5, y: 71}
+        - {x: -46.5, y: 74}
+        - {x: -47.5, y: 73}
+        - {x: -47.5, y: -5}
+        - {x: -34.5, y: -79}
+        - {x: 45.5, y: -79}
+        - {x: 47.5, y: -77}
+        - {x: 47.5, y: 79}
+      - - {x: -47.5, y: 11}
+        - {x: -44.5, y: 12}
+        - {x: -44.5, y: 16}
+        - {x: -46.5, y: 18}
+        - {x: -47.5, y: 18}
+    - name: backview walk_34
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 268
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_35
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 174
+        width: 91
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.5, y: 79.5}
+        - {x: -45.5, y: 76.5}
+        - {x: -45.5, y: 0.5}
+        - {x: -19.5, y: -68.5}
+        - {x: 0.5, y: -79.5}
+        - {x: 29.5, y: -79.5}
+        - {x: 30.5, y: -78.5}
+        - {x: 45.5, y: -70.5}
+        - {x: 45.5, y: 60.5}
+        - {x: 2.5, y: 79.5}
+      - - {x: 36.5, y: 60.5}
+        - {x: 32.5, y: 60.5}
+        - {x: 32.5, y: 54.5}
+        - {x: 33.5, y: 49.5}
+        - {x: 39.5, y: 49.5}
+        - {x: 40.5, y: 51.5}
+        - {x: 40.5, y: 58.5}
+        - {x: 39.5, y: 59.5}
+    - name: backview walk_36
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 269
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_37
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 174
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 80}
+        - {x: -45, y: 80}
+        - {x: -45, y: -22}
+        - {x: -17, y: -76}
+        - {x: 3, y: -80}
+        - {x: 28, y: -80}
+        - {x: 44, y: -65}
+        - {x: 45, y: -61}
+        - {x: 45, y: 55}
+      - - {x: 36, y: 60}
+        - {x: 33, y: 59}
+        - {x: 33, y: 50}
+        - {x: 35, y: 49}
+        - {x: 41, y: 49}
+        - {x: 41, y: 55}
+        - {x: 40, y: 58}
+    - name: backview walk_38
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 271
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_39
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 174
+        width: 90
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 47.5}
+        - {x: 12, y: 80.5}
+        - {x: -45, y: 80.5}
+        - {x: -45, y: -5.5}
+        - {x: -17, y: -77.5}
+        - {x: -1, y: -80.5}
+        - {x: 28, y: -80.5}
+        - {x: 43, y: -65.5}
+        - {x: 45, y: -28.5}
+      - - {x: 36, y: 58.5}
+        - {x: 34, y: 56.5}
+        - {x: 34, y: 48.5}
+        - {x: 36, y: 47.5}
+        - {x: 40, y: 47.5}
+        - {x: 41, y: 48.5}
+        - {x: 41, y: 55.5}
+        - {x: 39, y: 58.5}
+    - name: backview walk_40
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 175
+        width: 101
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 80.5}
+        - {x: -41.5, y: 0.5}
+        - {x: -23.5, y: -76.5}
+        - {x: -10.5, y: -80.5}
+        - {x: 39.5, y: -80.5}
+        - {x: 50.5, y: -23.5}
+        - {x: 50.5, y: 78.5}
+        - {x: 40.5, y: 80.5}
+      - - {x: -50.5, y: 38.5}
+        - {x: -50.5, y: 20.5}
+        - {x: -47.5, y: 14.5}
+        - {x: -44.5, y: 14.5}
+        - {x: -43.5, y: 15.5}
+        - {x: -43.5, y: 30.5}
+        - {x: -47.5, y: 38.5}
+      - - {x: 40.5, y: 51.5}
+        - {x: 46.5, y: 51.5}
+        - {x: 46.5, y: 55.5}
+        - {x: 44.5, y: 57.5}
+        - {x: 42.5, y: 57.5}
+        - {x: 40.5, y: 56.5}
+    - name: backview walk_41
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5
+        width: 90
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 81}
+        - {x: -44, y: 81}
+        - {x: -45, y: 79}
+        - {x: -45, y: -46}
+        - {x: -21, y: -81}
+        - {x: 37, y: -81}
+        - {x: 45, y: -73}
+        - {x: 45, y: 49}
+        - {x: 43, y: 53}
+      - - {x: 38, y: 56}
+        - {x: 36, y: 53}
+        - {x: 36, y: 50}
+        - {x: 42, y: 50}
+        - {x: 42, y: 55}
+        - {x: 40, y: 56}
+    - name: backview walk_42
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 5
+        width: 91
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 81}
+        - {x: -45.5, y: 68}
+        - {x: -45.5, y: -49}
+        - {x: -38.5, y: -81}
+        - {x: 22.5, y: -81}
+        - {x: 45.5, y: -71}
+        - {x: 45.5, y: 53}
+        - {x: 27.5, y: 81}
+      - - {x: 37.5, y: 55}
+        - {x: 37.5, y: 44}
+        - {x: 40.5, y: 43}
+        - {x: 42.5, y: 43}
+        - {x: 44.5, y: 44}
+        - {x: 44.5, y: 54}
+        - {x: 42.5, y: 55}
+    - name: backview walk_43
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 101
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: 81.5}
+        - {x: -42.5, y: 43.5}
+        - {x: -42.5, y: -30.5}
+        - {x: -19.5, y: -76.5}
+        - {x: -8.5, y: -81.5}
+        - {x: 50.5, y: -81.5}
+        - {x: 50.5, y: 65.5}
+        - {x: 32.5, y: 81.5}
+      - - {x: -50.5, y: 23.5}
+        - {x: -48.5, y: 19.5}
+        - {x: -44.5, y: 19.5}
+        - {x: -44.5, y: 42.5}
+        - {x: -48.5, y: 44.5}
+        - {x: -50.5, y: 43.5}
+      - - {x: 43.5, y: 52.5}
+        - {x: 43.5, y: 42.5}
+        - {x: 44.5, y: 41.5}
+        - {x: 50.5, y: 41.5}
+        - {x: 50.5, y: 52.5}
+    - name: backview walk_44
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 5
+        width: 92
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 44}
+        - {x: 25, y: 82}
+        - {x: -26, y: 82}
+        - {x: -46, y: 58}
+        - {x: -46, y: -5}
+        - {x: -27, y: -82}
+        - {x: 35, y: -82}
+        - {x: 46, y: -51}
+        - {x: 46, y: 47}
+      - - {x: 42, y: 51}
+        - {x: 40, y: 50}
+        - {x: 40, y: 46}
+        - {x: 42, y: 45}
+        - {x: 46, y: 45}
+        - {x: 46, y: 51}
+    - name: backview walk_45
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 5
+        width: 100
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 80}
+        - {x: 20, y: 82}
+        - {x: -19, y: 82}
+        - {x: -45, y: 37}
+        - {x: -45, y: 2}
+        - {x: -32, y: -77}
+        - {x: -14, y: -82}
+        - {x: 30, y: -82}
+        - {x: 39, y: -61}
+        - {x: 50, y: -3}
+        - {x: 50, y: 39}
+      - - {x: -50, y: 47}
+        - {x: -50, y: 26}
+        - {x: -48, y: 24}
+        - {x: -45, y: 25}
+        - {x: -45, y: 46}
+        - {x: -47, y: 48}
+        - {x: -49, y: 48}
+      - - {x: 46, y: 41}
+        - {x: 46, y: 40}
+        - {x: 49, y: 37}
+        - {x: 50, y: 37}
+        - {x: 50, y: 43}
+        - {x: 48, y: 43}
+      - - {x: 46, y: 47}
+        - {x: 46, y: 45}
+        - {x: 48, y: 43}
+        - {x: 50, y: 43}
+        - {x: 50, y: 49}
+        - {x: 48, y: 49}
+    - name: backview walk_46
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 116
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_47
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 5
+        width: 93
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 82.5}
+        - {x: -46.5, y: 49.5}
+        - {x: -46.5, y: -23.5}
+        - {x: -36.5, y: -77.5}
+        - {x: -20.5, y: -82.5}
+        - {x: 25.5, y: -82.5}
+        - {x: 46.5, y: -38.5}
+        - {x: 46.5, y: 50.5}
+        - {x: 32.5, y: 82.5}
+      - - {x: 42.5, y: 45.5}
+        - {x: 42.5, y: 35.5}
+        - {x: 46.5, y: 35.5}
+        - {x: 46.5, y: 46.5}
+        - {x: 44.5, y: 46.5}
+    - name: backview walk_48
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 5
+        width: 101
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46.5, y: 32.5}
+        - {x: 47.5, y: 33.5}
+        - {x: 49.5, y: 33.5}
+        - {x: 50.5, y: 34.5}
+        - {x: 50.5, y: 45.5}
+        - {x: 47.5, y: 46.5}
+        - {x: 45.5, y: 42.5}
+        - {x: 45.5, y: 35.5}
+        - {x: 45.5, y: 37.5}
+        - {x: 39.5, y: 56.5}
+        - {x: 23.5, y: 82.5}
+        - {x: -15.5, y: 82.5}
+        - {x: -46.5, y: 46.5}
+        - {x: -46.5, y: -18.5}
+        - {x: -32.5, y: -80.5}
+        - {x: -23.5, y: -82.5}
+        - {x: 31.5, y: -82.5}
+        - {x: 50.5, y: -29.5}
+        - {x: 50.5, y: 32.5}
+        - {x: 48.5, y: 33.5}
+      - - {x: -41.5, y: -24.5}
+        - {x: -42.5, y: -29.5}
+        - {x: -39.5, y: -32.5}
+        - {x: -38.5, y: -32.5}
+        - {x: -35.5, y: -29.5}
+        - {x: -35.5, y: -26.5}
+        - {x: -38.5, y: -23.5}
+      - - {x: -48.5, y: 53.5}
+        - {x: -50.5, y: 51.5}
+        - {x: -50.5, y: 28.5}
+        - {x: -47.5, y: 29.5}
+        - {x: -45.5, y: 36.5}
+        - {x: -45.5, y: 52.5}
+    - name: backview walk_49
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 120
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_50
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 5
+        width: 95
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.5, y: 1.5}
+        - {x: 47.5, y: 43.5}
+        - {x: 22.5, y: 78.5}
+        - {x: 17.5, y: 77.5}
+        - {x: 5.5, y: 67.5}
+        - {x: -6.5, y: 82.5}
+        - {x: -14.5, y: 82.5}
+        - {x: -47.5, y: 44.5}
+        - {x: -47.5, y: -8.5}
+        - {x: -35.5, y: -75.5}
+        - {x: -12.5, y: -82.5}
+        - {x: 16.5, y: -82.5}
+        - {x: 21.5, y: -74.5}
+        - {x: 23.5, y: -62.5}
+        - {x: 16.5, y: -59.5}
+      - - {x: 43.5, y: 40.5}
+        - {x: 44.5, y: 37.5}
+        - {x: 47.5, y: 37.5}
+        - {x: 47.5, y: 42.5}
+        - {x: 45.5, y: 42.5}
+    - name: backview walk_51
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 5
+        width: 102
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 82.5}
+        - {x: -48, y: 49.5}
+        - {x: -48, y: -65.5}
+        - {x: -34, y: -82.5}
+        - {x: 21, y: -82.5}
+        - {x: 50, y: -20.5}
+        - {x: 50, y: 46.5}
+        - {x: 31, y: 82.5}
+      - - {x: -37, y: -23.5}
+        - {x: -37, y: -24.5}
+        - {x: -35, y: -26.5}
+        - {x: -34, y: -26.5}
+        - {x: -31, y: -23.5}
+        - {x: -31, y: -21.5}
+        - {x: -34, y: -20.5}
+      - - {x: 46, y: 39.5}
+        - {x: 46, y: 30.5}
+        - {x: 47, y: 29.5}
+        - {x: 51, y: 29.5}
+        - {x: 51, y: 40.5}
+        - {x: 49, y: 41.5}
+      - - {x: -51, y: 56.5}
+        - {x: -51, y: 32.5}
+        - {x: -47, y: 32.5}
+        - {x: -45, y: 45.5}
+        - {x: -45, y: 56.5}
+    - name: backview walk_52
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 5
+        width: 102
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 82.5}
+        - {x: -49, y: 63.5}
+        - {x: -49, y: -51.5}
+        - {x: -45, y: -79.5}
+        - {x: -31, y: -82.5}
+        - {x: 29, y: -82.5}
+        - {x: 50, y: -33.5}
+        - {x: 50, y: 58.5}
+        - {x: 29, y: 82.5}
+      - - {x: -37, y: -25.5}
+        - {x: -34, y: -24.5}
+        - {x: -34, y: -21.5}
+        - {x: -37, y: -20.5}
+        - {x: -39, y: -22.5}
+      - - {x: 47, y: 38.5}
+        - {x: 46, y: 36.5}
+        - {x: 46, y: 28.5}
+        - {x: 47, y: 27.5}
+        - {x: 50, y: 27.5}
+        - {x: 51, y: 28.5}
+        - {x: 51, y: 38.5}
+      - - {x: -48, y: 59.5}
+        - {x: -51, y: 55.5}
+        - {x: -51, y: 34.5}
+        - {x: -50, y: 34.5}
+        - {x: -47, y: 35.5}
+        - {x: -44, y: 51.5}
+        - {x: -44, y: 59.5}
+    - name: backview walk_53
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 5
+        width: 103
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: 82.5}
+        - {x: -26.5, y: 82.5}
+        - {x: -49.5, y: 62.5}
+        - {x: -49.5, y: -22.5}
+        - {x: -38.5, y: -75.5}
+        - {x: -14.5, y: -82.5}
+        - {x: 31.5, y: -82.5}
+        - {x: 44.5, y: -80.5}
+        - {x: 50.5, y: -34.5}
+        - {x: 50.5, y: 69.5}
+      - - {x: -41.5, y: -23.5}
+        - {x: -39.5, y: -25.5}
+        - {x: -34.5, y: -22.5}
+        - {x: -35.5, y: -19.5}
+        - {x: -38.5, y: -19.5}
+        - {x: -41.5, y: -22.5}
+      - - {x: 47.5, y: 36.5}
+        - {x: 46.5, y: 34.5}
+        - {x: 46.5, y: 26.5}
+        - {x: 47.5, y: 25.5}
+        - {x: 50.5, y: 25.5}
+        - {x: 51.5, y: 26.5}
+        - {x: 51.5, y: 36.5}
+      - - {x: -45.5, y: 60.5}
+        - {x: -47.5, y: 60.5}
+        - {x: -51.5, y: 55.5}
+        - {x: -51.5, y: 36.5}
+        - {x: -46.5, y: 36.5}
+        - {x: -43.5, y: 47.5}
+        - {x: -43.5, y: 59.5}
+    - name: backview walk_54
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 136
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_55
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 7
+        width: 104
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 81.5}
+        - {x: -50, y: 41.5}
+        - {x: -50, y: -48.5}
+        - {x: -33, y: -81.5}
+        - {x: 33, y: -81.5}
+        - {x: 51, y: -25.5}
+        - {x: 51, y: 75.5}
+        - {x: 30, y: 81.5}
+      - - {x: -42, y: -22.5}
+        - {x: -41, y: -25.5}
+        - {x: -38, y: -25.5}
+        - {x: -35, y: -22.5}
+        - {x: -35, y: -20.5}
+        - {x: -38, y: -19.5}
+      - - {x: -52, y: -7.5}
+        - {x: -52, y: -16.5}
+        - {x: -49, y: -15.5}
+        - {x: -48, y: -12.5}
+        - {x: -48, y: -8.5}
+        - {x: -50, y: -7.5}
+      - - {x: 47, y: 30.5}
+        - {x: 47, y: 24.5}
+        - {x: 48, y: 22.5}
+        - {x: 52, y: 22.5}
+        - {x: 52, y: 33.5}
+        - {x: 48, y: 32.5}
+      - - {x: -41, y: 60.5}
+        - {x: -43, y: 61.5}
+        - {x: -45, y: 61.5}
+        - {x: -50, y: 56.5}
+        - {x: -52, y: 39.5}
+        - {x: -52, y: 37.5}
+        - {x: -50, y: 36.5}
+        - {x: -48, y: 36.5}
+        - {x: -46, y: 38.5}
+        - {x: -43, y: 44.5}
+        - {x: -41, y: 57.5}
+    - name: backview walk_56
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 127
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_57
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 104
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_58
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 106
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: backview walk_59
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 111
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
