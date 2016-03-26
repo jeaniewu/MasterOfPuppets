@@ -17,6 +17,8 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
+    Animator anim;
+
 
 	
 	//	public bool facingRight = true;
@@ -29,7 +31,7 @@ public class Controller2 : MonoBehaviour {
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
-		//anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 		
 	}
 	
@@ -48,16 +50,32 @@ public class Controller2 : MonoBehaviour {
 			move ();
 			if (Input.GetKeyDown (KeyCode.Z))
 				interact ();
-		} 
+		}
 
-		if (Input.GetAxis ("Horizontal") != 0) {
-			Horizontal = Input.GetAxis ("Horizontal");
-			Vertical = 0;
-		}
-		else if (Input.GetAxis ("Vertical") != 0) {
-			Vertical = Input.GetAxis ("Vertical");
-			Horizontal = 0;
-		}
+        /*ANIMATION*/
+        float input_x = Input.GetAxisRaw("Horizontal");
+        float input_y = Input.GetAxisRaw("Vertical");
+        bool isWalking = (Mathf.Abs(input_x) + Mathf.Abs(input_y)) > 0;
+        anim.SetBool("isWalking", isWalking);
+        /*--------*/
+
+        if (isWalking)
+        {
+            anim.SetFloat("X", input_x);
+            anim.SetFloat("Y", input_y);
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                
+                Horizontal = Input.GetAxis("Horizontal");
+                Vertical = 0;
+            }
+            else if (Input.GetAxis("Vertical") != 0)
+            {
+                
+                Vertical = Input.GetAxis("Vertical");
+                Horizontal = 0;
+            }
+        }
 
 	}
 
