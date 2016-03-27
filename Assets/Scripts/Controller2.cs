@@ -17,7 +17,7 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
-    Animator anim;
+    public Animator anim;
 
 
 	
@@ -32,7 +32,12 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
-		
+		anim.SetFloat("Y", -1); // face the front
+
+		if (this.CompareTag("Player")){
+			anim.SetBool ("hasSoul", true);
+		}
+			
 	}
 	
 	void Update(){

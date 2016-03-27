@@ -44,6 +44,7 @@ public class levelManager : MonoBehaviour {
 	void initPlayer(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
+		player.GetComponent<Animator> ().SetBool("hasSoul", true);
 		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
 	}
@@ -114,6 +115,7 @@ public class levelManager : MonoBehaviour {
 	void possess(GameObject player, GameObject doll){
 		dollsUpdated = false;
 		//player.GetComponent<BoxCollider2D> ().enabled = true;
+		player.GetComponent<Animator> ().SetBool("hasSoul", false);
 		player.GetComponent<Controller2> ().ghostMode = false;
 		player.GetComponent<Controller2> ().enabled = false;
 		player.GetComponent<Rigidbody2D> ().isKinematic = true;

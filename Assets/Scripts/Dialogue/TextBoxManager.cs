@@ -52,6 +52,7 @@ public class TextBoxManager : MonoBehaviour
         if (isActive)
         {
            
+			player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
 			player.GetComponent<Controller2> ().enabled = false;
 			theText.text = textLines[currentLine];
 			if (Input.GetKeyDown(KeyCode.Z))
