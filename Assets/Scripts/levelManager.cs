@@ -44,6 +44,7 @@ public class levelManager : MonoBehaviour {
 	void initPlayer(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
+		player.GetComponent<Animator> ().enabled = true;
 		player.GetComponent<Animator> ().SetBool("hasSoul", true);
 		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
@@ -127,6 +128,10 @@ public class levelManager : MonoBehaviour {
 
         DollAudioManager.getInstance().playGhostSwitchSound();
         updateCamera();
+	}
+
+	void turnOffAnimator(){
+		player.GetComponent<Animator> ().enabled = false;
 	}
 
 

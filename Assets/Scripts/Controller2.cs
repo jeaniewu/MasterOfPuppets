@@ -34,10 +34,6 @@ public class Controller2 : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		anim.SetFloat("Y", -1); // face the front
 
-		if (this.CompareTag("Player")){
-			anim.SetBool ("hasSoul", true);
-		}
-
         //ghostModebg = GameObject.FindGameObjectWithTag("GhostMode");
         //ghostModebg.SetActive(false);
 
