@@ -135,7 +135,7 @@ public class Controller2 : MonoBehaviour {
 		}
 
 		hit = 
-			Physics2D.Raycast(this.transform.position + new Vector3(0.5f,0.5f,0), direction,1, 1 << LayerMask.NameToLayer ("Interactive"));
+			Physics2D.Raycast(this.transform.position + new Vector3(0.5f,0.5f,0), direction,2.5f, 1 << LayerMask.NameToLayer ("Interactive"));
 		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
 
 		if (hit.collider != null) {

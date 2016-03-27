@@ -53,10 +53,19 @@ public class TextBoxManager : MonoBehaviour
         {
            
 			player.GetComponent<Controller2> ().enabled = false;
-			theText.text = textLines[currentLine];
+			//Debug.Log ("currentLine: " + currentLine);
+			//Debug.Log ("Length: " + textLines.Length);
+			if (currentLine == textLines.Length) { //find better fix later?
+				DisableTextBox ();
+			}
+			if (currentLine < textLines.Length) {
+				Debug.Log ("rendering: " + currentLine);
+				theText.text = textLines [currentLine];
+			}
 			if (Input.GetKeyDown(KeyCode.Z))
 			{
 				currentLine += 1;
+				Debug.Log ("currentLine increased! now: " + currentLine);
 			}
 
 			if (currentLine >= endAtLine)
