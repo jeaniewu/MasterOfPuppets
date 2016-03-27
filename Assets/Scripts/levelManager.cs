@@ -124,7 +124,9 @@ public class levelManager : MonoBehaviour {
 		doll.tag = "Player";
 		notHighlight(doll);
 		initPlayer();
-		updateCamera();
+
+        DollAudioManager.getInstance().playGhostSwitchSound();
+        updateCamera();
 	}
 
 
