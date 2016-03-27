@@ -51,7 +51,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if (isActive)
         {
-           
+			DollAudioManager.getInstance().stopWalkingSound();
 			player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
 			player.GetComponent<Controller2> ().enabled = false;
 			theText.text = textLines[currentLine];
@@ -74,6 +74,7 @@ public class TextBoxManager : MonoBehaviour
         textBox.SetActive(true);
         isActive = true;
 		theText.text = textLines[currentLine];
+		DollAudioManager.getInstance().stopWalkingSound();
     }
 
     public void DisableTextBox()

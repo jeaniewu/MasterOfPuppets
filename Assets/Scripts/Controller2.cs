@@ -93,6 +93,7 @@ public class Controller2 : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
+		updateMovingSound(moveHorizontal, moveVertical);
 
 		//GetComponent<Rigidbody2D>().velocity = new Vector2(moveHorizontal * maxSpeed, moveVertical * maxSpeed);
 		
@@ -105,7 +106,7 @@ public class Controller2 : MonoBehaviour {
 				0.0f
 				);
 
-        updateMovingSound(moveHorizontal, moveVertical);
+        
 
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
@@ -139,8 +140,8 @@ public class Controller2 : MonoBehaviour {
 		}
 
 		hit = 
-			Physics2D.Raycast(this.transform.position + new Vector3(0.5f,0.5f,0), direction,1, 1 << LayerMask.NameToLayer ("Interactive"));
-		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
+			Physics2D.Raycast(this.transform.position, direction,2, 1 << LayerMask.NameToLayer ("Interactive"));
+		Debug.DrawRay (this.transform.position ,direction, Color.green,0.2f);
 
 		if (hit.collider != null) {
 			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
