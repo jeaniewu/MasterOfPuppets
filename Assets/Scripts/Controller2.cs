@@ -54,7 +54,7 @@ public class Controller2 : MonoBehaviour {
             {
                 interact();
                 
-                ghostModebg.SetActive(false);
+                //ghostModebg.SetActive(false);
             }
 		}
 
@@ -114,7 +114,7 @@ public class Controller2 : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
           
-            ghostModebg.SetActive(true);
+           // ghostModebg.SetActive(true);
          
 		}
 	}
