@@ -18,7 +18,7 @@ public class Controller2 : MonoBehaviour {
 	public float Vertical;
 
     Animator anim;
-
+    GameObject ghostModebg;
 
 	
 	//	public bool facingRight = true;
@@ -32,8 +32,10 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
-		
-	}
+        //ghostModebg = GameObject.FindGameObjectWithTag("GhostMode");
+        //ghostModebg.SetActive(false);
+
+    }
 	
 	void Update(){
 
@@ -48,8 +50,12 @@ public class Controller2 : MonoBehaviour {
 
 		if (!ghostMode) {
 			move ();
-			if (Input.GetKeyDown (KeyCode.Z))
-				interact ();
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                interact();
+                
+                //ghostModebg.SetActive(false);
+            }
 		}
 
         /*ANIMATION*/
@@ -97,6 +103,8 @@ public class Controller2 : MonoBehaviour {
 				0.0f
 				);
 
+        updateMovingSound(moveHorizontal, moveVertical);
+
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
 //		else if (moveHorizontal < 0 && facingRight)
@@ -107,6 +115,9 @@ public class Controller2 : MonoBehaviour {
 	void checkGhostMode() {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
+          
+           // ghostModebg.SetActive(true);
+         
 		}
 	}
 
@@ -136,6 +147,14 @@ public class Controller2 : MonoBehaviour {
 
 	}
 
+
+    private void updateMovingSound(float horizontal, float vertical) {
+        if (horizontal == 0 && vertical == 0) {
+            DollAudioManager.getInstance().stopWalkingSound();
+        } else {
+            DollAudioManager.getInstance().playWalkingSound();
+        }
+    }
 
 //	void Flip()
 //	{
