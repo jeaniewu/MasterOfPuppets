@@ -103,6 +103,8 @@ public class Controller2 : MonoBehaviour {
 				0.0f
 				);
 
+        updateMovingSound(moveHorizontal, moveVertical);
+
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
 //		else if (moveHorizontal < 0 && facingRight)
@@ -145,6 +147,14 @@ public class Controller2 : MonoBehaviour {
 
 	}
 
+
+    private void updateMovingSound(float horizontal, float vertical) {
+        if (horizontal == 0 && vertical == 0) {
+            DollAudioManager.getInstance().stopWalkingSound();
+        } else {
+            DollAudioManager.getInstance().playWalkingSound();
+        }
+    }
 
 //	void Flip()
 //	{
