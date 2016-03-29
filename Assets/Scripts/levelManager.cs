@@ -20,13 +20,12 @@ public class levelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isGhostMode ()) {
-			//player.GetComponent<BoxCollider2D> ().enabled = false;
+			DollAudioManager.getInstance().stopWalkingSound();
 			updateDolls (); //find the dolls you can possess
 			if (dolls.Length > 0)
 				selectPlayer ();
 
 		} else {
-			//player.GetComponent<BoxCollider2D> ().enabled = true;
 			dollsUpdated = false;
 			if (dolls.Length > 0)
 				notHighlight (dolls [Mathf.Abs(dollIndex)]);
@@ -79,14 +78,6 @@ public class levelManager : MonoBehaviour {
 			dollsUpdated = true;
 			dollIndex = 0;
 		}
-//		Collider2D[] circle = Physics2D.OverlapCircleAll (player.transform.position, player.radius, 1 << 8);
-//		container.Clear ();
-//
-//		for (int i = 0; i < circle.Length; i ++) {
-//			if(!container.Contains(circle [i].gameObject) && circle[i].gameObject.transform != player.transform)
-//				container.Add( circle [i].gameObject);
-//		}
-//		dolls = container.ToArray ();
 	}
 
 	// make the camera follow the current player
