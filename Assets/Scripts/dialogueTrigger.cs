@@ -15,7 +15,7 @@ public class dialogueTrigger : Trigger {
 	public bool loop;
 	// Use this for initialization
 	void Start () {
-		pointer = 0;
+		pointer = -1;
 		theTextBox = FindObjectOfType < TextBoxManager >();
 	}
 	
@@ -27,6 +27,14 @@ public class dialogueTrigger : Trigger {
 	public override void switchTrigger(){
 		//Debug.Log ("size: " + size);
 		//Debug.Log ("pointer: " + pointer);
+		if (loop) {
+			if (pointer < texts.Length) {
+				pointer ++;
+				pointer = pointer % (texts.Length);
+			}
+		} else  {
+			pointer++;
+		}
 
 		if (pointer < texts.Length) {
 			theTextBox.ReloadScript (texts[pointer]);
@@ -34,13 +42,7 @@ public class dialogueTrigger : Trigger {
 			theTextBox.endAtLine = endLine;
 			Invoke ("enable", 0.1f);
 		}
-		if (loop) {
-			if (pointer < texts.Length) {
-				pointer = (pointer + 1) % (texts.Length);
-			}
-		} else  {
-			pointer++;
-		}
+
 			
 	}
 
