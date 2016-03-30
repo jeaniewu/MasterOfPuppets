@@ -22,7 +22,7 @@ public class Controller2 : MonoBehaviour {
     public bool openSceneMode;
 
     public Animator anim;
-    GameObject ghostModebg;
+    public GameObject ghostModebg;
 
 
 	
