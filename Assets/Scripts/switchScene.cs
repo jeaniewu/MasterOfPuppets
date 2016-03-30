@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class switchScene : MonoBehaviour {
+public class switchScene : Trigger {
 
 	public string nextScene;
 
@@ -16,9 +16,8 @@ public class switchScene : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Player"))
-			SceneManager.LoadScene (nextScene);
+	public override void switchTrigger(){
+		SceneManager.LoadScene (nextScene);
 	}
 
 	void setNextScene(string s){
