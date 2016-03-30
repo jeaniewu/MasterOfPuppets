@@ -17,6 +17,8 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
+    public Animator anim;
+    public GameObject ghostModebg;
 
 	
 	//	public bool facingRight = true;
@@ -29,9 +31,13 @@ public class Controller2 : MonoBehaviour {
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
-		//anim = GetComponent<Animator>();
-		
-	}
+		anim = GetComponent<Animator>();
+		anim.SetFloat("Y", -1); // face the front
+
+        //ghostModebg = GameObject.FindGameObjectWithTag("GhostMode");
+        //ghostModebg.SetActive(false);
+
+    }
 	
 	void Update(){
 
@@ -46,17 +52,43 @@ public class Controller2 : MonoBehaviour {
 
 		if (!ghostMode) {
 			move ();
-			if (Input.GetKeyDown (KeyCode.Z))
+			if (Input.GetKeyDown (KeyCode.Z)) {
 				interact ();
-		} 
+                
+				//ghostModebg.SetActive(false);
+				if (!ghostMode)
+				{
+					ghostModebg.SetActive(false);
+				}
+				else if (ghostMode)
+				{
+					ghostModebg.SetActive(true);
+				}
+			}
 
-		if (Input.GetAxis ("Horizontal") != 0) {
-			Horizontal = Input.GetAxis ("Horizontal");
-			Vertical = 0;
-		}
-		else if (Input.GetAxis ("Vertical") != 0) {
-			Vertical = Input.GetAxis ("Vertical");
-			Horizontal = 0;
+			/*ANIMATION*/
+			float input_x = Input.GetAxisRaw ("Horizontal");
+			float input_y = Input.GetAxisRaw ("Vertical");
+			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
+			anim.SetBool ("isWalking", isWalking);
+			/*--------*/
+
+			if (isWalking) {
+				anim.SetFloat ("X", input_x);
+				anim.SetFloat ("Y", input_y);
+				if (Input.GetAxis ("Horizontal") != 0) {
+                
+					Horizontal = Input.GetAxis ("Horizontal");
+					Vertical = 0;
+				} else if (Input.GetAxis ("Vertical") != 0) {
+                
+					Vertical = Input.GetAxis ("Vertical");
+					Horizontal = 0;
+				}
+			}
+		} else {
+			DollAudioManager.getInstance().stopWalkingSound();
+			anim.SetBool ("isWalking", false);
 		}
 
 	}
@@ -67,6 +99,7 @@ public class Controller2 : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
+		updateMovingSound(moveHorizontal, moveVertical);
 
 		//GetComponent<Rigidbody2D>().velocity = new Vector2(moveHorizontal * maxSpeed, moveVertical * maxSpeed);
 		
@@ -78,17 +111,15 @@ public class Controller2 : MonoBehaviour {
 				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
 				0.0f
 				);
-
-//		if (moveHorizontal  > 0 && ! facingRight)
-//			Flip ();
-//		else if (moveHorizontal < 0 && facingRight)
-//			Flip ();
 		
 	}
 
 	void checkGhostMode() {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
+          
+           	//ghostModebg.SetActive(true);
+         
 		}
 	}
 
@@ -108,8 +139,8 @@ public class Controller2 : MonoBehaviour {
 		}
 
 		hit = 
-			Physics2D.Raycast(this.transform.position + new Vector3(0.5f,0.5f,0), direction,1, 1 << LayerMask.NameToLayer ("Interactive"));
-		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
+			Physics2D.Raycast(this.transform.position, direction,2, 1 << LayerMask.NameToLayer ("Interactive"));
+		Debug.DrawRay (this.transform.position ,direction, Color.green,0.2f);
 
 		if (hit.collider != null) {
 			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
@@ -119,12 +150,14 @@ public class Controller2 : MonoBehaviour {
 	}
 
 
-//	void Flip()
-//	{
-//		facingRight = ! facingRight;
-//		Vector3 theScale = transform.localScale;
-//		theScale.x *= -1;
-//		transform.localScale = theScale;
-//	}
+    private void updateMovingSound(float horizontal, float vertical) {
+        if (horizontal == 0 && vertical == 0) {
+            DollAudioManager.getInstance().stopWalkingSound();
+        } else {
+            DollAudioManager.getInstance().playWalkingSound();
+        }
+    }
+		
+		
 }
 
