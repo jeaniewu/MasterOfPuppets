@@ -24,7 +24,9 @@ public class buttonTrigger : Trigger {
 			if (!objects.Contains (other.gameObject)) 
 				objects.Add (other.gameObject);
 			switchTriggerOn ();
-			GetComponent<SpriteRenderer>().sprite = buttonPressed;
+            MechanicAudioManager.getInstance().playButtonSound();
+
+            GetComponent<SpriteRenderer>().sprite = buttonPressed;
 		}
 	}
 
