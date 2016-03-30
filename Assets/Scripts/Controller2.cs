@@ -18,7 +18,7 @@ public class Controller2 : MonoBehaviour {
 	public float Vertical;
 
     public Animator anim;
-    GameObject ghostModebg;
+    public GameObject ghostModebg;
 
 	
 	//	public bool facingRight = true;
