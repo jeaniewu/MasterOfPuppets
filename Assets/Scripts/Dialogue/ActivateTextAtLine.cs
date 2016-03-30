@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
@@ -12,9 +13,15 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     public bool destroyWhenActivated;
 
-	// Use this for initialization
-	void Start () {
+   
+    public string message;
 
+
+    // Use this for initialization
+    void Start () {
+
+       
+   
         theTextBox = FindObjectOfType < TextBoxManager >();
 	
 	}
@@ -23,6 +30,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 	void Update () {
 	
 	}
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
