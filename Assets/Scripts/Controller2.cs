@@ -17,9 +17,13 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
-    Animator anim;
-    public GameObject ghostModebg;
+
+  
     public bool openSceneMode;
+
+    public Animator anim;
+    GameObject ghostModebg;
+
 
 	
 	//	public bool facingRight = true;
@@ -33,10 +37,17 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
+
         if (openSceneMode)
         {
             ghostModebg.SetActive(false);
         }
+
+
+		anim.SetFloat("Y", -1); // face the front
+
+        //ghostModebg = GameObject.FindGameObjectWithTag("GhostMode");
+        //ghostModebg.SetActive(false);
 
 
     }
@@ -103,6 +114,7 @@ public class Controller2 : MonoBehaviour {
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
+		updateMovingSound(moveHorizontal, moveVertical);
 
 		//GetComponent<Rigidbody2D>().velocity = new Vector2(moveHorizontal * maxSpeed, moveVertical * maxSpeed);
 		
@@ -114,6 +126,8 @@ public class Controller2 : MonoBehaviour {
 				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
 				0.0f
 				);
+
+        
 
 //		if (moveHorizontal  > 0 && ! facingRight)
 //			Flip ();
@@ -151,8 +165,8 @@ public class Controller2 : MonoBehaviour {
 		}
 
 		hit = 
-			Physics2D.Raycast(this.transform.position + new Vector3(0.5f,0.5f,0), direction,1, 1 << LayerMask.NameToLayer ("Interactive"));
-		Debug.DrawRay (this.transform.position + new Vector3(0.5f,0.5f,0),direction, Color.green,0.2f);
+			Physics2D.Raycast(this.transform.position, direction,2, 1 << LayerMask.NameToLayer ("Interactive"));
+		Debug.DrawRay (this.transform.position ,direction, Color.green,0.2f);
 
 		if (hit.collider != null) {
 			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
@@ -161,6 +175,14 @@ public class Controller2 : MonoBehaviour {
 
 	}
 
+
+    private void updateMovingSound(float horizontal, float vertical) {
+        if (horizontal == 0 && vertical == 0) {
+            DollAudioManager.getInstance().stopWalkingSound();
+        } else {
+            DollAudioManager.getInstance().playWalkingSound();
+        }
+    }
 
 //	void Flip()
 //	{
