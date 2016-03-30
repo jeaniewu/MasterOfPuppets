@@ -17,13 +17,17 @@ public class receiveSignalJail : receiveSignal {
 		if(GetComponent<Collider2D>() != null){
 			GetComponent<Collider2D>().enabled = false;
 		}
-		GetComponent<Renderer>().enabled = false;
+		if (GetComponent<Renderer> () != null) {
+			GetComponent<Renderer> ().enabled = false;
+		}
 	}
 
 	public override void deactivate(){
 		if (GetComponent<Collider2D> () != null) {
 			GetComponent<Collider2D> ().enabled = true;
 		}
-		GetComponent<Renderer>().enabled = true;
+		if (GetComponent<Renderer> () != null) {
+			GetComponent<Renderer> ().enabled = true;
+		}
 	}
 }

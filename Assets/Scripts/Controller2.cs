@@ -56,6 +56,14 @@ public class Controller2 : MonoBehaviour {
 				interact ();
                 
 				//ghostModebg.SetActive(false);
+				if (!ghostMode)
+				{
+					ghostModebg.SetActive(false);
+				}
+				else if (ghostMode)
+				{
+					ghostModebg.SetActive(true);
+				}
 			}
 
 			/*ANIMATION*/
@@ -110,7 +118,7 @@ public class Controller2 : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
           
-           // ghostModebg.SetActive(true);
+           	//ghostModebg.SetActive(true);
          
 		}
 	}
@@ -149,6 +157,7 @@ public class Controller2 : MonoBehaviour {
             DollAudioManager.getInstance().playWalkingSound();
         }
     }
+		
 		
 }
 
