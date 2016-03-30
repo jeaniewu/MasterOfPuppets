@@ -17,8 +17,13 @@ public class Controller2 : MonoBehaviour {
 	public float Horizontal;
 	public float Vertical;
 
+
+  
+    public bool openSceneMode;
+
     public Animator anim;
     GameObject ghostModebg;
+
 
 	
 	//	public bool facingRight = true;
@@ -32,10 +37,18 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
+
+        if (openSceneMode)
+        {
+            ghostModebg.SetActive(false);
+        }
+
+
 		anim.SetFloat("Y", -1); // face the front
 
         //ghostModebg = GameObject.FindGameObjectWithTag("GhostMode");
         //ghostModebg.SetActive(false);
+
 
     }
 	
@@ -55,9 +68,17 @@ public class Controller2 : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 interact();
-                
-                //ghostModebg.SetActive(false);
+
+                if (!ghostMode)
+                {
+                    ghostModebg.SetActive(false);
+                }
+                else if (ghostMode)
+                {
+                    ghostModebg.SetActive(true);
+                }
             }
+
 		}
 
         /*ANIMATION*/
@@ -65,7 +86,7 @@ public class Controller2 : MonoBehaviour {
         float input_y = Input.GetAxisRaw("Vertical");
         bool isWalking = (Mathf.Abs(input_x) + Mathf.Abs(input_y)) > 0;
         anim.SetBool("isWalking", isWalking);
-        /*--------*/
+        /*--------*/    
 
         if (isWalking)
         {
@@ -118,11 +139,15 @@ public class Controller2 : MonoBehaviour {
 	void checkGhostMode() {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
-          
-           // ghostModebg.SetActive(true);
-         
-		}
-	}
+            ghostModebg.SetActive(true);
+      
+        }
+        else if (!ghostMode)
+        {
+            ghostModebg.SetActive(false);
+        }
+
+    }
 
 	void interact(){
 
