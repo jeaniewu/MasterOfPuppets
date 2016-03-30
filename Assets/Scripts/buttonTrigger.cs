@@ -7,9 +7,11 @@ public class buttonTrigger : Trigger {
 
 	public List<GameObject> objects = new List<GameObject> ();
 
+	public Sprite buttonPressed;
+	public Sprite buttonUnpressed;
+
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
@@ -22,7 +24,7 @@ public class buttonTrigger : Trigger {
 			if (!objects.Contains (other.gameObject)) 
 				objects.Add (other.gameObject);
 			switchTriggerOn ();
-			Debug.Log ("On");
+			GetComponent<SpriteRenderer>().sprite = buttonPressed;
 		}
 	}
 
@@ -39,7 +41,7 @@ public class buttonTrigger : Trigger {
 			objects.Remove (other.gameObject);
 			if (objects.Count == 0) {
 				switchTriggerOff ();
-				Debug.Log ("Off");
+				GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
 			}
 		}
 	}

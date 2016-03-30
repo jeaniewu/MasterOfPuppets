@@ -18,7 +18,7 @@ public class Controller2 : MonoBehaviour {
 	public float Vertical;
 
     public Animator anim;
-    GameObject ghostModebg;
+    public GameObject ghostModebg;
 
 	
 	//	public bool facingRight = true;
@@ -52,38 +52,44 @@ public class Controller2 : MonoBehaviour {
 
 		if (!ghostMode) {
 			move ();
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                interact();
+			if (Input.GetKeyDown (KeyCode.Z)) {
+				interact ();
                 
-                //ghostModebg.SetActive(false);
-            }
+				//ghostModebg.SetActive(false);
+				if (!ghostMode)
+				{
+					ghostModebg.SetActive(false);
+				}
+				else if (ghostMode)
+				{
+					ghostModebg.SetActive(true);
+				}
+			}
+
+			/*ANIMATION*/
+			float input_x = Input.GetAxisRaw ("Horizontal");
+			float input_y = Input.GetAxisRaw ("Vertical");
+			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
+			anim.SetBool ("isWalking", isWalking);
+			/*--------*/
+
+			if (isWalking) {
+				anim.SetFloat ("X", input_x);
+				anim.SetFloat ("Y", input_y);
+				if (Input.GetAxis ("Horizontal") != 0) {
+                
+					Horizontal = Input.GetAxis ("Horizontal");
+					Vertical = 0;
+				} else if (Input.GetAxis ("Vertical") != 0) {
+                
+					Vertical = Input.GetAxis ("Vertical");
+					Horizontal = 0;
+				}
+			}
+		} else {
+			DollAudioManager.getInstance().stopWalkingSound();
+			anim.SetBool ("isWalking", false);
 		}
-
-        /*ANIMATION*/
-        float input_x = Input.GetAxisRaw("Horizontal");
-        float input_y = Input.GetAxisRaw("Vertical");
-        bool isWalking = (Mathf.Abs(input_x) + Mathf.Abs(input_y)) > 0;
-        anim.SetBool("isWalking", isWalking);
-        /*--------*/
-
-        if (isWalking)
-        {
-            anim.SetFloat("X", input_x);
-            anim.SetFloat("Y", input_y);
-            if (Input.GetAxis("Horizontal") != 0)
-            {
-                
-                Horizontal = Input.GetAxis("Horizontal");
-                Vertical = 0;
-            }
-            else if (Input.GetAxis("Vertical") != 0)
-            {
-                
-                Vertical = Input.GetAxis("Vertical");
-                Horizontal = 0;
-            }
-        }
 
 	}
 
@@ -105,13 +111,6 @@ public class Controller2 : MonoBehaviour {
 				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
 				0.0f
 				);
-
-        
-
-//		if (moveHorizontal  > 0 && ! facingRight)
-//			Flip ();
-//		else if (moveHorizontal < 0 && facingRight)
-//			Flip ();
 		
 	}
 
@@ -119,7 +118,7 @@ public class Controller2 : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X)){
 			ghostMode = !ghostMode;
           
-           // ghostModebg.SetActive(true);
+           	//ghostModebg.SetActive(true);
          
 		}
 	}
@@ -158,13 +157,7 @@ public class Controller2 : MonoBehaviour {
             DollAudioManager.getInstance().playWalkingSound();
         }
     }
-
-//	void Flip()
-//	{
-//		facingRight = ! facingRight;
-//		Vector3 theScale = transform.localScale;
-//		theScale.x *= -1;
-//		transform.localScale = theScale;
-//	}
+		
+		
 }
 
