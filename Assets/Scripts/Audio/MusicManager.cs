@@ -56,6 +56,10 @@ public class MusicManager : AbstractAudioManager {
         setTrackToFadeIn(mainTheme, mainThemeVolume);
     }
 
+    public void startMechanicalTheme() {
+        setTrackToFadeIn(mechanicalTheme, mechanicalThemeVolume);
+    }
+
     //Fades in a song by the speed
     private void fadeIn() {
         isFadingIn = true;
