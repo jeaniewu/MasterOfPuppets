@@ -12,6 +12,8 @@ public class levelManager : MonoBehaviour {
 	private List<GameObject> container = new List<GameObject> ();
 	private bool dollsUpdated = false; 
 
+	public GameObject TextBoxManager;
+
 	void Start () {
 		initPlayer ();
 
@@ -47,6 +49,10 @@ public class levelManager : MonoBehaviour {
 		player.GetComponent<Animator> ().SetBool("hasSoul", true);
 		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
+
+		if (TextBoxManager != null) {
+			TextBoxManager.GetComponent<TextBoxManager> ().player = player;
+		}
 	}
 
 	// update dolls array with dolls that you can possess
