@@ -5,22 +5,22 @@ using UnityEngine.SceneManagement;
 public class switchScene : Trigger {
 
 	public string nextScene;
+    public bool isOpen;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override void switchTrigger() {
 
-	public override void switchTrigger(){
-		SceneManager.LoadScene (nextScene);
-	}
+        if (isOpen) {
+            SceneManager.LoadScene(nextScene);
+        }
+        isOn = false;
+        Debug.Log("IS OPEN: " + isOpen);
+    }
 
 	void setNextScene(string s){
 		nextScene = s;
 	}
+
+    public void setOpen(bool open) {
+        isOpen = open;
+    }
 }
