@@ -22,7 +22,5 @@ public class receiveSignalLockedDoor : receiveSignal {
     public override void deactivate() {
         animator.SetBool("open", false);
         doorToNextLevel.setOpen(false);
-
-        Debug.Log("DIACTIVATED BIATCH!!!");
     }
 }

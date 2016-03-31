@@ -115,7 +115,7 @@ public class Controller2 : MonoBehaviour {
 	}
 
 	void checkGhostMode() {
-		if (Input.GetKeyDown (KeyCode.X)){
+		if (Input.GetKeyDown (KeyCode.X) && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
 			ghostMode = !ghostMode;
           
            	//ghostModebg.SetActive(true);
