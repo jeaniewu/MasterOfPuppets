@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class dialogueTrigger : Trigger {
+public class dialogueTrigger : Interact {
 
 	//public TextAsset theText;
 
@@ -24,7 +24,7 @@ public class dialogueTrigger : Trigger {
 	
 	}
 
-	public override void switchTrigger(){
+	public override void interact(){
 		//Debug.Log ("size: " + size);
 		//Debug.Log ("pointer: " + pointer);
 		if (loop) {

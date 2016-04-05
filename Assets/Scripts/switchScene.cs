@@ -2,18 +2,15 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class switchScene : Trigger {
+public class switchScene : Interact {
 
 	public string nextScene;
     public bool isOpen;
 
-    public override void switchTrigger() {
-
-        if (isOpen) {
-            SceneManager.LoadScene(nextScene);
-        }
-        isOn = false;
-        Debug.Log("IS OPEN: " + isOpen);
+    public override void interact() {
+		if (isOpen) {
+			SceneManager.LoadScene (nextScene);
+		}
     }
 
 	void setNextScene(string s){

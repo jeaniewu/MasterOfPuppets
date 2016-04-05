@@ -15,7 +15,7 @@ public class receiveSignalLockedDoor : receiveSignal {
 
     public override void activate() {
         animator.SetBool("open", true);
-        doorToNextLevel.setOpen(true);
+		doorToNextLevel.setOpen(true);
         
     }
 

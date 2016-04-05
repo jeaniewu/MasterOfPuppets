@@ -41,7 +41,7 @@ public class levelManager : MonoBehaviour {
 		return player.GetComponent<Controller2>().ghostMode;
 	}
 
-	// find which game object is the player
+	// find which game object is the player, update the environment
 	void initPlayer(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;

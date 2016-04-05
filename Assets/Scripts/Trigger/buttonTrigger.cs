@@ -29,14 +29,7 @@ public class buttonTrigger : Trigger {
             GetComponent<SpriteRenderer>().sprite = buttonPressed;
 		}
 	}
-
-//	void OnTriggerStay2D(Collider2D other) {
-//		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
-//			if (other.gameObject.GetComponent<dollType> ().type.Equals (specialDoll))
-//				Debug.Log ("On");
-//				switchTriggerOn ();
-//		}
-//	}
+		
 
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {

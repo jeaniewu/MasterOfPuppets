@@ -19,11 +19,6 @@ public class Controller2 : MonoBehaviour {
 
     public Animator anim;
     public GameObject ghostModebg;
-
-	
-	//	public bool facingRight = true;
-//	
-//	Animator anim;
 	
 	// Use this for initialization
 	void Start () {
@@ -45,16 +40,10 @@ public class Controller2 : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.R))
 			SceneManager.LoadScene (Application.loadedLevel);
 
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-
 		if (!ghostMode) {
-			move ();
 			if (Input.GetKeyDown (KeyCode.Z)) {
-				interact ();
-                
+				startInteraction ();
+
 				//ghostModebg.SetActive(false);
 				if (!ghostMode)
 				{
@@ -69,6 +58,7 @@ public class Controller2 : MonoBehaviour {
 			/*ANIMATION*/
 			float input_x = Input.GetAxisRaw ("Horizontal");
 			float input_y = Input.GetAxisRaw ("Vertical");
+			move (input_x,input_y);
 			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
 			anim.SetBool ("isWalking", isWalking);
 			/*--------*/
@@ -76,15 +66,18 @@ public class Controller2 : MonoBehaviour {
 			if (isWalking) {
 				anim.SetFloat ("X", input_x);
 				anim.SetFloat ("Y", input_y);
+				DollAudioManager.getInstance ().playWalkingSound ();
 				if (Input.GetAxis ("Horizontal") != 0) {
-                
+
 					Horizontal = Input.GetAxis ("Horizontal");
 					Vertical = 0;
 				} else if (Input.GetAxis ("Vertical") != 0) {
-                
+
 					Vertical = Input.GetAxis ("Vertical");
 					Horizontal = 0;
 				}
+			} else {
+				DollAudioManager.getInstance().stopWalkingSound();
 			}
 		} else {
 			DollAudioManager.getInstance().stopWalkingSound();
@@ -92,16 +85,10 @@ public class Controller2 : MonoBehaviour {
 		}
 
 	}
+		
 
-	void move()
+	void move(float moveHorizontal, float moveVertical)
 	{
-
-
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		updateMovingSound(moveHorizontal, moveVertical);
-
-		//GetComponent<Rigidbody2D>().velocity = new Vector2(moveHorizontal * maxSpeed, moveVertical * maxSpeed);
 		
 		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
 		
@@ -123,15 +110,15 @@ public class Controller2 : MonoBehaviour {
 		}
 	}
 
-	void interact(){
+	void startInteraction(){
 
 
 		var direction = new Vector3 (0, 0, 0);
 
-		if (Horizontal > 0) {
-			direction = new Vector3 (1, 0, 0);
+		if (Horizontal> 0) {
+			direction = new Vector3 (0.8f, 0, 0);
 		} else if (Horizontal < 0) {
-			direction = new Vector3 (-1, 0, 0);
+			direction = new Vector3 (-0.8f, 0, 0);
 		} else if (Vertical > 0) {
 			direction = new Vector3 (0, 1, 0);
 		} else if (Vertical < 0) {
@@ -139,24 +126,15 @@ public class Controller2 : MonoBehaviour {
 		}
 
 		hit = 
-			Physics2D.Raycast(this.transform.position, direction,2, 1 << LayerMask.NameToLayer ("Interactive"));
-		Debug.DrawRay (this.transform.position ,direction, Color.green,0.2f);
+			Physics2D.Raycast(this.transform.position, direction,1.5f, 1 << LayerMask.NameToLayer ("Interactive"));
+		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
 
 		if (hit.collider != null) {
-			hit.collider.gameObject.GetComponent<Trigger> ().switchTrigger ();
+			hit.collider.gameObject.GetComponent<Interact> ().interact ();
 		}
 
 
 	}
-
-
-    private void updateMovingSound(float horizontal, float vertical) {
-        if (horizontal == 0 && vertical == 0) {
-            DollAudioManager.getInstance().stopWalkingSound();
-        } else {
-            DollAudioManager.getInstance().playWalkingSound();
-        }
-    }
 		
 		
 }

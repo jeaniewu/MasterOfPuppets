@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Trigger : MonoBehaviour {
+public class Trigger : Interact {
 
 	public GameObject[] toSwitches;
 
@@ -31,6 +31,10 @@ public class Trigger : MonoBehaviour {
 		Debug.Log ("off");
 		foreach (GameObject toSwitch in toSwitches)
 			toSwitch.GetComponent<receiveSignal>().deactivate ();
+	}
+
+	public override void interact(){
+		switchTrigger ();
 	}
 
 	public virtual void switchTrigger(){
