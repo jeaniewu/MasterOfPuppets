@@ -13,12 +13,16 @@ public class levelManager : MonoBehaviour {
 	private bool dollsUpdated = false; 
 
 	public GameObject TextBoxManager;
-    public GameObject ghostModebg;
-    Transform transformDoll;
+    //public GameObject ghostModebg;
 
 	void Start () {
 		initPlayer ();
 
+	}
+
+	void setGhostModebg(bool status){
+		GameObject background = player.transform.Find("GhostMode").gameObject;
+		background.GetComponent<SpriteRenderer> ().enabled = status;
 	}
 	
 	// Update is called once per frame
@@ -26,17 +30,14 @@ public class levelManager : MonoBehaviour {
 		if (isGhostMode ()) {
 			DollAudioManager.getInstance().stopWalkingSound();
 			updateDolls (); //find the dolls you can possess
-            ghostModebg.SetActive(true);
+			setGhostModebg(true);
 			if (dolls.Length > 0)
 				selectPlayer ();
 
 		}
-        else if (!isGhostMode())
-        {
-            ghostModebg.SetActive(false);
-        }
         else {
 			dollsUpdated = false;
+			setGhostModebg(false);
 			if (dolls.Length > 0)
 				notHighlight (dolls [Mathf.Abs(dollIndex)]);
 		}
@@ -47,10 +48,9 @@ public class levelManager : MonoBehaviour {
 	bool isGhostMode ()
 	{
 		return player.GetComponent<Controller2>().ghostMode;
-       // transform.doll
 	}
 
-	// find which game object is the player
+	// find which game object is the player, update the environment
 	void initPlayer(){
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
@@ -132,10 +132,11 @@ public class levelManager : MonoBehaviour {
 		player.layer = LayerMask.NameToLayer("Doll");
 		player.tag = "Doll";
 		doll.tag = "Player";
-		notHighlight(doll);
-        ghostModebg.SetActive(false);
-        initPlayer();
 
+		notHighlight(doll);
+		setGhostModebg(false);
+
+        initPlayer();
 
         DollAudioManager.getInstance().playGhostSwitchSound();
         updateCamera();

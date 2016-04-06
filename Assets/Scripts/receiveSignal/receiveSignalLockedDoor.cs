@@ -15,14 +15,12 @@ public class receiveSignalLockedDoor : receiveSignal {
 
     public override void activate() {
         animator.SetBool("open", true);
-        doorToNextLevel.setOpen(true);
+		doorToNextLevel.setOpen(true);
         
     }
 
     public override void deactivate() {
         animator.SetBool("open", false);
         doorToNextLevel.setOpen(false);
-
-        Debug.Log("DIACTIVATED BIATCH!!!");
     }
 }
