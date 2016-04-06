@@ -13,6 +13,8 @@ public class levelManager : MonoBehaviour {
 	private bool dollsUpdated = false; 
 
 	public GameObject TextBoxManager;
+    public GameObject ghostModebg;
+    Transform transformDoll;
 
 	void Start () {
 		initPlayer ();
@@ -24,10 +26,16 @@ public class levelManager : MonoBehaviour {
 		if (isGhostMode ()) {
 			DollAudioManager.getInstance().stopWalkingSound();
 			updateDolls (); //find the dolls you can possess
+            ghostModebg.SetActive(true);
 			if (dolls.Length > 0)
 				selectPlayer ();
 
-		} else {
+		}
+        else if (!isGhostMode())
+        {
+            ghostModebg.SetActive(false);
+        }
+        else {
 			dollsUpdated = false;
 			if (dolls.Length > 0)
 				notHighlight (dolls [Mathf.Abs(dollIndex)]);
@@ -39,6 +47,7 @@ public class levelManager : MonoBehaviour {
 	bool isGhostMode ()
 	{
 		return player.GetComponent<Controller2>().ghostMode;
+       // transform.doll
 	}
 
 	// find which game object is the player, update the environment
@@ -75,6 +84,7 @@ public class levelManager : MonoBehaviour {
 							break;
 						if (!container.Contains (hit.collider.gameObject) && hit.transform != player.transform)
 							container.Add (hit.collider.gameObject); //add doll to the list
+                            
 					}
 				}
 			}
@@ -112,16 +122,20 @@ public class levelManager : MonoBehaviour {
 	// switch control of the player to the doll, as well as update the environment
 	void possess(GameObject player, GameObject doll){
 		dollsUpdated = false;
-		//player.GetComponent<BoxCollider2D> ().enabled = true;
+        //player.GetComponent<BoxCollider2D> ().enabled = true;
+       
 		player.GetComponent<Animator> ().SetBool("hasSoul", false);
 		player.GetComponent<Controller2> ().ghostMode = false;
+    
 		player.GetComponent<Controller2> ().enabled = false;
 		player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.layer = LayerMask.NameToLayer("Doll");
 		player.tag = "Doll";
 		doll.tag = "Player";
 		notHighlight(doll);
-		initPlayer();
+        ghostModebg.SetActive(false);
+        initPlayer();
+
 
         DollAudioManager.getInstance().playGhostSwitchSound();
         updateCamera();
