@@ -14,12 +14,7 @@ public class Controller2 : MonoBehaviour {
 
 	public RaycastHit2D hit;
 
-	public float Horizontal;
-	public float Vertical;
-
     public Animator anim;
-
-    public bool isOpenMode;
 	
 	// Use this for initialization
 	void Start () {
@@ -57,15 +52,6 @@ public class Controller2 : MonoBehaviour {
 				anim.SetFloat ("X", input_x);
 				anim.SetFloat ("Y", input_y);
 				DollAudioManager.getInstance ().playWalkingSound ();
-				if (Input.GetAxis ("Horizontal") != 0) {
-
-					Horizontal = Input.GetAxis ("Horizontal");
-					Vertical = 0;
-				} else if (Input.GetAxis ("Vertical") != 0) {
-
-					Vertical = Input.GetAxis ("Vertical");
-					Horizontal = 0;
-				}
 			} else {
 				DollAudioManager.getInstance().stopWalkingSound();
 			}
@@ -97,15 +83,15 @@ public class Controller2 : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.X) && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
 			ghostMode = !ghostMode;
-          
-           	//ghostModebg.SetActive(true);
          
 		}
 	}
 
-
+	//whenever player press Z
 	void startInteraction(){
 
+		float Horizontal = anim.GetFloat ("X");
+		float Vertical = anim.GetFloat ("Y");
 
 		var direction = new Vector3 (0, 0, 0);
 
