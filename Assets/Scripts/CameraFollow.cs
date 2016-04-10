@@ -43,12 +43,18 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-		if (!player.GetComponent<Controller2> ().ghostMode) {
+		var controller2 = player.GetComponent<Controller2> ();
+		var animator = player.GetComponent<Animator> ();
+
+		if (!controller2.ghostMode) {
 			if (Input.GetKey (KeyCode.C)) {
-				player.GetComponent<Controller2> ().enabled = false;
+				controller2.enabled = false;
+				animator.enabled = false;
+				DollAudioManager.getInstance().stopWalkingSound();
 				moveCamera ();
 			} else {
-				player.GetComponent<Controller2> ().enabled = true;
+				controller2.enabled = true;
+				animator.enabled = true;
 				TrackPlayer ();
 			}
 		} 

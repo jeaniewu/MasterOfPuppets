@@ -15,6 +15,7 @@ public class Controller2 : MonoBehaviour {
 	public RaycastHit2D hit;
 
     public Animator anim;
+	private Rigidbody2D rigidbody2D2;
 	
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
+		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
 
     }
@@ -70,10 +72,11 @@ public class Controller2 : MonoBehaviour {
 		
 		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
 		
-		GetComponent<Rigidbody2D>().position = new Vector3 
+
+		rigidbody2D2.position = new Vector3 
 			(
-				Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, boundary.xMin, boundary.xMax), 
-				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
+				Mathf.Clamp(rigidbody2D2.position.x, boundary.xMin, boundary.xMax), 
+				Mathf.Clamp(rigidbody2D2.position.y, boundary.yMin, boundary.yMax),
 				0.0f
 				);
 		
