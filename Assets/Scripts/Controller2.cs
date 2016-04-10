@@ -109,7 +109,7 @@ public class Controller2 : MonoBehaviour {
 			Physics2D.Raycast(this.transform.position, direction,1.5f, 1 << LayerMask.NameToLayer ("Interactive"));
 		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
 
-		if (hit.collider != null) {
+		if (hit.collider != null && hit.collider.name != "wall") {
 			hit.collider.gameObject.GetComponent<Interact> ().interact ();
 		}
 
