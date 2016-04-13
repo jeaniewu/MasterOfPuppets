@@ -43,14 +43,21 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-		if (Input.GetKey (KeyCode.C)) {
-			player.GetComponent<Controller2> ().enabled = false;
-			moveCamera ();
-		} else {
-			player.GetComponent<Controller2> ().enabled = true;
-			TrackPlayer();
-		}
+		var controller2 = player.GetComponent<Controller2> ();
+		var animator = player.GetComponent<Animator> ();
 
+		if (!controller2.ghostMode) {
+			if (Input.GetKey (KeyCode.C)) {
+				controller2.enabled = false;
+				animator.enabled = false;
+				DollAudioManager.getInstance().stopWalkingSound();
+				moveCamera ();
+			} else {
+				controller2.enabled = true;
+				animator.enabled = true;
+				TrackPlayer ();
+			}
+		} 
 
     }
 
@@ -105,6 +112,12 @@ public class CameraFollow : MonoBehaviour
 		Debug.Log (moveHorizontal);
 		Debug.Log (moveVertical);
 
+	}
+
+	public void ghostModeSelect(Vector3 position){
+		float targetX = Mathf.Lerp(transform.position.x, position.x, xSmooth*Time.deltaTime);
+		float targetY = Mathf.Lerp(transform.position.y, position.y, ySmooth*Time.deltaTime);
+		transform.position = new Vector3(targetX, targetY, transform.position.z);
 	}
 }
 

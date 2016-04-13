@@ -14,12 +14,8 @@ public class Controller2 : MonoBehaviour {
 
 	public RaycastHit2D hit;
 
-	public float Horizontal;
-	public float Vertical;
-
     public Animator anim;
-
-    public bool isOpenMode;
+	private Rigidbody2D rigidbody2D2;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +24,7 @@ public class Controller2 : MonoBehaviour {
 		boundary = levelManager.GetComponent<DollManager>().boundary;
 		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
 		anim = GetComponent<Animator>();
+		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
 
     }
@@ -57,15 +54,6 @@ public class Controller2 : MonoBehaviour {
 				anim.SetFloat ("X", input_x);
 				anim.SetFloat ("Y", input_y);
 				DollAudioManager.getInstance ().playWalkingSound ();
-				if (Input.GetAxis ("Horizontal") != 0) {
-
-					Horizontal = Input.GetAxis ("Horizontal");
-					Vertical = 0;
-				} else if (Input.GetAxis ("Vertical") != 0) {
-
-					Vertical = Input.GetAxis ("Vertical");
-					Horizontal = 0;
-				}
 			} else {
 				DollAudioManager.getInstance().stopWalkingSound();
 			}
@@ -84,10 +72,11 @@ public class Controller2 : MonoBehaviour {
 		
 		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
 		
-		GetComponent<Rigidbody2D>().position = new Vector3 
+
+		rigidbody2D2.position = new Vector3 
 			(
-				Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, boundary.xMin, boundary.xMax), 
-				Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax),
+				Mathf.Clamp(rigidbody2D2.position.x, boundary.xMin, boundary.xMax), 
+				Mathf.Clamp(rigidbody2D2.position.y, boundary.yMin, boundary.yMax),
 				0.0f
 				);
 		
@@ -97,15 +86,15 @@ public class Controller2 : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.X) && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
 			ghostMode = !ghostMode;
-          
-           	//ghostModebg.SetActive(true);
          
 		}
 	}
 
-
+	//whenever player press Z
 	void startInteraction(){
 
+		float Horizontal = anim.GetFloat ("X");
+		float Vertical = anim.GetFloat ("Y");
 
 		var direction = new Vector3 (0, 0, 0);
 
@@ -123,7 +112,7 @@ public class Controller2 : MonoBehaviour {
 			Physics2D.Raycast(this.transform.position, direction,1.5f, 1 << LayerMask.NameToLayer ("Interactive"));
 		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
 
-		if (hit.collider != null) {
+		if (hit.collider != null && hit.collider.name != "wall") {
 			hit.collider.gameObject.GetComponent<Interact> ().interact ();
 		}
 

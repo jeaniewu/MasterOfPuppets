@@ -102,17 +102,24 @@ public class levelManager : MonoBehaviour {
 		Camera.main.GetComponent<CameraFollow> ().findPlayer ();
 	}
 
+	void moveCamera(Vector3 position){
+		Camera.main.GetComponent<CameraFollow> ().ghostModeSelect (position);
+	}
+
 	// selecting player from the array 'dolls'
 	void selectPlayer(){
 		highlight(dolls[Mathf.Abs(dollIndex)]);
+		moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			notHighlight(dolls[Mathf.Abs(dollIndex)]);
 			dollIndex= (dollIndex - 1) % dolls.Length;
 			highlight(dolls[Mathf.Abs(dollIndex)]);
+			moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
 		} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
 			notHighlight(dolls[Mathf.Abs(dollIndex)]);
 			dollIndex= (dollIndex + 1) % dolls.Length;
 			highlight(dolls[Mathf.Abs(dollIndex)]);
+			moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
 		} else if (Input.GetKeyDown (KeyCode.Z)){
 			possess(player,dolls[Mathf.Abs(dollIndex)]);
 		}
