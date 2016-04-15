@@ -120,7 +120,7 @@ public class levelManager : MonoBehaviour {
 			dollIndex= (dollIndex + 1) % dolls.Length;
 			highlight(dolls[Mathf.Abs(dollIndex)]);
 			moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
-		} else if (Input.GetKeyDown (KeyCode.Z)){
+		} else if (Input.GetButtonDown("Possess")){
 			possess(player,dolls[Mathf.Abs(dollIndex)]);
 		}
 
