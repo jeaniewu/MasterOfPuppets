@@ -25,7 +25,8 @@ public class Ditch : MonoBehaviour {
 
 	IEnumerator Fall() {
 		while (player.transform.localScale.x >= 0) {
-			player.transform.Rotate (new Vector3(0,0,30));
+			player.GetComponent<Controller2> ().enabled = false;
+			player.transform.Rotate (new Vector3(0,0,20));
 			player.transform.localScale -= new Vector3(0.05F, 0.05F, 0);
 			yield return null;
 		}
