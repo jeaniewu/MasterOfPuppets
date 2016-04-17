@@ -32,11 +32,11 @@ public class Controller2 : MonoBehaviour {
 	void Update(){
 
 		checkGhostMode ();
-		if (Input.GetKeyDown (KeyCode.R))
+		if (Input.GetButton("Restart"))
 			SceneManager.LoadScene (Application.loadedLevel);
 
 		if (!ghostMode) {
-			if (Input.GetKeyDown (KeyCode.Z)) {
+			if (Input.GetButtonDown ("Interact")) {
 				startInteraction ();
 
 
@@ -84,7 +84,7 @@ public class Controller2 : MonoBehaviour {
 
 	void checkGhostMode() {
 
-		if (Input.GetKeyDown (KeyCode.X) && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
+		if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
 			ghostMode = !ghostMode;
          
 		}

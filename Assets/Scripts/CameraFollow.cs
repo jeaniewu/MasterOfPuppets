@@ -12,8 +12,6 @@ public class CameraFollow : MonoBehaviour
     public float ySmooth = 8f; // How smoothly the camera catches up with it's target movement in the y axis.
     public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
-	public float xMovementBound;
-	public float yMovementBound;
 
     private Transform m_Player; // Reference to the player's transform.
 	public GameObject player;
@@ -96,7 +94,6 @@ public class CameraFollow : MonoBehaviour
 	}
 
 	private void moveCamera(){
-		Debug.Log ("move");
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -104,14 +101,10 @@ public class CameraFollow : MonoBehaviour
 
 		transform.position = new Vector3 
 			(
-				Mathf.Clamp(transform.position.x, m_Player.position.x-xMovementBound, m_Player.position.x+xMovementBound), 
-				Mathf.Clamp(transform.position.y, m_Player.position.y-yMovementBound, m_Player.position.y+yMovementBound),
+				Mathf.Clamp(transform.position.x, minXAndY.x, maxXAndY.x), 
+				Mathf.Clamp(transform.position.y, minXAndY.y, maxXAndY.y),
 				transform.position.z
 			);
-
-		Debug.Log (moveHorizontal);
-		Debug.Log (moveVertical);
-
 	}
 
 	public void ghostModeSelect(Vector3 position){
