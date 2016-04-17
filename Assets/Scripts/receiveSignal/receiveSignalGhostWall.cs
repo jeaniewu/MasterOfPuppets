@@ -9,12 +9,18 @@ public class receiveSignalGhostWall : receiveSignal {
 	}
 
 	public override void activate(){
+		if (GetComponent<Collider2D> () != null)
+			GetComponent<Collider2D> ().enabled = false;
+		
 		foreach (GhostWall wall in ghostWalls) {
 			activateChild (wall.GetComponent<Collider2D> (), wall.GetComponent<Renderer> ());
 		}
 	}
 
 	public override void deactivate(){
+		if (GetComponent<Collider2D> () != null)
+			GetComponent<Collider2D> ().enabled = true;
+		
 		foreach (GhostWall wall in ghostWalls) {
 			deactivateChild (wall.GetComponent<Collider2D> (), wall.GetComponent<Renderer> ());
 		}
