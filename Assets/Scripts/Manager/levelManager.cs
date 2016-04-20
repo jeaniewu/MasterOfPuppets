@@ -63,7 +63,7 @@ public class levelManager : MonoBehaviour
 		player.GetComponent<Animator> ().SetBool ("hasSoul", true);
 		player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
-		player.GetComponentInChildren<BoxCollider2D> ().enabled = false;
+
 
 		if (TextBoxManager != null) {
 			TextBoxManager.GetComponent<TextBoxManager> ().player = player;
@@ -155,8 +155,9 @@ public class levelManager : MonoBehaviour
 	{
 		Vector2 direction = doll.transform.position - player.transform.position;
 
+		LayerMask layer = 1 << LayerMask.NameToLayer ("Doll") | 1 << LayerMask.NameToLayer ("ghostCollider");
 		RaycastHit2D[] hits = Physics2D.RaycastAll (player.transform.position, direction,
-			GetComponent<DollManager> ().radius, 1 << LayerMask.NameToLayer ("Doll"));
+			GetComponent<DollManager> ().radius, layer);
 		Debug.DrawRay (player.transform.position, direction, Color.green, 0.3f);
 		foreach (RaycastHit2D hit in hits) {
 			if (hit.collider != null) {
@@ -176,7 +177,6 @@ public class levelManager : MonoBehaviour
 	void possess (GameObject player, GameObject doll)
 	{
 		dollsUpdated = false;
-		//player.GetComponent<BoxCollider2D> ().enabled = true;
 
 		player.GetComponent<Animator> ().SetBool ("hasSoul", false);
 		player.GetComponent<Controller2> ().ghostMode = false;
@@ -184,7 +184,6 @@ public class levelManager : MonoBehaviour
 		player.GetComponent<Controller2> ().enabled = false;
 		player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.layer = LayerMask.NameToLayer ("Doll");
-		player.GetComponentInChildren<BoxCollider2D> ().enabled = true;
 
 		player.tag = "Doll";
 		doll.tag = "Player";
@@ -205,11 +204,13 @@ public class levelManager : MonoBehaviour
 
 	void highlight (GameObject doll)
 	{
+		doll.GetComponentInChildren<BoxCollider2D> ().enabled = true;
 		doll.GetComponent<Highlight> ().higlighted = true;
 	}
 
 	void notHighlight (GameObject doll)
 	{
+		doll.GetComponentInChildren<BoxCollider2D> ().enabled = false;
 		doll.GetComponent<Highlight> ().higlighted = false;
 	}
 
