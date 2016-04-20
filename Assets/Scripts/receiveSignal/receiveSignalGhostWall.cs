@@ -2,47 +2,28 @@
 using System.Collections;
 
 public class receiveSignalGhostWall : receiveSignal {
-	private GhostWall[] ghostWalls;
+
+	private ParticleSystem particleSystem;
+	private ParticleSystemRenderer renderer;
 
 	void Start(){
-		ghostWalls = GetComponentsInChildren<GhostWall>();
+		particleSystem = GetComponentInChildren<ParticleSystem> ();
+		renderer = particleSystem.GetComponent<ParticleSystemRenderer> ();
+
 	}
 
 	public override void activate(){
 		if (GetComponent<Collider2D> () != null)
 			GetComponent<Collider2D> ().enabled = false;
 		
-		foreach (GhostWall wall in ghostWalls) {
-			activateChild (wall.GetComponent<Collider2D> (), wall.GetComponent<Renderer> ());
-		}
+		renderer.enabled = false;
 	}
 
 	public override void deactivate(){
 		if (GetComponent<Collider2D> () != null)
 			GetComponent<Collider2D> ().enabled = true;
 		
-		foreach (GhostWall wall in ghostWalls) {
-			deactivateChild (wall.GetComponent<Collider2D> (), wall.GetComponent<Renderer> ());
-		}
+		renderer.enabled = true;
 	}
 
-	public void activateChild(Collider2D collider2D2, Renderer renderer2){
-
-		if(collider2D2 != null){
-			collider2D2.enabled = false;
-		}
-
-		if (renderer2 != null) {
-			renderer2.enabled = false;
-		}
-	}
-
-	public void deactivateChild(Collider2D collider2D2, Renderer renderer2){
-		if (collider2D2 != null) {
-			collider2D2.enabled = true;
-		}
-		if (renderer2!= null) {
-			renderer2.enabled = true;
-		}
-	}
 }
