@@ -16,6 +16,7 @@ public class Controller2 : MonoBehaviour {
 
     public Animator anim;
 	private Rigidbody2D rigidbody2D2;
+
 	
 	// Use this for initialization
 	void Start () {
