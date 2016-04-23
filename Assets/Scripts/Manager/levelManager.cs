@@ -42,7 +42,7 @@ public class levelManager : MonoBehaviour
 		} else {
 			dollsUpdated = false;
 			if (dolls.Length > 0)
-				notHighlight (dolls [Mathf.Abs(dollIndex)]);
+				notHighlight (dolls [dollIndex]);
 			particleSystem.gameObject.SetActive (false);
 		}
 
