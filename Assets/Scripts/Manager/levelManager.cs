@@ -84,7 +84,7 @@ public class levelManager : MonoBehaviour
 
 			container.Clear ();
 
-			int maxDistance = 0;
+			float minDistance = 100;
 			int tempIndex = 0;
 
 			for (int delta_degree = 1; delta_degree < 360; delta_degree++) {
@@ -102,8 +102,10 @@ public class levelManager : MonoBehaviour
 
 							float dist = hit.distance;
 							Debug.Log (dist);
-							if (dist > maxDistance) {
+							Debug.Log (hit.collider.name);
+							if (dist < minDistance) {
 								dollIndex = tempIndex;
+								minDistance = dist;
 							}
 							tempIndex++;
 						}
@@ -131,17 +133,20 @@ public class levelManager : MonoBehaviour
 	// selecting player from the array 'dolls'
 	void selectPlayer ()
 	{
-		highlight(dolls[dollIndex]);
+		highlight (dolls [dollIndex]);
 		target (dolls [dollIndex]);
 		moveCamera (dolls [dollIndex].transform.position);
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			notHighlight(dolls[dollIndex]);
-			if (dollIndex - 1 < 0)
-				dollIndex = dolls.Length;
-			choose (dollIndex - 1);
-		} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			notHighlight(dolls[dollIndex]);
-			choose (dollIndex + 1);
+
+		if (dolls.Length > 1) {
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+				notHighlight (dolls [dollIndex]);
+				if (dollIndex - 1 < 0)
+					dollIndex = dolls.Length;
+				choose (dollIndex - 1);
+			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				notHighlight (dolls [dollIndex]);
+				choose (dollIndex + 1);
+			}
 		}
 
 		if (Input.GetButtonDown ("Possess")) {
