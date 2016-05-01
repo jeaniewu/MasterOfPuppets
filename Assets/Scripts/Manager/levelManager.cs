@@ -42,7 +42,7 @@ public class levelManager : MonoBehaviour
 		} else {
 			dollsUpdated = false;
 			if (dolls.Length > 0)
-				notHighlight (dolls [Mathf.Abs(dollIndex)]);
+				notHighlight (dolls [dollIndex]);
 			particleSystem.gameObject.SetActive (false);
 		}
 
@@ -84,19 +84,31 @@ public class levelManager : MonoBehaviour
 
 			container.Clear ();
 
+			float minDistance = 100;
+			int tempIndex = 0;
+
 			for (int delta_degree = 1; delta_degree < 360; delta_degree++) {
-				Quaternion q = Quaternion.AngleAxis (delta_degree, Vector3.forward);
-				Vector3 d = player.transform.right * GetComponent<DollManager> ().radius;
+				Quaternion quartenion = Quaternion.AngleAxis (delta_degree, Vector3.forward);
+				Vector3 distance = player.transform.right * GetComponent<DollManager> ().radius;
 				RaycastHit2D[] hits =
-					Physics2D.RaycastAll (player.transform.position, q * d, GetComponent<DollManager> ().radius, 1 << LayerMask.NameToLayer ("Doll"));
-				Debug.DrawRay (player.transform.position, q * d, Color.green, 0.2f);
+					Physics2D.RaycastAll (player.transform.position, quartenion * distance, GetComponent<DollManager> ().radius, 1 << LayerMask.NameToLayer ("Doll"));
+				Debug.DrawRay (player.transform.position, quartenion * distance, Color.green, 0.2f);
 
 				foreach (RaycastHit2D hit in hits) {
 					if (hit.collider != null) {
 						if (!container.Contains (hit.collider.gameObject) && hit.transform != player.transform 
-							&& (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player")))
+							&& (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player"))){
 							container.Add (hit.collider.gameObject); //add doll to the list
 
+							float dist = hit.distance;
+							Debug.Log (dist);
+							Debug.Log (hit.collider.name);
+							if (dist < minDistance) {
+								dollIndex = tempIndex;
+								minDistance = dist;
+							}
+							tempIndex++;
+						}
 					}
 				}
 			}
@@ -104,7 +116,6 @@ public class levelManager : MonoBehaviour
 			dolls = container.ToArray ();
 			Debug.Log ("updating");
 			dollsUpdated = true;
-			dollIndex = 0;
 		}
 	}
 
@@ -122,20 +133,25 @@ public class levelManager : MonoBehaviour
 	// selecting player from the array 'dolls'
 	void selectPlayer ()
 	{
-		highlight(dolls[Mathf.Abs(dollIndex)]);
-		target (dolls [Mathf.Abs (dollIndex)]);
-		moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			notHighlight(dolls[Mathf.Abs(dollIndex)]);
-			choose (dollIndex - 1);
-		} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			notHighlight(dolls[Mathf.Abs(dollIndex)]);
-			choose (dollIndex + 1);
+		highlight (dolls [dollIndex]);
+		target (dolls [dollIndex]);
+		moveCamera (dolls [dollIndex].transform.position);
+
+		if (dolls.Length > 1) {
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+				notHighlight (dolls [dollIndex]);
+				if (dollIndex - 1 < 0)
+					dollIndex = dolls.Length;
+				choose (dollIndex - 1);
+			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				notHighlight (dolls [dollIndex]);
+				choose (dollIndex + 1);
+			}
 		}
 
 		if (Input.GetButtonDown ("Possess")) {
-			if (!hasGhostWall (dolls [Mathf.Abs (dollIndex)])) {
-				possess (player, dolls [Mathf.Abs (dollIndex)]);
+			if (!hasGhostWall (dolls [dollIndex])) {
+				possess (player, dolls [dollIndex]);
 				particleSystem.gameObject.SetActive (false);
 			}
 		}
@@ -144,11 +160,11 @@ public class levelManager : MonoBehaviour
 
 	void choose (int index){
 		dollIndex = (index) % dolls.Length;
-		highlight(dolls[Mathf.Abs(dollIndex)]);
+		highlight(dolls[dollIndex]);
 		particleSystem.Clear ();
 		particleSystem.gameObject.SetActive (false);
-		target (dolls [Mathf.Abs (dollIndex)]);
-		moveCamera (dolls [Mathf.Abs (dollIndex)].transform.position);
+		target (dolls [dollIndex]);
+		moveCamera (dolls [dollIndex].transform.position);
 	}
 
 	bool hasGhostWall (GameObject doll)
