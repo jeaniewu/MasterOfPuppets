@@ -5,11 +5,21 @@ public class ConveyorBelt : MonoBehaviour {
 
 	public string direction;
 	public int speed;
-    private bool isSwitched;
+    public int conveyorBeltPart;
 
-	void Start() {
-		
-	}
+    private bool isSwitched;
+    private Animator animator;
+
+    void Awake() {
+        animator = GetComponent<Animator>();
+    }
+
+    void Start() {
+        animator.SetInteger("BeltPart", conveyorBeltPart);
+        if (direction == "right" || direction == "down") {
+            transform.Rotate(0, 0, 180f);
+        }
+    }
 
     void OnTriggerStay2D(Collider2D other) {
 		if (other.CompareTag("Doll") || other.CompareTag("Player")){
@@ -28,22 +38,38 @@ public class ConveyorBelt : MonoBehaviour {
     public void setConveyorBeltDirection(bool switched) {
         if (isSwitched != switched) {
             isSwitched = switched;
-            direction = swap(direction);
+            switchAnimation();
+            swapDirection();
         }
     }
 
-    private string swap(string dir) {
-		this.transform.Rotate(new Vector3(0,0,180));
-        if (dir.Equals("right")) {
-			return "left";
-        } else if (dir.Equals("left")) {
-			return "right";
-        } else if (dir.Equals("up")) {
-            return "down";
+    private void swapDirection() {
+        if (direction.Equals("right")) {
+            direction =  "left";
+        } else if (direction.Equals("left")) {
+            direction =  "right";
+        } else if (direction.Equals("up")) {
+            direction =  "down";
         } else {
-            return "up";
+            direction =  "up";
         }
     }
 
-
+    private void switchAnimation() {
+        switch(conveyorBeltPart) {
+            case 1:
+                conveyorBeltPart = 3;
+                break;
+            case 2:
+                conveyorBeltPart = 2;
+                //Need to restart animation for 2 as it actually does not switch animations
+                animator.Play("ConveyorBeltAnimation2", -1, 0f);
+                break;
+            case 3:
+                conveyorBeltPart = 1;
+                break;
+        }
+        animator.SetInteger("BeltPart", conveyorBeltPart);
+        transform.Rotate(0, 0, 180f);
+    }
 }
