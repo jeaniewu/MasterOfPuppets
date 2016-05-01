@@ -101,8 +101,6 @@ public class levelManager : MonoBehaviour
 							container.Add (hit.collider.gameObject); //add doll to the list
 
 							float dist = hit.distance;
-							Debug.Log (dist);
-							Debug.Log (hit.collider.name);
 							if (dist < minDistance) {
 								dollIndex = tempIndex;
 								minDistance = dist;
@@ -114,7 +112,6 @@ public class levelManager : MonoBehaviour
 			}
 
 			dolls = container.ToArray ();
-			Debug.Log ("updating");
 			dollsUpdated = true;
 		}
 	}

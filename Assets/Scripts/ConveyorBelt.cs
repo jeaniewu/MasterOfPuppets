@@ -7,6 +7,10 @@ public class ConveyorBelt : MonoBehaviour {
 	public int speed;
     private bool isSwitched;
 
+	void Start() {
+		
+	}
+
     void OnTriggerStay2D(Collider2D other) {
 		if (other.CompareTag("Doll") || other.CompareTag("Player")){
 			if (direction == "up"){
@@ -29,14 +33,17 @@ public class ConveyorBelt : MonoBehaviour {
     }
 
     private string swap(string dir) {
+		this.transform.Rotate(new Vector3(0,0,180));
         if (dir.Equals("right")) {
-            return "left";
+			return "left";
         } else if (dir.Equals("left")) {
-            return "right";
+			return "right";
         } else if (dir.Equals("up")) {
             return "down";
         } else {
             return "up";
         }
     }
+
+
 }
