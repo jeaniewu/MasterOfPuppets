@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d4a36e20dde07a642b66e4fa52cebbbb
-timeCreated: 1459029064
+timeCreated: 1462122601
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,735 +90,758 @@ TextureImporter:
     - name: left profile idle_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 344
-        width: 88
-        height: 138
+        x: 0
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 33, y: 69}
-        - {x: -2, y: 69}
-        - {x: -44, y: 29}
-        - {x: -44, y: -5}
-        - {x: -31, y: -22}
-        - {x: -31, y: -57}
-        - {x: -18, y: -69}
-        - {x: 10, y: -69}
-        - {x: 34, y: -57}
-        - {x: 44, y: -39}
-        - {x: 44, y: 43}
+      - - {x: -1, y: 59}
+        - {x: -45, y: 24}
+        - {x: -45, y: -38}
+        - {x: -22, y: -83}
+        - {x: 35, y: -83}
+        - {x: 47, y: -59}
+        - {x: 47, y: 40}
+        - {x: 34, y: 59}
     - name: left profile idle_1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 343
-        width: 88
-        height: 139
+        x: 130
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 43, y: 69.5}
-        - {x: -25, y: 69.5}
-        - {x: -44, y: 51.5}
-        - {x: -44, y: -24.5}
-        - {x: -34, y: -60.5}
-        - {x: -19, y: -69.5}
-        - {x: 15, y: -69.5}
-        - {x: 27, y: -49.5}
-        - {x: 44, y: -20.5}
-        - {x: 44, y: 66.5}
+      - - {x: -15, y: 59}
+        - {x: -45, y: 25}
+        - {x: -45, y: -33}
+        - {x: -31, y: -78}
+        - {x: -10, y: -84}
+        - {x: 32, y: -84}
+        - {x: 47, y: -80}
+        - {x: 47, y: 59}
     - name: left profile idle_2
       rect:
         serializedVersion: 2
-        x: 282
-        y: 342
-        width: 88
-        height: 141
+        x: 260
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 70.5}
-        - {x: -44, y: 45.5}
-        - {x: -44, y: -38.5}
-        - {x: -33, y: -70.5}
-        - {x: 18, y: -70.5}
-        - {x: 44, y: -9.5}
-        - {x: 44, y: 53.5}
-        - {x: 36, y: 70.5}
+      - - {x: -3, y: 60}
+        - {x: -7, y: 59}
+        - {x: -45, y: 27}
+        - {x: -45, y: -40}
+        - {x: -39, y: -79}
+        - {x: -20, y: -85}
+        - {x: 19, y: -85}
+        - {x: 47, y: -17}
+        - {x: 47, y: 27}
+        - {x: 32, y: 60}
     - name: left profile idle_3
       rect:
         serializedVersion: 2
-        x: 412
-        y: 342
-        width: 88
-        height: 141
+        x: 390
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 70.5}
-        - {x: -35, y: 56.5}
-        - {x: -44, y: 43.5}
-        - {x: -44, y: -25.5}
-        - {x: -32, y: -70.5}
-        - {x: 23, y: -70.5}
-        - {x: 44, y: -61.5}
-        - {x: 44, y: 49.5}
-        - {x: 32, y: 70.5}
+      - - {x: -8, y: 60}
+        - {x: -45, y: 22}
+        - {x: -45, y: -21}
+        - {x: -26, y: -78}
+        - {x: -10, y: -83}
+        - {x: -8, y: -85}
+        - {x: 37, y: -85}
+        - {x: 47, y: -64}
+        - {x: 47, y: 49}
+        - {x: 37, y: 60}
     - name: left profile idle_4
       rect:
         serializedVersion: 2
-        x: 542
-        y: 342
-        width: 88
-        height: 142
+        x: 520
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 34, y: 71}
-        - {x: -5, y: 71}
-        - {x: -44, y: 51}
-        - {x: -44, y: -69}
-        - {x: -29, y: -71}
-        - {x: 21, y: -71}
-        - {x: 44, y: -26}
-        - {x: 44, y: 38}
+      - - {x: 47, y: 35}
+        - {x: 37, y: 61}
+        - {x: -1, y: 61}
+        - {x: -45, y: 28}
+        - {x: -45, y: -78}
+        - {x: -20, y: -85}
+        - {x: 17, y: -85}
+        - {x: 26, y: -74}
+        - {x: 27, y: -62}
+        - {x: 47, y: -33}
     - name: left profile idle_5
       rect:
         serializedVersion: 2
-        x: 672
-        y: 342
-        width: 88
-        height: 143
+        x: 650
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 41, y: 71.5}
-        - {x: -31, y: 71.5}
-        - {x: -44, y: 48.5}
-        - {x: -44, y: -26.5}
-        - {x: -37, y: -64.5}
-        - {x: -16, y: -71.5}
-        - {x: 19, y: -71.5}
-        - {x: 43, y: -51.5}
-        - {x: 44, y: -50.5}
-        - {x: 44, y: 69.5}
+      - - {x: -36, y: -77}
+        - {x: -22, y: -85}
+        - {x: 17, y: -85}
+        - {x: 47, y: -53}
+        - {x: 47, y: 43}
+        - {x: 40, y: 62}
+        - {x: -12, y: 62}
+        - {x: -45, y: 43}
+        - {x: -45, y: -37}
     - name: left profile idle_6
       rect:
         serializedVersion: 2
-        x: 802
-        y: 342
-        width: 88
-        height: 143
+        x: 780
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 42, y: -13.5}
-        - {x: 44, y: -10.5}
-        - {x: 44, y: 52.5}
-        - {x: 29, y: 71.5}
-        - {x: -26, y: 71.5}
-        - {x: -44, y: 44.5}
-        - {x: -44, y: -56.5}
-        - {x: -39, y: -66.5}
-        - {x: -14, y: -71.5}
-        - {x: 18, y: -71.5}
-        - {x: 24, y: -62.5}
-        - {x: 26, y: -50.5}
-        - {x: 21, y: -48.5}
+      - - {x: -11, y: 62}
+        - {x: -45, y: 43}
+        - {x: -45, y: -59}
+        - {x: -22, y: -85}
+        - {x: 27, y: -85}
+        - {x: 47, y: -29}
+        - {x: 47, y: 56}
+        - {x: 40, y: 62}
     - name: left profile idle_7
       rect:
         serializedVersion: 2
-        x: 932
-        y: 342
-        width: 89
-        height: 144
+        x: 910
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -44.5, y: -72}
-        - {x: 37.5, y: -72}
-        - {x: 44.5, y: -65}
-        - {x: 44.5, y: 66}
-        - {x: 40.5, y: 72}
-        - {x: -11.5, y: 72}
-        - {x: -44.5, y: 53}
+      - - {x: -8, y: 63}
+        - {x: -45, y: 43}
+        - {x: -45, y: -75}
+        - {x: -44, y: -82}
+        - {x: -33, y: -85}
+        - {x: 26, y: -85}
+        - {x: 48, y: -33}
+        - {x: 48, y: 42}
+        - {x: 32, y: 63}
     - name: left profile idle_8
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 342
-        width: 89
-        height: 144
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14.5, y: 72}
-        - {x: -44.5, y: 36}
-        - {x: -44.5, y: -36}
-        - {x: -32.5, y: -72}
-        - {x: 14.5, y: -72}
-        - {x: 26.5, y: -57}
-        - {x: 44.5, y: -35}
-        - {x: 44.5, y: 72}
+      - - {x: -8, y: 63}
+        - {x: -45, y: 22}
+        - {x: -45, y: -36}
+        - {x: -35, y: -73}
+        - {x: -20, y: -85}
+        - {x: 29, y: -85}
+        - {x: 48, y: -26}
+        - {x: 48, y: 39}
+        - {x: 29, y: 63}
     - name: left profile idle_9
       rect:
         serializedVersion: 2
-        x: 1192
-        y: 342
-        width: 89
-        height: 145
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 44.5, y: -5.5}
-        - {x: 44.5, y: 43.5}
-        - {x: 34.5, y: 72.5}
-        - {x: -21.5, y: 72.5}
-        - {x: -44.5, y: 34.5}
-        - {x: -44.5, y: -50.5}
-        - {x: -33.5, y: -72.5}
-        - {x: 16.5, y: -72.5}
-        - {x: 24.5, y: -57.5}
-        - {x: 23.5, y: -52.5}
-        - {x: 20.5, y: -49.5}
+      - - {x: 48, y: 49}
+        - {x: 42, y: 64}
+        - {x: -12, y: 64}
+        - {x: -33, y: 55}
+        - {x: -45, y: 28}
+        - {x: -45, y: -51}
+        - {x: -39, y: -79}
+        - {x: -10, y: -85}
+        - {x: 18, y: -85}
+        - {x: 20, y: -83}
+        - {x: 34, y: -57}
+        - {x: 48, y: -17}
     - name: left profile idle_10
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 342
-        width: 89
-        height: 146
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6.5, y: 73}
-        - {x: -44.5, y: 45}
-        - {x: -44.5, y: -73}
-        - {x: 38.5, y: -73}
-        - {x: 44.5, y: -64}
-        - {x: 44.5, y: 56}
-        - {x: 32.5, y: 73}
+      - - {x: 48, y: 39}
+        - {x: 25, y: 65}
+        - {x: -4, y: 65}
+        - {x: -45, y: 21}
+        - {x: -45, y: -40}
+        - {x: -37, y: -76}
+        - {x: -16, y: -82}
+        - {x: -1, y: -85}
+        - {x: 15, y: -85}
+        - {x: 27, y: -68}
+        - {x: 37, y: -52}
+        - {x: 48, y: -28}
     - name: left profile idle_11
       rect:
         serializedVersion: 2
-        x: 1452
-        y: 342
-        width: 89
-        height: 146
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11.5, y: 73}
-        - {x: -44.5, y: 44}
-        - {x: -44.5, y: -47}
-        - {x: -39.5, y: -68}
-        - {x: -28.5, y: -73}
-        - {x: 14.5, y: -73}
-        - {x: 39.5, y: -61}
-        - {x: 44.5, y: -34}
-        - {x: 44.5, y: 43}
-        - {x: 27.5, y: 73}
+      - - {x: 38, y: 65}
+        - {x: -22, y: 65}
+        - {x: -45, y: 33}
+        - {x: -45, y: -65}
+        - {x: -37, y: -79}
+        - {x: -6, y: -85}
+        - {x: 18, y: -85}
+        - {x: 35, y: -69}
+        - {x: 48, y: -47}
+        - {x: 48, y: 56}
     - name: left profile idle_12
       rect:
         serializedVersion: 2
-        x: 1582
-        y: 342
-        width: 89
-        height: 147
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -44.5, y: 73.5}
-        - {x: -44.5, y: -73.5}
-        - {x: 35.5, y: -73.5}
-        - {x: 44.5, y: -70.5}
-        - {x: 44.5, y: 73.5}
+      - - {x: -3, y: 66}
+        - {x: -45, y: 38}
+        - {x: -45, y: -83}
+        - {x: -40, y: -85}
+        - {x: 23, y: -85}
+        - {x: 48, y: -80}
+        - {x: 48, y: 30}
+        - {x: 27, y: 66}
     - name: left profile idle_13
       rect:
         serializedVersion: 2
-        x: 22
-        y: 172
-        width: 89
-        height: 147
+        x: 0
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 73.5}
-        - {x: -44.5, y: 52.5}
-        - {x: -44.5, y: -73.5}
-        - {x: 18.5, y: -73.5}
-        - {x: 41.5, y: -60.5}
-        - {x: 44.5, y: -53.5}
-        - {x: 44.5, y: 73.5}
+      - - {x: -26, y: 66}
+        - {x: -45, y: 38}
+        - {x: -45, y: -81}
+        - {x: -36, y: -85}
+        - {x: 32, y: -85}
+        - {x: 48, y: -55}
+        - {x: 48, y: 62}
+        - {x: 42, y: 66}
     - name: left profile idle_14
       rect:
         serializedVersion: 2
-        x: 152
-        y: 172
-        width: 90
-        height: 148
+        x: 130
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -26, y: 74}
-        - {x: -45, y: 67}
-        - {x: -45, y: -74}
-        - {x: 31, y: -74}
-        - {x: 45, y: -51}
-        - {x: 45, y: 69}
-        - {x: 43, y: 74}
+      - - {x: -2, y: 67}
+        - {x: -10, y: 58}
+        - {x: -28, y: 42}
+        - {x: -45, y: 24}
+        - {x: -45, y: -15}
+        - {x: -31, y: -74}
+        - {x: -19, y: -82}
+        - {x: -14, y: -85}
+        - {x: 30, y: -85}
+        - {x: 49, y: -53}
+        - {x: 49, y: 32}
+        - {x: 24, y: 67}
     - name: left profile idle_15
       rect:
         serializedVersion: 2
-        x: 283
-        y: 172
-        width: 89
-        height: 148
+        x: 260
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18.5, y: 74}
-        - {x: -39.5, y: 52}
-        - {x: -44.5, y: 35}
-        - {x: -44.5, y: -32}
-        - {x: -34.5, y: -66}
-        - {x: -19.5, y: -74}
-        - {x: 33.5, y: -74}
-        - {x: 44.5, y: -50}
-        - {x: 44.5, y: 68}
-        - {x: 39.5, y: 74}
+      - - {x: -12, y: 67}
+        - {x: -44, y: 36}
+        - {x: -44, y: -58}
+        - {x: -41, y: -84}
+        - {x: -38, y: -85}
+        - {x: 45, y: -85}
+        - {x: 49, y: -80}
+        - {x: 49, y: 47}
+        - {x: 43, y: 67}
     - name: left profile idle_16
       rect:
         serializedVersion: 2
-        x: 413
-        y: 172
-        width: 89
-        height: 148
+        x: 390
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 28.5, y: 74}
-        - {x: -30.5, y: 74}
-        - {x: -44.5, y: 42}
-        - {x: -44.5, y: -40}
-        - {x: -29.5, y: -74}
-        - {x: 15.5, y: -74}
-        - {x: 37.5, y: -61}
-        - {x: 44.5, y: -31}
-        - {x: 44.5, y: 45}
+      - - {x: -15, y: 67}
+        - {x: -44, y: 47}
+        - {x: -44, y: -82}
+        - {x: -37, y: -85}
+        - {x: 33, y: -85}
+        - {x: 49, y: -55}
+        - {x: 49, y: 52}
+        - {x: 37, y: 67}
     - name: left profile idle_17
       rect:
         serializedVersion: 2
-        x: 543
-        y: 172
-        width: 89
-        height: 148
+        x: 520
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8.5, y: 74}
-        - {x: -44.5, y: 44}
-        - {x: -44.5, y: -70}
-        - {x: -36.5, y: -74}
-        - {x: 38.5, y: -74}
-        - {x: 44.5, y: -65}
-        - {x: 44.5, y: 64}
-        - {x: 37.5, y: 74}
+      - - {x: -33, y: 67}
+        - {x: -44, y: 42}
+        - {x: -44, y: -64}
+        - {x: -15, y: -85}
+        - {x: 37, y: -85}
+        - {x: 49, y: -67}
+        - {x: 49, y: 51}
+        - {x: 40, y: 67}
     - name: left profile idle_18
       rect:
         serializedVersion: 2
-        x: 673
-        y: 172
-        width: 89
-        height: 148
+        x: 650
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13.5, y: 74}
-        - {x: -44.5, y: 50}
-        - {x: -44.5, y: -73}
-        - {x: -37.5, y: -74}
-        - {x: 25.5, y: -74}
-        - {x: 44.5, y: -41}
-        - {x: 44.5, y: 54}
-        - {x: 36.5, y: 74}
+      - - {x: -22, y: 67}
+        - {x: -44, y: 27}
+        - {x: -44, y: -50}
+        - {x: -31, y: -72}
+        - {x: -15, y: -85}
+        - {x: 17, y: -85}
+        - {x: 47, y: -73}
+        - {x: 49, y: -41}
+        - {x: 49, y: 35}
+        - {x: 33, y: 67}
     - name: left profile idle_19
       rect:
         serializedVersion: 2
-        x: 803
-        y: 172
-        width: 89
-        height: 148
+        x: 780
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8.5, y: 74}
-        - {x: -44.5, y: 49}
-        - {x: -44.5, y: -59}
-        - {x: -43.5, y: -69}
-        - {x: -27.5, y: -74}
-        - {x: 21.5, y: -74}
-        - {x: 44.5, y: -9}
-        - {x: 44.5, y: 44}
-        - {x: 29.5, y: 74}
+      - - {x: 38, y: 67}
+        - {x: -14, y: 67}
+        - {x: -44, y: 46}
+        - {x: -44, y: -59}
+        - {x: -29, y: -85}
+        - {x: 15, y: -85}
+        - {x: 28, y: -68}
+        - {x: 49, y: -34}
+        - {x: 49, y: 37}
     - name: left profile idle_20
       rect:
         serializedVersion: 2
-        x: 933
-        y: 172
-        width: 89
-        height: 148
+        x: 910
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -25.5, y: 74}
-        - {x: -44.5, y: 46}
-        - {x: -44.5, y: -23}
-        - {x: -30.5, y: -73}
-        - {x: -25.5, y: -74}
-        - {x: 21.5, y: -74}
-        - {x: 44.5, y: -20}
-        - {x: 44.5, y: 57}
-        - {x: 34.5, y: 74}
+      - - {x: -16, y: 67}
+        - {x: -44, y: 25}
+        - {x: -44, y: -56}
+        - {x: -36, y: -75}
+        - {x: -17, y: -82}
+        - {x: -2, y: -85}
+        - {x: 49, y: -85}
+        - {x: 49, y: 67}
     - name: left profile idle_21
       rect:
         serializedVersion: 2
-        x: 1063
-        y: 172
-        width: 89
-        height: 148
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15.5, y: 74}
-        - {x: -44.5, y: 50}
-        - {x: -44.5, y: -48}
-        - {x: -39.5, y: -74}
-        - {x: 43.5, y: -74}
-        - {x: 44.5, y: -73}
-        - {x: 44.5, y: 59}
-        - {x: 35.5, y: 74}
+      - - {x: -12, y: 67}
+        - {x: -44, y: 35}
+        - {x: -44, y: -80}
+        - {x: -31, y: -85}
+        - {x: 20, y: -85}
+        - {x: 43, y: -76}
+        - {x: 49, y: -52}
+        - {x: 49, y: 41}
+        - {x: 37, y: 67}
     - name: left profile idle_22
       rect:
         serializedVersion: 2
-        x: 1192
-        y: 172
-        width: 89
-        height: 148
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -25.5, y: 74}
-        - {x: -44.5, y: 66}
-        - {x: -44.5, y: -72}
-        - {x: -42.5, y: -74}
-        - {x: 19.5, y: -74}
-        - {x: 32.5, y: -61}
-        - {x: 44.5, y: -44}
-        - {x: 44.5, y: 64}
-        - {x: 42.5, y: 74}
+      - - {x: -10, y: 67}
+        - {x: -45, y: 30}
+        - {x: -45, y: -36}
+        - {x: -36, y: -76}
+        - {x: -21, y: -85}
+        - {x: 37, y: -85}
+        - {x: 48, y: -69}
+        - {x: 48, y: 31}
+        - {x: 24, y: 67}
     - name: left profile idle_23
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 172
-        width: 89
-        height: 147
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11.5, y: 73.5}
-        - {x: -44.5, y: 38.5}
-        - {x: -44.5, y: -58.5}
-        - {x: -42.5, y: -68.5}
-        - {x: -18.5, y: -73.5}
-        - {x: 16.5, y: -73.5}
-        - {x: 26.5, y: -59.5}
-        - {x: 44.5, y: -33.5}
-        - {x: 44.5, y: 73.5}
+      - - {x: -5, y: 66}
+        - {x: -45, y: 32}
+        - {x: -45, y: -14}
+        - {x: -32, y: -72}
+        - {x: -19, y: -85}
+        - {x: 19, y: -85}
+        - {x: 44, y: -74}
+        - {x: 48, y: -40}
+        - {x: 48, y: 24}
+        - {x: 29, y: 66}
     - name: left profile idle_24
       rect:
         serializedVersion: 2
-        x: 1452
-        y: 172
-        width: 89
-        height: 147
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -22.5, y: 73.5}
-        - {x: -44.5, y: 38.5}
-        - {x: -44.5, y: -42.5}
-        - {x: -32.5, y: -62.5}
-        - {x: -10.5, y: -73.5}
-        - {x: 17.5, y: -73.5}
-        - {x: 44.5, y: -50.5}
-        - {x: 44.5, y: 73.5}
+      - - {x: 39, y: 66}
+        - {x: -4, y: 66}
+        - {x: -45, y: 47}
+        - {x: -45, y: -84}
+        - {x: -35, y: -85}
+        - {x: 14, y: -85}
+        - {x: 18, y: -84}
+        - {x: 27, y: -68}
+        - {x: 48, y: -26}
+        - {x: 48, y: 52}
     - name: left profile idle_25
       rect:
         serializedVersion: 2
-        x: 22
-        y: 2
-        width: 89
-        height: 146
+        x: 0
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10.5, y: 73}
-        - {x: -44.5, y: 45}
-        - {x: -44.5, y: -57}
-        - {x: -41.5, y: -69}
-        - {x: -20.5, y: -73}
-        - {x: 16.5, y: -73}
-        - {x: 44.5, y: -41}
-        - {x: 44.5, y: 59}
-        - {x: 39.5, y: 73}
+      - - {x: -14, y: 65}
+        - {x: -45, y: 22}
+        - {x: -45, y: -56}
+        - {x: -26, y: -85}
+        - {x: 26, y: -85}
+        - {x: 45, y: -71}
+        - {x: 48, y: -36}
+        - {x: 48, y: 26}
+        - {x: 32, y: 65}
     - name: left profile idle_26
       rect:
         serializedVersion: 2
-        x: 152
-        y: 2
-        width: 89
-        height: 146
+        x: 130
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -44.5, y: -64}
-        - {x: -38.5, y: -73}
-        - {x: 23.5, y: -73}
-        - {x: 44.5, y: -48}
-        - {x: 44.5, y: 61}
-        - {x: 39.5, y: 73}
-        - {x: -24.5, y: 73}
-        - {x: -44.5, y: 51}
+      - - {x: 35, y: 65}
+        - {x: 0, y: 65}
+        - {x: -16, y: 55}
+        - {x: -45, y: 36}
+        - {x: -45, y: -82}
+        - {x: -14, y: -85}
+        - {x: 16, y: -85}
+        - {x: 35, y: -69}
+        - {x: 48, y: -43}
+        - {x: 48, y: 35}
     - name: left profile idle_27
       rect:
         serializedVersion: 2
-        x: 282
-        y: 2
-        width: 89
-        height: 145
+        x: 260
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13.5, y: 72.5}
-        - {x: -42.5, y: 37.5}
-        - {x: -44.5, y: 28.5}
-        - {x: -44.5, y: -2.5}
-        - {x: -28.5, y: -24.5}
-        - {x: -33.5, y: -61.5}
-        - {x: -20.5, y: -72.5}
-        - {x: 17.5, y: -72.5}
-        - {x: 41.5, y: -60.5}
-        - {x: 44.5, y: -30.5}
-        - {x: 44.5, y: 41.5}
-        - {x: 34.5, y: 72.5}
+      - - {x: -45, y: 64}
+        - {x: -45, y: -85}
+        - {x: 21, y: -85}
+        - {x: 48, y: -56}
+        - {x: 48, y: 60}
+        - {x: 47, y: 64}
     - name: left profile idle_28
       rect:
         serializedVersion: 2
-        x: 412
-        y: 2
-        width: 88
-        height: 144
+        x: 390
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -25, y: 72}
-        - {x: -44, y: 38}
-        - {x: -44, y: -70}
+      - - {x: 40, y: 63}
+        - {x: -24, y: 63}
+        - {x: -45, y: 24}
+        - {x: -45, y: -51}
         - {x: -30, y: -72}
-        - {x: 44, y: -72}
-        - {x: 44, y: 72}
+        - {x: -15, y: -83}
+        - {x: -1, y: -85}
+        - {x: 16, y: -85}
+        - {x: 35, y: -69}
+        - {x: 47, y: -46}
+        - {x: 47, y: 38}
     - name: left profile idle_29
       rect:
         serializedVersion: 2
-        x: 542
-        y: 2
-        width: 88
-        height: 144
+        x: 520
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -7, y: 72}
-        - {x: -44, y: 52}
-        - {x: -44, y: -29}
-        - {x: -39, y: -56}
-        - {x: -23, y: -72}
-        - {x: 24, y: -72}
-        - {x: 43, y: -61}
-        - {x: 44, y: -53}
-        - {x: 44, y: 52}
-        - {x: 36, y: 72}
+      - - {x: 47, y: -11}
+        - {x: 47, y: 21}
+        - {x: 29, y: 63}
+        - {x: -12, y: 63}
+        - {x: -45, y: 45}
+        - {x: -45, y: -42}
+        - {x: -27, y: -85}
+        - {x: 15, y: -85}
+        - {x: 27, y: -68}
+        - {x: 24, y: -58}
+        - {x: 42, y: -28}
     - name: left profile idle_30
       rect:
         serializedVersion: 2
-        x: 672
-        y: 2
-        width: 88
-        height: 143
+        x: 650
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -32, y: -71.5}
-        - {x: 29, y: -71.5}
-        - {x: 44, y: -48.5}
-        - {x: 44, y: 71.5}
-        - {x: -32, y: 71.5}
-        - {x: -44, y: 55.5}
-        - {x: -44, y: -45.5}
+      - - {x: 34, y: 62}
+        - {x: -27, y: 62}
+        - {x: -45, y: 43}
+        - {x: -45, y: -85}
+        - {x: 13, y: -85}
+        - {x: 27, y: -68}
+        - {x: 47, y: -31}
+        - {x: 47, y: 44}
     - name: left profile idle_31
       rect:
         serializedVersion: 2
-        x: 802
-        y: 2
-        width: 88
-        height: 143
+        x: 780
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 44, y: 52.5}
-        - {x: 39, y: 71.5}
-        - {x: -4, y: 71.5}
-        - {x: -44, y: 30.5}
-        - {x: -44, y: -9.5}
-        - {x: -31, y: -55.5}
-        - {x: -29, y: -64.5}
-        - {x: -8, y: -71.5}
-        - {x: 16, y: -71.5}
-        - {x: 26, y: -56.5}
-        - {x: 24, y: -51.5}
-        - {x: 44, y: -30.5}
+      - - {x: 47, y: -14}
+        - {x: 47, y: 22}
+        - {x: 33, y: 62}
+        - {x: -6, y: 62}
+        - {x: -45, y: 34}
+        - {x: -45, y: -75}
+        - {x: -44, y: -85}
+        - {x: 17, y: -85}
+        - {x: 19, y: -82}
+        - {x: 27, y: -62}
+        - {x: 43, y: -28}
     - name: left profile idle_32
       rect:
         serializedVersion: 2
-        x: 932
-        y: 2
-        width: 88
-        height: 142
+        x: 910
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13, y: 71}
-        - {x: -44, y: 51}
-        - {x: -44, y: -48}
-        - {x: -32, y: -71}
-        - {x: 27, y: -71}
-        - {x: 44, y: -42}
-        - {x: 44, y: 47}
-        - {x: 32, y: 71}
+      - - {x: 47, y: -28}
+        - {x: 47, y: 43}
+        - {x: 43, y: 61}
+        - {x: -9, y: 61}
+        - {x: -45, y: 30}
+        - {x: -45, y: -52}
+        - {x: -41, y: -79}
+        - {x: -5, y: -85}
+        - {x: 16, y: -85}
+        - {x: 26, y: -68}
+        - {x: 25, y: -63}
+        - {x: 22, y: -60}
     - name: left profile idle_33
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 2
-        width: 87
-        height: 141
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 29.5, y: 70.5}
-        - {x: -9.5, y: 70.5}
-        - {x: -43.5, y: 36.5}
-        - {x: -43.5, y: -31.5}
-        - {x: -33.5, y: -70.5}
-        - {x: 18.5, y: -70.5}
-        - {x: 24.5, y: -61.5}
-        - {x: 43.5, y: -24.5}
-        - {x: 43.5, y: 31.5}
+      - - {x: -13, y: 60}
+        - {x: -45, y: 19}
+        - {x: -45, y: -42}
+        - {x: -35, y: -68}
+        - {x: -24, y: -85}
+        - {x: 14, y: -85}
+        - {x: 31, y: -78}
+        - {x: 46, y: -53}
+        - {x: 46, y: 48}
+        - {x: 43, y: 60}
     - name: left profile idle_34
       rect:
         serializedVersion: 2
-        x: 1192
-        y: 2
-        width: 87
-        height: 141
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9.5, y: 70.5}
-        - {x: -43.5, y: 37.5}
-        - {x: -43.5, y: -22.5}
-        - {x: -30.5, y: -59.5}
-        - {x: -12.5, y: -70.5}
-        - {x: 20.5, y: -70.5}
-        - {x: 43.5, y: -28.5}
-        - {x: 43.5, y: 36.5}
-        - {x: 31.5, y: 70.5}
+      - - {x: -13, y: 60}
+        - {x: -45, y: 35}
+        - {x: -45, y: -31}
+        - {x: -42, y: -45}
+        - {x: -30, y: -72}
+        - {x: -11, y: -84}
+        - {x: -8, y: -85}
+        - {x: 20, y: -85}
+        - {x: 46, y: -44}
+        - {x: 46, y: 60}
     - name: left profile idle_35
       rect:
         serializedVersion: 2
-        x: 1322
-        y: 2
-        width: 87
-        height: 140
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -20.5, y: 70}
-        - {x: -43.5, y: 33}
-        - {x: -43.5, y: -46}
-        - {x: -36.5, y: -63}
-        - {x: -17.5, y: -70}
-        - {x: 17.5, y: -70}
-        - {x: 43.5, y: -60}
-        - {x: 43.5, y: 70}
+      - - {x: -17, y: 59}
+        - {x: -45, y: 12}
+        - {x: -45, y: -49}
+        - {x: -26, y: -85}
+        - {x: 38, y: -85}
+        - {x: 46, y: -70}
+        - {x: 46, y: 50}
+        - {x: 42, y: 59}
     - name: left profile idle_36
       rect:
         serializedVersion: 2
-        x: 1452
-        y: 4
-        width: 87
-        height: 138
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11.5, y: 69}
-        - {x: -43.5, y: 38}
-        - {x: -43.5, y: -55}
-        - {x: -29.5, y: -69}
-        - {x: 15.5, y: -69}
-        - {x: 35.5, y: -58}
-        - {x: 43.5, y: -20}
-        - {x: 43.5, y: 51}
-        - {x: 38.5, y: 69}
+      - - {x: -15, y: 59}
+        - {x: -45, y: 20}
+        - {x: -45, y: -40}
+        - {x: -30, y: -69}
+        - {x: -22, y: -83}
+        - {x: 19, y: -83}
+        - {x: 46, y: -32}
+        - {x: 46, y: 30}
+        - {x: 37, y: 59}
     outline: []
   spritePackingTag: 
   userData: 
