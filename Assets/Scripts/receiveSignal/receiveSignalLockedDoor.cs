@@ -15,12 +15,15 @@ public class receiveSignalLockedDoor : receiveSignal {
 
     public override void activate() {
         animator.SetBool("open", true);
-		doorToNextLevel.setOpen(true);
-        
+        if (doorToNextLevel != null) {
+            doorToNextLevel.setOpen(true);
+        }
     }
 
     public override void deactivate() {
         animator.SetBool("open", false);
-        doorToNextLevel.setOpen(false);
+        if (doorToNextLevel != null) {
+            doorToNextLevel.setOpen(false);
+        }
     }
 }
