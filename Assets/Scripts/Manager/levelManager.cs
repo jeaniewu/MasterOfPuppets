@@ -174,7 +174,8 @@ public class levelManager : MonoBehaviour
 		Debug.DrawRay (player.transform.position, direction, Color.green, 0.3f);
 		foreach (RaycastHit2D hit in hits) {
 			if (hit.collider != null) {
-				if (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player")) {
+				if (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player") || hit.collider.CompareTag ("GhostModeCollider")) {
+					Debug.Log ("yeay!");
 					return false;
 				} else if (hit.collider.CompareTag ("impenetrable")) {
 					Debug.Log (hit.collider.name);
