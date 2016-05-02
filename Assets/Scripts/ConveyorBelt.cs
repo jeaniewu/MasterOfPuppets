@@ -5,20 +5,12 @@ public class ConveyorBelt : MonoBehaviour {
 
 	public string direction;
 	public int speed;
-    public int conveyorBeltPart;
 
-    private bool isSwitched;
-    private Animator animator;
-
-    void Awake() {
-        animator = GetComponent<Animator>();
-    }
+	private bool isSwitched;
+	private ConveyorBeltPiece[] pieces;
 
     void Start() {
-        animator.SetInteger("BeltPart", conveyorBeltPart);
-        if (direction == "right" || direction == "down") {
-            transform.Rotate(0, 0, 180f);
-        }
+		pieces = GetComponentsInChildren<ConveyorBeltPiece> ();
     }
 
     void OnTriggerStay2D(Collider2D other) {
@@ -38,10 +30,16 @@ public class ConveyorBelt : MonoBehaviour {
     public void setConveyorBeltDirection(bool switched) {
         if (isSwitched != switched) {
             isSwitched = switched;
-            switchAnimation();
+            switchAllAnimations();
             swapDirection();
         }
     }
+
+	private void switchAllAnimations(){
+		foreach (ConveyorBeltPiece piece in pieces) {
+			piece.switchAnimation();
+		}
+	}
 
     private void swapDirection() {
         if (direction.Equals("right")) {
@@ -54,22 +52,5 @@ public class ConveyorBelt : MonoBehaviour {
             direction =  "up";
         }
     }
-
-    private void switchAnimation() {
-        switch(conveyorBeltPart) {
-            case 1:
-                conveyorBeltPart = 3;
-                break;
-            case 2:
-                conveyorBeltPart = 2;
-                //Need to restart animation for 2 as it actually does not switch animations
-                animator.Play("ConveyorBeltAnimation2", -1, 0f);
-                break;
-            case 3:
-                conveyorBeltPart = 1;
-                break;
-        }
-        animator.SetInteger("BeltPart", conveyorBeltPart);
-        transform.Rotate(0, 0, 180f);
-    }
+		
 }
