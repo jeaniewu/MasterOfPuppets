@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 public class Ditch : MonoBehaviour {
 
 	private GameObject doll;
+	private GhostSwitchManager manager;
 
 	// Use this for initialization
 	void Start () {
-	
+		manager = GameObject.FindGameObjectWithTag ("LevelManager").GetComponent<GhostSwitchManager> ();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +31,9 @@ public class Ditch : MonoBehaviour {
 			doll.transform.localScale -= new Vector3(0.05F, 0.05F, 0);
 			yield return null;
 		}
+			
+		manager.dollsUpdated = false;
+		manager.updateDolls ();
 
 		if (doll.CompareTag("Player"))
 			SceneManager.LoadScene (Application.loadedLevel);

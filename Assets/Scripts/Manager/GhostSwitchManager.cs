@@ -2,16 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class levelManager : MonoBehaviour
+public class GhostSwitchManager : MonoBehaviour
 {
 
 	public GameObject[] dolls;
 	public GameObject player;
 
 	public int dollIndex = 0;
+	public bool dollsUpdated = false;
 
 	private List<GameObject> container = new List<GameObject> ();
-	private bool dollsUpdated = false;
 
 	public GameObject TextBoxManager;
 
@@ -77,7 +77,7 @@ public class levelManager : MonoBehaviour
 	}
 
 	// update dolls array with dolls that you can possess
-	void updateDolls ()
+	public void updateDolls ()
 	{
 
 		if (!dollsUpdated) {
@@ -174,7 +174,8 @@ public class levelManager : MonoBehaviour
 		Debug.DrawRay (player.transform.position, direction, Color.green, 0.3f);
 		foreach (RaycastHit2D hit in hits) {
 			if (hit.collider != null) {
-				if (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player")) {
+				if (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player") || hit.collider.CompareTag ("GhostModeCollider")) {
+					Debug.Log ("yeay!");
 					return false;
 				} else if (hit.collider.CompareTag ("impenetrable")) {
 					Debug.Log (hit.collider.name);
