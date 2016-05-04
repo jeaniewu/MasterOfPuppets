@@ -11,7 +11,7 @@ public class recieveSignalSpinningBlade : receiveSignal
     // Use this for initialization
     void Start()
     {
-        ROTATIONSIDE = -90;
+        ROTATIONSIDE = 90;
     }
 
     // Update is called once per frame
@@ -23,12 +23,12 @@ public class recieveSignalSpinningBlade : receiveSignal
 
     public override void activate()
     {
-        ROTATIONSIDE = 90;
+        ROTATIONSIDE = -90;
     }
 
     public override void deactivate()
     {
-        ROTATIONSIDE = -90;
+        ROTATIONSIDE = 90;
     }
 
   
