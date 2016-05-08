@@ -5,7 +5,13 @@ public class ConveyorBelt : MonoBehaviour {
 
 	public string direction;
 	public int speed;
-    private bool isSwitched;
+
+	private bool isSwitched;
+	private ConveyorBeltPiece[] pieces;
+
+    void Start() {
+		pieces = GetComponentsInChildren<ConveyorBeltPiece> ();
+    }
 
     void OnTriggerStay2D(Collider2D other) {
 		if (other.CompareTag("Doll") || other.CompareTag("Player")){
@@ -24,19 +30,27 @@ public class ConveyorBelt : MonoBehaviour {
     public void setConveyorBeltDirection(bool switched) {
         if (isSwitched != switched) {
             isSwitched = switched;
-            direction = swap(direction);
+            switchAllAnimations();
+            swapDirection();
         }
     }
 
-    private string swap(string dir) {
-        if (dir.Equals("right")) {
-            return "left";
-        } else if (dir.Equals("left")) {
-            return "right";
-        } else if (dir.Equals("up")) {
-            return "down";
+	private void switchAllAnimations(){
+		foreach (ConveyorBeltPiece piece in pieces) {
+			piece.switchAnimation();
+		}
+	}
+
+    private void swapDirection() {
+        if (direction.Equals("right")) {
+            direction =  "left";
+        } else if (direction.Equals("left")) {
+            direction =  "right";
+        } else if (direction.Equals("up")) {
+            direction =  "down";
         } else {
-            return "up";
+            direction =  "up";
         }
     }
+		
 }
