@@ -3,7 +3,7 @@ using System.Collections;
 
 public class receiveSignalGhostWall : receiveSignal {
 
-    public GameObject ghostWallAudio;
+	public AudioSource[] ghostWallAudioSources;
     private ParticleSystem particleSystem;
 	private ParticleSystemRenderer renderer;
    
@@ -11,13 +11,17 @@ public class receiveSignalGhostWall : receiveSignal {
 	void Start(){
 		particleSystem = GetComponentInChildren<ParticleSystem> ();
 		renderer = particleSystem.GetComponent<ParticleSystemRenderer> ();
+		ghostWallAudioSources = GetComponentsInChildren<AudioSource>();
 	}
 
 	public override void activate(){
 		if (GetComponent<Collider2D> () != null)
 			GetComponent<Collider2D> ().enabled = false;
 
-        ghostWallAudio.SetActive(false);
+		foreach (AudioSource ghostWallAudio in ghostWallAudioSources){
+			ghostWallAudio.enabled = false;
+		}
+
 		renderer.enabled = false;
 	}
 
@@ -25,7 +29,10 @@ public class receiveSignalGhostWall : receiveSignal {
 		if (GetComponent<Collider2D> () != null)
 			GetComponent<Collider2D> ().enabled = true;
 
-        ghostWallAudio.SetActive(true);
+		foreach (AudioSource ghostWallAudio in ghostWallAudioSources){
+			ghostWallAudio.enabled = true;
+		}
+
 		renderer.enabled = true;
 	}
 
