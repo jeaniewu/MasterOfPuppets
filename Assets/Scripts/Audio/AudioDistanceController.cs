@@ -18,18 +18,17 @@ public class AudioDistanceController : MonoBehaviour {
     // the parent container was scaled to 0.5 and the radius was 15, the actuall global radius 
     // would only be 7.5. 
     public float localScale;
-    private CircleCollider2D audioRangeCollider;
+    private BoxCollider2D audioRangeCollider;
     private AudioSource audioSource;
     private List<GameObject> dolls = new List<GameObject>();
 
     // Use this for initialization
     void Start() {
-        audioRangeCollider = GetComponent<CircleCollider2D>();
+        audioRangeCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
-        //Check if the list of dolls includes the player doll, else the volume of the object should be 0
         GameObject player = dolls.Find(x => x.CompareTag("Player"));
         if (player != null) {
             changeVolumeByDistance(player);
@@ -40,15 +39,14 @@ public class AudioDistanceController : MonoBehaviour {
 
     //Add the possible player to the list of dolls
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Doll")) {
-            Debug.Log("Added doll");
+        if (other.gameObject.CompareTag("Player")) {
             dolls.Add(other.gameObject);
         }
     }
 
     //Remove the doll from the list of dolls in range
     void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Doll")) {
+        if (other.gameObject.CompareTag("Player")) {
             dolls.Remove(other.gameObject);
         }
     }
@@ -56,7 +54,10 @@ public class AudioDistanceController : MonoBehaviour {
     //Change the volume of the audioSource relative to the distance of the player to the source
     private void changeVolumeByDistance(GameObject player) {
         float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
-        float volumePercentage = 1 - distanceFromPlayer / (audioRangeCollider.radius * localScale);
+		float maxDistance = Mathf.Sqrt (audioRangeCollider.size.x * localScale * audioRangeCollider.size.y * localScale);
+		float volumePercentage = 1 - distanceFromPlayer / maxDistance; 
+
+		Debug.Log (volumePercentage);
         audioSource.volume = maxVolume * volumePercentage;
     }   
 }
