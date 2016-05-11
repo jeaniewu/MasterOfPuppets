@@ -1,5 +1,6 @@
-using System;
+using System.Collections;
 using UnityEngine;
+
 
 
 
@@ -15,6 +16,7 @@ public class CameraFollow : MonoBehaviour
 
     private Transform m_Player; // Reference to the player's transform.
 	public GameObject player;
+    
 
 
     private void Awake()
@@ -113,5 +115,14 @@ public class CameraFollow : MonoBehaviour
 		float targetY = Mathf.Lerp(transform.position.y, position.y, ySmooth*Time.deltaTime);
 		transform.position = new Vector3(targetX, targetY, transform.position.z);
 	}
+
+    public void zoomOut()
+    {
+        if (Input.GetKey(KeyCode.C))
+        {
+            Camera.main.orthographicSize = 12;
+
+        }
+    }
 }
 
