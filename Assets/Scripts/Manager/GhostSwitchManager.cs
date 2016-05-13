@@ -116,6 +116,10 @@ public class GhostSwitchManager : MonoBehaviour
 		}
 	}
 
+	void updateAudio(){
+		MechanicAudioManager.getInstance ().updateAudioControllers ();
+	}
+
 	// make the camera follow the current player
 	void updateCamera ()
 	{
@@ -175,7 +179,6 @@ public class GhostSwitchManager : MonoBehaviour
 		foreach (RaycastHit2D hit in hits) {
 			if (hit.collider != null) {
 				if (hit.collider.CompareTag ("Doll") || hit.collider.CompareTag ("Player") || hit.collider.CompareTag ("GhostModeCollider")) {
-					Debug.Log ("yeay!");
 					return false;
 				} else if (hit.collider.CompareTag ("impenetrable")) {
 					Debug.Log (hit.collider.name);
@@ -208,6 +211,7 @@ public class GhostSwitchManager : MonoBehaviour
 
 		DollAudioManager.getInstance ().playGhostSwitchSound ();
 		updateCamera ();
+		updateAudio ();
 	}
 
 	void turnOffAnimator ()
