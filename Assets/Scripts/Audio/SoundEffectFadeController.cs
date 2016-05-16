@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class AudioController : MonoBehaviour {
+public class SoundEffectFadeController : MonoBehaviour {
 
     private float maxVolume;
 	private float fadeTime;
@@ -18,54 +18,41 @@ public class AudioController : MonoBehaviour {
     void Start() {
         audioRangeCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
-		maxVolume = MechanicAudioManager.getInstance ().maxVolume;
 		fadeTime = MechanicAudioManager.getInstance ().fadeTime;
+
+	
+		if (audioSource.clip.name == "Conveyor belt") {
+			maxVolume = MechanicAudioManager.getInstance ().maxConveyorBeltVolume;
+		} else if (audioSource.clip.name == "GhostWallSound") {
+			maxVolume = MechanicAudioManager.getInstance ().maxGhostWallVolume;
+		}
     }
 		
 
-	public void updateController(){
-		Debug.Log ("HAHAHA");
+	void Update(){
 		GameObject player = dolls.Find(x => x.CompareTag("Player"));
 		if (player == null && hasPlayer) {
-			hasPlayer = false;
 			fadeOut ();
+			hasPlayer = false;
+		} else if (player != null && !hasPlayer){
+			fadeIn ();
+			hasPlayer = true;
 		}
 	}
 
     //Add the possible player to the list of dolls
     void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Player")) {
-			addDoll (other.gameObject);
+		if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Doll")) {
+			if (!dolls.Contains (other.gameObject)) 
+				dolls.Add (other.gameObject);
         }
     }
 
-	void OnTriggerStay2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Player")) {
-			addDoll (other.gameObject);
-		}
-	}
-
-	void addDoll (GameObject doll){
-		if (!dolls.Contains (doll)) { 
-			dolls.Add (doll);
-			fadeIn ();
-		} else {
-			audioSource.volume = maxVolume;
-		}
-		hasPlayer = true;
-	}
-
-
     //Remove the doll from the list of dolls in range
     void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Player")) {
+		if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Doll")) {
             dolls.Remove(other.gameObject);
-			hasPlayer = false;
-			fadeOut();
         }
-		if (other.gameObject.CompareTag ("Doll")) {
-			dolls.Remove(other.gameObject);
-		}
     }
 		
 	public void fadeIn() { 

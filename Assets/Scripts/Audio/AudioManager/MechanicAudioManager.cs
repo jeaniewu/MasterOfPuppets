@@ -11,7 +11,8 @@ public class MechanicAudioManager : AbstractAudioManager {
 
     //Volume
     public float buttonVolume;
-	public float maxVolume;
+	public float maxConveyorBeltVolume;
+	public float maxGhostWallVolume;
 
 	//fadeTime
 	public float fadeTime;
@@ -38,10 +39,5 @@ public class MechanicAudioManager : AbstractAudioManager {
     public void playButtonSound() {
         playOneShotSound(buttonClip, button, buttonVolume);
     }
-
-	public void updateAudioControllers(){
-		foreach (GameObject audio in audioControllers){
-			audio.GetComponent<AudioController>().updateController ();
-		}
-	}
+		
 }

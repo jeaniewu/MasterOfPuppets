@@ -116,9 +116,6 @@ public class GhostSwitchManager : MonoBehaviour
 		}
 	}
 
-	void updateAudio(){
-		MechanicAudioManager.getInstance ().updateAudioControllers ();
-	}
 
 	// make the camera follow the current player
 	void updateCamera ()
@@ -211,7 +208,6 @@ public class GhostSwitchManager : MonoBehaviour
 
 		DollAudioManager.getInstance ().playGhostSwitchSound ();
 		updateCamera ();
-		updateAudio ();
 	}
 
 	void turnOffAnimator ()
