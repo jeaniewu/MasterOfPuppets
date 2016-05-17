@@ -11,7 +11,9 @@ public class receiveSignalGhostWall : receiveSignal {
 	void Start(){
 		particleSystem = GetComponentInChildren<ParticleSystem> ();
 		renderer = particleSystem.GetComponent<ParticleSystemRenderer> ();
-		ghostWallAudioSources = GetComponentsInChildren<AudioSource>();
+
+		GameObject parent = transform.parent.gameObject;
+		ghostWallAudioSources = parent.GetComponentsInChildren<AudioSource>();
 	}
 
 	public override void activate(){

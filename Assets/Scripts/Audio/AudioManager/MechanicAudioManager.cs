@@ -11,6 +11,13 @@ public class MechanicAudioManager : AbstractAudioManager {
 
     //Volume
     public float buttonVolume;
+	public float maxConveyorBeltVolume;
+	public float maxGhostWallVolume;
+
+	//fadeTime
+	public float fadeTime;
+
+	public GameObject[] audioControllers;
 
     public static MechanicAudioManager instance;
 
@@ -21,6 +28,10 @@ public class MechanicAudioManager : AbstractAudioManager {
         instance = this;
     }
 
+	void Start(){
+		audioControllers = GameObject.FindGameObjectsWithTag ("AudioContoller");
+	}
+
     public static MechanicAudioManager getInstance() {
         return instance;
     }
@@ -28,4 +39,5 @@ public class MechanicAudioManager : AbstractAudioManager {
     public void playButtonSound() {
         playOneShotSound(buttonClip, button, buttonVolume);
     }
+		
 }
