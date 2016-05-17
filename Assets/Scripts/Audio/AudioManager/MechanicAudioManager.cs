@@ -5,12 +5,15 @@ public class MechanicAudioManager : AbstractAudioManager {
 
     //Audioclips
     public AudioClip buttonClip;
+	public AudioClip unlockDoorClip;
 
     //AudioSources
     public AudioSource button;
+	public AudioSource unlockDoor;
 
     //Volume
     public float buttonVolume;
+	public float unlockDoorVolume;
 	public float maxConveyorBeltVolume;
 	public float maxGhostWallVolume;
 
@@ -18,6 +21,7 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public float fadeTime;
 
 	public GameObject[] audioControllers;
+
 
     public static MechanicAudioManager instance;
 
@@ -40,4 +44,8 @@ public class MechanicAudioManager : AbstractAudioManager {
         playOneShotSound(buttonClip, button, buttonVolume);
     }
 		
+	public void playUnlockDoorSound() {
+		playOneShotSound(unlockDoorClip, unlockDoor, unlockDoorVolume);
+	}
+
 }
