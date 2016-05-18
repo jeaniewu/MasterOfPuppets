@@ -9,6 +9,7 @@ public class MovingPlatform : MonoBehaviour {
     public Transform[] points;
     public int pointSelection;
 
+
 	// Use this for initialization
 	void Start () {
         currentPoint = points[pointSelection];
