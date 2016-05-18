@@ -35,9 +35,7 @@ public class Slice : MonoBehaviour
         else if (other.tag == "Doll")
         {
 
-            doll.GetComponent<Controller2>().enabled = false;
             StartCoroutine("NoSoulSlice");
-
 
         }
 
