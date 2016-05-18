@@ -26,13 +26,13 @@ public class Slice : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         doll = other.gameObject;
-        if (/*doll.gameObject.CompareTag("Player")*/ other.tag == "Player")
+        if (other.tag == "Player")
         {
             doll.GetComponent<Controller2>().enabled = false;
             StartCoroutine("SoulSlice");
         }
 
-        else if ( /*doll.gameObject.CompareTag("Doll")*/ other.tag == "Doll")
+        else if (other.tag == "Doll")
         {
 
             doll.GetComponent<Controller2>().enabled = false;
