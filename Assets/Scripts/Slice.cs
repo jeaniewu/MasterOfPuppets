@@ -34,7 +34,6 @@ public class Slice : MonoBehaviour
 
 		else if (doll.tag == "Doll")
         {
-
             StartCoroutine("NoSoulSlice");
 
         }
@@ -72,7 +71,7 @@ public class Slice : MonoBehaviour
         AnimationClip currentClip = currentClipInfo.clip;
         float currentCliplength = currentClip.length;
 
-  
+
             doll.GetComponent<Animator>().Play("soulless-sliced");
 
             yield return new WaitForSeconds(currentCliplength - 2);
