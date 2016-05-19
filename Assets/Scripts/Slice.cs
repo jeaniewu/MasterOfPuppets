@@ -23,16 +23,16 @@ public class Slice : MonoBehaviour
 
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         doll = other.gameObject;
-        if (other.tag == "Player")
+        if (doll.tag == "Player")
         {
             doll.GetComponent<Controller2>().enabled = false;
             StartCoroutine("SoulSlice");
         }
 
-        else if (other.tag == "Doll")
+		else if (doll.tag == "Doll")
         {
 
             StartCoroutine("NoSoulSlice");
