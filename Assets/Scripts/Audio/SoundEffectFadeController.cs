@@ -25,6 +25,8 @@ public class SoundEffectFadeController : MonoBehaviour {
 			maxVolume = MechanicAudioManager.getInstance ().maxConveyorBeltVolume;
 		} else if (audioSource.clip.name == "GhostWallSound") {
 			maxVolume = MechanicAudioManager.getInstance ().maxGhostWallVolume;
+		} else if (audioSource.clip.name == "Sawblade Sound") {
+			maxVolume = MechanicAudioManager.getInstance ().maxSawBladeVolume;
 		}
     }
 		

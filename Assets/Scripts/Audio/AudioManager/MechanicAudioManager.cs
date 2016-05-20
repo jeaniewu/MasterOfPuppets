@@ -16,6 +16,7 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public float unlockDoorVolume;
 	public float maxConveyorBeltVolume;
 	public float maxGhostWallVolume;
+	public float maxSawBladeVolume;
 
 	//fadeTime
 	public float fadeTime;
