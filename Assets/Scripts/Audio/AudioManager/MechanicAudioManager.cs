@@ -34,7 +34,7 @@ public class MechanicAudioManager : AbstractAudioManager {
     }
 
 	void Start(){
-		audioControllers = GameObject.FindGameObjectsWithTag ("AudioContoller");
+		audioControllers = GameObject.FindGameObjectsWithTag ("AudioController");
 	}
 
     public static MechanicAudioManager getInstance() {

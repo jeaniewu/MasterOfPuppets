@@ -5,16 +5,28 @@ using UnityEngine.SceneManagement;
 public class Slice : MonoBehaviour
 {
 
-
-    private GameObject doll;
+	public Animation animation;
+	// Needed to get animation clip's length
+    
+	private GameObject doll;
     private GhostSwitchManager manager;
-    private Animator anim;
+	private float clipLength;
 
     // Use this for initialization
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<GhostSwitchManager>();
-        anim = GetComponent<Animator>();
+		doll = GameObject.FindGameObjectWithTag ("Player");
+		Animator anim = doll.GetComponent<Animator>();
+
+		RuntimeAnimatorController ac = anim.runtimeAnimatorController;    //Get Animator controller
+		for(int i = 0; i<ac.animationClips.Length; i++)                 //For all animations
+		{
+			if(ac.animationClips[i].name == "right-soul-sliced")        //If it has the same name as your clip
+			{
+				clipLength = ac.animationClips[i].length;
+			}
+		}
     }
 
     // Update is called once per frame
@@ -23,16 +35,22 @@ public class Slice : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
     {
-        doll = other.gameObject;
-        if (doll.tag == "Player")
+		if (other.gameObject.CompareTag("AudioController")){
+			return;
+		}
+
+		if (other.gameObject.CompareTag("Player"))
         {
-            doll.GetComponent<Controller2>().enabled = false;
+			doll = other.gameObject;
+			doll.GetComponent<Controller2> ().enabled = false;
+			doll.GetComponent<Collider2D> ().enabled = false;
+			Debug.Log(doll.name);
             StartCoroutine("SoulSlice");
         }
 
-		else if (doll.tag == "Doll")
+		else if (other.gameObject.CompareTag("Doll"))
         {
             StartCoroutine("NoSoulSlice");
 
@@ -44,46 +62,26 @@ public class Slice : MonoBehaviour
 
     IEnumerator SoulSlice()
     {
-        AnimatorClipInfo[] infos = this.anim.GetCurrentAnimatorClipInfo(0);
-        AnimatorClipInfo currentClipInfo = infos[0];
-        AnimationClip currentClip = currentClipInfo.clip;
-        float currentCliplength = currentClip.length;
+	 
+		doll.GetComponent<AnimationController> ().Slice ();
 
-        
-
-
-            doll.GetComponent<Animator>().SetBool("isSoulSliced", true);
-
-
-            yield return new WaitForSeconds(currentCliplength-2);
-            manager.dollsUpdated = false;
-            manager.updateDolls();
-            SceneManager.LoadScene(Application.loadedLevel);
-
+		yield return new WaitForSeconds(clipLength);
+        manager.dollsUpdated = false;
+        manager.updateDolls();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         
     }
 
     IEnumerator NoSoulSlice()
     {
-        AnimatorClipInfo[] infos = this.anim.GetCurrentAnimatorClipInfo(0);
-        AnimatorClipInfo currentClipInfo = infos[0];
-        AnimationClip currentClip = currentClipInfo.clip;
-        float currentCliplength = currentClip.length;
+		doll.GetComponent<AnimationController> ().Slice ();
 
-
-            doll.GetComponent<Animator>().Play("soulless-sliced");
-
-            yield return new WaitForSeconds(currentCliplength - 2);
-
-            if (doll.tag == "Doll")
-            {
-                doll.SetActive(false);
-            }
-
-
+		yield return new WaitForSeconds(clipLength);
+		manager.dollsUpdated = false;
+		manager.updateDolls ();
  
-        }
-    }   
+     }
+}   
 
 

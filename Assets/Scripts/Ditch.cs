@@ -36,6 +36,6 @@ public class Ditch : MonoBehaviour {
 		manager.updateDolls ();
 
 		if (doll.CompareTag("Player"))
-			SceneManager.LoadScene (Application.loadedLevel);
+			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 	}
 }

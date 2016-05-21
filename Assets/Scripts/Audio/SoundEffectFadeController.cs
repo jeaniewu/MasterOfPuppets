@@ -10,13 +10,11 @@ public class SoundEffectFadeController : MonoBehaviour {
 
 	public bool hasPlayer;
 
-    private BoxCollider2D audioRangeCollider;
     private AudioSource audioSource;
     public List<GameObject> dolls = new List<GameObject>();
 
     // Use this for initialization
     void Start() {
-        audioRangeCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
 		fadeTime = MechanicAudioManager.getInstance ().fadeTime;
 
