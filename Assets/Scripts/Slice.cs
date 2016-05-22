@@ -15,9 +15,6 @@ public class Slice : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<GhostSwitchManager>();
 		doll = GameObject.FindGameObjectWithTag ("Player");
-		Animator anim = doll.GetComponent<Animator>();
-
-		clipLength = calculateClipLength(anim, "right-sould-sliced");
 
     }
 
@@ -38,12 +35,13 @@ public class Slice : MonoBehaviour
 			doll = other.gameObject;
 			doll.GetComponent<Controller2> ().enabled = false;
 			doll.GetComponent<Collider2D> ().enabled = false;
-			Debug.Log(doll.name);
+			MechanicAudioManager.getInstance ().playDeathBySawBlade ();
             StartCoroutine("SoulSlice");
         }
 
 		else if (other.gameObject.CompareTag("Doll"))
         {
+			doll = other.gameObject;
             StartCoroutine("NoSoulSlice");
 
         }
@@ -54,9 +52,10 @@ public class Slice : MonoBehaviour
 
     IEnumerator SoulSlice()
     {
-	 
+		Animator anim = doll.GetComponent<Animator>();
+		clipLength = calculateClipLength(anim, "right-soul-sliced");
 		doll.GetComponent<AnimationController> ().Slice ();
-
+		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
         manager.dollsUpdated = false;
         manager.updateDolls();
@@ -67,11 +66,15 @@ public class Slice : MonoBehaviour
 
     IEnumerator NoSoulSlice()
     {
+		Animator anim = doll.GetComponent<Animator>();
+		clipLength = calculateClipLength(anim, "right-soulless-sliced");
 		doll.GetComponent<AnimationController> ().Slice ();
-
+		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
+
 		manager.dollsUpdated = false;
 		manager.updateDolls ();
+		doll.SetActive (false);
  
      }
 

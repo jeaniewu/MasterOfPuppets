@@ -7,9 +7,13 @@ public class MechanicAudioManager : AbstractAudioManager {
     public AudioClip buttonClip;
 	public AudioClip unlockDoorClip;
 
+	public AudioClip deathBySawbladeClip;
+
     //AudioSources
     public AudioSource button;
 	public AudioSource unlockDoor;
+
+	public AudioSource deathBySawblade;
 
     //Volume
     public float buttonVolume;
@@ -17,6 +21,7 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public float maxConveyorBeltVolume;
 	public float maxGhostWallVolume;
 	public float maxSawBladeVolume;
+	public float deathBySawbladeVolume;
 
 	//fadeTime
 	public float fadeTime;
@@ -47,6 +52,10 @@ public class MechanicAudioManager : AbstractAudioManager {
 		
 	public void playUnlockDoorSound() {
 		playOneShotSound(unlockDoorClip, unlockDoor, unlockDoorVolume);
+	}
+
+	public void playDeathBySawBlade() {
+		playOneShotSound(deathBySawbladeClip, deathBySawblade, deathBySawbladeVolume);
 	}
 
 }
