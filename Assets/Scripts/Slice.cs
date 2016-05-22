@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class Slice : MonoBehaviour
 {
 
-	public Animation animation;
-	// Needed to get animation clip's length
     
 	private GameObject doll;
     private GhostSwitchManager manager;
@@ -19,14 +17,8 @@ public class Slice : MonoBehaviour
 		doll = GameObject.FindGameObjectWithTag ("Player");
 		Animator anim = doll.GetComponent<Animator>();
 
-		RuntimeAnimatorController ac = anim.runtimeAnimatorController;    //Get Animator controller
-		for(int i = 0; i<ac.animationClips.Length; i++)                 //For all animations
-		{
-			if(ac.animationClips[i].name == "right-soul-sliced")        //If it has the same name as your clip
-			{
-				clipLength = ac.animationClips[i].length;
-			}
-		}
+		clipLength = calculateClipLength(anim, "right-sould-sliced");
+
     }
 
     // Update is called once per frame
@@ -82,6 +74,18 @@ public class Slice : MonoBehaviour
 		manager.updateDolls ();
  
      }
+
+	public float calculateClipLength(Animator anim, string clipName){
+		RuntimeAnimatorController ac = anim.runtimeAnimatorController;    //Get Animator controller
+		for(int i = 0; i<ac.animationClips.Length; i++)                 //For all animations
+		{
+			if(ac.animationClips[i].name == clipName)        //If it has the same name as your clip
+			{
+				return ac.animationClips[i].length;
+			}
+		}
+		return 0;
+	}
 }   
 
 
