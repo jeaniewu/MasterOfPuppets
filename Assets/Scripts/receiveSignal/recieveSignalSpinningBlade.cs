@@ -3,7 +3,7 @@
 public class recieveSignalSpinningBlade : receiveSignal 
 {
 
-   public GameObject spinningSawblade;
+   //public GameObject spinningSawblade;
    public float rotationSpeed;
    public float ROTATIONSIDE;
 
