@@ -36,12 +36,14 @@ public class GhostSwitchManager : MonoBehaviour
 			if (dolls.Length > 0) {
 				selectPlayer ();
 				initParticleSystem ();
+			} else {
+				setGhostMode (false);
 			}
 
 
 		} else {
 			dollsUpdated = false;
-			if (dolls.Length > 0)
+			if (dolls.Length > 0 && dolls [dollIndex] != null)
 				notHighlight (dolls [dollIndex]);
 			particleSystem.gameObject.SetActive (false);
 		}
@@ -52,6 +54,11 @@ public class GhostSwitchManager : MonoBehaviour
 	bool isGhostMode ()
 	{
 		return player.GetComponent<Controller2> ().ghostMode;
+	}
+
+	void setGhostMode (bool ghostMode)
+	{
+		player.GetComponent<Controller2> ().ghostMode = ghostMode;
 	}
 
 	// find which game object is the player, update the environment
@@ -192,7 +199,7 @@ public class GhostSwitchManager : MonoBehaviour
 		dollsUpdated = false;
 
 		player.GetComponent<Animator> ().SetBool ("hasSoul", false);
-		player.GetComponent<Controller2> ().ghostMode = false;
+		setGhostMode (false);
 
 		player.GetComponent<Controller2> ().enabled = false;
 		player.GetComponent<Rigidbody2D> ().isKinematic = true;

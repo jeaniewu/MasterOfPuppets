@@ -119,7 +119,7 @@ public class Controller2 : MonoBehaviour {
 
 
 	}
-		
+
 		
 }
 

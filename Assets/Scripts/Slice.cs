@@ -8,12 +8,14 @@ public class Slice : MonoBehaviour
     
 	private GameObject doll;
     private GhostSwitchManager manager;
+	private DollManager dollManager;
 	private float clipLength;
 
     // Use this for initialization
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<GhostSwitchManager>();
+		dollManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<DollManager>();
 		doll = GameObject.FindGameObjectWithTag ("Player");
 
     }
@@ -72,9 +74,11 @@ public class Slice : MonoBehaviour
 		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
 
+		dollManager.Death (doll);
 		manager.dollsUpdated = false;
 		manager.updateDolls ();
-		doll.SetActive (false);
+
+
  
      }
 
