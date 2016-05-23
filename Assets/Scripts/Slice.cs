@@ -56,7 +56,7 @@ public class Slice : MonoBehaviour
     {
 		Animator anim = doll.GetComponent<Animator>();
 		clipLength = calculateClipLength(anim, "right-soul-sliced");
-		doll.GetComponent<AnimationController> ().Slice ();
+		doll.GetComponent<DollAnimationController> ().Slice ();
 		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
         manager.dollsUpdated = false;
@@ -70,7 +70,7 @@ public class Slice : MonoBehaviour
     {
 		Animator anim = doll.GetComponent<Animator>();
 		clipLength = calculateClipLength(anim, "right-soulless-sliced");
-		doll.GetComponent<AnimationController> ().Slice ();
+		doll.GetComponent<DollAnimationController> ().Slice ();
 		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
 
