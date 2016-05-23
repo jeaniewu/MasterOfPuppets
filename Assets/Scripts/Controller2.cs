@@ -34,7 +34,7 @@ public class Controller2 : MonoBehaviour {
 
 		checkGhostMode ();
 		if (Input.GetButton("Restart"))
-			SceneManager.LoadScene (Application.loadedLevel);
+			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 
 		if (!ghostMode) {
 			if (Input.GetButtonDown ("Interact")) {
@@ -119,7 +119,7 @@ public class Controller2 : MonoBehaviour {
 
 
 	}
-		
+
 		
 }
 

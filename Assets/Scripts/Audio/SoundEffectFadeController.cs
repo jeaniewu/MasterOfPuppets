@@ -10,13 +10,11 @@ public class SoundEffectFadeController : MonoBehaviour {
 
 	public bool hasPlayer;
 
-    private BoxCollider2D audioRangeCollider;
     private AudioSource audioSource;
     public List<GameObject> dolls = new List<GameObject>();
 
     // Use this for initialization
     void Start() {
-        audioRangeCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
 		fadeTime = MechanicAudioManager.getInstance ().fadeTime;
 
@@ -25,6 +23,8 @@ public class SoundEffectFadeController : MonoBehaviour {
 			maxVolume = MechanicAudioManager.getInstance ().maxConveyorBeltVolume;
 		} else if (audioSource.clip.name == "GhostWallSound") {
 			maxVolume = MechanicAudioManager.getInstance ().maxGhostWallVolume;
+		} else if (audioSource.clip.name == "Sawblade Sound") {
+			maxVolume = MechanicAudioManager.getInstance ().maxSawBladeVolume;
 		}
     }
 		

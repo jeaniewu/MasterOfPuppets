@@ -24,4 +24,9 @@ public class DollManager : MonoBehaviour {
         
 	
 	}
+
+	public void Death(GameObject doll){
+		doll.transform.position = new Vector3 (1000, 1000, 1000);
+		Object.Destroy (doll, 1);
+	}
 }

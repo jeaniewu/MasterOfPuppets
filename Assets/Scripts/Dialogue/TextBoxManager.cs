@@ -41,7 +41,7 @@ public class TextBoxManager : MonoBehaviour
         }
         else
         {
-            DisableTextBox();
+			textBox.SetActive(false);
         }
 
     }
