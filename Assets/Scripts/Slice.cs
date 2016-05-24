@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class Slice : MonoBehaviour
 {
-
-    
 	private GameObject doll;
     private GhostSwitchManager manager;
 	private DollManager dollManager;
