@@ -194,7 +194,7 @@ public class GhostSwitchManager : MonoBehaviour
 	}
 
 	// switch control of the player to the doll, as well as update the environment
-	void possess (GameObject player, GameObject doll)
+	public void possess (GameObject player, GameObject doll)
 	{
 		dollsUpdated = false;
 

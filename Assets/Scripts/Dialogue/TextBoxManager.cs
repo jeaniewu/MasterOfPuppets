@@ -69,10 +69,10 @@ public class TextBoxManager : MonoBehaviour
 				//Debug.Log ("currentLine increased! now: " + currentLine);
 			}
 
-			if (currentLine >= endAtLine)
-			{
-				DisableTextBox();
-			}
+//			if (currentLine >= endAtLine)
+//			{
+//				DisableTextBox();
+//			}
 
         }
 			
@@ -80,7 +80,9 @@ public class TextBoxManager : MonoBehaviour
 
     public void EnableTextBox()
     {
-        textBox.SetActive(true);
+		currentLine = 0;
+		endAtLine = textLines.Length - 1;
+		textBox.SetActive(true);
         isActive = true;
 		theText.text = textLines[currentLine];
 		DollAudioManager.getInstance().stopWalkingSound();

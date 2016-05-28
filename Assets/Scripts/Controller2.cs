@@ -61,8 +61,8 @@ public class Controller2 : MonoBehaviour {
 		}
       
         else {
-			DollAudioManager.getInstance().stopWalkingSound();
-			anim.SetBool ("isWalking", false);
+			stopWalking ();
+
 		}
 
 	}
@@ -81,6 +81,11 @@ public class Controller2 : MonoBehaviour {
 				0.0f
 				);
 		
+	}
+
+	public void stopWalking(){
+		DollAudioManager.getInstance().stopWalkingSound();
+		anim.SetBool ("isWalking", false);
 	}
 
 	void checkGhostMode() {
