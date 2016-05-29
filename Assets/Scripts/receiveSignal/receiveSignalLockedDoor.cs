@@ -9,19 +9,19 @@ public class receiveSignalLockedDoor : receiveSignal {
 	private Collider2D collider;
 
     public switchScene doorToNextLevel;
-    public string opensOrClosesUponTrigger = "opens";
+    public bool opensUponTrigger = true;
 
     void Start() {
         animator = GetComponent<Animator>();
         collider = GetComponent<BoxCollider2D>();
-        if (opensOrClosesUponTrigger == "closes") {
+        if (opensUponTrigger == false) {
             openDoor();
         }
     }
 
 
     public override void activate() {
-       if (opensOrClosesUponTrigger == "opens") {
+       if (opensUponTrigger == true) {
             openDoor();
         } else {
             closeDoor();
@@ -29,7 +29,7 @@ public class receiveSignalLockedDoor : receiveSignal {
     }
 
     public override void deactivate() {
-        if (opensOrClosesUponTrigger == "opens") {
+        if (opensUponTrigger == true) {
             closeDoor();
         } else {
             openDoor();
