@@ -14,14 +14,14 @@ public class receiveSignalLockedDoor : receiveSignal {
     void Start() {
         animator = GetComponent<Animator>();
         collider = GetComponent<BoxCollider2D>();
-        if (opensUponTrigger == false) {
+        if (!opensUponTrigger) {
             openDoor();
         }
     }
 
 
     public override void activate() {
-       if (opensUponTrigger == true) {
+       if (opensUponTrigger) {
             openDoor();
         } else {
             closeDoor();
@@ -29,7 +29,7 @@ public class receiveSignalLockedDoor : receiveSignal {
     }
 
     public override void deactivate() {
-        if (opensUponTrigger == true) {
+        if (opensUponTrigger) {
             closeDoor();
         } else {
             openDoor();
