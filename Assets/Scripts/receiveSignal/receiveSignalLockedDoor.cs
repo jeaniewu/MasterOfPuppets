@@ -9,24 +9,44 @@ public class receiveSignalLockedDoor : receiveSignal {
 	private Collider2D collider;
 
     public switchScene doorToNextLevel;
+    public bool opensUponTrigger = true;
 
     void Start() {
         animator = GetComponent<Animator>();
-		collider = GetComponent <BoxCollider2D> ();
+        collider = GetComponent<BoxCollider2D>();
+        if (!opensUponTrigger) {
+            openDoor();
+        }
     }
 
 
     public override void activate() {
+       if (opensUponTrigger) {
+            openDoor();
+        } else {
+            closeDoor();
+        }
+    }
+
+    public override void deactivate() {
+        if (opensUponTrigger) {
+            closeDoor();
+        } else {
+            openDoor();
+        }
+    }
+
+    private void openDoor() {
         animator.SetBool("open", true);
-		collider.enabled = false;
+        collider.enabled = false;
         if (doorToNextLevel != null) {
             doorToNextLevel.setOpen(true);
         }
     }
 
-    public override void deactivate() {
+    private void closeDoor() {
         animator.SetBool("open", false);
-		collider.enabled = true;
+        collider.enabled = true;
         if (doorToNextLevel != null) {
             doorToNextLevel.setOpen(false);
         }
