@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour {
 		return trueEnding;
 	}
 
+	public void setTrueEnding(){
+		trueEnding = true;
+	}
 
 	//Initializes the game for each level.
 	void InitGame()

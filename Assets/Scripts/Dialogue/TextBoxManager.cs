@@ -104,4 +104,13 @@ public class TextBoxManager : MonoBehaviour
             textLines = (textInput.text.Split('\n'));
         }
     }
+
+	public void reloadText(string text)
+	{
+		if (text != null)
+		{
+			textLines = new string[1];
+			textLines [0] = text;
+		}
+	}
 }

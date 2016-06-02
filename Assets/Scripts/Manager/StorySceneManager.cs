@@ -10,6 +10,8 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject puppetMaster;
 	private Animator puppetMasterAnim;
+	private string puppetMasterName;
+	private bool isNameUpdated;
 
 	public GameObject human;
 	private Animator humanAnim;
@@ -22,7 +24,8 @@ public class StorySceneManager : MonoBehaviour {
 
 	private GameObject maincam;
 
-	public TextBoxManager textBox;
+	public GameObject inputText;
+	public TextBoxManager textBoxManager;
 	public TextAsset[] texts;
 
 
@@ -46,24 +49,27 @@ public class StorySceneManager : MonoBehaviour {
 		ghostSwitchManager = GetComponent<GhostSwitchManager> ();
 
 		maincam = GameObject.FindGameObjectWithTag ("MainCamera");
-		textBox = FindObjectOfType < TextBoxManager >();
+		textBoxManager = FindObjectOfType < TextBoxManager >();
 
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerAnim = player.GetComponent<Animator>();
 		playerController = player.GetComponent<Controller2> ();
 
 		puppetMasterAnim = puppetMaster.GetComponent<Animator> ();
-		puppetMaster.SetActive (false);
+		puppetMaster.SetActive (false); 
+		isNameUpdated = false;
 
 		humanAnim = human.GetComponent<Animator> ();
 		humanController = human.GetComponent<Controller2> ();
 		human.layer = 0;
 
 		//TESTING
-//		puppetMasterAnim.SetBool ("hasSoul", true);
-//		StartCoroutine (thirdTrigger ());
+		//puppetMasterAnim.SetBool ("hasSoul", true);
+		//StartCoroutine (temp ());
+		//StartCoroutine (thirdTrigger ());
 
 	}
+		
 
 	void Update(){
 		if (Input.GetKeyDown(KeyCode.Y)){
@@ -93,7 +99,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator secondTrigger(){
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 		disableAll ();
@@ -110,7 +116,7 @@ public class StorySceneManager : MonoBehaviour {
 
 		// "Congratulations!..."
 		showText(0);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
@@ -119,7 +125,7 @@ public class StorySceneManager : MonoBehaviour {
 		puppetMasterAnim.SetFloat("X", 1); // puppet master anim TODO
 		StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		StartCoroutine(simulateGhostSwitch (player, human));
-		yield return new WaitForSeconds(0.7f);
+		yield return new WaitForSeconds(1.1f);
 		humanController.enabled = false;
 		player.layer = 0;
 		playerAnim.enabled = true;
@@ -132,7 +138,7 @@ public class StorySceneManager : MonoBehaviour {
 
 		// "Tada! Just as promised.."
 		showText(1);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
@@ -145,33 +151,43 @@ public class StorySceneManager : MonoBehaviour {
 		// open the door with light and stuff
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
-		yield return new WaitForSeconds(2f); // allow human to escape //TODO
+		yield return new WaitForSeconds(6f); // allow human to escape //TODO
 		humanController.enabled = false;
 
-		// "What's up? dont u want to leave?.."
-		showText(2);
-		while (textBox.isActive) {
-			yield return null;
-		}
-
-		//puppetmaster inches closer
 		puppetMasterAnim.SetFloat("X", 1);
-		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (2, 0, 0), 0.5f));
+		string[] array = texts [2].text.Split ('\n');
+		for (int i = 0; i < 3; i++) {
+			//puppetmaster inches closer
+			StartCoroutine (simulatePuppetMasterWalking(new Vector3 (5f - 1f*i, 0, 0), 1.2f));
+			textBoxManager.reloadText (array[i]);
+			textBoxManager.EnableTextBox();
+			while (textBoxManager.isActive) {
+				yield return null;
+			}
+		}
 
-		// "Aw, have you grown that fond of me, darling?"
+		// “I mean, look at just how adorable I am!”
 		showText(3);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
+
+		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (2, 0, 0), 0.8f));
 
 		// "But I’ve been waiting soooo long…"
 		showText(4);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
-		if (GameManager.getInstance ().isTrueEnding ()) {
-			//StartCoroutine (thirdTrigger ());
+		StartCoroutine (askPuppetMasterName());
+		while (!isNameUpdated) {
+			yield return null;
+		}
+		yield return new WaitForSeconds(0.4f);
+		// need to use GameManager.getInstance ().isTrueEnding () instead
+		if (puppetMasterName == "annie" || puppetMasterName == "Annie" || puppetMasterName == "ANNIE") {
+			StartCoroutine (fifthTrigger ());
 		} else {
 			StartCoroutine (fourthTrigger ());
 		}
@@ -182,17 +198,17 @@ public class StorySceneManager : MonoBehaviour {
 	IEnumerator fourthTrigger(){
 		yield return new WaitForSeconds(1f);
 		//puppetmaster inches even closer
-		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1, 0, 0), 0.5f));
+		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1.2f, 0, 0), 0.5f));
 
 		// "Hm, cute..."
 		showText(5);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
 		// "Especially when the only person.."
 		showText(6);
-		while (textBox.isActive) {
+		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
@@ -208,6 +224,24 @@ public class StorySceneManager : MonoBehaviour {
 		yield return null;
 	}
 
+	IEnumerator fifthTrigger(){
+		puppetMasterAnim.SetBool ("hasSoul", false);
+		yield return new WaitForSeconds(1f);
+		yield return null;
+	}
+
+	IEnumerator askPuppetMasterName(){
+		inputText.SetActive (true);
+		inputText.GetComponent<TextField> ().selectTextInput ();
+		while (inputText.GetComponent<TextField> ().isActive) {
+			yield return null;
+		}
+		puppetMasterName = inputText.GetComponent<TextField> ().mainInputField.text;
+		inputText.SetActive (false);
+		Debug.Log (puppetMasterName);
+		isNameUpdated = true;
+	}
+
 	IEnumerator simulatePuppetMasterWalking (Vector3 posFromTarget, float waitingTime){
 		puppetMasterAnim.SetBool ("isWalking", true);
 		GameObject target = new GameObject ();
@@ -220,7 +254,7 @@ public class StorySceneManager : MonoBehaviour {
 	// ghost switch from 'from' object to 'to' object
 	IEnumerator simulateGhostSwitch (GameObject from, GameObject to){
 		playerController.ghostMode = true;
-		yield return new WaitForSeconds(0.4f);
+		yield return new WaitForSeconds(0.8f);
 		ghostSwitchManager.possess (from, to);
 		yield return null;
 	}
@@ -243,7 +277,6 @@ public class StorySceneManager : MonoBehaviour {
 
 	IEnumerator dimLight(Light light, float dimSpeed){
 		while (light.intensity >= 0) {
-			Debug.Log (light.intensity);
 			light.intensity -= dimSpeed;
 			yield return null;
 		}
@@ -251,8 +284,13 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	void showText (int index){
-		textBox.ReloadScript (texts [index]);
-		textBox.EnableTextBox();
+		if (texts [index].text.Split ('\n').Length == 1) {
+			textBoxManager.reloadText (texts [index].text);
+			Debug.Log (texts [index].text.Split ('\n').Length);
+		} else {
+			textBoxManager.ReloadScript (texts [index]);
+		}
+		textBoxManager.EnableTextBox();
 	}
 
 	void disableAll(){
