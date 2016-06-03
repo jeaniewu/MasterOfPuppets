@@ -18,7 +18,7 @@ public class TextField : MonoBehaviour {
 		
 	void Update(){ 
 		if (isActive) {
-			player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
+			player.GetComponent<Animator> ().enabled = false;
 			player.GetComponent<Controller2> ().enabled = false;
 		}
 

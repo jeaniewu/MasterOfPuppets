@@ -52,7 +52,7 @@ public class TextBoxManager : MonoBehaviour
         if (isActive)
         {
 
-			player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
+			player.GetComponent<Animator> ().enabled = false;
 			player.GetComponent<Controller2> ().enabled = false;
 			//Debug.Log ("currentLine: " + currentLine);
 			//Debug.Log ("Length: " + textLines.Length);
@@ -92,6 +92,7 @@ public class TextBoxManager : MonoBehaviour
     {
         textBox.SetActive(false);
         isActive = false;
+		player.GetComponent<Animator> ().enabled = true;
 		player.GetComponent<Controller2> ().enabled = true; 
 
     }

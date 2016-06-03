@@ -17,6 +17,7 @@ public class Controller2 : MonoBehaviour {
     public Animator anim;
 	private Rigidbody2D rigidbody2D2;
 
+	public bool allowSound;
 	
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class Controller2 : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
-
+		allowSound = true;
     }
 	
 	void Update(){
@@ -54,7 +55,8 @@ public class Controller2 : MonoBehaviour {
 			if (isWalking) {
 				anim.SetFloat ("X", input_x);
 				anim.SetFloat ("Y", input_y);
-				DollAudioManager.getInstance ().playWalkingSound ();
+				if(allowSound)
+					DollAudioManager.getInstance ().playWalkingSound ();
 			} else {
 				DollAudioManager.getInstance().stopWalkingSound();
 			}

@@ -26,7 +26,6 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject inputText;
 	public TextBoxManager textBoxManager;
-	public TextAsset[] texts;
 
 
 	//Singleton Instantiation
@@ -56,7 +55,7 @@ public class StorySceneManager : MonoBehaviour {
 		playerController = player.GetComponent<Controller2> ();
 
 		puppetMasterAnim = puppetMaster.GetComponent<Animator> ();
-		puppetMaster.SetActive (false); 
+		//puppetMaster.SetActive (false);  TODO
 		isNameUpdated = false;
 
 		humanAnim = human.GetComponent<Animator> ();
@@ -64,9 +63,9 @@ public class StorySceneManager : MonoBehaviour {
 		human.layer = 0;
 
 		//TESTING
-		//puppetMasterAnim.SetBool ("hasSoul", true);
+		puppetMasterAnim.SetBool ("hasSoul", true);
 		//StartCoroutine (temp ());
-		//StartCoroutine (thirdTrigger ());
+		StartCoroutine (thirdTrigger ());
 
 	}
 		
@@ -151,11 +150,12 @@ public class StorySceneManager : MonoBehaviour {
 		// open the door with light and stuff
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
-		yield return new WaitForSeconds(6f); // allow human to escape //TODO
+		humanController.allowSound = false;
+		yield return new WaitForSeconds(3f); // allow human to escape //TODO
 		humanController.enabled = false;
 
 		puppetMasterAnim.SetFloat("X", 1);
-		string[] array = texts [2].text.Split ('\n');
+		string[] array = textBoxManager.GetComponent<DialogueParser>().textArrays[2].Split (';');
 		for (int i = 0; i < 3; i++) {
 			//puppetmaster inches closer
 			StartCoroutine (simulatePuppetMasterWalking(new Vector3 (5f - 1f*i, 0, 0), 1.2f));
@@ -284,12 +284,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	void showText (int index){
-		if (texts [index].text.Split ('\n').Length == 1) {
-			textBoxManager.reloadText (texts [index].text);
-			Debug.Log (texts [index].text.Split ('\n').Length);
-		} else {
-			textBoxManager.ReloadScript (texts [index]);
-		}
+		textBoxManager.GetComponent<DialogueParser>().playScript(index);
 		textBoxManager.EnableTextBox();
 	}
 
