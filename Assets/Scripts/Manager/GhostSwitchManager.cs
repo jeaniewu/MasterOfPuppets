@@ -67,7 +67,7 @@ public class GhostSwitchManager : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
 		player.GetComponent<Animator> ().SetBool ("hasSoul", true);
-		player.GetComponent<Rigidbody2D> ().isKinematic = false;
+		//player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
 
 
@@ -202,7 +202,7 @@ public class GhostSwitchManager : MonoBehaviour
 		setGhostMode (false);
 
 		player.GetComponent<Controller2> ().enabled = false;
-		player.GetComponent<Rigidbody2D> ().isKinematic = true;
+		//player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.layer = LayerMask.NameToLayer ("Doll");
 
 		player.tag = "Doll";

@@ -8,9 +8,11 @@ public class ConveyorBelt : MonoBehaviour {
 
 	private bool isSwitched;
 	private ConveyorBeltPiece[] pieces;
+    private DollManager.Boundary boundary;
 
     void Start() {
 		pieces = GetComponentsInChildren<ConveyorBeltPiece> ();
+        boundary = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<DollManager>().boundary;
     }
 
     void OnTriggerStay2D(Collider2D other) {
@@ -24,7 +26,14 @@ public class ConveyorBelt : MonoBehaviour {
 			}else if (direction == "left") {
 				other.gameObject.transform.position += new Vector3 (-1, 0,0)* Time.deltaTime * speed;
 			}
-		}
+            Rigidbody2D rigidBody = other.GetComponent<Rigidbody2D>();
+            rigidBody.position = new Vector3
+            (
+                Mathf.Clamp(rigidBody.position.x, boundary.xMin, boundary.xMax),
+                Mathf.Clamp(rigidBody.position.y, boundary.yMin, boundary.yMax),
+                0.0f
+                );
+        }
 	}
 
     public void setConveyorBeltDirection(bool switched) {

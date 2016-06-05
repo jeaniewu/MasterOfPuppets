@@ -12,6 +12,10 @@ public class Controller2 : MonoBehaviour {
 	private int radius;
 	private DollManager.Boundary boundary;
 
+    public int maxSpeedSlowerBy = 0;
+    public bool canPushButtons = true;
+    public bool canOnlyMoveUpAndDown = false;
+
 	public RaycastHit2D hit;
 
     public Animator anim;
@@ -20,10 +24,9 @@ public class Controller2 : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
 		boundary = levelManager.GetComponent<DollManager>().boundary;
-		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
+		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed - maxSpeedSlowerBy;
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
@@ -44,7 +47,7 @@ public class Controller2 : MonoBehaviour {
 			}
 
 			/*ANIMATION*/
-			float input_x = Input.GetAxisRaw ("Horizontal");
+			float input_x = canOnlyMoveUpAndDown ? 0 : Input.GetAxisRaw ("Horizontal");
 			float input_y = Input.GetAxisRaw ("Vertical");
 			move (input_x,input_y);
 			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
