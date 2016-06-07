@@ -55,7 +55,8 @@ public class StorySceneManager : MonoBehaviour {
 		playerController = player.GetComponent<Controller2> ();
 
 		puppetMasterAnim = puppetMaster.GetComponent<Animator> ();
-		//puppetMaster.SetActive (false);  TODO
+		//puppetMaster.SetActive (false); TODO
+		puppetMasterFace("forward");
 		isNameUpdated = false;
 
 		humanAnim = human.GetComponent<Animator> ();
@@ -63,9 +64,9 @@ public class StorySceneManager : MonoBehaviour {
 		human.layer = 0;
 
 		//TESTING
-		puppetMasterAnim.SetBool ("hasSoul", true);
+		//puppetMasterAnim.SetBool ("hasSoul", true);
 		//StartCoroutine (temp ());
-		StartCoroutine (thirdTrigger ());
+		//StartCoroutine (thirdTrigger ());
 
 	}
 		
@@ -79,16 +80,18 @@ public class StorySceneManager : MonoBehaviour {
 
 
 	IEnumerator firstTrigger(){
-		yield return new WaitForSeconds(0.3f);
 		playerAnim.SetFloat("Y", 1);
 		disableAll ();
 		yield return new WaitForSeconds(0.5f);
 
+		//Enable spotlight at human body
 		maincam.GetComponent<CameraFollow> ().enabled = false;
-		StartCoroutine (move (maincam.transform, human.transform, 0.04f));
+		Coroutine movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		yield return new WaitForSeconds(1.2f);
+		StopCoroutine (movecam);
 		human.GetComponentInChildren<Light> ().enabled = true;
 
+		//camera goes back to player
 		yield return new WaitForSeconds(1.5f);
 		maincam.GetComponent<CameraFollow> ().enabled = true;
 		yield return new WaitForSeconds(1f);
@@ -106,11 +109,11 @@ public class StorySceneManager : MonoBehaviour {
 		human.layer = LayerMask.NameToLayer ("Doll"); //make human layer to doll so can ghost switch into
 
 		//Puppet master Showdown!
-		StartCoroutine (move (maincam.transform, puppetMaster.transform, 0.04f));
+		Coroutine movecam = StartCoroutine (move (maincam.transform, puppetMaster.transform, 0.04f));
 		yield return new WaitForSeconds(0.7f);
+		StopCoroutine (movecam);
 		puppetMaster.SetActive (true);
-		puppetMasterAnim.SetFloat("Y", -1);
-		puppetMasterAnim.SetBool ("hasSoul", true);
+		puppetMasterFace("forward");
 		yield return new WaitForSeconds(1.5f);
 
 		// "Congratulations!..."
@@ -121,20 +124,23 @@ public class StorySceneManager : MonoBehaviour {
 
 		// simulate ghost switch from player to human
 		momentaryJail.SetActive(true); // prevent human from moving around
-		puppetMasterAnim.SetFloat("X", 1); // puppet master anim TODO
-		StartCoroutine (move (maincam.transform, human.transform, 0.04f));
+		puppetMasterFace("right");
+		puppetMasterAnim.SetBool("raiseHand", true);
+		movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		StartCoroutine(simulateGhostSwitch (player, human));
-		yield return new WaitForSeconds(1.1f);
+		yield return new WaitForSeconds(0.8f);
+		puppetMasterAnim.SetBool("raiseHand", false);
+		//puppetMaster face forward
+		puppetMasterFace("forward");
+
 		humanController.enabled = false;
 		player.layer = 0;
 		playerAnim.enabled = true;
 		playerAnim.SetTrigger ("Sliced");
+		StopCoroutine (movecam);
 
-		yield return new WaitForSeconds(0.3f);
-		//puppetMaster face forward
-		puppetMasterAnim.SetFloat("Y", -1);
-		puppetMasterAnim.SetFloat("X", 0);
 
+		yield return new WaitForSeconds(1f);
 		// "Tada! Just as promised.."
 		showText(1);
 		while (textBoxManager.isActive) {
@@ -151,14 +157,15 @@ public class StorySceneManager : MonoBehaviour {
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
 		humanController.allowSound = false;
-		yield return new WaitForSeconds(3f); // allow human to escape //TODO
+		//yield return new WaitForSeconds(3f); // allow human to escape //TODO
 		humanController.enabled = false;
 
-		puppetMasterAnim.SetFloat("X", 1);
+		//puppet Master face human and starts moving closer
+		puppetMasterFace("right");
 		string[] array = textBoxManager.GetComponent<DialogueParser>().textArrays[2].Split (';');
 		for (int i = 0; i < 3; i++) {
 			//puppetmaster inches closer
-			StartCoroutine (simulatePuppetMasterWalking(new Vector3 (5f - 1f*i, 0, 0), 1.2f));
+			StartCoroutine (simulatePuppetMasterWalking(new Vector3 (5f - 1f*i, 0, 0), 1f));
 			textBoxManager.reloadText (array[i]);
 			textBoxManager.EnableTextBox();
 			while (textBoxManager.isActive) {
@@ -172,7 +179,7 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 
-		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (2, 0, 0), 0.8f));
+		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (2, 0, 0), 0.9f));
 
 		// "But I’ve been waiting soooo long…"
 		showText(4);
@@ -180,6 +187,7 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 
+		puppetMasterFace("forward");
 		StartCoroutine (askPuppetMasterName());
 		while (!isNameUpdated) {
 			yield return null;
@@ -195,10 +203,11 @@ public class StorySceneManager : MonoBehaviour {
 		yield return null;
 	}
 
+	// BAD ENDING HEREEEE
 	IEnumerator fourthTrigger(){
 		yield return new WaitForSeconds(1f);
 		//puppetmaster inches even closer
-		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1.2f, 0, 0), 0.5f));
+		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1, 0, 0), 1f));
 
 		// "Hm, cute..."
 		showText(5);
@@ -211,6 +220,9 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
+
+		StartCoroutine(showRedEyesThenFade (3f));
+		yield return new WaitForSeconds(0.8f);
 
 		Light[] lights = Object.FindObjectsOfType<Light>();
 		foreach (Light light in lights) {
@@ -225,7 +237,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator fifthTrigger(){
-		puppetMasterAnim.SetBool ("hasSoul", false);
+		//puppetMasterAnim.SetBool ("hasSoul", false);
 		yield return new WaitForSeconds(1f);
 		yield return null;
 	}
@@ -253,7 +265,7 @@ public class StorySceneManager : MonoBehaviour {
 
 	// ghost switch from 'from' object to 'to' object
 	IEnumerator simulateGhostSwitch (GameObject from, GameObject to){
-		playerController.ghostMode = true;
+		from.GetComponent<Controller2>().ghostMode = true;
 		yield return new WaitForSeconds(0.8f);
 		ghostSwitchManager.possess (from, to);
 		yield return null;
@@ -264,7 +276,7 @@ public class StorySceneManager : MonoBehaviour {
 	IEnumerator move(Transform objectToMove, Transform target, float speed)
 	{
 		//While we are not near to the target
-		while((objectToMove.position - target.position).sqrMagnitude > 0.1)
+		while((objectToMove.position - target.position).sqrMagnitude > 0.2)
 		{
 			Vector3 targetPosition = new Vector3 (target.position.x, 
 				target.position.y,objectToMove.position.z);
@@ -273,6 +285,7 @@ public class StorySceneManager : MonoBehaviour {
 			//Yield until the next frame
 			yield return null;
 		}
+		yield break;
 	}
 
 	IEnumerator dimLight(Light light, float dimSpeed){
@@ -298,4 +311,31 @@ public class StorySceneManager : MonoBehaviour {
 		playerController.enabled = true;
 		playerAnim.enabled = true;
 	}
+
+	void puppetMasterFace(string dir){
+		if (dir == "right") {
+			puppetMasterAnim.SetFloat ("X", 1);
+			puppetMasterAnim.SetFloat ("Y", 0);
+		} else if (dir == "forward") {
+			puppetMasterAnim.SetFloat("X", 0);
+			puppetMasterAnim.SetFloat("Y", -1);
+		}
+	}
+
+	IEnumerator showRedEyesThenFade(float waitTime){
+		redEye[] eyes = puppetMaster.GetComponentsInChildren<redEye> ();
+		foreach (redEye eye in eyes) {
+			eye.StartCoroutine ("enlargeObject");
+		}
+
+		yield return new WaitForSeconds(waitTime);
+
+
+		foreach (redEye eye in eyes) {
+			eye.StartCoroutine ("fadeBlack");
+		}
+
+
+	}
+		
 }
