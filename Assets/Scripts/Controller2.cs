@@ -12,7 +12,7 @@ public class Controller2 : MonoBehaviour {
 	private int radius;
 	private DollManager.Boundary boundary;
 
-    public int maxSpeedSlowerBy = 0;
+    public float maxSpeedSlowerBy = 0;
     public bool canPushButtons = true;
     public bool canOnlyMoveUpAndDown = false;
 
