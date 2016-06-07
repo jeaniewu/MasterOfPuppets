@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class StorySceneManager : MonoBehaviour {
 
@@ -26,6 +27,7 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject inputText;
 	public TextBoxManager textBoxManager;
+	public GameObject panel;
 
 
 	//Singleton Instantiation
@@ -55,7 +57,7 @@ public class StorySceneManager : MonoBehaviour {
 		playerController = player.GetComponent<Controller2> ();
 
 		puppetMasterAnim = puppetMaster.GetComponent<Animator> ();
-		//puppetMaster.SetActive (false); TODO
+		puppetMaster.SetActive (false);
 		puppetMasterFace("forward");
 		isNameUpdated = false;
 
@@ -157,7 +159,7 @@ public class StorySceneManager : MonoBehaviour {
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
 		humanController.allowSound = false;
-		//yield return new WaitForSeconds(3f); // allow human to escape //TODO
+		yield return new WaitForSeconds(6f); // allow human to escape //TODO
 		humanController.enabled = false;
 
 		//puppet Master face human and starts moving closer
@@ -233,6 +235,21 @@ public class StorySceneManager : MonoBehaviour {
 			}
 		}
 
+		enlargeTextBoxpanel (panel,1.5f);
+		panel.GetComponentInChildren<Text> ().color = Color.red;
+
+		yield return new WaitForSeconds(3.6f);
+		showText(7);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		enlargeTextBoxpanel (panel,2f);
+		showText(8);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
 		yield return null;
 	}
 
@@ -288,6 +305,22 @@ public class StorySceneManager : MonoBehaviour {
 		yield break;
 	}
 
+	IEnumerator showRedEyesThenFade(float waitTime){
+		redEye[] eyes = puppetMaster.GetComponentsInChildren<redEye> ();
+		foreach (redEye eye in eyes) {
+			eye.StartCoroutine ("enlargeObject");
+		}
+
+		yield return new WaitForSeconds(waitTime);
+
+
+		foreach (redEye eye in eyes) {
+			eye.StartCoroutine ("fadeBlack");
+		}
+
+
+	}
+
 	IEnumerator dimLight(Light light, float dimSpeed){
 		while (light.intensity >= 0) {
 			light.intensity -= dimSpeed;
@@ -295,6 +328,7 @@ public class StorySceneManager : MonoBehaviour {
 		}
 		yield return null;
 	}
+
 
 	void showText (int index){
 		textBoxManager.GetComponent<DialogueParser>().playScript(index);
@@ -322,20 +356,10 @@ public class StorySceneManager : MonoBehaviour {
 		}
 	}
 
-	IEnumerator showRedEyesThenFade(float waitTime){
-		redEye[] eyes = puppetMaster.GetComponentsInChildren<redEye> ();
-		foreach (redEye eye in eyes) {
-			eye.StartCoroutine ("enlargeObject");
-		}
-
-		yield return new WaitForSeconds(waitTime);
-
-
-		foreach (redEye eye in eyes) {
-			eye.StartCoroutine ("fadeBlack");
-		}
-
-
+	void enlargeTextBoxpanel(GameObject panel, float size){
+		panel.transform.localScale = new Vector3 (size, size, -10);
+		panel.transform.position = maincam.transform.position;
 	}
+		
 		
 }
