@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-	public float maxSpeed = 10f;
+	public float initialSpeed = 8f;
 	public float xMargin = 1f; // Distance in the x axis the player can move before the camera follows.
     public float yMargin = 1f; // Distance in the y axis the player can move before the camera follows.
     public float xSmooth = 8f; // How smoothly the camera catches up with it's target movement in the x axis.
@@ -14,6 +14,8 @@ public class CameraFollow : MonoBehaviour
     public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
 
+
+    public float currentDollSpeed = 8f;
     private Transform m_Player; // Reference to the player's transform.
 	public GameObject player;
     
@@ -23,6 +25,7 @@ public class CameraFollow : MonoBehaviour
     {
         // Setting up the reference.
 		findPlayer();
+        currentDollSpeed = initialSpeed;
 
     }
 
@@ -101,7 +104,7 @@ public class CameraFollow : MonoBehaviour
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
-		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
+		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * currentDollSpeed;
 
 		transform.position = new Vector3 
 			(
@@ -124,6 +127,10 @@ public class CameraFollow : MonoBehaviour
             Camera.main.orthographicSize = 12;
 
         }
+    }
+
+    public void setCurrentDollSpeed(float speed) {
+        currentDollSpeed = speed;
     }
 }
 

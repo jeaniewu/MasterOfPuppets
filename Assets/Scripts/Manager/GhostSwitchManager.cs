@@ -126,7 +126,9 @@ public class GhostSwitchManager : MonoBehaviour
 	// make the camera follow the current player
 	void updateCamera ()
 	{
-		Camera.main.GetComponent<CameraFollow> ().findPlayer ();
+        CameraFollow cameraFollow = Camera.main.GetComponent<CameraFollow>();
+        cameraFollow.findPlayer ();
+        cameraFollow.setCurrentDollSpeed(cameraFollow.initialSpeed - player.GetComponent<Controller2>().maxSpeedSlowerBy);
 	}
 
 	void moveCamera (Vector3 position)
@@ -195,13 +197,13 @@ public class GhostSwitchManager : MonoBehaviour
 
 	// switch control of the player to the doll, as well as update the environment
 	void possess (GameObject player, GameObject doll)
-	{
-		dollsUpdated = false;
+	{     
+        dollsUpdated = false;
 
 		player.GetComponent<Animator> ().SetBool ("hasSoul", false);
 		setGhostMode (false);
 
-		player.GetComponent<Controller2> ().enabled = false;
+        player.GetComponent<Controller2>().enabled = false;
 		//player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.layer = LayerMask.NameToLayer ("Doll");
 

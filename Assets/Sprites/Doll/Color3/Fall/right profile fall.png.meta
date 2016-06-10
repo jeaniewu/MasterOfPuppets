@@ -1,0 +1,281 @@
+fileFormatVersion: 2
+guid: 0be991ab59c20274c94c94a6d0e1182e
+timeCreated: 1465533683
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: right profile fall_0
+    21300002: right profile fall_1
+    21300004: right profile fall_2
+    21300006: right profile fall_3
+    21300008: right profile fall_4
+    21300010: right profile fall_5
+    21300012: right profile fall_6
+    21300014: right profile fall_7
+    21300016: right profile fall_8
+    21300018: right profile fall_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: right profile fall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 132}
+        - {x: -45.5, y: 132}
+        - {x: -77.5, y: 79}
+        - {x: -77.5, y: -11}
+        - {x: -68.5, y: -38}
+        - {x: -44.5, y: -115}
+        - {x: -10.5, y: -134}
+        - {x: 51.5, y: -134}
+        - {x: 68.5, y: -76}
+        - {x: 68.5, y: 78}
+        - {x: 0.5, y: 130}
+    - name: right profile fall_1
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74.8, y: 83}
+        - {x: 16.800003, y: 133}
+        - {x: -32.199997, y: 133}
+        - {x: -71.2, y: 108}
+        - {x: -71.2, y: -134}
+        - {x: 31.800003, y: -134}
+        - {x: 55.800003, y: -99}
+        - {x: 71.8, y: -47}
+        - {x: 74.8, y: -25}
+    - name: right profile fall_2
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.600006, y: 54}
+        - {x: 30.600006, y: 123}
+        - {x: 21.600006, y: 123}
+        - {x: 18.600006, y: 119}
+        - {x: -6.399994, y: 133}
+        - {x: -14.399994, y: 133}
+        - {x: -42.399994, y: 109}
+        - {x: -67.399994, y: 61}
+        - {x: -67.399994, y: -88}
+        - {x: -45.399994, y: -134}
+        - {x: 46.600006, y: -134}
+        - {x: 70.600006, y: -120}
+        - {x: 78.600006, y: -17}
+        - {x: 78.600006, y: 43}
+    - name: right profile fall_3
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.600037, y: 132}
+        - {x: -60.600037, y: 57}
+        - {x: -63.600037, y: 38}
+        - {x: -63.600037, y: 10}
+        - {x: -56.600037, y: -11}
+        - {x: -33.600037, y: -28}
+        - {x: -40.600037, y: -115}
+        - {x: -3.6000366, y: -134}
+        - {x: 36.399963, y: -134}
+        - {x: 81.39996, y: -42}
+        - {x: 81.39996, y: 53}
+        - {x: 57.399963, y: 132}
+    - name: right profile fall_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63.700012, y: 119}
+        - {x: 47.700012, y: 129}
+        - {x: -5.299988, y: 129}
+        - {x: -59.299988, y: 97}
+        - {x: -59.299988, y: -134}
+        - {x: 51.700012, y: -134}
+        - {x: 73.70001, y: -70}
+        - {x: 86.70001, y: -47}
+        - {x: 86.70001, y: 65}
+    - name: right profile fall_5
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46.5, y: 125}
+        - {x: 11.5, y: 125}
+        - {x: -54.5, y: 72}
+        - {x: -54.5, y: -121}
+        - {x: -53.5, y: -129}
+        - {x: -26.5, y: -134}
+        - {x: 44.5, y: -134}
+        - {x: 90.5, y: -30}
+        - {x: 90.5, y: 74}
+        - {x: 76.5, y: 116}
+    - name: right profile fall_6
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60.799927, y: 120}
+        - {x: 31.799927, y: 120}
+        - {x: -37.200073, y: 83}
+        - {x: -50.200073, y: 46}
+        - {x: -50.200073, y: -82}
+        - {x: -43.200073, y: -116}
+        - {x: -15.200073, y: -134}
+        - {x: 63.799927, y: -134}
+        - {x: 94.79993, y: -88}
+        - {x: 94.79993, y: 69}
+        - {x: 79.79993, y: 100}
+    - name: right profile fall_7
+      rect:
+        serializedVersion: 2
+        x: 4550
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43.599976, y: 114}
+        - {x: -23.400024, y: 81}
+        - {x: -46.400024, y: 43}
+        - {x: -46.400024, y: -68}
+        - {x: -38.400024, y: -116}
+        - {x: -10.400024, y: -134}
+        - {x: 69.599976, y: -134}
+        - {x: 98.599976, y: -93}
+        - {x: 98.599976, y: 103}
+        - {x: 70.599976, y: 114}
+    - name: right profile fall_8
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43.400024, y: 106}
+        - {x: -41.599976, y: 54}
+        - {x: -41.599976, y: -4}
+        - {x: -36.599976, y: -17}
+        - {x: -41.599976, y: -64}
+        - {x: -41.599976, y: -114}
+        - {x: -15.599976, y: -134}
+        - {x: 33.400024, y: -134}
+        - {x: 102.400024, y: -59}
+        - {x: 102.400024, y: 106}
+    - name: right profile fall_9
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.30005, y: 68}
+        - {x: -39.30005, y: -119}
+        - {x: -5.300049, y: -134}
+        - {x: 56.69995, y: -134}
+        - {x: 102.69995, y: -74}
+        - {x: 102.69995, y: 98}
+        - {x: -7.300049, y: 98}
+        - {x: -29.300049, y: 94}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

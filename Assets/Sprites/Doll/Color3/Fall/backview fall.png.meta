@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 79d09e8bf6d2d48de928e2e7d27da688
-timeCreated: 1462122133
+guid: 5b6ffef1240f75940b5975e68fc06737
+timeCreated: 1465533665
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,95 +14,6 @@ TextureImporter:
     21300014: backview fall_7
     21300016: backview fall_8
     21300018: backview fall_9
-    21300020: backview fall_10
-    21300022: backview fall_11
-    21300024: backview fall_12
-    21300026: backview fall_13
-    21300028: backview fall_14
-    21300030: backview fall_15
-    21300032: backview fall_16
-    21300034: backview fall_17
-    21300036: backview fall_18
-    21300038: backview fall_19
-    21300040: backview fall_20
-    21300042: backview fall_21
-    21300044: backview fall_22
-    21300046: backview fall_23
-    21300048: backview fall_24
-    21300050: backview fall_25
-    21300052: backview fall_26
-    21300054: backview fall_27
-    21300056: backview fall_28
-    21300058: backview fall_29
-    21300060: backview fall_30
-    21300062: backview fall_31
-    21300064: backview fall_32
-    21300066: backview fall_33
-    21300068: backview fall_34
-    21300070: backview fall_35
-    21300072: backview fall_36
-    21300074: backview fall_37
-    21300076: backview fall_38
-    21300078: backview fall_39
-    21300080: backview fall_40
-    21300082: backview fall_41
-    21300084: backview fall_42
-    21300086: backview fall_43
-    21300088: backview fall_44
-    21300090: backview fall_45
-    21300092: backview fall_46
-    21300094: backview fall_47
-    21300096: backview fall_48
-    21300098: backview fall_49
-    21300100: backview fall_50
-    21300102: backview fall_51
-    21300104: backview fall_52
-    21300106: backview fall_53
-    21300108: backview fall_54
-    21300110: backview fall_55
-    21300112: backview fall_56
-    21300114: backview fall_57
-    21300116: backview fall_58
-    21300118: backview fall_59
-    21300120: backview fall_60
-    21300122: backview fall_61
-    21300124: backview fall_62
-    21300126: backview fall_63
-    21300128: backview fall_64
-    21300130: backview fall_65
-    21300132: backview fall_66
-    21300134: backview fall_67
-    21300136: backview fall_68
-    21300138: backview fall_69
-    21300140: backview fall_70
-    21300142: backview fall_71
-    21300144: backview fall_72
-    21300146: backview fall_73
-    21300148: backview fall_74
-    21300150: backview fall_75
-    21300152: backview fall_76
-    21300154: backview fall_77
-    21300156: backview fall_78
-    21300158: backview fall_79
-    21300160: backview fall_80
-    21300162: backview fall_81
-    21300164: backview fall_82
-    21300166: backview fall_83
-    21300168: backview fall_84
-    21300170: backview fall_85
-    21300172: backview fall_86
-    21300174: backview fall_87
-    21300176: backview fall_88
-    21300178: backview fall_89
-    21300180: backview fall_90
-    21300182: backview fall_91
-    21300184: backview fall_92
-    21300186: backview fall_93
-    21300188: backview fall_94
-    21300190: backview fall_95
-    21300192: backview fall_96
-    21300194: backview fall_97
-    21300196: backview fall_98
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

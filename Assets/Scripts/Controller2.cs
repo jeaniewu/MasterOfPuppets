@@ -12,6 +12,7 @@ public class Controller2 : MonoBehaviour {
 	private int radius;
 	private DollManager.Boundary boundary;
 
+    //Doll Prototype Version Properties
     public float maxSpeedSlowerBy = 0;
     public bool canPushButtons = true;
     public bool canOnlyMoveUpAndDown = false;
@@ -30,7 +31,6 @@ public class Controller2 : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
-
     }
 	
 	void Update(){
