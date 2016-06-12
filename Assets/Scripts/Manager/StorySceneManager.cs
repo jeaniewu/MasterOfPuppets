@@ -20,6 +20,7 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject doorToOpen;
 	public GameObject momentaryJail;
+	public GameObject cage;
 
 	private GhostSwitchManager ghostSwitchManager;
 
@@ -76,6 +77,12 @@ public class StorySceneManager : MonoBehaviour {
 	void Update(){
 		if (Input.GetKeyDown(KeyCode.Y)){
 			StartCoroutine (fourthTrigger ());
+		}
+		if (Input.GetKeyDown(KeyCode.K)){
+			StartCoroutine (instantiateDoll ());
+		}
+		if (Input.GetKeyDown(KeyCode.F)){
+			StartCoroutine (fifthTrigger ());
 		}
 	}
 		
@@ -159,7 +166,7 @@ public class StorySceneManager : MonoBehaviour {
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
 		humanController.allowSound = false;
-		yield return new WaitForSeconds(6f); // allow human to escape //TODO
+		yield return new WaitForSeconds(5f); // allow human to escape //TODO
 		humanController.enabled = false;
 
 		//puppet Master face human and starts moving closer
@@ -207,8 +214,10 @@ public class StorySceneManager : MonoBehaviour {
 
 	// BAD ENDING HEREEEE
 	IEnumerator fourthTrigger(){
+		momentaryJail.SetActive(false); 
 		yield return new WaitForSeconds(1f);
 		//puppetmaster inches even closer
+		puppetMasterFace("right");
 		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1, 0, 0), 1f));
 
 		// "Hm, cute..."
@@ -225,18 +234,10 @@ public class StorySceneManager : MonoBehaviour {
 
 		StartCoroutine(showRedEyesThenFade (3f));
 		yield return new WaitForSeconds(0.8f);
-
-		Light[] lights = Object.FindObjectsOfType<Light>();
-		foreach (Light light in lights) {
-			if (light.type == LightType.Spot) {
-				StartCoroutine (dimLight(light, 0.03f));
-			} else if (light.type == LightType.Directional) {
-				StartCoroutine (dimLight(light, 0.005f));
-			}
-		}
+		StartCoroutine (dimAllLights ());
 
 		enlargeTextBoxpanel (panel,1.5f);
-		panel.GetComponentInChildren<Text> ().color = Color.red;
+		changePanelFontColor (Color.red);
 
 		yield return new WaitForSeconds(3.6f);
 		showText(7);
@@ -253,9 +254,105 @@ public class StorySceneManager : MonoBehaviour {
 		yield return null;
 	}
 
+	// TRUE ENDING HEREE
 	IEnumerator fifthTrigger(){
 		//puppetMasterAnim.SetBool ("hasSoul", false);
-		yield return new WaitForSeconds(1f);
+		puppetMasterAnim.SetTrigger("tiltHead");
+		yield return new WaitForSeconds(0.5f);
+
+		//"How do yoU knoW tHaT nAmE?"
+		changePanelFontColor (Color.red);
+		showText(9);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		Light[] lights = Object.FindObjectsOfType<Light>();
+		foreach (Light light in lights) {
+			if (light.type == LightType.Spot) {
+				light.intensity = 1f;
+			} else if (light.type == LightType.Directional) {
+				light.intensity = 0.8f;
+			}
+		}
+
+		puppetMasterAnim.SetTrigger("spazz");
+		StartCoroutine (instantiateDoll ());
+
+		//“hUrrY, aNd DEstRoy tHe dOll!”
+		changePanelFontColor (Color.blue);
+		showText(10);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		//cage.GetComponent<SpriteRenderer> ().sortingOrder = 7;
+		//cage.GetComponent<Animator> ().SetBool ("isActive", true);
+
+		//“nO! yOu Can’T!”; “HuRry!”
+		StartCoroutine(showTextAlternateColor (11));
+
+		maincam.GetComponent<CameraFollow> ().enabled = true;
+
+		yield return null;
+	}
+
+	IEnumerator sixthTrigger(){
+		//“ArghaaehHAHhahahaHAAaaaHAHAhA!”;“Just shut up and diE already!” 
+		StartCoroutine(showTextAlternateColor (12));
+		puppetMasterAnim.SetBool ("lowerHead", true);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		maincam.GetComponent<CameraFollow> ().enabled = false;
+		Coroutine movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
+		yield return new WaitForSeconds(1.2f);
+		StopCoroutine (movecam);
+
+		yield return new WaitForSeconds(0.5f);
+		puppetMasterAnim.SetBool ("lowerHead", false);
+
+		changePanelFontColor (Color.white);
+		//“She’s gone?”
+		showText(13);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		puppetMasterFace ("right");
+		//“Yes, she’s finally gone!” She goes up to the cage. “Thank you! Thank you so, so much!” 
+		showText(14);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		//“I’ve been trapped for so… so long, I almost gave up hope… But you saved me. I, I can’t thank you enough!”
+		showText(15);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		puppetMasterAnim.SetBool ("raiseHand", true);
+
+		//“I know where the real exit is, let’s go!”
+		showText(16);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		StartCoroutine (dimAllLights ());
+		yield return new WaitForSeconds(3f);
+		enlargeTextBoxpanel (panel,1f);
+
+		//rest of dialogue
+		for (int i = 17; i < 21; i++) {
+			showText(i);
+			while (textBoxManager.isActive) {
+				yield return null;
+			}
+		}
+
 		yield return null;
 	}
 
@@ -317,8 +414,18 @@ public class StorySceneManager : MonoBehaviour {
 		foreach (redEye eye in eyes) {
 			eye.StartCoroutine ("fadeBlack");
 		}
+	}
 
-
+	IEnumerator dimAllLights(){
+		Light[] lights = Object.FindObjectsOfType<Light>();
+		foreach (Light light in lights) {
+			if (light.type == LightType.Spot) {
+				StartCoroutine (dimLight(light, 0.03f));
+			} else if (light.type == LightType.Directional) {
+				StartCoroutine (dimLight(light, 0.005f));
+			}
+		}
+		yield return null;
 	}
 
 	IEnumerator dimLight(Light light, float dimSpeed){
@@ -359,6 +466,60 @@ public class StorySceneManager : MonoBehaviour {
 	void enlargeTextBoxpanel(GameObject panel, float size){
 		panel.transform.localScale = new Vector3 (size, size, -10);
 		panel.transform.position = maincam.transform.position;
+	}
+
+	void changePanelFontColor(Color color) {
+		panel.GetComponentInChildren<Text> ().color = color;
+	}
+
+	IEnumerator instantiateDoll(){
+		GameObject doll = Instantiate(puppetMaster.GetComponentInChildren<DollAnimationController> ().gameObject);
+		doll.tag = "Doll";
+		doll.layer = LayerMask.NameToLayer ("Doll");
+		doll.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+		doll.transform.position = puppetMaster.transform.position;
+
+		Transform fallPosition = GameObject.Find ("FallPosition").transform;
+		Coroutine simulateThrow = StartCoroutine (simulateThrowDoll (doll, doll.transform, fallPosition));
+		yield return new WaitForSeconds(0.8f);
+		StopCoroutine (simulateThrow);
+		doll.GetComponent<Collider2D> ().enabled = true;
+		doll.GetComponent<Rigidbody2D> ().isKinematic = false;
+	}
+
+	IEnumerator simulateThrowDoll(GameObject doll, Transform origin, Transform target) {
+		//While we are not near to the target
+		while((origin.position - target.position).sqrMagnitude > 0.5)
+		{
+			doll.transform.Rotate (new Vector3(0,0,-10));
+			Vector3 targetPosition = new Vector3 (target.position.x, 
+				target.position.y,origin.position.z);
+			origin.position = Vector3.Lerp(origin.position, targetPosition, 0.03f);
+			yield return null;
+		}
+		yield break;
+	}
+
+	public void initFallenDoll(GameObject doll){
+		doll.GetComponent<Animator> ().enabled = true;
+		doll.transform.localScale = new Vector3 (0.75f, 0.75f, 0.75f);
+		doll.transform.rotation = Quaternion.identity;
+	}
+
+	IEnumerator showTextAlternateColor(int index){
+		string[] array = textBoxManager.GetComponent<DialogueParser>().textArrays[index].Split (';');
+		changePanelFontColor (Color.red);
+		textBoxManager.reloadText (array[0]);
+		textBoxManager.EnableTextBox();
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+		changePanelFontColor (Color.blue);
+		textBoxManager.reloadText (array[1]);
+		textBoxManager.EnableTextBox();
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
 	}
 		
 		
