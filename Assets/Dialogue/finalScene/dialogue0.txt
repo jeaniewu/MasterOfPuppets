@@ -6,7 +6,7 @@
 “Hm, cute. But I find last words a bit pointless.”
 “Especially when the only person who’s heard them is going to forget them by tomorrow.”
 "But don’t worry, I’ll remember your screams."
-"END."
+THE END.
 "How do yoU knoW tHaT nAmE?"
 “hUrrY, aNd DEstRoy tHe dOll!”
 “nO! yOu Can’T!”;“HuRry!”
@@ -19,3 +19,5 @@
 “But it’s been so long, I wonder if my family is still alive…”
 “It’s okay though, I have you right?”
 “Here it is! Let’s open it together!”
+"Hey, you'll take care of me...
+r  i   g   h T?"

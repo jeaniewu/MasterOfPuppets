@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class StorySceneManager : MonoBehaviour {
 
@@ -29,6 +30,12 @@ public class StorySceneManager : MonoBehaviour {
 	public GameObject inputText;
 	public TextBoxManager textBoxManager;
 	public GameObject panel;
+	public GameObject whitePanel;
+
+	private FinalSceneMusicManager musicManager;
+
+	public List<Light> spotLights;
+	private Light dirLight;
 
 
 	//Singleton Instantiation
@@ -39,6 +46,17 @@ public class StorySceneManager : MonoBehaviour {
 			Debug.LogError("Multiple instances of StorySceneManager!");
 		}
 		instance = this;
+
+		// Instantiate Lights
+		spotLights = new List<Light> ();
+		Light[] lights = Object.FindObjectsOfType<Light>();
+		foreach (Light light in lights) {
+			if (light.type == LightType.Spot) {
+				spotLights.Add (light);
+			} else if (light.type == LightType.Directional) {
+				dirLight = light;
+			}
+		}
 	}
 
 	//Own getInstance method needed to convert types
@@ -48,6 +66,8 @@ public class StorySceneManager : MonoBehaviour {
 
 
 	void Start () {
+		musicManager = FinalSceneMusicManager.getInstance ();
+		musicManager.playTrack (0); //E1
 		ghostSwitchManager = GetComponent<GhostSwitchManager> ();
 
 		maincam = GameObject.FindGameObjectWithTag ("MainCamera");
@@ -66,24 +86,27 @@ public class StorySceneManager : MonoBehaviour {
 		humanController = human.GetComponent<Controller2> ();
 		human.layer = 0;
 
+		doorToOpen.SetActive (false);
+
 		//TESTING
 		//puppetMasterAnim.SetBool ("hasSoul", true);
 		//StartCoroutine (temp ());
 		//StartCoroutine (thirdTrigger ());
-
 	}
-		
 
 	void Update(){
-		if (Input.GetKeyDown(KeyCode.Y)){
-			StartCoroutine (fourthTrigger ());
-		}
-		if (Input.GetKeyDown(KeyCode.K)){
-			StartCoroutine (instantiateDoll ());
-		}
-		if (Input.GetKeyDown(KeyCode.F)){
-			StartCoroutine (fifthTrigger ());
-		}
+//		if (Input.GetKeyDown(KeyCode.Y)){
+//			StartCoroutine (fourthTrigger ());
+//		}
+//		if (Input.GetKeyDown(KeyCode.K)){
+//			StartCoroutine (instantiateDoll ());
+//		}
+//		if (Input.GetKeyDown(KeyCode.F)){
+//			StartCoroutine (fifthTrigger ());
+//		}
+				if (Input.GetKeyDown(KeyCode.F)){
+					StartCoroutine (sixthTrigger ());
+				}
 	}
 		
 
@@ -98,6 +121,7 @@ public class StorySceneManager : MonoBehaviour {
 		Coroutine movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		yield return new WaitForSeconds(1.2f);
 		StopCoroutine (movecam);
+		musicManager.stopTrack(0); //E1
 		human.GetComponentInChildren<Light> ().enabled = true;
 
 		//camera goes back to player
@@ -110,6 +134,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator secondTrigger(){
+		musicManager.playTrack(1); //E2
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
@@ -162,6 +187,9 @@ public class StorySceneManager : MonoBehaviour {
 
 	IEnumerator thirdTrigger(){
 
+		musicManager.playTrack (2); //E3
+		yield return new WaitForSeconds(0.5f);
+		musicManager.stopTrack (1); //E2
 		// open the door with light and stuff
 		doorToOpen.SetActive (true);
 		humanController.enabled = true;
@@ -201,6 +229,7 @@ public class StorySceneManager : MonoBehaviour {
 		while (!isNameUpdated) {
 			yield return null;
 		}
+		musicManager.stopTrack(2); //E3
 		yield return new WaitForSeconds(0.4f);
 		// need to use GameManager.getInstance ().isTrueEnding () instead
 		if (puppetMasterName == "annie" || puppetMasterName == "Annie" || puppetMasterName == "ANNIE") {
@@ -216,6 +245,7 @@ public class StorySceneManager : MonoBehaviour {
 	IEnumerator fourthTrigger(){
 		momentaryJail.SetActive(false); 
 		yield return new WaitForSeconds(1f);
+		musicManager.playTrack (5); //E6
 		//puppetmaster inches even closer
 		puppetMasterFace("right");
 		StartCoroutine (simulatePuppetMasterWalking(new Vector3 (1, 0, 0), 1f));
@@ -231,10 +261,13 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
-
+		musicManager.playTrack (6); //E6 (Scream)
 		StartCoroutine(showRedEyesThenFade (3f));
 		yield return new WaitForSeconds(0.8f);
-		StartCoroutine (dimAllLights ());
+		foreach (Light light in spotLights) {
+			StartCoroutine (dimLight(light, 0.03f));
+		}
+		StartCoroutine (dimLight(dirLight, 0.005f));
 
 		enlargeTextBoxpanel (panel,1.5f);
 		changePanelFontColor (Color.red);
@@ -256,6 +289,7 @@ public class StorySceneManager : MonoBehaviour {
 
 	// TRUE ENDING HEREE
 	IEnumerator fifthTrigger(){
+		musicManager.stopTrack(2); //E3
 		//puppetMasterAnim.SetBool ("hasSoul", false);
 		puppetMasterAnim.SetTrigger("tiltHead");
 		yield return new WaitForSeconds(0.5f);
@@ -266,15 +300,15 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
+			
+		musicManager.playOnce(4); //E4 (beginning)
+		yield return new WaitForSeconds(2.3f);
+		musicManager.playTrack(3,0.75f); //E4
 
-		Light[] lights = Object.FindObjectsOfType<Light>();
-		foreach (Light light in lights) {
-			if (light.type == LightType.Spot) {
-				light.intensity = 1f;
-			} else if (light.type == LightType.Directional) {
-				light.intensity = 0.8f;
-			}
+		foreach (Light light in spotLights) {
+			light.intensity = 1f;
 		}
+		dirLight.intensity = 0.8f;
 
 		puppetMasterAnim.SetTrigger("spazz");
 		StartCoroutine (instantiateDoll ());
@@ -286,9 +320,6 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 
-		//cage.GetComponent<SpriteRenderer> ().sortingOrder = 7;
-		//cage.GetComponent<Animator> ().SetBool ("isActive", true);
-
 		//“nO! yOu Can’T!”; “HuRry!”
 		StartCoroutine(showTextAlternateColor (11));
 
@@ -298,6 +329,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator sixthTrigger(){
+		musicManager.stopTrack(3); //E4
 		//“ArghaaehHAHhahahaHAAaaaHAHAhA!”;“Just shut up and diE already!” 
 		StartCoroutine(showTextAlternateColor (12));
 		puppetMasterAnim.SetBool ("lowerHead", true);
@@ -313,6 +345,7 @@ public class StorySceneManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		puppetMasterAnim.SetBool ("lowerHead", false);
 
+		musicManager.playTrack(5,0.3f); //E6
 		changePanelFontColor (Color.white);
 		//“She’s gone?”
 		showText(13);
@@ -341,7 +374,10 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 
-		StartCoroutine (dimAllLights ());
+		foreach (Light light in spotLights) {
+			StartCoroutine (dimLight(light, 0.03f));
+		}
+		Coroutine dim = StartCoroutine (dimLight(dirLight, 0.005f));
 		yield return new WaitForSeconds(3f);
 		enlargeTextBoxpanel (panel,1f);
 
@@ -352,7 +388,28 @@ public class StorySceneManager : MonoBehaviour {
 				yield return null;
 			}
 		}
+		StopCoroutine (dim);
 
+		whitePanel.SetActive (true);
+		textBoxManager.textBox = whitePanel;
+		Coroutine brighten = StartCoroutine (brightenLight(dirLight, 0.05f, 2f));
+		yield return new WaitForSeconds(1.8f);
+
+		Text[] texts = whitePanel.GetComponentsInChildren<Text> ();
+		textBoxManager.theText = texts [0];
+		showText(21);
+		StopCoroutine (brighten);
+		yield return new WaitForSeconds(0.8f);
+		musicManager.playTrack (7,1); //E9
+		textBoxManager.theText = texts [1];
+		showText(22);
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+		texts [0].gameObject.SetActive (false);
+		texts [1].gameObject.SetActive (false);
+		textBoxManager.theText = texts [2];
+		showText(8);
 		yield return null;
 	}
 
@@ -416,21 +473,18 @@ public class StorySceneManager : MonoBehaviour {
 		}
 	}
 
-	IEnumerator dimAllLights(){
-		Light[] lights = Object.FindObjectsOfType<Light>();
-		foreach (Light light in lights) {
-			if (light.type == LightType.Spot) {
-				StartCoroutine (dimLight(light, 0.03f));
-			} else if (light.type == LightType.Directional) {
-				StartCoroutine (dimLight(light, 0.005f));
-			}
+	IEnumerator dimLight(Light light, float dimSpeed){
+		while (light.intensity >= 0) {
+			light.intensity -= dimSpeed;
+			yield return null;
 		}
 		yield return null;
 	}
 
-	IEnumerator dimLight(Light light, float dimSpeed){
-		while (light.intensity >= 0) {
-			light.intensity -= dimSpeed;
+	IEnumerator brightenLight(Light light, float brightSpeed, float intensity){
+		Debug.Log ("brighten");
+		while (light.intensity <= intensity) {
+			light.intensity += brightSpeed;
 			yield return null;
 		}
 		yield return null;
