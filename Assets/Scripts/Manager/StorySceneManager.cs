@@ -104,9 +104,6 @@ public class StorySceneManager : MonoBehaviour {
 //		if (Input.GetKeyDown(KeyCode.F)){
 //			StartCoroutine (fifthTrigger ());
 //		}
-				if (Input.GetKeyDown(KeyCode.F)){
-					StartCoroutine (sixthTrigger ());
-				}
 	}
 		
 
@@ -121,7 +118,6 @@ public class StorySceneManager : MonoBehaviour {
 		Coroutine movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		yield return new WaitForSeconds(1.2f);
 		StopCoroutine (movecam);
-		musicManager.stopTrack(0); //E1
 		human.GetComponentInChildren<Light> ().enabled = true;
 
 		//camera goes back to player
@@ -134,6 +130,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator secondTrigger(){
+		musicManager.stopTrack(0); //E1
 		musicManager.playTrack(1); //E2
 		while (textBoxManager.isActive) {
 			yield return null;
