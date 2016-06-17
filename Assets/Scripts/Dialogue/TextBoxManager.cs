@@ -61,7 +61,7 @@ public class TextBoxManager : MonoBehaviour
 				//Debug.Log ("rendering: " + currentLine);
 				theText.text = textLines [currentLine];
 			}
-			if (Input.GetKeyDown(KeyCode.Z))
+			if (Input.GetButtonDown ("Interact"))
 			{
 				currentLine += 1;
 				//Debug.Log ("currentLine increased! now: " + currentLine);

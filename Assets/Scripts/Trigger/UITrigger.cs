@@ -7,6 +7,7 @@ public class UITrigger : Interact {
     public GameObject LetterCanvas;
 	public Sprite[] replacementSprites;
 	public bool found = false;
+	public bool destroyOnFound;
 
 	private TextBoxManager manager;
 	private bool isActive = false;
@@ -20,10 +21,13 @@ public class UITrigger : Interact {
     {
 		if (isActive){
 			DollAudioManager.getInstance().stopWalkingSound();
-			if (Input.GetKeyDown (KeyCode.Z)) {
+			if (Input.GetButtonDown ("Interact")) {
 				LetterCanvas.SetActive (false);
 				isActive = false;
 				manager.enablePlayer ();
+				if (destroyOnFound) {
+					DestroyObject (this);
+				}
 			}
 		}
     }
