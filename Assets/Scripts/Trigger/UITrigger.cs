@@ -1,58 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class UITrigger : Interact {
 
-    public bool found;
     public GameObject LetterCanvas;
-    public GameObject[] toSwitches;
-    
-  
+	public Sprite[] replacementSprites;
+	public bool found = false;
+
+	private TextBoxManager manager;
+	private bool isActive = false;
 
 	// Use this for initialization
 	void Start () {
-        
-        found = false;
-        LetterCanvas = GameObject.Find("Panel");
+		manager = GameObject.FindGameObjectWithTag("TextBoxManager").GetComponent<TextBoxManager>();
     }
 
     public void Update()
     {
-        interact();
+		if (isActive){
+			DollAudioManager.getInstance().stopWalkingSound();
+			if (Input.GetKeyDown (KeyCode.Z)) {
+				LetterCanvas.SetActive (false);
+				isActive = false;
+				manager.enablePlayer ();
+			}
+		}
     }
 
-    public void switchTriggerOn()
-    {
-        found = true;
-        foreach (GameObject toSwitch in toSwitches)
-            toSwitch.GetComponent<receiveSignal>().activate();
-    }
 
-    public void switchTriggerOff()
-    {
-        found = false;
-        foreach (GameObject toSwitch in toSwitches)
-            toSwitch.GetComponent<receiveSignal>().deactivate();
-    }
 
     public override void interact()
     {
-        switchTrigger();
-    }
-
-    public virtual void switchTrigger()
-    {
-        if (found)
-        {
-            switchTriggerOn();
-
-        }
-       else if (!found)
-        {
-
-            switchTriggerOff();
-        }
-
+		manager.disablePlayer ();
+		LetterCanvas.SetActive (true);
+		isActive = true;
+		found = true;
     }
 
 
