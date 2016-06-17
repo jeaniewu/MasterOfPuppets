@@ -1,0 +1,633 @@
+fileFormatVersion: 2
+guid: 1220305fd660f4d22a46a6e57c37c3d5
+timeCreated: 1461518694
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: conveyor belt tile 2-sheet_0
+    21300002: conveyor belt tile 2-sheet_1
+    21300004: conveyor belt tile 2-sheet_2
+    21300006: conveyor belt tile 2-sheet_3
+    21300008: conveyor belt tile 2-sheet_4
+    21300010: conveyor belt tile 2-sheet_5
+    21300012: conveyor belt tile 2-sheet_6
+    21300014: conveyor belt tile 2-sheet_7
+    21300016: conveyor belt tile 2-sheet_8
+    21300018: conveyor belt tile 2-sheet_9
+    21300020: conveyor belt tile 2-sheet_10
+    21300022: conveyor belt tile 2-sheet_11
+    21300024: conveyor belt tile 2-sheet_12
+    21300026: conveyor belt tile 2-sheet_13
+    21300028: conveyor belt tile 2-sheet_14
+    21300030: conveyor belt tile 2-sheet_15
+    21300032: conveyor belt tile 2-sheet_16
+    21300034: conveyor belt tile 2-sheet_17
+    21300036: conveyor belt tile 2-sheet_18
+    21300038: conveyor belt tile 2-sheet_19
+    21300040: conveyor belt tile 2-sheet_20
+    21300042: conveyor belt tile 2-sheet_21
+    21300044: conveyor belt tile 2-sheet_22
+    21300046: conveyor belt tile 2-sheet_23
+    21300048: conveyor belt tile 2-sheet_24
+    21300050: conveyor belt tile 2-sheet_25
+    21300052: conveyor belt tile 2-sheet_26
+    21300054: conveyor belt tile 2-sheet_27
+    21300056: conveyor belt tile 2-sheet_28
+    21300058: conveyor belt tile 2-sheet_29
+    21300060: conveyor belt tile 2-sheet_30
+    21300062: conveyor belt tile 2-sheet_31
+    21300064: conveyor belt tile 2-sheet_32
+    21300066: conveyor belt tile 2-sheet_33
+    21300068: conveyor belt tile 2-sheet_34
+    21300070: conveyor belt tile 2-sheet_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: conveyor belt tile 2-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 85.83331}
+        - {x: -85.5, y: -85.16669}
+        - {x: 85.5, y: -85.16669}
+        - {x: 85.5, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.33334, y: 85.83331}
+        - {x: -85.33334, y: -85.16669}
+        - {x: 86.66666, y: -85.16669}
+        - {x: 86.66666, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 85.83331}
+        - {x: -85.16669, y: -85.16669}
+        - {x: 85.83331, y: -85.16669}
+        - {x: 85.83331, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00003, y: 85.83331}
+        - {x: -85.00003, y: -85.16669}
+        - {x: 86.99997, y: -85.16669}
+        - {x: 86.99997, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.83331}
+        - {x: -85.333374, y: -85.16669}
+        - {x: 86.666626, y: -85.16669}
+        - {x: 86.666626, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 85.83331}
+        - {x: -85.16669, y: -85.16669}
+        - {x: 85.83331, y: -85.16669}
+        - {x: 85.83331, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00006, y: 85.83331}
+        - {x: -85.00006, y: -85.16669}
+        - {x: 86.99994, y: -85.16669}
+        - {x: 86.99994, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.83331}
+        - {x: -85.333374, y: -85.16669}
+        - {x: 86.666626, y: -85.16669}
+        - {x: 86.666626, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 85.83331}
+        - {x: -85.16675, y: -85.16669}
+        - {x: 85.83325, y: -85.16669}
+        - {x: 85.83325, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 85.83331}
+        - {x: -85.5, y: -85.16669}
+        - {x: 85.5, y: -85.16669}
+        - {x: 85.5, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.83331}
+        - {x: -85.333374, y: -85.16669}
+        - {x: 86.666626, y: -85.16669}
+        - {x: 86.666626, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 648
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 85.83331}
+        - {x: -85.16675, y: -85.16669}
+        - {x: 85.83325, y: -85.16669}
+        - {x: 85.83325, y: 85.83331}
+    - name: conveyor belt tile 2-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 86.66666}
+        - {x: -85.5, y: -85.33334}
+        - {x: 85.5, y: -85.33334}
+        - {x: 85.5, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.33334, y: 86.66666}
+        - {x: -85.33334, y: -85.33334}
+        - {x: 86.66666, y: -85.33334}
+        - {x: 86.66666, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 86.66666}
+        - {x: -85.16669, y: -85.33334}
+        - {x: 85.83331, y: -85.33334}
+        - {x: 85.83331, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00003, y: 86.66666}
+        - {x: -85.00003, y: -85.33334}
+        - {x: 86.99997, y: -85.33334}
+        - {x: 86.99997, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 86.66666}
+        - {x: -85.333374, y: -85.33334}
+        - {x: 86.666626, y: -85.33334}
+        - {x: 86.666626, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 86.66666}
+        - {x: -85.16669, y: -85.33334}
+        - {x: 85.83331, y: -85.33334}
+        - {x: 85.83331, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00006, y: 86.66666}
+        - {x: -85.00006, y: -85.33334}
+        - {x: 86.99994, y: -85.33334}
+        - {x: 86.99994, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 86.66666}
+        - {x: -85.333374, y: -85.33334}
+        - {x: 86.666626, y: -85.33334}
+        - {x: 86.666626, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 86.66666}
+        - {x: -85.16675, y: -85.33334}
+        - {x: 85.83325, y: -85.33334}
+        - {x: 85.83325, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 86.66666}
+        - {x: -85.5, y: -85.33334}
+        - {x: 85.5, y: -85.33334}
+        - {x: 85.5, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 86.66666}
+        - {x: -85.333374, y: -85.33334}
+        - {x: 86.666626, y: -85.33334}
+        - {x: 86.666626, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 324
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 86.66666}
+        - {x: -85.16675, y: -85.33334}
+        - {x: 85.83325, y: -85.33334}
+        - {x: 85.83325, y: 86.66666}
+    - name: conveyor belt tile 2-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 85.5}
+        - {x: -85.5, y: -85.5}
+        - {x: 85.5, y: -85.5}
+        - {x: 85.5, y: 85.5}
+    - name: conveyor belt tile 2-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.33334, y: 85.5}
+        - {x: -85.33334, y: -85.5}
+        - {x: 86.66666, y: -85.5}
+        - {x: 86.66666, y: 85.5}
+    - name: conveyor belt tile 2-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 85.5}
+        - {x: -85.16669, y: -85.5}
+        - {x: 85.83331, y: -85.5}
+        - {x: 85.83331, y: 85.5}
+    - name: conveyor belt tile 2-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00003, y: 85.5}
+        - {x: -85.00003, y: -85.5}
+        - {x: 86.99997, y: -85.5}
+        - {x: 86.99997, y: 85.5}
+    - name: conveyor belt tile 2-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.5}
+        - {x: -85.333374, y: -85.5}
+        - {x: 86.666626, y: -85.5}
+        - {x: 86.666626, y: 85.5}
+    - name: conveyor belt tile 2-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16669, y: 85.5}
+        - {x: -85.16669, y: -85.5}
+        - {x: 85.83331, y: -85.5}
+        - {x: 85.83331, y: 85.5}
+    - name: conveyor belt tile 2-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.00006, y: 85.5}
+        - {x: -85.00006, y: -85.5}
+        - {x: 86.99994, y: -85.5}
+        - {x: 86.99994, y: 85.5}
+    - name: conveyor belt tile 2-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.5}
+        - {x: -85.333374, y: -85.5}
+        - {x: 86.666626, y: -85.5}
+        - {x: 86.666626, y: 85.5}
+    - name: conveyor belt tile 2-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 85.5}
+        - {x: -85.16675, y: -85.5}
+        - {x: 85.83325, y: -85.5}
+        - {x: 85.83325, y: 85.5}
+    - name: conveyor belt tile 2-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 85.5}
+        - {x: -85.5, y: -85.5}
+        - {x: 85.5, y: -85.5}
+        - {x: 85.5, y: 85.5}
+    - name: conveyor belt tile 2-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 85.5}
+        - {x: -85.333374, y: -85.5}
+        - {x: 86.666626, y: -85.5}
+        - {x: 86.666626, y: 85.5}
+    - name: conveyor belt tile 2-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 0
+        width: 324
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16675, y: 85.5}
+        - {x: -85.16675, y: -85.5}
+        - {x: 85.83325, y: -85.5}
+        - {x: 85.83325, y: 85.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
