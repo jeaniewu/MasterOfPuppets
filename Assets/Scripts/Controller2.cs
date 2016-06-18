@@ -31,7 +31,6 @@ public class Controller2 : MonoBehaviour {
     }
 	
 	void Update(){
-
 		checkGhostMode ();
 		if (Input.GetButton("Restart"))
 			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
