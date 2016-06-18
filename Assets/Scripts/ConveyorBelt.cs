@@ -15,14 +15,19 @@ public class ConveyorBelt : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other) {
 		if (other.CompareTag("Doll") || other.CompareTag("Player")){
-			if (direction == "up"){
-				other.gameObject.transform.position += new Vector3 (0, 1,0) * Time.deltaTime * speed;
-			}else if (direction == "down") {
-				other.gameObject.transform.position += new Vector3 (0, -1,0)* Time.deltaTime * speed;
-			}else if (direction == "right") {
-				other.gameObject.transform.position += new Vector3 (1, 0,0)* Time.deltaTime * speed;
-			}else if (direction == "left") {
-				other.gameObject.transform.position += new Vector3 (-1, 0,0)* Time.deltaTime * speed;
+			ConveyorUpdate convUpdate = other.GetComponent<ConveyorUpdate> ();
+			if (direction == "up" && !convUpdate.conveyorMovedU) {
+				other.gameObject.transform.position += new Vector3 (0, 1, 0) * Time.deltaTime * speed;
+				convUpdate.conveyorMovedU = true;
+			} else if (direction == "down" && !convUpdate.conveyorMovedD) {
+				other.gameObject.transform.position += new Vector3 (0, -1, 0) * Time.deltaTime * speed;
+				convUpdate.conveyorMovedD = true;
+			} else if (direction == "right" && !convUpdate.conveyorMovedR) {
+				other.gameObject.transform.position += new Vector3 (1, 0, 0) * Time.deltaTime * speed;
+				convUpdate.conveyorMovedR = true;
+			} else if (direction == "left" && !convUpdate.conveyorMovedL) {
+				other.gameObject.transform.position += new Vector3 (-1, 0, 0) * Time.deltaTime * speed;
+				convUpdate.conveyorMovedL = true;
 			}
 		}
 	}
