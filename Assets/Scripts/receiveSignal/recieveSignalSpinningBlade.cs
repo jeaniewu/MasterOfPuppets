@@ -3,14 +3,13 @@
 public class recieveSignalSpinningBlade : receiveSignal 
 {
 
-   public GameObject spinningSawblade;
+   //public GameObject spinningSawblade;
    public float rotationSpeed;
-   public float ROTATIONSIDE;
+   public float ROTATIONSIDE = 90;
 
     // Use this for initialization
     void Start()
     {
-        ROTATIONSIDE = 90;
     }
 
     // Update is called once per frame

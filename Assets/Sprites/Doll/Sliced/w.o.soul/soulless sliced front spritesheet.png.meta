@@ -1,0 +1,870 @@
+fileFormatVersion: 2
+guid: 243e23116b63e4ce0acf7aae9745b2ad
+timeCreated: 1463946107
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: soulless sliced front spritesheet_0
+    21300002: soulless sliced front spritesheet_1
+    21300004: soulless sliced front spritesheet_2
+    21300006: soulless sliced front spritesheet_3
+    21300008: soulless sliced front spritesheet_4
+    21300010: soulless sliced front spritesheet_5
+    21300012: soulless sliced front spritesheet_6
+    21300014: soulless sliced front spritesheet_7
+    21300016: soulless sliced front spritesheet_8
+    21300018: soulless sliced front spritesheet_9
+    21300020: soulless sliced front spritesheet_10
+    21300022: soulless sliced front spritesheet_11
+    21300024: soulless sliced front spritesheet_12
+    21300026: soulless sliced front spritesheet_13
+    21300028: soulless sliced front spritesheet_14
+    21300030: soulless sliced front spritesheet_15
+    21300032: soulless sliced front spritesheet_16
+    21300034: soulless sliced front spritesheet_17
+    21300036: soulless sliced front spritesheet_18
+    21300038: soulless sliced front spritesheet_19
+    21300040: soulless sliced front spritesheet_20
+    21300042: soulless sliced front spritesheet_21
+    21300044: soulless sliced front spritesheet_22
+    21300046: soulless sliced front spritesheet_23
+    21300048: soulless sliced front spritesheet_24
+    21300050: soulless sliced front spritesheet_25
+    21300052: soulless sliced front spritesheet_26
+    21300054: soulless sliced front spritesheet_27
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: soulless sliced front spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 56}
+        - {x: -59, y: -69}
+        - {x: -58, y: -79}
+        - {x: 21, y: -79}
+        - {x: 30, y: -70}
+        - {x: 30, y: 19}
+        - {x: -5, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 17}
+        - {x: -59, y: -25}
+        - {x: -20, y: -74}
+        - {x: -4, y: -79}
+        - {x: 22, y: -79}
+        - {x: 33, y: -70}
+        - {x: 33, y: -9}
+        - {x: 29, y: 19}
+        - {x: -13, y: 56}
+        - {x: -43, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 17}
+        - {x: -59, y: -25}
+        - {x: -20, y: -74}
+        - {x: -4, y: -79}
+        - {x: 22, y: -79}
+        - {x: 33, y: -70}
+        - {x: 33, y: -9}
+        - {x: 29, y: 19}
+        - {x: -13, y: 56}
+        - {x: -43, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 17}
+        - {x: -59, y: -25}
+        - {x: -20, y: -74}
+        - {x: -4, y: -79}
+        - {x: 22, y: -79}
+        - {x: 33, y: -70}
+        - {x: 33, y: -9}
+        - {x: 29, y: 19}
+        - {x: -13, y: 56}
+        - {x: -43, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 17}
+        - {x: -59, y: -25}
+        - {x: -20, y: -74}
+        - {x: -4, y: -79}
+        - {x: 22, y: -79}
+        - {x: 33, y: -70}
+        - {x: 33, y: -9}
+        - {x: 29, y: 19}
+        - {x: -13, y: 56}
+        - {x: -43, y: 56}
+      - - {x: 13, y: 39}
+        - {x: 13, y: 32}
+        - {x: 20, y: 20}
+        - {x: 23, y: 20}
+        - {x: 26, y: 21}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 18, y: 40}
+        - {x: 14, y: 40}
+    - name: soulless sliced front spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 56}
+        - {x: -24, y: 50}
+        - {x: -23, y: 46}
+        - {x: -30, y: 49}
+        - {x: -39, y: 45}
+        - {x: -59, y: 13}
+        - {x: -59, y: -33}
+        - {x: -32, y: -75}
+        - {x: -10, y: -79}
+        - {x: 33, y: -79}
+        - {x: 33, y: 29}
+        - {x: -4, y: 56}
+      - - {x: 15, y: 37}
+        - {x: 14, y: 36}
+        - {x: 14, y: 30}
+        - {x: 16, y: 27}
+        - {x: 22, y: 20}
+        - {x: 26, y: 20}
+        - {x: 26, y: 26}
+        - {x: 24, y: 34}
+        - {x: 19, y: 37}
+    - name: soulless sliced front spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 11}
+        - {x: -59, y: -29}
+        - {x: -30, y: -73}
+        - {x: -8, y: -79}
+        - {x: 25, y: -79}
+        - {x: 33, y: -74}
+        - {x: 33, y: -2}
+        - {x: 26, y: 29}
+        - {x: -13, y: 54}
+        - {x: -28, y: 54}
+        - {x: -41, y: 43}
+      - - {x: 13, y: 37}
+        - {x: 13, y: 30}
+        - {x: 20, y: 18}
+        - {x: 23, y: 18}
+        - {x: 26, y: 19}
+        - {x: 26, y: 24}
+        - {x: 24, y: 32}
+        - {x: 18, y: 38}
+        - {x: 14, y: 38}
+    - name: soulless sliced front spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 18}
+        - {x: -59, y: -40}
+        - {x: -37, y: -79}
+        - {x: 24, y: -79}
+        - {x: 33, y: -69}
+        - {x: 33, y: -10}
+        - {x: 26, y: 20}
+        - {x: -12, y: 52}
+        - {x: -22, y: 52}
+        - {x: -35, y: 46}
+      - - {x: 17, y: 33}
+        - {x: 14, y: 30}
+        - {x: 17, y: 23}
+        - {x: 23, y: 16}
+        - {x: 26, y: 17}
+        - {x: 26, y: 20}
+        - {x: 20, y: 33}
+    - name: soulless sliced front spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 40}
+        - {x: -35, y: 44}
+        - {x: -59, y: 18}
+        - {x: -59, y: -36}
+        - {x: -18, y: -79}
+        - {x: 27, y: -79}
+        - {x: 33, y: -76}
+        - {x: 33, y: 4}
+        - {x: 26, y: 31}
+        - {x: -16, y: 50}
+        - {x: -21, y: 50}
+        - {x: -24, y: 44}
+      - - {x: 15, y: 31}
+        - {x: 14, y: 30}
+        - {x: 14, y: 24}
+        - {x: 16, y: 21}
+        - {x: 22, y: 14}
+        - {x: 26, y: 14}
+        - {x: 26, y: 20}
+        - {x: 24, y: 28}
+        - {x: 19, y: 31}
+    - name: soulless sliced front spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 49}
+        - {x: -23, y: 38}
+        - {x: -35, y: 42}
+        - {x: -40, y: 29}
+        - {x: -59, y: -1}
+        - {x: -59, y: -14}
+        - {x: -53, y: -28}
+        - {x: -34, y: -77}
+        - {x: -25, y: -79}
+        - {x: 33, y: -79}
+        - {x: 33, y: 5}
+        - {x: -15, y: 49}
+      - - {x: 14, y: 21}
+        - {x: 21, y: 13}
+        - {x: 26, y: 13}
+        - {x: 26, y: 17}
+        - {x: 21, y: 30}
+        - {x: 14, y: 30}
+    - name: soulless sliced front spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 48}
+        - {x: -23, y: 48}
+        - {x: -24, y: 43}
+        - {x: -23, y: 36}
+        - {x: -35, y: 41}
+        - {x: -59, y: 23}
+        - {x: -59, y: -48}
+        - {x: -27, y: -79}
+        - {x: 26, y: -79}
+        - {x: 33, y: -71}
+        - {x: 33, y: -1}
+        - {x: 14, y: 23}
+      - - {x: 14, y: 29}
+        - {x: 14, y: 20}
+        - {x: 22, y: 12}
+        - {x: 26, y: 12}
+        - {x: 26, y: 17}
+        - {x: 23, y: 26}
+        - {x: 19, y: 29}
+    - name: soulless sliced front spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 48}
+        - {x: -37, y: 44}
+        - {x: -59, y: 9}
+        - {x: -59, y: -55}
+        - {x: -38, y: -79}
+        - {x: 32, y: -79}
+        - {x: 33, y: -78}
+        - {x: 33, y: 14}
+        - {x: -13, y: 48}
+      - - {x: 15, y: 29}
+        - {x: 14, y: 27}
+        - {x: 14, y: 22}
+        - {x: 22, y: 12}
+        - {x: 25, y: 13}
+        - {x: 25, y: 16}
+        - {x: 19, y: 29}
+    - name: soulless sliced front spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 47}
+        - {x: -42, y: 37}
+        - {x: -59, y: 1}
+        - {x: -59, y: -18}
+        - {x: -55, y: -31}
+        - {x: -20, y: -79}
+        - {x: 31, y: -79}
+        - {x: 34, y: -77}
+        - {x: 34, y: 9}
+        - {x: -9, y: 47}
+      - - {x: 13, y: 26}
+        - {x: 13, y: 23}
+        - {x: 21, y: 11}
+        - {x: 25, y: 11}
+        - {x: 25, y: 15}
+        - {x: 22, y: 24}
+        - {x: 19, y: 28}
+        - {x: 15, y: 28}
+    - name: soulless sliced front spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 46}
+        - {x: -39, y: 36}
+        - {x: -39, y: 31}
+        - {x: -59, y: 16}
+        - {x: -59, y: -44}
+        - {x: -39, y: -79}
+        - {x: 25, y: -79}
+        - {x: 36, y: -71}
+        - {x: 36, y: 11}
+        - {x: -16, y: 46}
+      - - {x: 13, y: 27}
+        - {x: 13, y: 18}
+        - {x: 20, y: 11}
+        - {x: 22, y: 11}
+        - {x: 24, y: 12}
+        - {x: 24, y: 16}
+        - {x: 22, y: 23}
+        - {x: 17, y: 27}
+    - name: soulless sliced front spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 46}
+        - {x: -42, y: 35}
+        - {x: -59, y: -5}
+        - {x: -59, y: -34}
+        - {x: -27, y: -68}
+        - {x: -2, y: -79}
+        - {x: 23, y: -79}
+        - {x: 38, y: -67}
+        - {x: 38, y: 5}
+        - {x: -14, y: 46}
+      - - {x: 15, y: 27}
+        - {x: 12, y: 24}
+        - {x: 15, y: 17}
+        - {x: 21, y: 10}
+        - {x: 24, y: 11}
+        - {x: 24, y: 14}
+        - {x: 18, y: 27}
+    - name: soulless sliced front spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 45}
+        - {x: -41, y: 34}
+        - {x: -39, y: 26}
+        - {x: -37, y: 20}
+        - {x: -59, y: 1}
+        - {x: -59, y: -36}
+        - {x: -15, y: -79}
+        - {x: 28, y: -79}
+        - {x: 39, y: -74}
+        - {x: 39, y: 10}
+        - {x: 3, y: 45}
+      - - {x: 12, y: 17}
+        - {x: 19, y: 9}
+        - {x: 24, y: 9}
+        - {x: 24, y: 13}
+        - {x: 19, y: 26}
+        - {x: 12, y: 26}
+    - name: soulless sliced front spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 45}
+        - {x: -41, y: 34}
+        - {x: -39, y: 26}
+        - {x: -37, y: 20}
+        - {x: -59, y: 1}
+        - {x: -59, y: -36}
+        - {x: -15, y: -79}
+        - {x: 28, y: -79}
+        - {x: 39, y: -74}
+        - {x: 39, y: 10}
+        - {x: 3, y: 45}
+      - - {x: 12, y: 24}
+        - {x: 12, y: 19}
+        - {x: 20, y: 9}
+        - {x: 24, y: 9}
+        - {x: 24, y: 15}
+        - {x: 22, y: 22}
+        - {x: 16, y: 26}
+        - {x: 14, y: 26}
+    - name: soulless sliced front spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 45}
+        - {x: -51, y: 45}
+        - {x: -59, y: 32}
+        - {x: -59, y: -33}
+        - {x: -28, y: -69}
+        - {x: 1, y: -79}
+        - {x: 21, y: -79}
+        - {x: 25, y: -76}
+        - {x: 36, y: -58}
+        - {x: 39, y: -53}
+        - {x: 39, y: 6}
+      - - {x: 12, y: 22}
+        - {x: 17, y: 15}
+        - {x: 20, y: 16}
+        - {x: 20, y: 21}
+        - {x: 18, y: 26}
+        - {x: 14, y: 26}
+        - {x: 12, y: 24}
+    - name: soulless sliced front spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 45}
+        - {x: -27, y: 45}
+        - {x: -40, y: 34}
+        - {x: -39, y: 25}
+        - {x: -59, y: -3}
+        - {x: -59, y: -50}
+        - {x: -15, y: -79}
+        - {x: 37, y: -79}
+        - {x: 39, y: -72}
+        - {x: 39, y: 5}
+        - {x: 37, y: 8}
+      - - {x: 14, y: 16}
+        - {x: 17, y: 15}
+        - {x: 20, y: 16}
+        - {x: 20, y: 21}
+        - {x: 18, y: 26}
+        - {x: 12, y: 26}
+        - {x: 12, y: 21}
+    - name: soulless sliced front spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 45}
+        - {x: -48, y: 37}
+        - {x: -59, y: 19}
+        - {x: -59, y: -32}
+        - {x: -31, y: -79}
+        - {x: 34, y: -79}
+        - {x: 39, y: -77}
+        - {x: 39, y: 20}
+        - {x: -11, y: 45}
+      - - {x: 13, y: 22}
+        - {x: 16, y: 18}
+        - {x: 19, y: 20}
+        - {x: 18, y: 24}
+        - {x: 16, y: 26}
+        - {x: 13, y: 25}
+    - name: soulless sliced front spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 45}
+        - {x: -58, y: -37}
+        - {x: -36, y: -78}
+        - {x: 25, y: -78}
+        - {x: 39, y: -68}
+        - {x: 39, y: 36}
+        - {x: 11, y: 45}
+    - name: soulless sliced front spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 45}
+        - {x: -44, y: 44}
+        - {x: -55, y: 20}
+        - {x: -55, y: -33}
+        - {x: -23, y: -75}
+        - {x: 4, y: -78}
+        - {x: 23, y: -78}
+        - {x: 39, y: -68}
+        - {x: 39, y: 13}
+        - {x: -17, y: 45}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

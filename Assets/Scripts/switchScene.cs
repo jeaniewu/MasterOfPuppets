@@ -9,9 +9,17 @@ public class switchScene : Interact {
 
     public override void interact() {
 		if (isOpen) {
-			SceneManager.LoadScene (nextScene);
+			StartCoroutine ("changeNextScene");
 		}
     }
+
+	IEnumerator changeNextScene(){
+		MechanicAudioManager.getInstance ().playUnlockDoorSound ();
+
+		yield return new WaitForSeconds(MechanicAudioManager.getInstance().unlockDoorClip.length*0.5f);
+
+		SceneManager.LoadScene (nextScene);
+	}
 
 	void setNextScene(string s){
 		nextScene = s;
@@ -21,3 +29,4 @@ public class switchScene : Interact {
         isOpen = open;
     }
 }
+	

@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 3b8047ccc91114ceeadc02757c8c55c1
+timeCreated: 1463636544
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NEW vertical saw sprite sheet_0
+    21300002: NEW vertical saw sprite sheet_1
+    21300004: NEW vertical saw sprite sheet_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: NEW vertical saw sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 789
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 327, y: -66}
+        - {x: 327, y: -61}
+        - {x: 322, y: -38}
+        - {x: 316, y: -30}
+        - {x: 306, y: -6}
+        - {x: 275, y: 23}
+        - {x: 269, y: 22}
+        - {x: 195, y: 15}
+        - {x: 213, y: 37}
+        - {x: 216, y: 43}
+        - {x: 167, y: 66}
+        - {x: 151, y: 64}
+        - {x: 76, y: 27}
+        - {x: 101, y: 74}
+        - {x: 74, y: 79}
+        - {x: 24, y: 81}
+        - {x: -13, y: 35}
+        - {x: -39, y: 85}
+        - {x: -45, y: 88}
+        - {x: -91, y: 88}
+        - {x: -112, y: 85}
+        - {x: -113, y: 34}
+        - {x: -135, y: 77}
+        - {x: -168, y: 75}
+        - {x: -201, y: 61}
+        - {x: -209, y: 65}
+        - {x: -265, y: 62}
+        - {x: -277, y: 57}
+        - {x: -327, y: 5}
+        - {x: -327, y: -93}
+        - {x: 1, y: -93}
+        - {x: 311, y: -91}
+        - {x: 318, y: -86}
+    - name: NEW vertical saw sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 0
+        width: 789
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 320.19604, y: -13}
+        - {x: 315.19604, y: -15}
+        - {x: 311.19604, y: 2}
+        - {x: 257.19604, y: 39}
+        - {x: 193.19604, y: 27}
+        - {x: 216.19604, y: 71}
+        - {x: 130.19604, y: 73}
+        - {x: 115.196045, y: 76}
+        - {x: 50.196045, y: 88}
+        - {x: 18.196045, y: 88}
+        - {x: -9.803955, y: 82}
+        - {x: -52.803955, y: 37}
+        - {x: -55.803955, y: 88}
+        - {x: -120.803955, y: 88}
+        - {x: -131.80396, y: 79}
+        - {x: -164.80396, y: 88}
+        - {x: -217.80396, y: 64}
+        - {x: -238.80396, y: 83}
+        - {x: -333.80396, y: 15}
+        - {x: -333.80396, y: 5}
+        - {x: -324.80396, y: -1}
+        - {x: -316.80396, y: -4}
+        - {x: -326.80396, y: 0}
+        - {x: -333.80396, y: -3}
+        - {x: -333.80396, y: -36}
+        - {x: -324.80396, y: -59}
+        - {x: -319.80396, y: -57}
+        - {x: -303.80396, y: -57}
+        - {x: -315.80396, y: -57}
+        - {x: -329.80396, y: -70}
+        - {x: -321.80396, y: -93}
+        - {x: 205.19604, y: -93}
+        - {x: 317.19604, y: -91}
+        - {x: 331.19604, y: -70}
+        - {x: 331.19604, y: -34}
+      - - {x: 338.19604, y: -2}
+        - {x: 338.19604, y: -12}
+        - {x: 339.19604, y: -15}
+        - {x: 342.19604, y: -15}
+        - {x: 342.19604, y: -1}
+        - {x: 341.19604, y: -1}
+    - name: NEW vertical saw sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 0
+        width: 789
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 331.8921, y: -46}
+        - {x: 336.8921, y: -41}
+        - {x: 336.8921, y: -28}
+        - {x: 324.8921, y: -5}
+        - {x: 307.8921, y: 4}
+        - {x: 295.8921, y: 9}
+        - {x: 287.8921, y: 25}
+        - {x: 258.8921, y: 40}
+        - {x: 232.89209, y: 50}
+        - {x: 186.89209, y: 32}
+        - {x: 115.89209, y: 20}
+        - {x: 117.89209, y: 33}
+        - {x: 167.89209, y: 67}
+        - {x: 126.89209, y: 83}
+        - {x: 57.89209, y: 86}
+        - {x: -12.10791, y: 35}
+        - {x: -8.10791, y: 94}
+        - {x: -113.10791, y: 94}
+        - {x: -137.10791, y: 46}
+        - {x: -161.10791, y: 80}
+        - {x: -183.10791, y: 82}
+        - {x: -237.10791, y: 61}
+        - {x: -214.10791, y: 17}
+        - {x: -271.1079, y: 56}
+        - {x: -341.1079, y: 26}
+        - {x: -341.1079, y: -39}
+        - {x: -328.1079, y: -46}
+        - {x: -317.1079, y: -45}
+        - {x: -324.1079, y: -47}
+        - {x: -327.1079, y: -56}
+        - {x: -329.1079, y: -84}
+        - {x: -316.1079, y: -93}
+        - {x: 4.89209, y: -93}
+        - {x: 314.8921, y: -91}
+        - {x: 324.8921, y: -89}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

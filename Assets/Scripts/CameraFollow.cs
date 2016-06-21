@@ -19,12 +19,11 @@ public class CameraFollow : MonoBehaviour
     
 
 
-    private void Awake()
+    private void Start()
     {
         // Setting up the reference.
-		player = GameObject.FindGameObjectWithTag("Player");
-        m_Player = player.transform;
-		//TrackPlayer ();
+		findPlayer();
+
     }
 
 
@@ -51,11 +50,13 @@ public class CameraFollow : MonoBehaviour
 			if (Input.GetKey (KeyCode.C)) {
 				controller2.enabled = false;
 				animator.enabled = false;
-				DollAudioManager.getInstance().stopWalkingSound();
+				DollAudioManager.getInstance ().stopWalkingSound ();
 				moveCamera ();
-			} else {
+			} else if (Input.GetKeyUp (KeyCode.C)) {
 				controller2.enabled = true;
 				animator.enabled = true;
+				TrackPlayer ();
+			} else {
 				TrackPlayer ();
 			}
 		} 
