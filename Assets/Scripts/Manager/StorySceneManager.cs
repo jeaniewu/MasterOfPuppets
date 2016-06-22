@@ -342,7 +342,7 @@ public class StorySceneManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		puppetMasterAnim.SetBool ("lowerHead", false);
 
-		musicManager.playTrack(5,0.3f); //E6
+		musicManager.playTrack(8); //E6 pinao only
 		changePanelFontColor (Color.white);
 		//“She’s gone?”
 		showText(13);
