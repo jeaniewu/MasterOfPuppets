@@ -37,7 +37,7 @@ public class CameraIntMsg : MonoBehaviour {
             ArrowsSide.SetActive(true);
             onlyOnce = true;
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown("Interact"))
         {
 
             ArrowsSide.SetActive(false);
