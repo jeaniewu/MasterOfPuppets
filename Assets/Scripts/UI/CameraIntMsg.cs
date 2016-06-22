@@ -3,16 +3,17 @@ using System.Collections;
 
 public class CameraIntMsg : MonoBehaviour {
 
-    public GameObject Camera;
+    public GameObject CameraSprite;
     public GameObject ArrowsSide;
     public GameObject ArrowsUp;
-    public Controller2 isghostMode;
+    private Controller2 ghostMode;
     private bool onlyOnce;
 
     // Use this for initialization
     void Start()
     {
         onlyOnce = false;
+        ghostMode = GetComponentInChildren<Controller2>();
     }
 
     // Update is called once per frame
@@ -20,18 +21,15 @@ public class CameraIntMsg : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-
             Debug.Log("hi");
-            Camera.SetActive(false);
-
-
+            CameraSprite.SetActive(false);
         }
         if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
         {
             ArrowsSide.SetActive(false);
             ArrowsUp.SetActive(false);
         }
-        if (isghostMode.ghostMode && !onlyOnce)
+        if (ghostMode.ghostMode && !onlyOnce)
         {
             ArrowsUp.SetActive(false);
             ArrowsSide.SetActive(true);

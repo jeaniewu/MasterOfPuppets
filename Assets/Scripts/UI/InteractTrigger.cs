@@ -17,7 +17,7 @@ public class InteractTrigger : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Furniture")
         {
            
             interactButton.SetActive(true);
@@ -27,7 +27,7 @@ public class InteractTrigger : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Furniture")
         {
             
             interactButton.SetActive(false);
