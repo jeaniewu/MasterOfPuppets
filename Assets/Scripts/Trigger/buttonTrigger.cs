@@ -42,5 +42,20 @@ public class buttonTrigger : Trigger {
 		}
 	}
 
+	public override void interact()
+	{
+		UITrigger secretItem = GetComponent<UITrigger> ();
+		if (secretItem != null && !secretItem.found) {
+			secretItem.interact ();
+			buttonPressed = secretItem.replacementSprites [0];
+			buttonUnpressed = secretItem.replacementSprites [1];
+
+			if (isOn) {
+				GetComponent<SpriteRenderer>().sprite = buttonPressed;
+			} else {
+				GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
+			}
+		}
+	}
 
 }
