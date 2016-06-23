@@ -13,7 +13,6 @@ public class CameraFollow : MonoBehaviour
     public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
 
-    private float maxSpeed;
     private float currentDollSpeed;
     private Transform m_Player; // Reference to the player's transform.
     private DollManager dollManager;
@@ -26,8 +25,7 @@ public class CameraFollow : MonoBehaviour
         // Setting up the reference.
 		findPlayer();
         dollManager = FindObjectOfType<DollManager>();
-        maxSpeed = dollManager.maxSpeed;
-        currentDollSpeed = maxSpeed;
+        currentDollSpeed = dollManager.maxSpeed;
     }
 
 
@@ -98,6 +96,7 @@ public class CameraFollow : MonoBehaviour
 
 	public void findPlayer(){
 		player = GameObject.FindGameObjectWithTag("Player");
+        currentDollSpeed = player.GetComponent<Controller2>().getDollSpeed();
 		m_Player = player.transform;
 	}
 
@@ -128,10 +127,6 @@ public class CameraFollow : MonoBehaviour
             Camera.main.orthographicSize = 12;
 
         }
-    }
-
-    public void setCurrentDollSpeed(float slowerBy) {
-        currentDollSpeed = maxSpeed - slowerBy;
     }
 }
 

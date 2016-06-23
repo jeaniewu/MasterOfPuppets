@@ -128,7 +128,6 @@ public class GhostSwitchManager : MonoBehaviour
 	{
         CameraFollow cameraFollow = Camera.main.GetComponent<CameraFollow>();
         cameraFollow.findPlayer ();
-        cameraFollow.setCurrentDollSpeed(player.GetComponent<Controller2>().maxSpeedSlowerBy);
 	}
 
 	void moveCamera (Vector3 position)
