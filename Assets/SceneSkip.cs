@@ -6,7 +6,12 @@ public class SceneSkip : MonoBehaviour {
    
 
     public void sceneSwitch(string scene) {
-        SceneManager.LoadScene(scene);
+		if (scene == "continue") {
+			GameManager.getInstance ().Load ();
+			SceneManager.LoadScene (GameManager.getInstance ().currentLevel);
+		} else {
+			SceneManager.LoadScene (scene);
+		}
     }
 
 }
