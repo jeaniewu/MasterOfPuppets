@@ -1,0 +1,718 @@
+fileFormatVersion: 2
+guid: 8651960cee260164dbafafe6f5e5a390
+timeCreated: 1466292835
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: soulless sliced spritesheet_0
+    21300002: soulless sliced spritesheet_1
+    21300004: soulless sliced spritesheet_2
+    21300006: soulless sliced spritesheet_3
+    21300008: soulless sliced spritesheet_4
+    21300010: soulless sliced spritesheet_5
+    21300012: soulless sliced spritesheet_6
+    21300014: soulless sliced spritesheet_7
+    21300016: soulless sliced spritesheet_8
+    21300018: soulless sliced spritesheet_9
+    21300020: soulless sliced spritesheet_10
+    21300022: soulless sliced spritesheet_11
+    21300024: soulless sliced spritesheet_12
+    21300026: soulless sliced spritesheet_13
+    21300028: soulless sliced spritesheet_14
+    21300030: soulless sliced spritesheet_15
+    21300032: soulless sliced spritesheet_16
+    21300034: soulless sliced spritesheet_17
+    21300036: soulless sliced spritesheet_18
+    21300038: soulless sliced spritesheet_19
+    21300040: soulless sliced spritesheet_20
+    21300042: soulless sliced spritesheet_21
+    21300044: soulless sliced spritesheet_22
+    21300046: soulless sliced spritesheet_23
+    21300048: soulless sliced spritesheet_24
+    21300050: soulless sliced spritesheet_25
+    21300052: soulless sliced spritesheet_26
+    21300054: soulless sliced spritesheet_27
+    21300056: soulless sliced spritesheet_28
+    21300058: soulless sliced spritesheet_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: soulless sliced spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: 35.27179}
+        - {x: -22.5, y: 24.27179}
+        - {x: -22.5, y: -40.72821}
+        - {x: -14.5, y: -44.72821}
+        - {x: 3.5, y: -44.72821}
+        - {x: 28.5, y: -14.72821}
+        - {x: 28.5, y: 33.27179}
+        - {x: 24.5, y: 35.27179}
+    - name: soulless sliced spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.766663, y: 35.27179}
+        - {x: -17.233337, y: 31.27179}
+        - {x: -21.233337, y: 26.27179}
+        - {x: -21.233337, y: -44.72821}
+        - {x: 15.766663, y: -44.72821}
+        - {x: 19.766663, y: -41.72821}
+        - {x: 28.766663, y: -10.72821}
+        - {x: 28.766663, y: 27.27179}
+    - name: soulless sliced spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.0333252, y: 35.27179}
+        - {x: -20.966675, y: 22.27179}
+        - {x: -20.966675, y: -41.72821}
+        - {x: -13.966675, y: -44.72821}
+        - {x: 18.033325, y: -44.72821}
+        - {x: 30.033325, y: -13.72821}
+        - {x: 30.033325, y: 35.27179}
+    - name: soulless sliced spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.200012, y: 35.27179}
+        - {x: -21.200012, y: 32.27179}
+        - {x: -21.200012, y: -44.72821}
+        - {x: 14.799988, y: -44.72821}
+        - {x: 25.799988, y: -42.72821}
+        - {x: 29.799988, y: -26.72821}
+        - {x: 29.799988, y: 35.27179}
+    - name: soulless sliced spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.56665, y: 35.27179}
+        - {x: -8.43335, y: 28.27179}
+        - {x: -21.43335, y: 15.27179}
+        - {x: -21.43335, y: -40.72821}
+        - {x: -14.43335, y: -44.72821}
+        - {x: 16.56665, y: -44.72821}
+        - {x: 28.56665, y: -29.72821}
+        - {x: 28.56665, y: 27.27179}
+        - {x: 25.56665, y: 35.27179}
+    - name: soulless sliced spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.166687, y: 26.27179}
+        - {x: -21.166687, y: -44.72821}
+        - {x: 18.833313, y: -44.72821}
+        - {x: 29.833313, y: -19.72821}
+        - {x: 29.833313, y: 35.27179}
+        - {x: -0.16668701, y: 35.27179}
+        - {x: -17.166687, y: 34.27179}
+    - name: soulless sliced spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.099976, y: 35.27179}
+        - {x: -10.900024, y: 27.27179}
+        - {x: -20.900024, y: 16.27179}
+        - {x: -20.900024, y: -44.72821}
+        - {x: 15.099976, y: -44.72821}
+        - {x: 30.099976, y: -25.72821}
+        - {x: 30.099976, y: 30.27179}
+        - {x: 28.099976, y: 35.27179}
+    - name: soulless sliced spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.8666382, y: 34.27179}
+        - {x: -9.133362, y: 30.27179}
+        - {x: -21.133362, y: 24.27179}
+        - {x: -21.133362, y: -44.72821}
+        - {x: 8.866638, y: -44.72821}
+        - {x: 14.866638, y: -38.72821}
+        - {x: 29.866638, y: -19.72821}
+        - {x: 29.866638, y: 26.27179}
+        - {x: 26.866638, y: 34.27179}
+    - name: soulless sliced spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.633301, y: 35.27179}
+        - {x: -21.3667, y: 21.27179}
+        - {x: -21.3667, y: -39.72821}
+        - {x: -13.366699, y: -44.72821}
+        - {x: 18.6333, y: -44.72821}
+        - {x: 28.6333, y: -15.72821}
+        - {x: 28.6333, y: 35.27179}
+    - name: soulless sliced spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.899963, y: 34.27179}
+        - {x: -10.100037, y: 26.27179}
+        - {x: -21.100037, y: 15.27179}
+        - {x: -21.100037, y: -40.72821}
+        - {x: -14.100037, y: -44.72821}
+        - {x: 20.899963, y: -44.72821}
+        - {x: 29.899963, y: -18.72821}
+        - {x: 29.899963, y: 34.27179}
+    - name: soulless sliced spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.166626, y: 33.27179}
+        - {x: 24.166626, y: 34.27179}
+        - {x: -10.833374, y: 34.27179}
+        - {x: -20.833374, y: 18.27179}
+        - {x: -20.833374, y: -38.72821}
+        - {x: -11.833374, y: -44.72821}
+        - {x: 5.166626, y: -44.72821}
+        - {x: 11.166626, y: -36.72821}
+        - {x: 30.166626, y: -10.72821}
+        - {x: 30.166626, y: 26.27179}
+    - name: soulless sliced spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.9332886, y: 34.27179}
+        - {x: -18.066711, y: 20.27179}
+        - {x: -21.066711, y: 14.27179}
+        - {x: -21.066711, y: -39.72821}
+        - {x: -12.066711, y: -44.72821}
+        - {x: 8.933289, y: -44.72821}
+        - {x: 29.933289, y: -20.72821}
+        - {x: 29.933289, y: 34.27179}
+    - name: soulless sliced spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.699951, y: 32.27179}
+        - {x: -6.300049, y: 25.27179}
+        - {x: -21.300049, y: 17.27179}
+        - {x: -21.300049, y: -44.72821}
+        - {x: 21.699951, y: -44.72821}
+        - {x: 28.699951, y: -22.72821}
+        - {x: 28.699951, y: 32.27179}
+    - name: soulless sliced spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.033386, y: 14.27179}
+        - {x: -21.033386, y: -3.7282104}
+        - {x: -19.033386, y: -12.72821}
+        - {x: -21.033386, y: -21.72821}
+        - {x: -21.033386, y: -42.72821}
+        - {x: -16.033386, y: -44.72821}
+        - {x: 20.966614, y: -44.72821}
+        - {x: 29.966614, y: -23.72821}
+        - {x: 29.966614, y: 30.27179}
+        - {x: -0.03338623, y: 30.27179}
+        - {x: -17.033386, y: 26.27179}
+    - name: soulless sliced spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.7667236, y: 28.27179}
+        - {x: -11.766724, y: 25.27179}
+        - {x: -20.766724, y: 14.27179}
+        - {x: -20.766724, y: -40.72821}
+        - {x: -18.766724, y: -44.72821}
+        - {x: 7.2332764, y: -44.72821}
+        - {x: 30.233276, y: -16.72821}
+        - {x: 30.233276, y: 18.27179}
+        - {x: 27.233276, y: 28.27179}
+    - name: soulless sliced spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 26}
+        - {x: -22.5, y: 17}
+        - {x: -22.5, y: -45}
+        - {x: 4.5, y: -45}
+        - {x: 28.5, y: -19}
+        - {x: 28.5, y: 18}
+        - {x: 25.5, y: 26}
+      - - {x: -6.5, y: 45}
+        - {x: -5.5, y: 42}
+        - {x: 1.5, y: 42}
+        - {x: 3.5, y: 44}
+        - {x: 3.5, y: 45}
+    - name: soulless sliced spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.7666626, y: 25}
+        - {x: -22.233337, y: 17}
+        - {x: -22.233337, y: -41}
+        - {x: -14.233337, y: -45}
+        - {x: 8.766663, y: -45}
+        - {x: 28.766663, y: -14}
+        - {x: 28.766663, y: 20}
+        - {x: 26.766663, y: 25}
+      - - {x: -6.2333374, y: 45}
+        - {x: -5.2333374, y: 42}
+        - {x: 1.7666626, y: 42}
+        - {x: 3.7666626, y: 44}
+        - {x: 3.7666626, y: 45}
+    - name: soulless sliced spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.033325, y: 25}
+        - {x: 4.033325, y: 25}
+        - {x: -8.966675, y: 21}
+        - {x: -19.966675, y: 9}
+        - {x: -23.966675, y: 4}
+        - {x: -23.966675, y: -42}
+        - {x: -15.966675, y: -45}
+        - {x: 13.033325, y: -45}
+        - {x: 30.033325, y: -21}
+        - {x: 30.033325, y: 18}
+      - - {x: -5.966675, y: 45}
+        - {x: -4.966675, y: 42}
+        - {x: 2.0333252, y: 42}
+        - {x: 4.033325, y: 44}
+        - {x: 4.033325, y: 45}
+    - name: soulless sliced spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.799988, y: 24}
+        - {x: -24.200012, y: 15}
+        - {x: -24.200012, y: -45}
+        - {x: 10.799988, y: -45}
+        - {x: 29.799988, y: -18}
+        - {x: 29.799988, y: 17}
+        - {x: 27.799988, y: 24}
+      - - {x: -5.200012, y: 45}
+        - {x: -4.200012, y: 42}
+        - {x: 1.7999878, y: 42}
+        - {x: 3.7999878, y: 44}
+        - {x: 3.7999878, y: 45}
+    - name: soulless sliced spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.43335, y: 23}
+        - {x: -27.43335, y: 22}
+        - {x: -27.43335, y: -45}
+        - {x: 7.5666504, y: -45}
+        - {x: 17.56665, y: -41}
+        - {x: 29.56665, y: -22}
+        - {x: 29.56665, y: 23}
+      - - {x: -6.4333496, y: 45}
+        - {x: -5.4333496, y: 42}
+        - {x: 1.5666504, y: 42}
+        - {x: 3.5666504, y: 44}
+        - {x: 3.5666504, y: 45}
+    - name: soulless sliced spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.833313, y: 23}
+        - {x: -28.166687, y: 19}
+        - {x: -28.166687, y: -45}
+        - {x: 12.833313, y: -45}
+        - {x: 30.833313, y: -25}
+        - {x: 30.833313, y: 14}
+        - {x: 24.833313, y: 23}
+      - - {x: -6.166687, y: 45}
+        - {x: -5.166687, y: 42}
+        - {x: 1.833313, y: 42}
+        - {x: 3.833313, y: 44}
+        - {x: 3.833313, y: 45}
+    - name: soulless sliced spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.900024, y: -43}
+        - {x: -26.900024, y: -45}
+        - {x: 14.099976, y: -45}
+        - {x: 31.099976, y: -28}
+        - {x: 31.099976, y: 23}
+        - {x: -4.9000244, y: 23}
+        - {x: -28.900024, y: 17}
+      - - {x: -5.9000244, y: 45}
+        - {x: -4.9000244, y: 42}
+        - {x: 2.0999756, y: 42}
+        - {x: 4.0999756, y: 44}
+        - {x: 4.0999756, y: 45}
+    - name: soulless sliced spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.866638, y: 23}
+        - {x: -26.133362, y: 8}
+        - {x: -29.133362, y: 6}
+        - {x: -29.133362, y: -24}
+        - {x: -25.133362, y: -45}
+        - {x: 14.866638, y: -45}
+        - {x: 30.866638, y: -27}
+        - {x: 30.866638, y: 16}
+        - {x: 27.866638, y: 23}
+      - - {x: -5.133362, y: 45}
+        - {x: -4.133362, y: 42}
+        - {x: 1.8666382, y: 42}
+        - {x: 3.8666382, y: 44}
+        - {x: 3.8666382, y: 45}
+    - name: soulless sliced spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.3666992, y: 22}
+        - {x: -30.3667, y: 19}
+        - {x: -30.3667, y: -32}
+        - {x: -23.3667, y: -40}
+        - {x: -17.3667, y: -45}
+        - {x: 10.633301, y: -45}
+        - {x: 21.6333, y: -41}
+        - {x: 29.6333, y: -24}
+        - {x: 29.6333, y: 18}
+        - {x: 23.6333, y: 22}
+      - - {x: -6.366699, y: 45}
+        - {x: -5.366699, y: 42}
+        - {x: 1.6333008, y: 42}
+        - {x: 3.6333008, y: 44}
+        - {x: 3.6333008, y: 45}
+    - name: soulless sliced spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.899963, y: 22}
+        - {x: -29.100037, y: 13}
+        - {x: -29.100037, y: -45}
+        - {x: 14.899963, y: -45}
+        - {x: 30.899963, y: -25}
+        - {x: 30.899963, y: 20}
+        - {x: 29.899963, y: 22}
+      - - {x: -6.1000366, y: 45}
+        - {x: -5.1000366, y: 42}
+        - {x: 1.8999634, y: 42}
+        - {x: 3.8999634, y: 44}
+        - {x: 3.8999634, y: 45}
+    - name: soulless sliced spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.166626, y: 22}
+        - {x: -28.833374, y: 7}
+        - {x: -28.833374, y: -33}
+        - {x: -27.833374, y: -37}
+        - {x: -17.833374, y: -45}
+        - {x: 27.166626, y: -45}
+        - {x: 31.166626, y: -28}
+        - {x: 31.166626, y: 22}
+      - - {x: -4.833374, y: 45}
+        - {x: -3.833374, y: 42}
+        - {x: 2.166626, y: 42}
+        - {x: 4.166626, y: 44}
+        - {x: 4.166626, y: 45}
+    - name: soulless sliced spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.933289, y: 22}
+        - {x: 4.9332886, y: 22}
+        - {x: -29.066711, y: 19}
+        - {x: -29.066711, y: -45}
+        - {x: 14.933289, y: -45}
+        - {x: 30.933289, y: -22}
+        - {x: 30.933289, y: 15}
+      - - {x: -5.0667114, y: 45}
+        - {x: -4.0667114, y: 42}
+        - {x: 1.9332886, y: 42}
+        - {x: 3.9332886, y: 44}
+        - {x: 3.9332886, y: 45}
+    - name: soulless sliced spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.699951, y: 22}
+        - {x: -0.30004883, y: 22}
+        - {x: -29.300049, y: 11}
+        - {x: -29.300049, y: -13}
+        - {x: -23.300049, y: -45}
+        - {x: 8.699951, y: -45}
+        - {x: 11.699951, y: -38}
+        - {x: 29.699951, y: -18}
+        - {x: 29.699951, y: 18}
+      - - {x: -6.300049, y: 45}
+        - {x: -5.300049, y: 42}
+        - {x: 1.6999512, y: 42}
+        - {x: 3.6999512, y: 44}
+        - {x: 3.6999512, y: 45}
+    - name: soulless sliced spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.033386, y: 45}
+        - {x: -5.033386, y: 42}
+        - {x: 1.9666138, y: 42}
+        - {x: 3.9666138, y: 44}
+        - {x: 3.9666138, y: 45}
+    - name: soulless sliced spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.7667236, y: 45}
+        - {x: -3.7667236, y: 42}
+        - {x: 2.2332764, y: 42}
+        - {x: 4.2332764, y: 44}
+        - {x: 4.2332764, y: 45}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
