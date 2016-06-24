@@ -1,0 +1,1142 @@
+fileFormatVersion: 2
+guid: d4275eeb5d7b693428b46c5ec75a7dd1
+timeCreated: 1465447906
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: front view idle_0
+    21300002: front view idle_1
+    21300004: front view idle_2
+    21300006: front view idle_3
+    21300008: front view idle_4
+    21300010: front view idle_5
+    21300012: front view idle_6
+    21300014: front view idle_7
+    21300016: front view idle_8
+    21300018: front view idle_9
+    21300020: front view idle_10
+    21300022: front view idle_11
+    21300024: front view idle_12
+    21300026: front view idle_13
+    21300028: front view idle_14
+    21300030: front view idle_15
+    21300032: front view idle_16
+    21300034: front view idle_17
+    21300036: front view idle_18
+    21300038: front view idle_19
+    21300040: front view idle_20
+    21300042: front view idle_21
+    21300044: front view idle_22
+    21300046: front view idle_23
+    21300048: front view idle_24
+    21300050: front view idle_25
+    21300052: front view idle_26
+    21300054: front view idle_27
+    21300056: front view idle_28
+    21300058: front view idle_29
+    21300060: front view idle_30
+    21300062: front view idle_31
+    21300064: front view idle_32
+    21300066: front view idle_33
+    21300068: front view idle_34
+    21300070: front view idle_35
+    21300072: front view idle_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: front view idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 61}
+        - {x: -17, y: 61}
+        - {x: -48, y: 45}
+        - {x: -48, y: -10}
+        - {x: -46, y: -43}
+        - {x: -26, y: -79}
+        - {x: 18, y: -79}
+        - {x: 32, y: -44}
+        - {x: 40, y: 0}
+        - {x: 43, y: 55}
+      - - {x: 38, y: 17}
+        - {x: 41, y: 15}
+        - {x: 44, y: 17}
+        - {x: 45, y: 31}
+        - {x: 43, y: 36}
+        - {x: 41, y: 36}
+        - {x: 38, y: 34}
+    - name: front view idle_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 61}
+        - {x: -47, y: 48}
+        - {x: -47, y: -43}
+        - {x: -28, y: -79}
+        - {x: 17, y: -79}
+        - {x: 38, y: -35}
+        - {x: 43, y: 13}
+        - {x: 43, y: 61}
+      - - {x: 38, y: 36}
+        - {x: 38, y: 17}
+        - {x: 40, y: 15}
+        - {x: 41, y: 15}
+        - {x: 44, y: 16}
+        - {x: 45, y: 26}
+        - {x: 45, y: 32}
+        - {x: 42, y: 36}
+    - name: front view idle_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 61}
+        - {x: -12, y: 61}
+        - {x: -47, y: 47}
+        - {x: -47, y: -12}
+        - {x: -30, y: -79}
+        - {x: 15, y: -79}
+        - {x: 23, y: -67}
+        - {x: 36, y: -44}
+        - {x: 44, y: 14}
+      - - {x: 38, y: 16}
+        - {x: 39, y: 15}
+        - {x: 44, y: 15}
+        - {x: 45, y: 17}
+        - {x: 45, y: 34}
+        - {x: 44, y: 37}
+        - {x: 41, y: 37}
+        - {x: 39, y: 36}
+        - {x: 38, y: 33}
+    - name: front view idle_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 62}
+        - {x: -48, y: 48}
+        - {x: -48, y: -8}
+        - {x: -32, y: -79}
+        - {x: 15, y: -79}
+        - {x: 26, y: -68}
+        - {x: 44, y: 2}
+        - {x: 44, y: 62}
+      - - {x: 41, y: 37}
+        - {x: 38, y: 35}
+        - {x: 38, y: 18}
+        - {x: 41, y: 16}
+        - {x: 44, y: 18}
+        - {x: 45, y: 26}
+        - {x: 45, y: 34}
+        - {x: 43, y: 37}
+    - name: front view idle_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 62}
+        - {x: -2, y: 62}
+        - {x: -47, y: 46}
+        - {x: -47, y: -3}
+        - {x: -27, y: -79}
+        - {x: 17, y: -79}
+        - {x: 44, y: -12}
+        - {x: 44, y: 59}
+        - {x: 37, y: 60}
+      - - {x: 38, y: 18}
+        - {x: 41, y: 16}
+        - {x: 44, y: 18}
+        - {x: 45, y: 32}
+        - {x: 43, y: 37}
+        - {x: 41, y: 37}
+        - {x: 38, y: 35}
+    - name: front view idle_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 62}
+        - {x: -47, y: 44}
+        - {x: -47, y: -23}
+        - {x: -40, y: -78}
+        - {x: -38, y: -79}
+        - {x: 29, y: -79}
+        - {x: 45, y: 25}
+        - {x: 45, y: 59}
+        - {x: 28, y: 62}
+      - - {x: 38, y: 17}
+        - {x: 39, y: 16}
+        - {x: 44, y: 16}
+        - {x: 45, y: 18}
+        - {x: 45, y: 35}
+        - {x: 44, y: 38}
+        - {x: 41, y: 38}
+        - {x: 39, y: 37}
+        - {x: 38, y: 34}
+    - name: front view idle_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 44}
+        - {x: 45, y: 56}
+        - {x: 43, y: 59}
+        - {x: 38, y: 59}
+        - {x: 30, y: 54}
+        - {x: 17, y: 61}
+        - {x: 12, y: 63}
+        - {x: 8, y: 63}
+        - {x: 5, y: 59}
+        - {x: -44, y: 44}
+        - {x: -48, y: 41}
+        - {x: -48, y: -1}
+        - {x: -29, y: -69}
+        - {x: -3, y: -79}
+        - {x: 12, y: -79}
+        - {x: 24, y: -64}
+        - {x: 37, y: -6}
+        - {x: 39, y: 16}
+      - - {x: 41, y: 39}
+        - {x: 38, y: 36}
+        - {x: 38, y: 17}
+        - {x: 44, y: 17}
+        - {x: 45, y: 25}
+        - {x: 45, y: 36}
+        - {x: 43, y: 39}
+    - name: front view idle_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 63}
+        - {x: -47, y: 55}
+        - {x: -47, y: -41}
+        - {x: -30, y: -79}
+        - {x: 25, y: -79}
+        - {x: 45, y: 29}
+        - {x: 45, y: 63}
+      - - {x: 42, y: 39}
+        - {x: 39, y: 38}
+        - {x: 38, y: 29}
+        - {x: 38, y: 21}
+        - {x: 40, y: 17}
+        - {x: 41, y: 17}
+        - {x: 44, y: 19}
+        - {x: 45, y: 23}
+        - {x: 45, y: 38}
+    - name: front view idle_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 63}
+        - {x: -47, y: 50}
+        - {x: -47, y: -22}
+        - {x: -36, y: -75}
+        - {x: -25, y: -79}
+        - {x: 21, y: -79}
+        - {x: 46, y: -24}
+        - {x: 46, y: 61}
+        - {x: 39, y: 63}
+      - - {x: 38, y: 18}
+        - {x: 39, y: 17}
+        - {x: 44, y: 17}
+        - {x: 45, y: 19}
+        - {x: 45, y: 36}
+        - {x: 44, y: 39}
+        - {x: 41, y: 39}
+        - {x: 39, y: 38}
+        - {x: 38, y: 35}
+    - name: front view idle_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 64}
+        - {x: -48, y: 55}
+        - {x: -48, y: -54}
+        - {x: -21, y: -79}
+        - {x: 13, y: -79}
+        - {x: 31, y: -68}
+        - {x: 46, y: 0}
+        - {x: 46, y: 61}
+        - {x: 38, y: 64}
+      - - {x: 38, y: 20}
+        - {x: 41, y: 18}
+        - {x: 44, y: 20}
+        - {x: 45, y: 34}
+        - {x: 43, y: 39}
+        - {x: 41, y: 39}
+        - {x: 38, y: 37}
+    - name: front view idle_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 64}
+        - {x: -47, y: 44}
+        - {x: -47, y: -55}
+        - {x: -37, y: -73}
+        - {x: -17, y: -79}
+        - {x: 28, y: -79}
+        - {x: 46, y: -19}
+        - {x: 46, y: 64}
+      - - {x: 39, y: 38}
+        - {x: 38, y: 36}
+        - {x: 38, y: 22}
+        - {x: 40, y: 18}
+        - {x: 43, y: 18}
+        - {x: 44, y: 19}
+        - {x: 45, y: 29}
+        - {x: 45, y: 35}
+        - {x: 42, y: 39}
+    - name: front view idle_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 64}
+        - {x: -47, y: 52}
+        - {x: -47, y: -45}
+        - {x: -42, y: -77}
+        - {x: -35, y: -79}
+        - {x: 18, y: -79}
+        - {x: 31, y: -40}
+        - {x: 46, y: 13}
+        - {x: 46, y: 64}
+      - - {x: 40, y: 40}
+        - {x: 38, y: 37}
+        - {x: 38, y: 18}
+        - {x: 45, y: 18}
+        - {x: 45, y: 39}
+        - {x: 44, y: 40}
+    - name: front view idle_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 65}
+        - {x: -48, y: 51}
+        - {x: -48, y: -5}
+        - {x: -30, y: -78}
+        - {x: -27, y: -79}
+        - {x: 18, y: -79}
+        - {x: 47, y: -15}
+        - {x: 47, y: 62}
+        - {x: 22, y: 65}
+      - - {x: 42, y: 41}
+        - {x: 39, y: 40}
+        - {x: 38, y: 32}
+        - {x: 38, y: 25}
+        - {x: 40, y: 19}
+        - {x: 42, y: 19}
+        - {x: 44, y: 21}
+        - {x: 45, y: 26}
+        - {x: 45, y: 40}
+    - name: front view idle_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 65}
+        - {x: 5, y: 65}
+        - {x: -47, y: 40}
+        - {x: -47, y: 3}
+        - {x: -31, y: -71}
+        - {x: -8, y: -79}
+        - {x: 15, y: -79}
+        - {x: 29, y: -64}
+        - {x: 47, y: 35}
+        - {x: 47, y: 59}
+      - - {x: 38, y: 21}
+        - {x: 41, y: 19}
+        - {x: 44, y: 21}
+        - {x: 45, y: 35}
+        - {x: 43, y: 40}
+        - {x: 41, y: 40}
+        - {x: 38, y: 38}
+    - name: front view idle_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 65}
+        - {x: -48, y: 56}
+        - {x: -48, y: -6}
+        - {x: -36, y: -77}
+        - {x: -31, y: -78}
+        - {x: 21, y: -78}
+        - {x: 47, y: 22}
+        - {x: 47, y: 63}
+        - {x: 33, y: 65}
+      - - {x: 38, y: 38}
+        - {x: 38, y: 19}
+        - {x: 45, y: 19}
+        - {x: 45, y: 37}
+        - {x: 42, y: 40}
+    - name: front view idle_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 65}
+        - {x: -47, y: 50}
+        - {x: -47, y: -20}
+        - {x: -46, y: -35}
+        - {x: -21, y: -78}
+        - {x: 16, y: -78}
+        - {x: 44, y: 11}
+        - {x: 47, y: 21}
+        - {x: 47, y: 65}
+      - - {x: 40, y: 41}
+        - {x: 38, y: 38}
+        - {x: 38, y: 19}
+        - {x: 45, y: 19}
+        - {x: 45, y: 40}
+        - {x: 44, y: 41}
+    - name: front view idle_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 65}
+        - {x: -47, y: 42}
+        - {x: -47, y: -9}
+        - {x: -33, y: -73}
+        - {x: -16, y: -78}
+        - {x: 23, y: -78}
+        - {x: 47, y: -15}
+        - {x: 47, y: 65}
+      - - {x: 38, y: 20}
+        - {x: 39, y: 19}
+        - {x: 44, y: 19}
+        - {x: 45, y: 21}
+        - {x: 45, y: 38}
+        - {x: 44, y: 41}
+        - {x: 41, y: 41}
+        - {x: 39, y: 40}
+        - {x: 38, y: 37}
+    - name: front view idle_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 65}
+        - {x: -47, y: 65}
+        - {x: -47, y: -75}
+        - {x: -35, y: -78}
+        - {x: 18, y: -78}
+        - {x: 35, y: -40}
+        - {x: 47, y: -3}
+        - {x: 47, y: 64}
+      - - {x: 40, y: 41}
+        - {x: 38, y: 40}
+        - {x: 38, y: 23}
+        - {x: 40, y: 19}
+        - {x: 43, y: 19}
+        - {x: 45, y: 20}
+        - {x: 45, y: 37}
+        - {x: 44, y: 41}
+    - name: front view idle_18
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 65}
+        - {x: 7, y: 65}
+        - {x: -48, y: 40}
+        - {x: -48, y: -22}
+        - {x: -31, y: -72}
+        - {x: -16, y: -78}
+        - {x: 20, y: -78}
+        - {x: 37, y: -42}
+        - {x: 47, y: 16}
+        - {x: 47, y: 63}
+      - - {x: 38, y: 20}
+        - {x: 39, y: 19}
+        - {x: 44, y: 19}
+        - {x: 45, y: 21}
+        - {x: 45, y: 38}
+        - {x: 44, y: 41}
+        - {x: 41, y: 41}
+        - {x: 39, y: 40}
+        - {x: 38, y: 37}
+    - name: front view idle_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 65}
+        - {x: -46, y: 53}
+        - {x: -47, y: 49}
+        - {x: -47, y: -13}
+        - {x: -28, y: -67}
+        - {x: -14, y: -79}
+        - {x: 19, y: -79}
+        - {x: 47, y: 0}
+        - {x: 47, y: 65}
+      - - {x: 40, y: 41}
+        - {x: 38, y: 40}
+        - {x: 38, y: 23}
+        - {x: 40, y: 19}
+        - {x: 43, y: 19}
+        - {x: 45, y: 20}
+        - {x: 45, y: 37}
+        - {x: 44, y: 41}
+    - name: front view idle_20
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 65}
+        - {x: -29, y: 65}
+        - {x: -33, y: 64}
+        - {x: -47, y: 53}
+        - {x: -47, y: -13}
+        - {x: -32, y: -79}
+        - {x: 13, y: -79}
+        - {x: 25, y: -66}
+        - {x: 47, y: 29}
+        - {x: 47, y: 59}
+      - - {x: 38, y: 20}
+        - {x: 39, y: 19}
+        - {x: 44, y: 19}
+        - {x: 45, y: 21}
+        - {x: 45, y: 38}
+        - {x: 44, y: 41}
+        - {x: 41, y: 41}
+        - {x: 39, y: 40}
+        - {x: 38, y: 37}
+    - name: front view idle_21
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 65}
+        - {x: -47, y: 52}
+        - {x: -47, y: -48}
+        - {x: -26, y: -68}
+        - {x: -22, y: -70}
+        - {x: -9, y: -76}
+        - {x: -3, y: -79}
+        - {x: 10, y: -79}
+        - {x: 23, y: -64}
+        - {x: 47, y: 17}
+        - {x: 47, y: 65}
+      - - {x: 40, y: 41}
+        - {x: 38, y: 38}
+        - {x: 38, y: 19}
+        - {x: 45, y: 19}
+        - {x: 45, y: 40}
+        - {x: 44, y: 41}
+    - name: front view idle_22
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 65}
+        - {x: -48, y: 50}
+        - {x: -48, y: -37}
+        - {x: -25, y: -79}
+        - {x: 11, y: -79}
+        - {x: 30, y: -67}
+        - {x: 47, y: 38}
+        - {x: 47, y: 58}
+        - {x: 19, y: 65}
+      - - {x: 38, y: 38}
+        - {x: 38, y: 19}
+        - {x: 45, y: 19}
+        - {x: 45, y: 37}
+        - {x: 42, y: 40}
+    - name: front view idle_23
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 65}
+        - {x: -47, y: 50}
+        - {x: -47, y: -24}
+        - {x: -39, y: -77}
+        - {x: -21, y: -79}
+        - {x: 15, y: -79}
+        - {x: 26, y: -64}
+        - {x: 47, y: 17}
+        - {x: 47, y: 65}
+      - - {x: 38, y: 21}
+        - {x: 41, y: 19}
+        - {x: 44, y: 21}
+        - {x: 45, y: 35}
+        - {x: 43, y: 40}
+        - {x: 41, y: 40}
+        - {x: 38, y: 38}
+    - name: front view idle_24
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: 65}
+        - {x: -26, y: 65}
+        - {x: -48, y: 55}
+        - {x: -48, y: -16}
+        - {x: -32, y: -79}
+        - {x: 13, y: -79}
+        - {x: 25, y: -64}
+        - {x: 40, y: -11}
+        - {x: 47, y: 16}
+      - - {x: 38, y: 40}
+        - {x: 38, y: 21}
+        - {x: 41, y: 19}
+        - {x: 44, y: 21}
+        - {x: 45, y: 29}
+        - {x: 45, y: 36}
+        - {x: 42, y: 40}
+    - name: front view idle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 64}
+        - {x: -47, y: 52}
+        - {x: -47, y: -39}
+        - {x: -40, y: -78}
+        - {x: -38, y: -79}
+        - {x: 22, y: -79}
+        - {x: 46, y: 2}
+        - {x: 46, y: 64}
+      - - {x: 40, y: 40}
+        - {x: 38, y: 37}
+        - {x: 38, y: 18}
+        - {x: 45, y: 18}
+        - {x: 45, y: 39}
+        - {x: 44, y: 40}
+    - name: front view idle_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 64}
+        - {x: -47, y: 47}
+        - {x: -47, y: -4}
+        - {x: -33, y: -74}
+        - {x: -25, y: -79}
+        - {x: 14, y: -79}
+        - {x: 36, y: -69}
+        - {x: 46, y: 36}
+        - {x: 46, y: 64}
+      - - {x: 39, y: 38}
+        - {x: 38, y: 36}
+        - {x: 38, y: 22}
+        - {x: 40, y: 18}
+        - {x: 43, y: 18}
+        - {x: 44, y: 19}
+        - {x: 45, y: 29}
+        - {x: 45, y: 35}
+        - {x: 42, y: 39}
+    - name: front view idle_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 54}
+        - {x: -48, y: -14}
+        - {x: -37, y: -76}
+        - {x: -29, y: -79}
+        - {x: 24, y: -79}
+        - {x: 46, y: -36}
+        - {x: 46, y: 64}
+        - {x: -1, y: 64}
+      - - {x: 38, y: 20}
+        - {x: 41, y: 18}
+        - {x: 44, y: 20}
+        - {x: 45, y: 34}
+        - {x: 43, y: 39}
+        - {x: 41, y: 39}
+        - {x: 38, y: 37}
+    - name: front view idle_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 63}
+        - {x: -7, y: 63}
+        - {x: -47, y: 47}
+        - {x: -47, y: -3}
+        - {x: -32, y: -71}
+        - {x: -17, y: -79}
+        - {x: 14, y: -79}
+        - {x: 34, y: -68}
+        - {x: 43, y: -12}
+        - {x: 46, y: 7}
+        - {x: 46, y: 61}
+      - - {x: 38, y: 18}
+        - {x: 39, y: 17}
+        - {x: 44, y: 17}
+        - {x: 45, y: 19}
+        - {x: 45, y: 36}
+        - {x: 44, y: 39}
+        - {x: 41, y: 39}
+        - {x: 39, y: 38}
+        - {x: 38, y: 35}
+    - name: front view idle_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 63}
+        - {x: -47, y: 40}
+        - {x: -47, y: -9}
+        - {x: -24, y: -76}
+        - {x: -9, y: -79}
+        - {x: 16, y: -79}
+        - {x: 31, y: -66}
+        - {x: 45, y: 17}
+        - {x: 45, y: 63}
+      - - {x: 42, y: 39}
+        - {x: 39, y: 38}
+        - {x: 38, y: 29}
+        - {x: 38, y: 21}
+        - {x: 40, y: 17}
+        - {x: 41, y: 17}
+        - {x: 44, y: 19}
+        - {x: 45, y: 23}
+        - {x: 45, y: 38}
+    - name: front view idle_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 59}
+        - {x: 38, y: 59}
+        - {x: 30, y: 54}
+        - {x: 17, y: 61}
+        - {x: 12, y: 63}
+        - {x: 8, y: 63}
+        - {x: 5, y: 59}
+        - {x: -44, y: 44}
+        - {x: -48, y: 41}
+        - {x: -48, y: 0}
+        - {x: -27, y: -74}
+        - {x: -5, y: -79}
+        - {x: 15, y: -79}
+        - {x: 28, y: -65}
+        - {x: 45, y: 42}
+        - {x: 45, y: 56}
+      - - {x: 41, y: 39}
+        - {x: 38, y: 36}
+        - {x: 38, y: 17}
+        - {x: 44, y: 17}
+        - {x: 45, y: 25}
+        - {x: 45, y: 36}
+        - {x: 43, y: 39}
+    - name: front view idle_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 9}
+        - {x: 45, y: 39}
+        - {x: 45, y: 56}
+        - {x: 37, y: 60}
+        - {x: 24, y: 62}
+        - {x: 4, y: 62}
+        - {x: -47, y: 38}
+        - {x: -47, y: -8}
+        - {x: -28, y: -68}
+        - {x: -6, y: -79}
+        - {x: 10, y: -79}
+        - {x: 15, y: -78}
+        - {x: 21, y: -63}
+        - {x: 21, y: -59}
+        - {x: 19, y: -57}
+      - - {x: 38, y: 17}
+        - {x: 39, y: 16}
+        - {x: 44, y: 16}
+        - {x: 45, y: 18}
+        - {x: 45, y: 35}
+        - {x: 44, y: 38}
+        - {x: 41, y: 38}
+        - {x: 39, y: 37}
+        - {x: 38, y: 34}
+    - name: front view idle_32
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 59}
+        - {x: 37, y: 61}
+        - {x: 12, y: 62}
+        - {x: 8, y: 62}
+        - {x: -47, y: 47}
+        - {x: -47, y: -24}
+        - {x: -37, y: -77}
+        - {x: -24, y: -79}
+        - {x: 17, y: -79}
+        - {x: 26, y: -68}
+        - {x: 42, y: -5}
+        - {x: 44, y: 11}
+      - - {x: 38, y: 18}
+        - {x: 41, y: 16}
+        - {x: 44, y: 18}
+        - {x: 45, y: 32}
+        - {x: 43, y: 37}
+        - {x: 41, y: 37}
+        - {x: 38, y: 35}
+    - name: front view idle_33
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 62}
+        - {x: -48, y: 48}
+        - {x: -48, y: -8}
+        - {x: -32, y: -79}
+        - {x: 15, y: -79}
+        - {x: 26, y: -68}
+        - {x: 44, y: 2}
+        - {x: 44, y: 62}
+      - - {x: 41, y: 37}
+        - {x: 38, y: 35}
+        - {x: 38, y: 18}
+        - {x: 41, y: 16}
+        - {x: 44, y: 18}
+        - {x: 45, y: 26}
+        - {x: 45, y: 34}
+        - {x: 43, y: 37}
+    - name: front view idle_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 61}
+        - {x: -12, y: 61}
+        - {x: -47, y: 47}
+        - {x: -47, y: -12}
+        - {x: -30, y: -79}
+        - {x: 15, y: -79}
+        - {x: 23, y: -67}
+        - {x: 36, y: -44}
+        - {x: 44, y: 14}
+      - - {x: 38, y: 16}
+        - {x: 39, y: 15}
+        - {x: 44, y: 15}
+        - {x: 45, y: 17}
+        - {x: 45, y: 34}
+        - {x: 44, y: 37}
+        - {x: 41, y: 37}
+        - {x: 39, y: 36}
+        - {x: 38, y: 33}
+    - name: front view idle_35
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 61}
+        - {x: -47, y: 48}
+        - {x: -47, y: -43}
+        - {x: -28, y: -79}
+        - {x: 17, y: -79}
+        - {x: 38, y: -35}
+        - {x: 43, y: 13}
+        - {x: 43, y: 61}
+      - - {x: 38, y: 36}
+        - {x: 38, y: 17}
+        - {x: 40, y: 15}
+        - {x: 41, y: 15}
+        - {x: 44, y: 16}
+        - {x: 45, y: 26}
+        - {x: 45, y: 32}
+        - {x: 42, y: 36}
+    - name: front view idle_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 61}
+        - {x: -17, y: 61}
+        - {x: -48, y: 45}
+        - {x: -48, y: -10}
+        - {x: -46, y: -43}
+        - {x: -26, y: -79}
+        - {x: 18, y: -79}
+        - {x: 32, y: -44}
+        - {x: 40, y: 0}
+        - {x: 43, y: 55}
+      - - {x: 38, y: 17}
+        - {x: 41, y: 15}
+        - {x: 44, y: 17}
+        - {x: 45, y: 31}
+        - {x: 43, y: 36}
+        - {x: 41, y: 36}
+        - {x: 38, y: 34}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,10 +7,16 @@ public class Controller2 : MonoBehaviour {
 
 	public GameObject levelManager;
 
-	private float maxSpeed = 10f;
+	
 	public bool ghostMode = false;
 	private int radius;
 	private DollManager.Boundary boundary;
+    private float dollSpeed = 10f;
+
+    //Doll Prototype Version Properties
+    public float maxSpeedSlowerBy = 0;
+    public bool canPushButtons = true;
+    public bool canOnlyMoveUpAndDown = false;
 
 	public RaycastHit2D hit;
 
@@ -20,14 +26,12 @@ public class Controller2 : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
 		boundary = levelManager.GetComponent<DollManager>().boundary;
-		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
+		dollSpeed = levelManager.GetComponent<DollManager> ().maxSpeed - maxSpeedSlowerBy;
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
-
     }
 	
 	void Update(){
@@ -44,7 +48,7 @@ public class Controller2 : MonoBehaviour {
 			}
 
 			/*ANIMATION*/
-			float input_x = Input.GetAxisRaw ("Horizontal");
+			float input_x = canOnlyMoveUpAndDown ? 0 : Input.GetAxisRaw ("Horizontal");
 			float input_y = Input.GetAxisRaw ("Vertical");
 			move (input_x,input_y);
 			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
@@ -71,7 +75,7 @@ public class Controller2 : MonoBehaviour {
 	void move(float moveHorizontal, float moveVertical)
 	{
 		
-		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
+		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * dollSpeed;
 		
 
 		rigidbody2D2.position = new Vector3 
@@ -119,6 +123,11 @@ public class Controller2 : MonoBehaviour {
 
 
 	}
+
+    //Helper to get DollSpeed
+    public float getDollSpeed() {
+        return dollSpeed;
+    }
 
 		
 }
