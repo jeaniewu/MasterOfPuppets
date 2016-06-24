@@ -1,0 +1,856 @@
+fileFormatVersion: 2
+guid: a4058e7a71356e843bef58baa91b451f
+timeCreated: 1465454394
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: left profile walk_0
+    21300002: left profile walk_1
+    21300004: left profile walk_2
+    21300006: left profile walk_3
+    21300008: left profile walk_4
+    21300010: left profile walk_5
+    21300012: left profile walk_6
+    21300014: left profile walk_7
+    21300016: left profile walk_8
+    21300018: left profile walk_9
+    21300020: left profile walk_10
+    21300022: left profile walk_11
+    21300024: left profile walk_12
+    21300026: left profile walk_13
+    21300028: left profile walk_14
+    21300030: left profile walk_15
+    21300032: left profile walk_16
+    21300034: left profile walk_17
+    21300036: left profile walk_18
+    21300038: left profile walk_19
+    21300040: left profile walk_20
+    21300042: left profile walk_21
+    21300044: left profile walk_22
+    21300046: left profile walk_23
+    21300048: left profile walk_24
+    21300050: left profile walk_25
+    21300052: left profile walk_26
+    21300054: left profile walk_27
+    21300056: left profile walk_28
+    21300058: left profile walk_29
+    21300060: left profile walk_30
+    21300062: left profile walk_31
+    21300064: left profile walk_32
+    21300066: left profile walk_33
+    21300068: left profile walk_34
+    21300070: left profile walk_35
+    21300072: left profile walk_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: left profile walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 64}
+        - {x: -20, y: 64}
+        - {x: -44, y: 43}
+        - {x: -44, y: -62}
+        - {x: -43, y: -77}
+        - {x: -18, y: -82}
+        - {x: -9, y: -83}
+        - {x: 11, y: -83}
+        - {x: 34, y: -69}
+        - {x: 47, y: -23}
+        - {x: 47, y: 31}
+    - name: left profile walk_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 64}
+        - {x: -44, y: 19}
+        - {x: -44, y: -34}
+        - {x: -29, y: -78}
+        - {x: -18, y: -84}
+        - {x: 15, y: -84}
+        - {x: 40, y: -68}
+        - {x: 47, y: -36}
+        - {x: 47, y: 31}
+        - {x: 30, y: 64}
+    - name: left profile walk_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 64}
+        - {x: -44, y: 44}
+        - {x: -44, y: -29}
+        - {x: -32, y: -73}
+        - {x: -14, y: -85}
+        - {x: 16, y: -85}
+        - {x: 31, y: -68}
+        - {x: 47, y: -35}
+        - {x: 47, y: 41}
+        - {x: 41, y: 64}
+    - name: left profile walk_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 64}
+        - {x: -44, y: 37}
+        - {x: -44, y: -40}
+        - {x: -24, y: -85}
+        - {x: 22, y: -85}
+        - {x: 48, y: -46}
+        - {x: 48, y: 47}
+        - {x: 41, y: 64}
+    - name: left profile walk_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 24}
+        - {x: 24, y: 64}
+        - {x: -10, y: 64}
+        - {x: -44, y: 25}
+        - {x: -44, y: -82}
+        - {x: -32, y: -85}
+        - {x: 26, y: -85}
+        - {x: 34, y: -67}
+        - {x: 46, y: -27}
+        - {x: 48, y: -16}
+    - name: left profile walk_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 64}
+        - {x: -44, y: 51}
+        - {x: -44, y: -85}
+        - {x: 36, y: -85}
+        - {x: 48, y: -64}
+        - {x: 48, y: 53}
+        - {x: 36, y: 64}
+    - name: left profile walk_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: -28}
+        - {x: 49, y: 30}
+        - {x: 35, y: 64}
+        - {x: -9, y: 64}
+        - {x: -44, y: 22}
+        - {x: -44, y: -29}
+        - {x: -30, y: -72}
+        - {x: -11, y: -84}
+        - {x: -7, y: -85}
+        - {x: 12, y: -85}
+        - {x: 19, y: -83}
+        - {x: 23, y: -73}
+        - {x: 27, y: -62}
+        - {x: 22, y: -60}
+    - name: left profile walk_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 33}
+        - {x: 26, y: 64}
+        - {x: -4, y: 64}
+        - {x: -44, y: 41}
+        - {x: -44, y: -30}
+        - {x: -29, y: -72}
+        - {x: -17, y: -83}
+        - {x: 0, y: -85}
+        - {x: 14, y: -85}
+        - {x: 23, y: -73}
+        - {x: 27, y: -62}
+        - {x: 49, y: -31}
+    - name: left profile walk_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 64}
+        - {x: -44, y: 43}
+        - {x: -44, y: -49}
+        - {x: -31, y: -85}
+        - {x: 17, y: -85}
+        - {x: 43, y: -76}
+        - {x: 49, y: -63}
+        - {x: 49, y: 47}
+        - {x: 46, y: 64}
+    - name: left profile walk_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 64}
+        - {x: -44, y: 40}
+        - {x: -44, y: -33}
+        - {x: -33, y: -74}
+        - {x: -16, y: -85}
+        - {x: 30, y: -85}
+        - {x: 49, y: -52}
+        - {x: 49, y: 55}
+        - {x: 46, y: 64}
+    - name: left profile walk_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 64}
+        - {x: -44, y: 22}
+        - {x: -44, y: -42}
+        - {x: -30, y: -72}
+        - {x: -23, y: -85}
+        - {x: 26, y: -85}
+        - {x: 49, y: -34}
+        - {x: 49, y: 26}
+        - {x: 33, y: 64}
+    - name: left profile walk_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 64}
+        - {x: -44, y: 44}
+        - {x: -44, y: -51}
+        - {x: -40, y: -81}
+        - {x: -32, y: -85}
+        - {x: 32, y: -85}
+        - {x: 49, y: -49}
+        - {x: 49, y: 57}
+        - {x: 43, y: 64}
+    - name: left profile walk_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 64}
+        - {x: -44, y: 42}
+        - {x: -44, y: -84}
+        - {x: -42, y: -85}
+        - {x: 36, y: -85}
+        - {x: 48, y: -60}
+        - {x: 48, y: 50}
+        - {x: 35, y: 64}
+    - name: left profile walk_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 64}
+        - {x: -12, y: 64}
+        - {x: -44, y: 34}
+        - {x: -44, y: -44}
+        - {x: -38, y: -79}
+        - {x: -4, y: -85}
+        - {x: 16, y: -85}
+        - {x: 27, y: -68}
+        - {x: 48, y: -44}
+        - {x: 48, y: 57}
+    - name: left profile walk_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 64}
+        - {x: -44, y: 52}
+        - {x: -44, y: -44}
+        - {x: -41, y: -56}
+        - {x: -28, y: -73}
+        - {x: -17, y: -79}
+        - {x: -9, y: -85}
+        - {x: 30, y: -85}
+        - {x: 48, y: -55}
+        - {x: 48, y: 39}
+        - {x: 30, y: 64}
+    - name: left profile walk_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 64}
+        - {x: -44, y: 41}
+        - {x: -44, y: -85}
+        - {x: 33, y: -85}
+        - {x: 47, y: -50}
+        - {x: 47, y: 44}
+        - {x: 31, y: 64}
+    - name: left profile walk_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 64}
+        - {x: -39, y: 27}
+        - {x: -44, y: 12}
+        - {x: -44, y: -17}
+        - {x: -33, y: -73}
+        - {x: -19, y: -85}
+        - {x: 14, y: -85}
+        - {x: 36, y: -71}
+        - {x: 47, y: -43}
+        - {x: 47, y: 33}
+        - {x: 35, y: 64}
+    - name: left profile walk_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 64}
+        - {x: -44, y: 37}
+        - {x: -44, y: -28}
+        - {x: -30, y: -72}
+        - {x: -15, y: -83}
+        - {x: -11, y: -85}
+        - {x: 24, y: -85}
+        - {x: 47, y: -54}
+        - {x: 47, y: 48}
+        - {x: 41, y: 64}
+    - name: left profile walk_18
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 64}
+        - {x: -44, y: 22}
+        - {x: -44, y: -43}
+        - {x: -27, y: -79}
+        - {x: -17, y: -85}
+        - {x: 30, y: -85}
+        - {x: 47, y: -51}
+        - {x: 47, y: 50}
+        - {x: 37, y: 64}
+    - name: left profile walk_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 64}
+        - {x: -44, y: 42}
+        - {x: -44, y: -52}
+        - {x: -26, y: -85}
+        - {x: 16, y: -85}
+        - {x: 31, y: -69}
+        - {x: 47, y: -41}
+        - {x: 47, y: 35}
+        - {x: 41, y: 64}
+    - name: left profile walk_20
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 64}
+        - {x: -9, y: 64}
+        - {x: -44, y: 47}
+        - {x: -44, y: -59}
+        - {x: -40, y: -79}
+        - {x: -2, y: -85}
+        - {x: 16, y: -85}
+        - {x: 37, y: -69}
+        - {x: 47, y: -41}
+        - {x: 47, y: 33}
+    - name: left profile walk_21
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 64}
+        - {x: -44, y: 41}
+        - {x: -44, y: -79}
+        - {x: -32, y: -85}
+        - {x: 24, y: -85}
+        - {x: 47, y: -75}
+        - {x: 47, y: 28}
+        - {x: 30, y: 64}
+    - name: left profile walk_22
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 64}
+        - {x: -44, y: 21}
+        - {x: -44, y: -40}
+        - {x: -33, y: -73}
+        - {x: -7, y: -85}
+        - {x: 18, y: -85}
+        - {x: 48, y: -40}
+        - {x: 48, y: 48}
+        - {x: 43, y: 64}
+    - name: left profile walk_23
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 64}
+        - {x: -44, y: 31}
+        - {x: -44, y: -53}
+        - {x: -41, y: -77}
+        - {x: -26, y: -85}
+        - {x: 20, y: -85}
+        - {x: 43, y: -75}
+        - {x: 48, y: -46}
+        - {x: 48, y: 34}
+        - {x: 27, y: 64}
+    - name: left profile walk_24
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 64}
+        - {x: -44, y: 31}
+        - {x: -44, y: -51}
+        - {x: -29, y: -83}
+        - {x: -24, y: -85}
+        - {x: 25, y: -85}
+        - {x: 48, y: -37}
+        - {x: 48, y: 45}
+        - {x: 34, y: 64}
+    - name: left profile walk_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 64}
+        - {x: -44, y: 36}
+        - {x: -44, y: -45}
+        - {x: -24, y: -85}
+        - {x: 34, y: -85}
+        - {x: 49, y: -59}
+        - {x: 49, y: 62}
+        - {x: 47, y: 64}
+    - name: left profile walk_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 64}
+        - {x: -44, y: 22}
+        - {x: -44, y: -42}
+        - {x: -31, y: -72}
+        - {x: -14, y: -85}
+        - {x: 35, y: -85}
+        - {x: 49, y: -63}
+        - {x: 49, y: 45}
+        - {x: 35, y: 64}
+    - name: left profile walk_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 64}
+        - {x: -40, y: 27}
+        - {x: -44, y: 18}
+        - {x: -44, y: -41}
+        - {x: -36, y: -75}
+        - {x: -21, y: -85}
+        - {x: 34, y: -85}
+        - {x: 49, y: -55}
+        - {x: 49, y: 52}
+        - {x: 32, y: 64}
+    - name: left profile walk_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 64}
+        - {x: -44, y: 43}
+        - {x: -44, y: -36}
+        - {x: -34, y: -74}
+        - {x: -19, y: -85}
+        - {x: 39, y: -85}
+        - {x: 49, y: -69}
+        - {x: 49, y: 46}
+        - {x: 44, y: 64}
+    - name: left profile walk_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 64}
+        - {x: -44, y: 45}
+        - {x: -44, y: -26}
+        - {x: -29, y: -73}
+        - {x: -17, y: -79}
+        - {x: -10, y: -85}
+        - {x: 42, y: -85}
+        - {x: 49, y: -77}
+        - {x: 49, y: 54}
+        - {x: 45, y: 64}
+    - name: left profile walk_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 64}
+        - {x: -44, y: 40}
+        - {x: -44, y: -30}
+        - {x: -33, y: -76}
+        - {x: -5, y: -85}
+        - {x: 19, y: -85}
+        - {x: 49, y: -38}
+        - {x: 49, y: 52}
+        - {x: 45, y: 64}
+    - name: left profile walk_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 64}
+        - {x: -44, y: 33}
+        - {x: -44, y: -67}
+        - {x: -28, y: -85}
+        - {x: 37, y: -85}
+        - {x: 48, y: -69}
+        - {x: 48, y: 30}
+        - {x: 35, y: 64}
+    - name: left profile walk_32
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 24}
+        - {x: 24, y: 64}
+        - {x: -10, y: 64}
+        - {x: -44, y: 25}
+        - {x: -44, y: -55}
+        - {x: -38, y: -77}
+        - {x: -9, y: -85}
+        - {x: 19, y: -85}
+        - {x: 26, y: -68}
+        - {x: 26, y: -62}
+        - {x: 48, y: -30}
+    - name: left profile walk_33
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 64}
+        - {x: -12, y: 64}
+        - {x: -44, y: 26}
+        - {x: -44, y: -45}
+        - {x: -38, y: -78}
+        - {x: -11, y: -84}
+        - {x: 0, y: -85}
+        - {x: 13, y: -85}
+        - {x: 23, y: -73}
+        - {x: 48, y: -40}
+        - {x: 48, y: 48}
+    - name: left profile walk_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 63}
+        - {x: 9, y: 58}
+        - {x: 6, y: 64}
+        - {x: -19, y: 64}
+        - {x: -44, y: 27}
+        - {x: -44, y: -60}
+        - {x: -24, y: -85}
+        - {x: 35, y: -85}
+        - {x: 47, y: -56}
+        - {x: 47, y: 54}
+        - {x: 21, y: 64}
+    - name: left profile walk_35
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 64}
+        - {x: -44, y: 42}
+        - {x: -44, y: -27}
+        - {x: -31, y: -73}
+        - {x: -20, y: -85}
+        - {x: 35, y: -85}
+        - {x: 47, y: -55}
+        - {x: 47, y: 55}
+        - {x: 42, y: 64}
+    - name: left profile walk_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 64}
+        - {x: -20, y: 64}
+        - {x: -44, y: 43}
+        - {x: -44, y: -62}
+        - {x: -43, y: -77}
+        - {x: -18, y: -82}
+        - {x: -9, y: -83}
+        - {x: 11, y: -83}
+        - {x: 34, y: -69}
+        - {x: 47, y: -23}
+        - {x: 47, y: 31}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

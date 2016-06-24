@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: dfd60609f5666534991696ceef789e54
+timeCreated: 1465453638
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: right profile walk_0
+    21300002: right profile walk_1
+    21300004: right profile walk_2
+    21300006: right profile walk_3
+    21300008: right profile walk_4
+    21300010: right profile walk_5
+    21300012: right profile walk_6
+    21300014: right profile walk_7
+    21300016: right profile walk_8
+    21300018: right profile walk_9
+    21300020: right profile walk_10
+    21300022: right profile walk_11
+    21300024: right profile walk_12
+    21300026: right profile walk_13
+    21300028: right profile walk_14
+    21300030: right profile walk_15
+    21300032: right profile walk_16
+    21300034: right profile walk_17
+    21300036: right profile walk_18
+    21300038: right profile walk_19
+    21300040: right profile walk_20
+    21300042: right profile walk_21
+    21300044: right profile walk_22
+    21300046: right profile walk_23
+    21300048: right profile walk_24
+    21300050: right profile walk_25
+    21300052: right profile walk_26
+    21300054: right profile walk_27
+    21300056: right profile walk_28
+    21300058: right profile walk_29
+    21300060: right profile walk_30
+    21300062: right profile walk_31
+    21300064: right profile walk_32
+    21300066: right profile walk_33
+    21300068: right profile walk_34
+    21300070: right profile walk_35
+    21300072: right profile walk_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: right profile walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 67}
+        - {x: -50, y: 35}
+        - {x: -50, y: -61}
+        - {x: -43, y: -85}
+        - {x: 35, y: -85}
+        - {x: 43, y: -64}
+        - {x: 43, y: 33}
+        - {x: 18, y: 67}
+    - name: right profile walk_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: -27}
+        - {x: -28, y: -73}
+        - {x: -13, y: -85}
+        - {x: 43, y: -85}
+        - {x: 43, y: 41}
+        - {x: 35, y: 67}
+        - {x: -27, y: 67}
+        - {x: -50, y: 20}
+    - name: right profile walk_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 67}
+        - {x: -27, y: 65}
+        - {x: -50, y: 31}
+        - {x: -50, y: -31}
+        - {x: -36, y: -78}
+        - {x: -14, y: -85}
+        - {x: 40, y: -85}
+        - {x: 43, y: -65}
+        - {x: 43, y: 38}
+        - {x: 14, y: 67}
+    - name: right profile walk_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 66}
+        - {x: -30, y: 66}
+        - {x: -50, y: 17}
+        - {x: -50, y: -14}
+        - {x: -45, y: -20}
+        - {x: -31, y: -33}
+        - {x: -27, y: -64}
+        - {x: -25, y: -77}
+        - {x: -8, y: -85}
+        - {x: 22, y: -85}
+        - {x: 25, y: -84}
+        - {x: 38, y: -60}
+        - {x: 43, y: -20}
+        - {x: 43, y: 27}
+    - name: right profile walk_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 66}
+        - {x: -51, y: 28}
+        - {x: -51, y: -42}
+        - {x: -34, y: -85}
+        - {x: 25, y: -85}
+        - {x: 43, y: -70}
+        - {x: 43, y: 66}
+    - name: right profile walk_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 66}
+        - {x: -51, y: 27}
+        - {x: -51, y: -37}
+        - {x: -37, y: -81}
+        - {x: -13, y: -85}
+        - {x: 30, y: -85}
+        - {x: 43, y: -48}
+        - {x: 43, y: 25}
+        - {x: 18, y: 66}
+    - name: right profile walk_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 66}
+        - {x: -23, y: 66}
+        - {x: -51, y: 32}
+        - {x: -51, y: -43}
+        - {x: -37, y: -79}
+        - {x: -24, y: -85}
+        - {x: 23, y: -85}
+        - {x: 43, y: -74}
+        - {x: 43, y: 32}
+        - {x: 19, y: 65}
+    - name: right profile walk_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 65}
+        - {x: -24, y: 65}
+        - {x: -51, y: 39}
+        - {x: -51, y: -55}
+        - {x: -45, y: -85}
+        - {x: 33, y: -85}
+        - {x: 41, y: -70}
+        - {x: 43, y: -63}
+        - {x: 43, y: 24}
+    - name: right profile walk_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 65}
+        - {x: -51, y: -85}
+        - {x: 27, y: -85}
+        - {x: 43, y: -72}
+        - {x: 43, y: 35}
+        - {x: 11, y: 65}
+    - name: right profile walk_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -14}
+        - {x: 43, y: 25}
+        - {x: 19, y: 65}
+        - {x: -22, y: 65}
+        - {x: -51, y: 50}
+        - {x: -51, y: -72}
+        - {x: -47, y: -85}
+        - {x: 23, y: -85}
+        - {x: 33, y: -72}
+        - {x: 31, y: -63}
+        - {x: 28, y: -60}
+    - name: right profile walk_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 65}
+        - {x: -51, y: 46}
+        - {x: -51, y: -49}
+        - {x: -39, y: -80}
+        - {x: -29, y: -85}
+        - {x: 25, y: -85}
+        - {x: 43, y: -72}
+        - {x: 43, y: 46}
+        - {x: 27, y: 65}
+    - name: right profile walk_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 65}
+        - {x: -2, y: 57}
+        - {x: -12, y: 65}
+        - {x: -19, y: 65}
+        - {x: -23, y: 54}
+        - {x: -51, y: 21}
+        - {x: -51, y: -28}
+        - {x: -30, y: -77}
+        - {x: -7, y: -85}
+        - {x: 23, y: -85}
+        - {x: 43, y: -41}
+        - {x: 43, y: 25}
+        - {x: 17, y: 65}
+    - name: right profile walk_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 61}
+        - {x: 9, y: 66}
+        - {x: -20, y: 66}
+        - {x: -24, y: 65}
+        - {x: -51, y: 32}
+        - {x: -51, y: -48}
+        - {x: -24, y: -85}
+        - {x: 24, y: -85}
+        - {x: 35, y: -61}
+        - {x: 43, y: -29}
+        - {x: 43, y: 35}
+    - name: right profile walk_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: 66}
+        - {x: -34, y: 66}
+        - {x: -51, y: 48}
+        - {x: -51, y: -57}
+        - {x: -45, y: -85}
+        - {x: 23, y: -85}
+        - {x: 40, y: -73}
+        - {x: 43, y: -67}
+        - {x: 43, y: 36}
+    - name: right profile walk_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 66}
+        - {x: -22, y: 66}
+        - {x: -50, y: 23}
+        - {x: -50, y: -43}
+        - {x: -35, y: -77}
+        - {x: -10, y: -85}
+        - {x: 28, y: -85}
+        - {x: 40, y: -68}
+        - {x: 43, y: -61}
+        - {x: 43, y: 28}
+    - name: right profile walk_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 67}
+        - {x: -22, y: 67}
+        - {x: -50, y: 21}
+        - {x: -50, y: -45}
+        - {x: -36, y: -83}
+        - {x: -13, y: -85}
+        - {x: 21, y: -85}
+        - {x: 37, y: -68}
+        - {x: 43, y: -26}
+        - {x: 43, y: 20}
+    - name: right profile walk_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 67}
+        - {x: -31, y: 67}
+        - {x: -50, y: 34}
+        - {x: -50, y: -47}
+        - {x: -20, y: -85}
+        - {x: 23, y: -85}
+        - {x: 35, y: -63}
+        - {x: 43, y: -42}
+        - {x: 43, y: 24}
+    - name: right profile walk_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 67}
+        - {x: -50, y: 41}
+        - {x: -50, y: -43}
+        - {x: -37, y: -81}
+        - {x: -29, y: -85}
+        - {x: 32, y: -85}
+        - {x: 39, y: -82}
+        - {x: 43, y: -20}
+        - {x: 43, y: 18}
+        - {x: 10, y: 67}
+    - name: right profile walk_18
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 36}
+        - {x: 25, y: 67}
+        - {x: -23, y: 67}
+        - {x: -50, y: 46}
+        - {x: -50, y: -12}
+        - {x: -35, y: -34}
+        - {x: -24, y: -72}
+        - {x: -19, y: -76}
+        - {x: -12, y: -81}
+        - {x: 2, y: -85}
+        - {x: 21, y: -85}
+        - {x: 33, y: -61}
+        - {x: 43, y: -18}
+    - name: right profile walk_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 67}
+        - {x: -50, y: 37}
+        - {x: -50, y: -41}
+        - {x: -38, y: -85}
+        - {x: 43, y: -85}
+        - {x: 43, y: 41}
+        - {x: 14, y: 67}
+    - name: right profile walk_20
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 67}
+        - {x: -50, y: 36}
+        - {x: -50, y: -56}
+        - {x: -26, y: -85}
+        - {x: 25, y: -85}
+        - {x: 43, y: -41}
+        - {x: 43, y: 23}
+        - {x: 18, y: 67}
+    - name: right profile walk_21
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 67}
+        - {x: -50, y: 49}
+        - {x: -50, y: -62}
+        - {x: -44, y: -84}
+        - {x: 28, y: -84}
+        - {x: 43, y: -49}
+        - {x: 43, y: 43}
+        - {x: 14, y: 67}
+    - name: right profile walk_22
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 66}
+        - {x: -50, y: 18}
+        - {x: -50, y: -28}
+        - {x: -29, y: -82}
+        - {x: -16, y: -85}
+        - {x: 43, y: -85}
+        - {x: 43, y: 44}
+        - {x: 10, y: 66}
+    - name: right profile walk_23
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: -42}
+        - {x: -37, y: -85}
+        - {x: 43, y: -85}
+        - {x: 43, y: 35}
+        - {x: 34, y: 66}
+        - {x: -29, y: 66}
+        - {x: -51, y: 32}
+    - name: right profile walk_24
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 66}
+        - {x: -51, y: -75}
+        - {x: -23, y: -85}
+        - {x: 43, y: -85}
+        - {x: 43, y: 46}
+        - {x: 38, y: 66}
+    - name: right profile walk_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 15}
+        - {x: 41, y: 27}
+        - {x: 6, y: 65}
+        - {x: 0, y: 65}
+        - {x: -2, y: 64}
+        - {x: -2, y: 57}
+        - {x: -12, y: 65}
+        - {x: -19, y: 65}
+        - {x: -23, y: 54}
+        - {x: -51, y: 21}
+        - {x: -51, y: -37}
+        - {x: -34, y: -85}
+        - {x: 21, y: -85}
+        - {x: 34, y: -64}
+        - {x: 27, y: -60}
+        - {x: 43, y: -12}
+    - name: right profile walk_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 65}
+        - {x: -51, y: 29}
+        - {x: -51, y: -9}
+        - {x: -35, y: -69}
+        - {x: -19, y: -85}
+        - {x: 31, y: -85}
+        - {x: 43, y: -80}
+        - {x: 43, y: 41}
+        - {x: 15, y: 65}
+    - name: right profile walk_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 65}
+        - {x: -22, y: 65}
+        - {x: -51, y: 51}
+        - {x: -51, y: -67}
+        - {x: -45, y: -85}
+        - {x: 22, y: -85}
+        - {x: 39, y: -69}
+        - {x: 43, y: -42}
+        - {x: 43, y: 25}
+    - name: right profile walk_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 65}
+        - {x: -51, y: 65}
+        - {x: -51, y: -85}
+        - {x: 24, y: -85}
+        - {x: 40, y: -74}
+        - {x: 31, y: -63}
+        - {x: 43, y: -43}
+        - {x: 43, y: 30}
+    - name: right profile walk_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 65}
+        - {x: -51, y: 40}
+        - {x: -51, y: -32}
+        - {x: -37, y: -81}
+        - {x: -21, y: -85}
+        - {x: 24, y: -85}
+        - {x: 43, y: -39}
+        - {x: 43, y: 23}
+        - {x: 18, y: 65}
+    - name: right profile walk_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 66}
+        - {x: -51, y: 47}
+        - {x: -51, y: -69}
+        - {x: -46, y: -85}
+        - {x: 41, y: -85}
+        - {x: 43, y: -84}
+        - {x: 43, y: 66}
+    - name: right profile walk_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 66}
+        - {x: -25, y: 66}
+        - {x: -51, y: 14}
+        - {x: -51, y: -3}
+        - {x: -49, y: -7}
+        - {x: -49, y: -40}
+        - {x: -20, y: -85}
+        - {x: 32, y: -85}
+        - {x: 43, y: -75}
+        - {x: 43, y: 18}
+        - {x: 40, y: 29}
+    - name: right profile walk_32
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 66}
+        - {x: -51, y: 41}
+        - {x: -51, y: -56}
+        - {x: -44, y: -81}
+        - {x: -39, y: -85}
+        - {x: 28, y: -85}
+        - {x: 43, y: -76}
+        - {x: 43, y: 30}
+        - {x: 8, y: 66}
+    - name: right profile walk_33
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 66}
+        - {x: -50, y: 25}
+        - {x: -50, y: -31}
+        - {x: -22, y: -83}
+        - {x: -18, y: -85}
+        - {x: 31, y: -85}
+        - {x: 43, y: -46}
+        - {x: 43, y: 42}
+        - {x: 13, y: 66}
+    - name: right profile walk_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 67}
+        - {x: -27, y: 65}
+        - {x: -50, y: 31}
+        - {x: -50, y: -19}
+        - {x: -29, y: -72}
+        - {x: -24, y: -76}
+        - {x: -11, y: -85}
+        - {x: 39, y: -85}
+        - {x: 43, y: -77}
+        - {x: 43, y: 40}
+        - {x: 21, y: 67}
+    - name: right profile walk_35
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 67}
+        - {x: -50, y: 54}
+        - {x: -50, y: -52}
+        - {x: -40, y: -85}
+        - {x: 24, y: -85}
+        - {x: 43, y: -77}
+        - {x: 43, y: 28}
+        - {x: 11, y: 67}
+    - name: right profile walk_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 67}
+        - {x: -50, y: 35}
+        - {x: -50, y: -61}
+        - {x: -43, y: -85}
+        - {x: 35, y: -85}
+        - {x: 43, y: -64}
+        - {x: 43, y: 33}
+        - {x: 18, y: 67}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
