@@ -15,10 +15,10 @@ public class UITrigger : Interact {
 
 	void Awake(){
 		found = GameManager.getInstance ().secretItemFound [index];
-		checkDestroy ();
 	}
 
 	void Start () {
+		checkDestroy ();
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
 	}
 

@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MusicManager : AbstractAudioManager {
     
@@ -39,6 +43,17 @@ public class MusicManager : AbstractAudioManager {
     private AudioSource switchingTo;
     private int switchingState = 0; //representing start, fadingOut, fadingIN
 
+	private static String[] mainThemeScenes = {"OpenScene"};
+	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
+
+	void Start(){
+		String currentLevel = SceneManager.GetActiveScene ().name;
+		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
+			startMainTheme ();
+		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
+			startMechanicalTheme ();
+		}
+	}
 
     void Update () {
         if (isSongSwitching) {

@@ -21,14 +21,9 @@ public class ActivateTextAtLine : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        theTextBox = FindObjectOfType < TextBoxManager >();
+		theTextBox = FindObjectOfType < TextBoxManager > ();
 		UpdateTrigger ();
 	}
-
-	void UpdateTrigger () {
-		textTriggered = GameManager.getInstance ().textTriggered[index];
-	}
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,4 +37,8 @@ public class ActivateTextAtLine : MonoBehaviour {
             theTextBox.EnableTextBox();
         }
     }
+
+	void UpdateTrigger () {
+		textTriggered = GameManager.getInstance ().textTriggered[index];
+	}
 }
