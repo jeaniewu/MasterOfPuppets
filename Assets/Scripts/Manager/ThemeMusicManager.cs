@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ThemeMusicManager : MusicManager {
 
@@ -23,15 +27,21 @@ public class ThemeMusicManager : MusicManager {
 			Debug.LogError("Multiple instances of ThemeMusicManager!");
 		}
 		instance = this;
-	}
 
-	void Start(){
+		initAudioSource ();
+
 		String currentLevel = SceneManager.GetActiveScene ().name;
 		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
 			startMainTheme ();
 		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
 			startMechanicalTheme ();
 		}
+	}
+		
+	void initAudioSource(){
+		AudioSource[] source = GetComponentsInChildren<AudioSource> ();
+		mainTheme = source [0];
+		mechanicalTheme = source [1];
 	}
 
 	public static ThemeMusicManager getInstance() {

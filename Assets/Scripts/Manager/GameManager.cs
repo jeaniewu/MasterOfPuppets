@@ -54,13 +54,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update(){
-		if (Input.GetKeyDown(KeyCode.S)){
-			Save ();
-		} 
-		if (Input.GetKeyDown(KeyCode.L)){
-			Load ();
-			//SceneManager.LoadScene (currentLevel);
-		}
+//		if (Input.GetKeyDown(KeyCode.S)){
+//			Save ();
+//		} 
+//		if (Input.GetKeyDown(KeyCode.L)){
+//			Load ();
+//			//SceneManager.LoadScene (currentLevel);
+//		}
 
 		if (Input.GetButton ("Restart") && !cannotRestartScenes.ToList().Contains(instance.currentLevel)) {
 			SceneManager.LoadScene (instance.currentLevel);
