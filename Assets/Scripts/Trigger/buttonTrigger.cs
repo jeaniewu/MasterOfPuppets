@@ -27,13 +27,16 @@ public class buttonTrigger : Trigger {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
-			if (!objects.Contains (other.gameObject)) 
-				objects.Add (other.gameObject);
-			if (!isOn) {
-				switchTriggerOn ();
-				MechanicAudioManager.getInstance ().playButtonSound ();
-			}
-            GetComponent<SpriteRenderer>().sprite = buttonPressed;
+            bool canPushButtons = other.GetComponent<Controller2>().canPushButtons;
+            if (canPushButtons) {
+                if (!objects.Contains(other.gameObject))
+                    objects.Add(other.gameObject);
+                if (!isOn) {
+                    switchTriggerOn();
+                    MechanicAudioManager.getInstance().playButtonSound();
+                }
+                GetComponent<SpriteRenderer>().sprite = buttonPressed;
+            }
 		}
 	}
 		

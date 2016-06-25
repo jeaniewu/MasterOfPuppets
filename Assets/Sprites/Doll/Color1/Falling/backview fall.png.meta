@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 79d09e8bf6d2d48de928e2e7d27da688
+timeCreated: 1462122133
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: backview fall_0
+    21300002: backview fall_1
+    21300004: backview fall_2
+    21300006: backview fall_3
+    21300008: backview fall_4
+    21300010: backview fall_5
+    21300012: backview fall_6
+    21300014: backview fall_7
+    21300016: backview fall_8
+    21300018: backview fall_9
+    21300020: backview fall_10
+    21300022: backview fall_11
+    21300024: backview fall_12
+    21300026: backview fall_13
+    21300028: backview fall_14
+    21300030: backview fall_15
+    21300032: backview fall_16
+    21300034: backview fall_17
+    21300036: backview fall_18
+    21300038: backview fall_19
+    21300040: backview fall_20
+    21300042: backview fall_21
+    21300044: backview fall_22
+    21300046: backview fall_23
+    21300048: backview fall_24
+    21300050: backview fall_25
+    21300052: backview fall_26
+    21300054: backview fall_27
+    21300056: backview fall_28
+    21300058: backview fall_29
+    21300060: backview fall_30
+    21300062: backview fall_31
+    21300064: backview fall_32
+    21300066: backview fall_33
+    21300068: backview fall_34
+    21300070: backview fall_35
+    21300072: backview fall_36
+    21300074: backview fall_37
+    21300076: backview fall_38
+    21300078: backview fall_39
+    21300080: backview fall_40
+    21300082: backview fall_41
+    21300084: backview fall_42
+    21300086: backview fall_43
+    21300088: backview fall_44
+    21300090: backview fall_45
+    21300092: backview fall_46
+    21300094: backview fall_47
+    21300096: backview fall_48
+    21300098: backview fall_49
+    21300100: backview fall_50
+    21300102: backview fall_51
+    21300104: backview fall_52
+    21300106: backview fall_53
+    21300108: backview fall_54
+    21300110: backview fall_55
+    21300112: backview fall_56
+    21300114: backview fall_57
+    21300116: backview fall_58
+    21300118: backview fall_59
+    21300120: backview fall_60
+    21300122: backview fall_61
+    21300124: backview fall_62
+    21300126: backview fall_63
+    21300128: backview fall_64
+    21300130: backview fall_65
+    21300132: backview fall_66
+    21300134: backview fall_67
+    21300136: backview fall_68
+    21300138: backview fall_69
+    21300140: backview fall_70
+    21300142: backview fall_71
+    21300144: backview fall_72
+    21300146: backview fall_73
+    21300148: backview fall_74
+    21300150: backview fall_75
+    21300152: backview fall_76
+    21300154: backview fall_77
+    21300156: backview fall_78
+    21300158: backview fall_79
+    21300160: backview fall_80
+    21300162: backview fall_81
+    21300164: backview fall_82
+    21300166: backview fall_83
+    21300168: backview fall_84
+    21300170: backview fall_85
+    21300172: backview fall_86
+    21300174: backview fall_87
+    21300176: backview fall_88
+    21300178: backview fall_89
+    21300180: backview fall_90
+    21300182: backview fall_91
+    21300184: backview fall_92
+    21300186: backview fall_93
+    21300188: backview fall_94
+    21300190: backview fall_95
+    21300192: backview fall_96
+    21300194: backview fall_97
+    21300196: backview fall_98
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: backview fall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 63}
+        - {x: -42.5, y: 21}
+        - {x: -39.5, y: 20}
+        - {x: -37.5, y: 20}
+        - {x: -39.5, y: 20}
+        - {x: -42.5, y: 18}
+        - {x: -42.5, y: 2}
+        - {x: -21.5, y: -63}
+        - {x: -16.5, y: -64}
+        - {x: 21.5, y: -64}
+        - {x: 40.5, y: -57}
+        - {x: 40.5, y: 61}
+        - {x: 29.5, y: 63}
+      - - {x: 37.5, y: 31}
+        - {x: 40.5, y: 32}
+        - {x: 40.5, y: 35}
+        - {x: 37.5, y: 36}
+        - {x: 35.5, y: 34}
+    - name: backview fall_1
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.9000015, y: 62}
+        - {x: -4.0999985, y: 62}
+        - {x: -11.099998, y: 51}
+        - {x: -8.099998, y: 48}
+        - {x: -13.099998, y: 53}
+        - {x: -21.099998, y: 62}
+        - {x: -33.1, y: 62}
+        - {x: -39.1, y: 54}
+        - {x: -39.1, y: -10}
+        - {x: -14.099998, y: -64}
+        - {x: 25.900002, y: -64}
+        - {x: 42.9, y: 4}
+        - {x: 42.9, y: 33}
+        - {x: 28.900002, y: 50}
+      - - {x: 40.9, y: 28}
+        - {x: 43.9, y: 29}
+        - {x: 43.9, y: 32}
+        - {x: 40.9, y: 33}
+        - {x: 38.9, y: 31}
+    - name: backview fall_2
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.800003, y: 63}
+        - {x: -36.199997, y: 63}
+        - {x: -36.199997, y: -64}
+        - {x: 20.800003, y: -64}
+        - {x: 31.800003, y: -48}
+        - {x: 45.800003, y: 3}
+        - {x: 45.800003, y: 44}
+    - name: backview fall_3
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.699982, y: 64}
+        - {x: 8.699982, y: 60}
+        - {x: 5.6999817, y: 58}
+        - {x: -11.300018, y: 63}
+        - {x: -16.300018, y: 64}
+        - {x: -19.300018, y: 63}
+        - {x: -33.30002, y: 46}
+        - {x: -34.30002, y: 36}
+        - {x: -34.30002, y: 23}
+        - {x: -31.300018, y: 20}
+        - {x: -34.30002, y: -1}
+        - {x: -34.30002, y: -5}
+        - {x: -17.300018, y: -55}
+        - {x: 0.6999817, y: -64}
+        - {x: 17.699982, y: -64}
+        - {x: 46.69998, y: -7}
+        - {x: 46.69998, y: 40}
+      - - {x: -34.30002, y: 10}
+        - {x: -31.300018, y: 11}
+        - {x: -31.300018, y: 14}
+        - {x: -34.30002, y: 15}
+        - {x: -36.30002, y: 13}
+      - - {x: 44.69998, y: 22}
+        - {x: 47.69998, y: 23}
+        - {x: 47.69998, y: 26}
+        - {x: 44.69998, y: 27}
+        - {x: 42.69998, y: 25}
+    - name: backview fall_4
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.899994, y: 64}
+        - {x: -30.899994, y: -19}
+        - {x: -22.899994, y: -59}
+        - {x: -10.899994, y: -65}
+        - {x: 17.100006, y: -65}
+        - {x: 34.100006, y: -46}
+        - {x: 49.100006, y: -20}
+        - {x: 49.100006, y: 32}
+        - {x: 34.100006, y: 64}
+      - - {x: -31.899994, y: 11}
+        - {x: -28.899994, y: 12}
+        - {x: -28.899994, y: 15}
+        - {x: -31.899994, y: 16}
+        - {x: -33.899994, y: 14}
+      - - {x: -30.899994, y: 16}
+        - {x: -27.899994, y: 17}
+        - {x: -27.899994, y: 20}
+        - {x: -30.899994, y: 21}
+        - {x: -32.899994, y: 19}
+      - - {x: 45.100006, y: 25}
+        - {x: 45.100006, y: 24}
+        - {x: 47.100006, y: 22}
+        - {x: 48.100006, y: 22}
+        - {x: 51.100006, y: 25}
+        - {x: 51.100006, y: 27}
+        - {x: 48.100006, y: 28}
+    - name: backview fall_5
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 64}
+        - {x: -7.5, y: 62}
+        - {x: -27.5, y: 44}
+        - {x: -31.5, y: 29}
+        - {x: -31.5, y: -9}
+        - {x: -23.5, y: -11}
+        - {x: -20.5, y: -10}
+        - {x: -14.5, y: -16}
+        - {x: -14.5, y: -18}
+        - {x: -16.5, y: -15}
+        - {x: -19.5, y: -13}
+        - {x: -23.5, y: -27}
+        - {x: -19.5, y: -56}
+        - {x: -3.5, y: -65}
+        - {x: 30.5, y: -65}
+        - {x: 49.5, y: -21}
+        - {x: 49.5, y: 55}
+        - {x: 16.5, y: 61}
+      - - {x: 48.5, y: 15}
+        - {x: 51.5, y: 16}
+        - {x: 51.5, y: 19}
+        - {x: 48.5, y: 20}
+        - {x: 46.5, y: 18}
+    - name: backview fall_6
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35.899963, y: 59}
+        - {x: 12.899963, y: 63}
+        - {x: -0.10003662, y: 63}
+        - {x: -2.1000366, y: 58}
+        - {x: -14.100037, y: 37}
+        - {x: -18.100037, y: 33}
+        - {x: -14.100037, y: 37}
+        - {x: -15.100037, y: 41}
+        - {x: -19.100037, y: 47}
+        - {x: -29.100037, y: 54}
+        - {x: -29.100037, y: -65}
+        - {x: 23.899963, y: -65}
+        - {x: 50.899963, y: -16}
+        - {x: 51.899963, y: -13}
+        - {x: 51.899963, y: 33}
+    - name: backview fall_7
+      rect:
+        serializedVersion: 2
+        x: 4550
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.799988, y: 51}
+        - {x: 41.799988, y: 62}
+        - {x: -14.200012, y: 62}
+        - {x: -24.200012, y: 51}
+        - {x: -24.200012, y: -61}
+        - {x: -1.2000122, y: -65}
+        - {x: 19.799988, y: -65}
+        - {x: 51.799988, y: -19}
+        - {x: 52.799988, y: -17}
+      - - {x: -16.200012, y: -20}
+        - {x: -13.200012, y: -19}
+        - {x: -13.200012, y: -16}
+        - {x: -16.200012, y: -15}
+        - {x: -18.200012, y: -17}
+    - name: backview fall_8
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.700012, y: 60}
+        - {x: 9.700012, y: 60}
+        - {x: -1.2999878, y: 40}
+        - {x: -9.299988, y: 36}
+        - {x: -8.299988, y: 37}
+        - {x: -7.299988, y: 43}
+        - {x: -12.299988, y: 46}
+        - {x: -26.299988, y: 45}
+        - {x: -26.299988, y: -65}
+        - {x: 30.700012, y: -65}
+        - {x: 51.700012, y: -12}
+        - {x: 51.700012, y: 42}
+        - {x: 43.700012, y: 50}
+      - - {x: -25.299988, y: -4}
+        - {x: -22.299988, y: -3}
+        - {x: -22.299988, y: 0}
+        - {x: -25.299988, y: 1}
+        - {x: -27.299988, y: -1}
+    - name: backview fall_9
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 0
+        width: 650
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.099976, y: 58}
+        - {x: -4.9000244, y: 58}
+        - {x: -16.900024, y: 55}
+        - {x: -23.900024, y: 30}
+        - {x: -23.900024, y: -39}
+        - {x: -17.900024, y: -60}
+        - {x: 4.0999756, y: -65}
+        - {x: 17.099976, y: -65}
+        - {x: 52.099976, y: -15}
+        - {x: 52.099976, y: 33}
+        - {x: 50.099976, y: 51}
+      - - {x: 38.099976, y: -32}
+        - {x: 41.099976, y: -31}
+        - {x: 41.099976, y: -28}
+        - {x: 38.099976, y: -27}
+        - {x: 36.099976, y: -29}
+      - - {x: -16.900024, y: -20}
+        - {x: -13.900024, y: -19}
+        - {x: -13.900024, y: -16}
+        - {x: -16.900024, y: -15}
+        - {x: -18.900024, y: -17}
+      - - {x: -47.900024, y: -1}
+        - {x: -47.900024, y: 2}
+        - {x: -50.900024, y: 3}
+        - {x: -50.900024, y: -2}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
