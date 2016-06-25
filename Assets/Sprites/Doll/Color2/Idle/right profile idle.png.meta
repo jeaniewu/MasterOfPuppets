@@ -1,0 +1,874 @@
+fileFormatVersion: 2
+guid: 8772530b10d71be4eb7b12c0fd2f043c
+timeCreated: 1465447978
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: right profile idle_0
+    21300002: right profile idle_1
+    21300004: right profile idle_2
+    21300006: right profile idle_3
+    21300008: right profile idle_4
+    21300010: right profile idle_5
+    21300012: right profile idle_6
+    21300014: right profile idle_7
+    21300016: right profile idle_8
+    21300018: right profile idle_9
+    21300020: right profile idle_10
+    21300022: right profile idle_11
+    21300024: right profile idle_12
+    21300026: right profile idle_13
+    21300028: right profile idle_14
+    21300030: right profile idle_15
+    21300032: right profile idle_16
+    21300034: right profile idle_17
+    21300036: right profile idle_18
+    21300038: right profile idle_19
+    21300040: right profile idle_20
+    21300042: right profile idle_21
+    21300044: right profile idle_22
+    21300046: right profile idle_23
+    21300048: right profile idle_24
+    21300050: right profile idle_25
+    21300052: right profile idle_26
+    21300054: right profile idle_27
+    21300056: right profile idle_28
+    21300058: right profile idle_29
+    21300060: right profile idle_30
+    21300062: right profile idle_31
+    21300064: right profile idle_32
+    21300066: right profile idle_33
+    21300068: right profile idle_34
+    21300070: right profile idle_35
+    21300072: right profile idle_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 75
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: right profile idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 62}
+        - {x: -51, y: 42}
+        - {x: -51, y: -42}
+        - {x: -22, y: -82}
+        - {x: -16, y: -85}
+        - {x: 36, y: -85}
+        - {x: 44, y: -68}
+        - {x: 44, y: 30}
+        - {x: 23, y: 62}
+    - name: right profile idle_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 62}
+        - {x: -51, y: 22}
+        - {x: -51, y: -27}
+        - {x: -40, y: -84}
+        - {x: -33, y: -85}
+        - {x: 31, y: -85}
+        - {x: 44, y: -31}
+        - {x: 44, y: 25}
+        - {x: 14, y: 62}
+    - name: right profile idle_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 62}
+        - {x: -51, y: 34}
+        - {x: -51, y: -51}
+        - {x: -36, y: -85}
+        - {x: 41, y: -85}
+        - {x: 44, y: -77}
+        - {x: 44, y: 19}
+        - {x: 20, y: 62}
+    - name: right profile idle_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 62}
+        - {x: -51, y: 36}
+        - {x: -51, y: -35}
+        - {x: -29, y: -81}
+        - {x: -14, y: -85}
+        - {x: 38, y: -85}
+        - {x: 44, y: -59}
+        - {x: 44, y: 47}
+        - {x: 23, y: 62}
+    - name: right profile idle_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 63}
+        - {x: -51, y: 33}
+        - {x: -51, y: -55}
+        - {x: -44, y: -85}
+        - {x: 36, y: -85}
+        - {x: 44, y: -68}
+        - {x: 44, y: 25}
+        - {x: 12, y: 63}
+    - name: right profile idle_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 63}
+        - {x: -20, y: 63}
+        - {x: -28, y: 62}
+        - {x: -51, y: 19}
+        - {x: -51, y: -15}
+        - {x: -46, y: -28}
+        - {x: -28, y: -73}
+        - {x: -4, y: -85}
+        - {x: 20, y: -85}
+        - {x: 35, y: -61}
+        - {x: 44, y: -28}
+        - {x: 44, y: 21}
+    - name: right profile idle_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 63}
+        - {x: -2, y: 51}
+        - {x: -16, y: 61}
+        - {x: -24, y: 59}
+        - {x: -51, y: 34}
+        - {x: -51, y: -65}
+        - {x: -44, y: -85}
+        - {x: 23, y: -85}
+        - {x: 44, y: -81}
+        - {x: 44, y: 30}
+        - {x: 36, y: 63}
+    - name: right profile idle_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 63}
+        - {x: -51, y: 33}
+        - {x: -51, y: -24}
+        - {x: -30, y: -85}
+        - {x: 44, y: -85}
+        - {x: 44, y: 37}
+        - {x: 30, y: 63}
+    - name: right profile idle_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -22}
+        - {x: 44, y: -10}
+        - {x: 44, y: 14}
+        - {x: 39, y: 27}
+        - {x: 8, y: 63}
+        - {x: -33, y: 63}
+        - {x: -51, y: 23}
+        - {x: -51, y: -73}
+        - {x: -46, y: -85}
+        - {x: 34, y: -85}
+        - {x: 31, y: -63}
+        - {x: 27, y: -61}
+        - {x: 23, y: -60}
+    - name: right profile idle_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 64}
+        - {x: -51, y: 35}
+        - {x: -51, y: -60}
+        - {x: -42, y: -84}
+        - {x: -34, y: -85}
+        - {x: 39, y: -85}
+        - {x: 44, y: -61}
+        - {x: 44, y: 50}
+        - {x: 27, y: 64}
+    - name: right profile idle_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 62}
+        - {x: 23, y: 64}
+        - {x: -29, y: 64}
+        - {x: -51, y: 29}
+        - {x: -51, y: -52}
+        - {x: -39, y: -84}
+        - {x: -23, y: -85}
+        - {x: 21, y: -85}
+        - {x: 36, y: -61}
+        - {x: 44, y: -24}
+        - {x: 44, y: 32}
+    - name: right profile idle_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 64}
+        - {x: -33, y: 64}
+        - {x: -51, y: 44}
+        - {x: -51, y: -85}
+        - {x: 24, y: -85}
+        - {x: 30, y: -70}
+        - {x: 44, y: -37}
+        - {x: 44, y: 28}
+    - name: right profile idle_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 64}
+        - {x: -51, y: 33}
+        - {x: -51, y: -24}
+        - {x: -30, y: -75}
+        - {x: -19, y: -85}
+        - {x: 24, y: -85}
+        - {x: 43, y: -74}
+        - {x: 44, y: -67}
+        - {x: 44, y: 38}
+        - {x: 17, y: 64}
+    - name: right profile idle_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 64}
+        - {x: -20, y: 64}
+        - {x: -51, y: 17}
+        - {x: -51, y: -6}
+        - {x: -50, y: -8}
+        - {x: -48, y: -17}
+        - {x: -33, y: -32}
+        - {x: -22, y: -36}
+        - {x: -14, y: -37}
+        - {x: -28, y: -67}
+        - {x: -22, y: -78}
+        - {x: -2, y: -85}
+        - {x: 22, y: -85}
+        - {x: 39, y: -72}
+        - {x: 44, y: -52}
+        - {x: 44, y: 21}
+    - name: right profile idle_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -16}
+        - {x: 44, y: 24}
+        - {x: 11, y: 64}
+        - {x: -24, y: 64}
+        - {x: -51, y: 47}
+        - {x: -51, y: -85}
+        - {x: 28, y: -85}
+        - {x: 33, y: -68}
+        - {x: 28, y: -60}
+        - {x: 39, y: -36}
+    - name: right profile idle_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 65}
+        - {x: -51, y: 35}
+        - {x: -51, y: -26}
+        - {x: -28, y: -74}
+        - {x: -11, y: -85}
+        - {x: 26, y: -85}
+        - {x: 44, y: -77}
+        - {x: 44, y: 34}
+        - {x: 15, y: 65}
+    - name: right profile idle_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 65}
+        - {x: -51, y: 43}
+        - {x: -51, y: -85}
+        - {x: 27, y: -85}
+        - {x: 44, y: -45}
+        - {x: 44, y: 22}
+        - {x: 17, y: 65}
+    - name: right profile idle_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 65}
+        - {x: -31, y: 65}
+        - {x: -51, y: 18}
+        - {x: -51, y: -43}
+        - {x: -31, y: -77}
+        - {x: -8, y: -85}
+        - {x: 28, y: -85}
+        - {x: 42, y: -70}
+        - {x: 44, y: -44}
+        - {x: 44, y: 33}
+    - name: right profile idle_18
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 65}
+        - {x: -51, y: 43}
+        - {x: -51, y: -53}
+        - {x: -40, y: -85}
+        - {x: 44, y: -85}
+        - {x: 44, y: 48}
+        - {x: 38, y: 65}
+    - name: right profile idle_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: -43}
+        - {x: -31, y: -76}
+        - {x: -22, y: -85}
+        - {x: 36, y: -85}
+        - {x: 44, y: -74}
+        - {x: 44, y: 30}
+        - {x: 22, y: 65}
+        - {x: -31, y: 65}
+        - {x: -51, y: 18}
+    - name: right profile idle_20
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 30}
+        - {x: 10, y: 65}
+        - {x: 5, y: 65}
+        - {x: 2, y: 63}
+        - {x: -3, y: 65}
+        - {x: -23, y: 65}
+        - {x: -51, y: 42}
+        - {x: -51, y: -60}
+        - {x: -43, y: -85}
+        - {x: 18, y: -85}
+        - {x: 21, y: -84}
+        - {x: 27, y: -67}
+        - {x: 28, y: -64}
+        - {x: 44, y: -34}
+    - name: right profile idle_21
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 39}
+        - {x: 29, y: 65}
+        - {x: -27, y: 65}
+        - {x: -51, y: 24}
+        - {x: -51, y: -66}
+        - {x: -45, y: -84}
+        - {x: 21, y: -84}
+        - {x: 24, y: -75}
+        - {x: 27, y: -65}
+        - {x: 44, y: -45}
+    - name: right profile idle_22
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -64}
+        - {x: 39, y: -36}
+        - {x: 44, y: -16}
+        - {x: 44, y: 24}
+        - {x: 11, y: 64}
+        - {x: -23, y: 64}
+        - {x: -51, y: 46}
+        - {x: -51, y: -77}
+        - {x: -26, y: -85}
+        - {x: 14, y: -85}
+        - {x: 19, y: -83}
+        - {x: 19, y: -78}
+        - {x: 29, y: -68}
+    - name: right profile idle_23
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 64}
+        - {x: -51, y: 17}
+        - {x: -51, y: -6}
+        - {x: -50, y: -8}
+        - {x: -48, y: -17}
+        - {x: -33, y: -32}
+        - {x: -22, y: -36}
+        - {x: -14, y: -37}
+        - {x: -25, y: -63}
+        - {x: -28, y: -72}
+        - {x: -6, y: -85}
+        - {x: 22, y: -85}
+        - {x: 44, y: -36}
+        - {x: 44, y: 23}
+        - {x: 24, y: 64}
+    - name: right profile idle_24
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 64}
+        - {x: -17, y: 64}
+        - {x: -22, y: 62}
+        - {x: -51, y: 36}
+        - {x: -51, y: -51}
+        - {x: -41, y: -85}
+        - {x: 33, y: -85}
+        - {x: 44, y: -63}
+        - {x: 44, y: 33}
+        - {x: 43, y: 34}
+    - name: right profile idle_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 64}
+        - {x: -51, y: 19}
+        - {x: -51, y: -15}
+        - {x: -30, y: -84}
+        - {x: -21, y: -85}
+        - {x: 32, y: -85}
+        - {x: 44, y: -47}
+        - {x: 44, y: 26}
+        - {x: 29, y: 64}
+    - name: right profile idle_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 64}
+        - {x: -51, y: 44}
+        - {x: -51, y: -60}
+        - {x: -43, y: -85}
+        - {x: 29, y: -85}
+        - {x: 44, y: -80}
+        - {x: 44, y: 64}
+    - name: right profile idle_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 64}
+        - {x: -51, y: 36}
+        - {x: -51, y: -84}
+        - {x: -49, y: -85}
+        - {x: 42, y: -85}
+        - {x: 44, y: -61}
+        - {x: 44, y: 34}
+        - {x: 19, y: 64}
+    - name: right profile idle_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 27}
+        - {x: 8, y: 63}
+        - {x: -25, y: 63}
+        - {x: -51, y: 22}
+        - {x: -51, y: -29}
+        - {x: -23, y: -78}
+        - {x: -2, y: -85}
+        - {x: 23, y: -85}
+        - {x: 39, y: -76}
+        - {x: 44, y: -59}
+        - {x: 44, y: 14}
+    - name: right profile idle_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 63}
+        - {x: -30, y: 63}
+        - {x: -51, y: 44}
+        - {x: -51, y: -69}
+        - {x: -47, y: -85}
+        - {x: 34, y: -85}
+        - {x: 44, y: -60}
+        - {x: 44, y: 33}
+        - {x: 28, y: 62}
+    - name: right profile idle_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -60}
+        - {x: 40, y: -21}
+        - {x: 44, y: -9}
+        - {x: 44, y: 18}
+        - {x: 15, y: 59}
+        - {x: 6, y: 63}
+        - {x: -2, y: 63}
+        - {x: -2, y: 51}
+        - {x: -16, y: 61}
+        - {x: -20, y: 63}
+        - {x: -37, y: 63}
+        - {x: -51, y: 22}
+        - {x: -51, y: -54}
+        - {x: -28, y: -85}
+        - {x: 23, y: -85}
+        - {x: 33, y: -72}
+        - {x: 31, y: -63}
+        - {x: 27, y: -61}
+    - name: right profile idle_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 63}
+        - {x: -51, y: 30}
+        - {x: -51, y: -40}
+        - {x: -36, y: -80}
+        - {x: -18, y: -85}
+        - {x: 44, y: -85}
+        - {x: 44, y: 31}
+        - {x: 16, y: 63}
+    - name: right profile idle_32
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 63}
+        - {x: -51, y: 17}
+        - {x: -51, y: -15}
+        - {x: -44, y: -25}
+        - {x: -32, y: -34}
+        - {x: -26, y: -72}
+        - {x: -21, y: -76}
+        - {x: -5, y: -85}
+        - {x: 33, y: -85}
+        - {x: 44, y: -63}
+        - {x: 44, y: 25}
+        - {x: 13, y: 63}
+    - name: right profile idle_33
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 62}
+        - {x: -18, y: 62}
+        - {x: -26, y: 58}
+        - {x: -51, y: 38}
+        - {x: -51, y: -57}
+        - {x: -40, y: -83}
+        - {x: -26, y: -85}
+        - {x: 19, y: -85}
+        - {x: 35, y: -61}
+        - {x: 44, y: -27}
+        - {x: 44, y: 29}
+    - name: right profile idle_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: -48}
+        - {x: -40, y: -81}
+        - {x: -32, y: -85}
+        - {x: 44, y: -85}
+        - {x: 44, y: 62}
+        - {x: -21, y: 62}
+        - {x: -26, y: 58}
+        - {x: -51, y: 29}
+    - name: right profile idle_35
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 62}
+        - {x: -51, y: 20}
+        - {x: -51, y: -57}
+        - {x: -40, y: -77}
+        - {x: -14, y: -85}
+        - {x: 38, y: -85}
+        - {x: 44, y: -71}
+        - {x: 44, y: 17}
+        - {x: 14, y: 62}
+    - name: right profile idle_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 62}
+        - {x: -51, y: 42}
+        - {x: -51, y: -42}
+        - {x: -22, y: -82}
+        - {x: -16, y: -85}
+        - {x: 36, y: -85}
+        - {x: 44, y: -68}
+        - {x: 44, y: 30}
+        - {x: 23, y: 62}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -74,7 +74,7 @@ public class GhostSwitchManager : MonoBehaviour
 		}
 
 		player.GetComponent<Animator> ().SetBool ("hasSoul", true);
-		player.GetComponent<Rigidbody2D> ().isKinematic = false;
+		//player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
 
 
@@ -133,7 +133,8 @@ public class GhostSwitchManager : MonoBehaviour
 	// make the camera follow the current player
 	void updateCamera ()
 	{
-		Camera.main.GetComponent<CameraFollow> ().findPlayer ();
+        CameraFollow cameraFollow = Camera.main.GetComponent<CameraFollow>();
+        cameraFollow.findPlayer ();
 	}
 
 	void moveCamera (Vector3 position)
@@ -208,8 +209,8 @@ public class GhostSwitchManager : MonoBehaviour
 		player.GetComponent<Animator> ().SetBool ("hasSoul", false);
 		setGhostMode (false);
 
-		player.GetComponent<Controller2> ().enabled = false;
-		player.GetComponent<Rigidbody2D> ().isKinematic = true;
+        player.GetComponent<Controller2>().enabled = false;
+		//player.GetComponent<Rigidbody2D> ().isKinematic = true;
 		player.layer = LayerMask.NameToLayer ("Doll");
 
 		player.tag = "Doll";
