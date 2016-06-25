@@ -4,8 +4,10 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-	public static GameManager instance = null;                                 
+	//Singleton Instantiation
+	public static GameManager instance;   
 
+	public bool trueEnding;
 
 	//Awake is always called before any Start functions
 	void Awake()
@@ -17,8 +19,20 @@ public class GameManager : MonoBehaviour {
 		}
 			
 		DontDestroyOnLoad(gameObject);
+		trueEnding = false;
+		//InitGame();
+	}
+		
+	public static GameManager getInstance () {
+		return (GameManager) instance;
+	}
 
-		InitGame();
+	public bool isTrueEnding(){
+		return trueEnding;
+	}
+
+	public void setTrueEnding(){
+		trueEnding = true;
 	}
 
 	//Initializes the game for each level.
