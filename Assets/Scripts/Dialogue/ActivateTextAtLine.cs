@@ -7,9 +7,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 
 	public TextAsset theText;
 
-    public int startLine;
-    public int endLine;
-
     public TextBoxManager theTextBox;
    
     public string message;
@@ -32,8 +29,6 @@ public class ActivateTextAtLine : MonoBehaviour {
 			GameManager.getInstance ().textTriggered [index] = true;
 			UpdateTrigger ();
             theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
         }
     }

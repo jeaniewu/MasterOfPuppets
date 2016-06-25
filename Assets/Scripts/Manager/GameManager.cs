@@ -9,9 +9,11 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 
-	public static GameManager instance = null;                                 
+	//Singleton Instantiation
+	public static GameManager instance;   
 
 	public bool trueEnding;
+
 	public string currentLevel;
 	public bool[] secretItemFound;
 
@@ -49,7 +51,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start(){
-		
 	}
 
 	void Update(){
@@ -93,6 +94,10 @@ public class GameManager : MonoBehaviour {
 
 	public bool isTrueEnding(){
 		return trueEnding;
+	}
+
+	public void setTrueEnding(){
+		trueEnding = true;
 	}
 
 	public void Save(){

@@ -6,30 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class MusicManager : AbstractAudioManager {
-    
-    //Singleton Instantiation
-    public static MusicManager instance;
 
-    void Awake() {
-        if (instance != null) {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        instance = this;
-    }
-
-    public static MusicManager getInstance() {
-        return (MusicManager) instance;
-    }
-
-    //Songs
-    public AudioSource mainTheme;
-    public AudioSource mechanicalTheme;
-
-    //Song Volume
-    public float mainThemeVolume;
-    public float mechanicalThemeVolume;
-
-    public float fadeInSpeed;
+	public float fadeInSpeed;
     public float fadeOutSpeed;
 
     private bool isFadingIn = false;
@@ -43,16 +21,8 @@ public class MusicManager : AbstractAudioManager {
     private AudioSource switchingTo;
     private int switchingState = 0; //representing start, fadingOut, fadingIN
 
-	private static String[] mainThemeScenes = {"OpenScene"};
-	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
-
-	void Start(){
-		String currentLevel = SceneManager.GetActiveScene ().name;
-		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
-			startMainTheme ();
-		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-			startMechanicalTheme ();
-		}
+	void Awake() {
+		DontDestroyOnLoad(transform.gameObject);
 	}
 
     void Update () {
@@ -65,14 +35,6 @@ public class MusicManager : AbstractAudioManager {
         if (isFadingOut) {
             fadeOut();
         }
-    }
-
-    public void startMainTheme() {
-        setTrackToFadeIn(mainTheme, mainThemeVolume);
-    }
-
-    public void startMechanicalTheme() {
-        setTrackToFadeIn(mechanicalTheme, mechanicalThemeVolume);
     }
 
     //Fades in a song by the speed
@@ -97,7 +59,7 @@ public class MusicManager : AbstractAudioManager {
         }
     }
 
-    private void setTrackToFadeIn(AudioSource source, float volume) {
+    protected void setTrackToFadeIn(AudioSource source, float volume) {
         currentFadeInTrack = source;
         isFadingIn = true;
         currentFadeInVolume = volume;
@@ -105,7 +67,7 @@ public class MusicManager : AbstractAudioManager {
         playLoopingSound(source);
     }
 
-    private void setTrackToFadeOut(AudioSource source) {
+	protected void setTrackToFadeOut(AudioSource source) {
         currentFadeOutTrack = source;
         isFadingOut = true;
     }
