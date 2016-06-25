@@ -39,9 +39,14 @@ public class ThemeMusicManager : MusicManager {
 	}
 		
 	void initAudioSource(){
-		AudioSource[] source = GetComponentsInChildren<AudioSource> ();
-		mainTheme = source [0];
-		mechanicalTheme = source [1];
+		AudioSource[] sources = GetComponentsInChildren<AudioSource> ();
+		foreach (AudioSource source in sources) {
+			if (source.gameObject.name.Equals ("TaleofAToyMakerLoop")) {
+				mainTheme = source;
+			} else if (source.gameObject.name.Equals ("MechanicalLevelTheme")) {
+				mechanicalTheme = source;
+			}
+		}
 	}
 
 	public static ThemeMusicManager getInstance() {
