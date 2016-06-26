@@ -8,12 +8,24 @@ public class SwitchSelectMsg : MonoBehaviour {
 
 	private Controller2 controller2;
     public TextBoxManager textBoxManager;
-    // Use this for initialization
+
+	private checkOneTimeTrigger switchTriggeredCheck;
+	private checkOneTimeTrigger acceptTriggeredCheck;
+
+	private Renderer switchMessageRenderer;
+	private Renderer acceptMessageRenderer;
+
     //this is a tutotial script for level 1a
     void Start()
     {
         controller2 = GetComponent<Controller2>();
 		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
+
+		switchTriggeredCheck = switchMessage.GetComponent<checkOneTimeTrigger> ();
+		acceptTriggeredCheck = acceptMessage.GetComponent<checkOneTimeTrigger> ();
+		switchMessageRenderer = switchMessage.GetComponent<Renderer> ();
+		acceptMessageRenderer = acceptMessage.GetComponent<Renderer> ();
+
 		disableMessages ();
 		StartCoroutine ("ghostSwitchTutorial");
     }
@@ -23,14 +35,22 @@ public class SwitchSelectMsg : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
-		switchMessage.SetActive (true); //Press X
+
+		if(!switchTriggeredCheck.hasBeenTriggeredOnce){
+			switchMessageRenderer.enabled = true; //Press X
+			switchTriggeredCheck.setTriggered();
+		}
 
 		while (!controller2.ghostMode) {
 			yield return null;
 		}
 
-		switchMessage.SetActive (false);
-		acceptMessage.SetActive (true); //Press Z
+		switchMessageRenderer.enabled = false;
+
+		if(!acceptTriggeredCheck.hasBeenTriggeredOnce){
+			acceptMessageRenderer.enabled = true; //Press Z
+			acceptTriggeredCheck.setTriggered();
+		}
 
 		while (controller2.ghostMode) {
 			yield return null;
@@ -40,7 +60,8 @@ public class SwitchSelectMsg : MonoBehaviour {
 
 	private void disableMessages ()
 	{
-		switchMessage.SetActive (false);
-		acceptMessage.SetActive (false);
+		// Disable renderer so I can do triggered check on the game object
+		switchMessageRenderer.enabled = false;
+		acceptMessageRenderer.enabled = false;
 	}
 }

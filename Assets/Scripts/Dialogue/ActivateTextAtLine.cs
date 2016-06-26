@@ -8,32 +8,24 @@ public class ActivateTextAtLine : MonoBehaviour {
 	public TextAsset theText;
 
     public TextBoxManager theTextBox;
-   
-    public string message;
-
-	public int index;
 
 	public static bool textShown = false;
-	public bool textTriggered;
+
+	private checkOneTimeTrigger triggeredCheck;
 
     // Use this for initialization
     void Start () {
 		theTextBox = FindObjectOfType < TextBoxManager > ();
-		UpdateTrigger ();
+		triggeredCheck = GetComponent<checkOneTimeTrigger> ();
 	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
-		if (other.CompareTag ("Player") && !textTriggered) 
+		if (other.CompareTag ("Player") && !triggeredCheck.hasBeenTriggeredOnce) 
         {
-			GameManager.getInstance ().objectTriggered [index] = true;
-			UpdateTrigger ();
+			triggeredCheck.setTriggered ();
             theTextBox.ReloadScript(theText);
             theTextBox.EnableTextBox();
         }
     }
-
-	void UpdateTrigger () {
-		textTriggered = GameManager.getInstance ().objectTriggered[index];
-	}
 }
