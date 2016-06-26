@@ -1,31 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MusicManager : AbstractAudioManager {
-    
-    //Singleton Instantiation
-    public static MusicManager instance;
 
-    void Awake() {
-        if (instance != null) {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        instance = this;
-    }
-
-    public static MusicManager getInstance() {
-        return (MusicManager) instance;
-    }
-
-    //Songs
-    public AudioSource mainTheme;
-    public AudioSource mechanicalTheme;
-
-    //Song Volume
-    public float mainThemeVolume;
-    public float mechanicalThemeVolume;
-
-    public float fadeInSpeed;
+	public float fadeInSpeed;
     public float fadeOutSpeed;
 
     private bool isFadingIn = false;
@@ -39,6 +21,9 @@ public class MusicManager : AbstractAudioManager {
     private AudioSource switchingTo;
     private int switchingState = 0; //representing start, fadingOut, fadingIN
 
+	void Awake() {
+		DontDestroyOnLoad(transform.gameObject);
+	}
 
     void Update () {
         if (isSongSwitching) {
@@ -50,14 +35,6 @@ public class MusicManager : AbstractAudioManager {
         if (isFadingOut) {
             fadeOut();
         }
-    }
-
-    public void startMainTheme() {
-        setTrackToFadeIn(mainTheme, mainThemeVolume);
-    }
-
-    public void startMechanicalTheme() {
-        setTrackToFadeIn(mechanicalTheme, mechanicalThemeVolume);
     }
 
     //Fades in a song by the speed
@@ -82,7 +59,7 @@ public class MusicManager : AbstractAudioManager {
         }
     }
 
-    private void setTrackToFadeIn(AudioSource source, float volume) {
+    protected void setTrackToFadeIn(AudioSource source, float volume) {
         currentFadeInTrack = source;
         isFadingIn = true;
         currentFadeInVolume = volume;
@@ -90,7 +67,7 @@ public class MusicManager : AbstractAudioManager {
         playLoopingSound(source);
     }
 
-    private void setTrackToFadeOut(AudioSource source) {
+	protected void setTrackToFadeOut(AudioSource source) {
         currentFadeOutTrack = source;
         isFadingOut = true;
     }

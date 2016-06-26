@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GhostSwitchManager : MonoBehaviour
 {
@@ -66,6 +67,12 @@ public class GhostSwitchManager : MonoBehaviour
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<Controller2> ().enabled = true;
+
+		//finalScene helper
+		if (!player.GetComponent<Animator> ().enabled && SceneManager.GetActiveScene ().name.Equals ("finalScene")) {
+			GetComponent<StorySceneManager> ().initFallenDoll (player);
+		}
+
 		player.GetComponent<Animator> ().SetBool ("hasSoul", true);
 		//player.GetComponent<Rigidbody2D> ().isKinematic = false;
 		player.layer = 0;
@@ -195,9 +202,9 @@ public class GhostSwitchManager : MonoBehaviour
 	}
 
 	// switch control of the player to the doll, as well as update the environment
-	void possess (GameObject player, GameObject doll)
-	{     
-        dollsUpdated = false;
+	public void possess (GameObject player, GameObject doll)
+	{
+		dollsUpdated = false;
 
 		player.GetComponent<Animator> ().SetBool ("hasSoul", false);
 		setGhostMode (false);

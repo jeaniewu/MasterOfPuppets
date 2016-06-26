@@ -1,53 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
-    public TextAsset theText;
-
-    public int startLine;
-    public int endLine;
+	public TextAsset theText;
 
     public TextBoxManager theTextBox;
-
-    public bool destroyWhenActivated;
-
    
     public string message;
 
+	public int index;
+
+	public static bool textShown = false;
+	public bool textTriggered;
 
     // Use this for initialization
     void Start () {
-
-       
-   
-        theTextBox = FindObjectOfType < TextBoxManager >();
-	
+		theTextBox = FindObjectOfType < TextBoxManager > ();
+		UpdateTrigger ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
-		if (other.CompareTag ("Player")) 
+		if (other.CompareTag ("Player") && !textTriggered) 
         {
-
+			GameManager.getInstance ().textTriggered [index] = true;
+			UpdateTrigger ();
             theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
-
-            if (destroyWhenActivated)
-            {
-                Destroy(gameObject);
-            }
         }
-
-       
     }
+
+	void UpdateTrigger () {
+		textTriggered = GameManager.getInstance ().textTriggered[index];
+	}
 }

@@ -6,16 +6,22 @@ public class UITrigger : Interact {
 
     public GameObject LetterCanvas;
 	public Sprite[] replacementSprites;
+	public int index;
 	public bool found = false;
 	public bool destroyOnFound;
 
 	private TextBoxManager manager;
 	private bool isActive = false;
 
-	// Use this for initialization
+	void Awake(){
+		
+	}
+
 	void Start () {
-		manager = GameObject.FindGameObjectWithTag("TextBoxManager").GetComponent<TextBoxManager>();
-    }
+		found = GameManager.getInstance ().secretItemFound [index];
+		checkDestroy ();
+		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
+	}
 
     public void Update()
     {
@@ -25,12 +31,16 @@ public class UITrigger : Interact {
 				LetterCanvas.SetActive (false);
 				isActive = false;
 				manager.enablePlayer ();
-				if (destroyOnFound) {
-					DestroyObject (this);
-				}
+				checkDestroy ();
 			}
 		}
     }
+
+	private void checkDestroy(){
+		if (destroyOnFound && found) {
+			DestroyObject (this.gameObject);
+		}
+	}
 
 
 
@@ -40,6 +50,8 @@ public class UITrigger : Interact {
 		LetterCanvas.SetActive (true);
 		isActive = true;
 		found = true;
+		GameManager.getInstance ().secretItemFound [index] = true;
+		GameManager.getInstance ().Save ();
     }
 
 
