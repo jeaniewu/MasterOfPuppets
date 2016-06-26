@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour {
 				instance.firstRun = false;
 			}
 		}
+
+		if (instance.firstRun) {
+			ThemeMusicManager.getInstance ().playThemeSong (instance.currentLevel);
+		}
+
 	}
 
 	void Start(){

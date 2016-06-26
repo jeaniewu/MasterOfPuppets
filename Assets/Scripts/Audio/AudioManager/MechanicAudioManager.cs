@@ -32,10 +32,11 @@ public class MechanicAudioManager : AbstractAudioManager {
     public static MechanicAudioManager instance;
 
     void Awake() {
-        if (instance != null) {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        instance = this;
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
     }
 
 	void Start(){
@@ -47,15 +48,15 @@ public class MechanicAudioManager : AbstractAudioManager {
     }
 
     public void playButtonSound() {
-        playOneShotSound(buttonClip, button, buttonVolume);
+		playOneShotSound(instance.buttonClip, instance.button, buttonVolume);
     }
 		
 	public void playUnlockDoorSound() {
-		playOneShotSound(unlockDoorClip, unlockDoor, unlockDoorVolume);
+		playOneShotSound(instance.unlockDoorClip, instance.unlockDoor, unlockDoorVolume);
 	}
 
 	public void playDeathBySawBlade() {
-		playOneShotSound(deathBySawbladeClip, deathBySawblade, deathBySawbladeVolume);
+		playOneShotSound(instance.deathBySawbladeClip, instance.deathBySawblade, deathBySawbladeVolume);
 	}
 
 }
