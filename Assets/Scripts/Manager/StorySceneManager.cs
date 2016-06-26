@@ -86,8 +86,6 @@ public class StorySceneManager : MonoBehaviour {
 		humanController = human.GetComponent<Controller2> ();
 		human.layer = 0;
 
-		doorToOpen.SetActive (false);
-
 		//TESTING
 		//puppetMasterAnim.SetBool ("hasSoul", true);
 		//StartCoroutine (temp ());
@@ -179,12 +177,19 @@ public class StorySceneManager : MonoBehaviour {
 		musicManager.playTrack (2); //E3
 		yield return new WaitForSeconds(0.5f);
 		musicManager.stopTrack (1); //E2
+
 		// open the door with light and stuff
-		doorToOpen.SetActive (true);
+		Coroutine movecam = StartCoroutine (move (maincam.transform, doorToOpen.transform, 0.04f));
+		openDoor();
+		yield return new WaitForSeconds(2f);
+		StopCoroutine (movecam);
+
+		movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		humanController.enabled = true;
 		humanController.allowSound = false;
-		yield return new WaitForSeconds(5f); // allow human to escape //TODO
+		yield return new WaitForSeconds(6f); // allow human to escape //TODO
 		humanController.enabled = false;
+		StopCoroutine (movecam);
 
 		//puppet Master face human and starts moving closer
 		puppetMasterFace("right");
@@ -563,6 +568,12 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
+	}
+
+	private void openDoor(){
+		doorToOpen.GetComponentInChildren<Light> ().enabled = true;
+		doorToOpen.GetComponent<Animator> ().SetBool ("open", true);
+		doorToOpen.GetComponent<BoxCollider2D> ().enabled = false;
 	}
 		
 		
