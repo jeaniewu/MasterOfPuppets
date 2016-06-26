@@ -13,10 +13,11 @@ public class DollAudioManager : AbstractAudioManager {
     public static DollAudioManager instance;
 
     void Awake() {
-        if (instance != null) {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        instance = this;
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
     }
 
     //Own getInstance method needed to convert types
@@ -26,16 +27,16 @@ public class DollAudioManager : AbstractAudioManager {
 
     //Plays the walking sound
     public void playWalkingSound () {
-        playLoopingSound(walking);
+		playLoopingSound(instance.walking);
     }
 
     //stops the walking sound
     public void stopWalkingSound() {
-        stopLoopingSound(walking);
+        stopLoopingSound(instance.walking);
     }
 
     public void playGhostSwitchSound() {
-        playOneShotSound(ghostSwitchClip, ghostSwitch, 0.5f);
+		playOneShotSound(instance.ghostSwitchClip, instance.ghostSwitch, 0.5f);
     }
 
 }
