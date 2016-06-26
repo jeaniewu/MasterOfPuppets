@@ -6,17 +6,19 @@ public class SwitchSelectMsg : MonoBehaviour {
     public GameObject switchMessage;
     public GameObject acceptMessage;
     private bool onlyOnce;
-    private bool onlyOnce2;
-    public Controller2 isghostMode;
+
+    private Controller2 ghostMode;
     // Use this for initialization
+    //this is a tutotial script for level 1a
     void Start()
     {
+        ghostMode = GetComponent<Controller2>();
         //switchMessage = GameObject.FindGameObjectWithTag("SwitchMessage");
         switchMessage.SetActive(false);
         acceptMessage.SetActive(false);
 
         onlyOnce = false;
-        onlyOnce2 = false;
+        
 
     }
 
@@ -24,22 +26,28 @@ public class SwitchSelectMsg : MonoBehaviour {
     void Update()
     {
 
-        if (!textBox.gameObject.activeSelf && /*Input.GetKeyDown(KeyCode.X)*/ !isghostMode.ghostMode && !onlyOnce)
+        if (!textBox.gameObject.activeSelf && !ghostMode.ghostMode && !onlyOnce)
         {
             switchMessage.SetActive(true);
             acceptMessage.SetActive(false);
-            onlyOnce = true;
-
+           
         }
-        if (!textBox.gameObject.activeSelf &&  isghostMode.ghostMode && !onlyOnce2)
+        if (!textBox.gameObject.activeSelf &&  ghostMode.ghostMode )
         {
+            onlyOnce = true;
 
             acceptMessage.SetActive(true);
             switchMessage.SetActive(false);
-            onlyOnce2 = true;
+           
 
         }
 
-        
+        if(!textBox.gameObject.activeSelf && !ghostMode.ghostMode && onlyOnce){
+            Debug.Log("pressed");
+            switchMessage.SetActive(false);
+            acceptMessage.SetActive(false);
+        }
+
+
     }
 }
