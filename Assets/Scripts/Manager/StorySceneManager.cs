@@ -78,8 +78,8 @@ public class StorySceneManager : MonoBehaviour {
 		playerController = player.GetComponent<Controller2> ();
 
 		puppetMasterAnim = puppetMaster.GetComponent<Animator> ();
-		puppetMaster.SetActive (false);
 		puppetMasterFace("forward");
+		puppetMaster.SetActive (false);
 		isNameUpdated = false;
 
 		humanAnim = human.GetComponent<Animator> ();
@@ -95,15 +95,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	void Update(){
-//		if (Input.GetKeyDown(KeyCode.Y)){
-//			StartCoroutine (fourthTrigger ());
-//		}
-//		if (Input.GetKeyDown(KeyCode.K)){
-//			StartCoroutine (instantiateDoll ());
-//		}
-//		if (Input.GetKeyDown(KeyCode.F)){
-//			StartCoroutine (fifthTrigger ());
-//		}
+
 	}
 		
 
@@ -229,7 +221,7 @@ public class StorySceneManager : MonoBehaviour {
 		musicManager.stopTrack(2); //E3
 		yield return new WaitForSeconds(0.4f);
 		// need to use GameManager.getInstance ().isTrueEnding () instead
-		if (puppetMasterName == "annie" || puppetMasterName == "Annie" || puppetMasterName == "ANNIE") {
+		if (puppetMasterName.ToLower().Equals("annie")) {
 			StartCoroutine (fifthTrigger ());
 		} else {
 			StartCoroutine (fourthTrigger ());

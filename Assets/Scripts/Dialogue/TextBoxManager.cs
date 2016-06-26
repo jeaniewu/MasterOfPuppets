@@ -118,9 +118,10 @@ public class TextBoxManager : MonoBehaviour
 	}
 
 	public void disablePlayer(){
-		player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
+		if (player.GetComponent<Controller2> ().enabled) {
+			player.GetComponent<Controller2> ().anim.SetBool ("isWalking", false);
+			player.GetComponent<Controller2> ().enabled = false;
+		}
 		player.GetComponent<Animator> ().enabled = false;
-		player.GetComponent<Controller2> ().enabled = false;
-
 	}
 }
