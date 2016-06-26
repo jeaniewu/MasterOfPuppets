@@ -26,7 +26,7 @@ public class ActivateTextAtLine : MonoBehaviour {
     {
 		if (other.CompareTag ("Player") && !textTriggered) 
         {
-			GameManager.getInstance ().textTriggered [index] = true;
+			GameManager.getInstance ().objectTriggered [index] = true;
 			UpdateTrigger ();
             theTextBox.ReloadScript(theText);
             theTextBox.EnableTextBox();
@@ -34,6 +34,6 @@ public class ActivateTextAtLine : MonoBehaviour {
     }
 
 	void UpdateTrigger () {
-		textTriggered = GameManager.getInstance ().textTriggered[index];
+		textTriggered = GameManager.getInstance ().objectTriggered[index];
 	}
 }

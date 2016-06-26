@@ -5,51 +5,42 @@ public class SwitchSelectMsg : MonoBehaviour {
    // public GameObject textBox;
     public GameObject switchMessage;
     public GameObject acceptMessage;
-    private bool onlyOnce;
 
-    private Controller2 ghostMode;
-    public TextBoxManager txtMan;
+	private Controller2 controller2;
+    public TextBoxManager textBoxManager;
     // Use this for initialization
     //this is a tutotial script for level 1a
     void Start()
     {
-        ghostMode = GetComponent<Controller2>();
-        //txtMan = GetComponent<TextBoxManager>();
-        //switchMessage = GameObject.FindGameObjectWithTag("SwitchMessage");
-        switchMessage.SetActive(false);
-        acceptMessage.SetActive(false);
-
-        onlyOnce = false;
-        
-
+        controller2 = GetComponent<Controller2>();
+		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
+		disableMessages ();
+		StartCoroutine ("ghostSwitchTutorial");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+	IEnumerator ghostSwitchTutorial(){
+		yield return new WaitForEndOfFrame();
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+		switchMessage.SetActive (true); //Press X
 
-        if (!txtMan.isActive && !ghostMode.ghostMode && !onlyOnce)
-        {
-            switchMessage.SetActive(true);
-            acceptMessage.SetActive(false);
-           
-        }
-        if (!txtMan.isActive &&  ghostMode.ghostMode )
-        {
-            onlyOnce = true;
+		while (!controller2.ghostMode) {
+			yield return null;
+		}
 
-            acceptMessage.SetActive(true);
-            switchMessage.SetActive(false);
-           
+		switchMessage.SetActive (false);
+		acceptMessage.SetActive (true); //Press Z
 
-        }
+		while (controller2.ghostMode) {
+			yield return null;
+		}
+		disableMessages ();	
+	}
 
-        if(!txtMan.isActive && !ghostMode.ghostMode && onlyOnce){
-            Debug.Log("pressed");
-            switchMessage.SetActive(false);
-            acceptMessage.SetActive(false);
-        }
-
-
-    }
+	private void disableMessages ()
+	{
+		switchMessage.SetActive (false);
+		acceptMessage.SetActive (false);
+	}
 }

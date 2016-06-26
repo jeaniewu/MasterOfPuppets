@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 	public bool[] secretItemFound;
 
 	public bool firstRun;
-	public bool[] textTriggered;
+	public bool[] objectTriggered;
 
 	public GameObject saveText;
 
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour {
 		instance.firstRun = true;
 		instance.currentLevel = SceneManager.GetActiveScene ().name;
 		int numTextTriggers = GameObject.FindGameObjectsWithTag ("TextTrigger").Length;
-		instance.textTriggered = new bool[numTextTriggers];
+		instance.objectTriggered = new bool[numTextTriggers];
 
 		initScene ();
 
