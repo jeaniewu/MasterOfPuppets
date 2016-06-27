@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 	public bool[] secretItemFound;
 
 	public bool firstRun;
-	public bool[] objectTriggered;
+	public Dictionary<string, bool> objectsTriggered;
 
 	public GameObject saveText;
 
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
 			DontDestroyOnLoad (transform.root.gameObject);
 			instance = this;
 			instance.secretItemFound = new bool[5];
+			instance.objectsTriggered = new Dictionary<string, bool>();
 			trueEnding = false;
 			initSceneFirstRun();
 		} else if (instance != this) {
@@ -57,15 +58,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update(){
-		
-//		if (Input.GetKeyDown(KeyCode.S)){
-//			Save ();
-//		} 
-//		if (Input.GetKeyDown(KeyCode.L)){
-//			Load ();
-//			//SceneManager.LoadScene (currentLevel);
-//		}
-
 		if (Input.GetButton ("Restart") && !cannotRestartScenes.ToList().Contains(instance.currentLevel)) {
 			SceneManager.LoadScene (instance.currentLevel);
 		}
@@ -76,8 +68,6 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("first run");
 		instance.firstRun = true;
 		instance.currentLevel = SceneManager.GetActiveScene ().name;
-		int numTextTriggers = GameObject.FindGameObjectsWithTag ("TextTrigger").Length;
-		instance.objectTriggered = new bool[numTextTriggers];
 
 		initScene ();
 

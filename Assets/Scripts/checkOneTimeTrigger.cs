@@ -3,9 +3,7 @@ using System.Collections;
 
 public class checkOneTimeTrigger : MonoBehaviour {
 
-	public int index;
 	public bool hasBeenTriggeredOnce;
-
 
 	// Use this for initialization
 	void Start () {
@@ -18,11 +16,11 @@ public class checkOneTimeTrigger : MonoBehaviour {
 	}
 
 	public void UpdateTrigger () {
-		hasBeenTriggeredOnce = GameManager.getInstance ().objectTriggered[index];
+		GameManager.getInstance ().objectsTriggered.TryGetValue (gameObject.name, out hasBeenTriggeredOnce);
 	}
 
 	public void setTriggered(){
-		GameManager.getInstance ().objectTriggered [index] = true;
+		GameManager.getInstance ().objectsTriggered.Add (gameObject.name, true);
 		UpdateTrigger ();
 	}
 }
