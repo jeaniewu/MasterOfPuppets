@@ -19,37 +19,38 @@ public class UITrigger : Interact {
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
 	}
 
-    public void Update()
-    {
-		if (isActive){
-			DollAudioManager.getInstance().stopWalkingSound();
-			if (Input.GetButtonDown ("Interact")) {
-				LetterCanvas.SetActive (false);
-				isActive = false;
-				manager.enablePlayer ();
-				checkDestroy ();
-			}
-		}
-    }
-
 	private void checkDestroy(){
 		if (destroyOnFound && found) {
 			DestroyObject (this.gameObject);
 		}
 	}
 
-
-
     public override void interact()
     {
+		StartCoroutine("enableSecretMessage");
+    }
+
+	IEnumerator enableSecretMessage(){
 		manager.disablePlayer ();
 		LetterCanvas.SetActive (true);
 		isActive = true;
 		found = true;
-		GameManager.getInstance ().secretItemFound [index] = true;
+		GameManager.getInstance ().secretItemFound [index] = found;
 		GameManager.getInstance ().Save ();
-    }
 
+		yield return new WaitForSeconds(0.3f);
 
+		while (isActive) {
+			DollAudioManager.getInstance().stopWalkingSound();
+			if (Input.GetButtonUp ("Interact")) {
+				LetterCanvas.SetActive (false);
+				isActive = false;
+				manager.enablePlayer ();
+				checkDestroy ();
+			} else {
+				yield return null;
+			}
+		}
+	}
  
 }
