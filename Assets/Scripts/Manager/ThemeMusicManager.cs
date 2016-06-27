@@ -22,17 +22,25 @@ public class ThemeMusicManager : MusicManager {
 	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
 
 	void Awake() {
-		DontDestroyOnLoad(transform.gameObject);
-		if (instance != null) {
-			Debug.LogError("Multiple instances of ThemeMusicManager!");
+		if (instance == null) {
+			DontDestroyOnLoad (transform.root.gameObject);
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
 		}
-		instance = this;
+	}
 
-		String currentLevel = SceneManager.GetActiveScene ().name;
+	public void playThemeSong (string currentLevel)
+	{
 		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
 			startMainTheme ();
-		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-			startMechanicalTheme ();
+		}
+		else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
+			if (currentLevel.Equals ("1a")&& instance.mainTheme.isPlaying) {
+				setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
+			} else {
+				startMechanicalTheme ();
+			}
 		}
 	}
 
@@ -41,10 +49,10 @@ public class ThemeMusicManager : MusicManager {
 	}
 
 	public void startMainTheme() {
-		setTrackToFadeIn(mainTheme, mainThemeVolume);
+		setTrackToFadeIn(instance.mainTheme, mainThemeVolume);
 	}
 
 	public void startMechanicalTheme() {
-		setTrackToFadeIn(mechanicalTheme, mechanicalThemeVolume);
+		setTrackToFadeIn(instance.mechanicalTheme, mechanicalThemeVolume);
 	}
 }

@@ -13,10 +13,6 @@ public class UITrigger : Interact {
 	private TextBoxManager manager;
 	private bool isActive = false;
 
-	void Awake(){
-		
-	}
-
 	void Start () {
 		found = GameManager.getInstance ().secretItemFound [index];
 		checkDestroy ();

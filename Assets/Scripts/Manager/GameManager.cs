@@ -48,12 +48,16 @@ public class GameManager : MonoBehaviour {
 				instance.firstRun = false;
 			}
 		}
+		if (instance.firstRun) {
+			ThemeMusicManager.getInstance ().playThemeSong (instance.currentLevel);
+		}
 	}
 
 	void Start(){
 	}
 
 	void Update(){
+		
 //		if (Input.GetKeyDown(KeyCode.S)){
 //			Save ();
 //		} 
