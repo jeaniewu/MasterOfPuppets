@@ -18,8 +18,6 @@ public class Controller2 : MonoBehaviour {
     public bool canPushButtons = true;
     public bool canOnlyMoveUpAndDown = false;
 
-	public RaycastHit2D hit;
-
     public Animator anim;
 	private Rigidbody2D rigidbody2D2;
 
@@ -119,15 +117,20 @@ public class Controller2 : MonoBehaviour {
 			direction = new Vector3 (0, -1, 0);
 		}
 
-		hit = 
-			Physics2D.Raycast(this.transform.position, direction,1.5f, 1 << LayerMask.NameToLayer ("Interactive"));
+		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
+
+		RaycastHit2D[] hits = 
+			Physics2D.RaycastAll(this.transform.position, direction,1.5f, layer);
 		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
 
-		if (hit.collider != null && hit.collider.name != "wall") {
-			hit.collider.gameObject.GetComponent<Interact> ().interact ();
+		// prevent wall to come between player and interactive objects
+		foreach (RaycastHit2D hit in hits) {
+			if (hit.collider != null) {
+				if (hit.collider.CompareTag ("impenetrable"))
+					return;
+				hit.collider.gameObject.GetComponent<Interact> ().interact ();
+			}
 		}
-
-
 	}
 
     //Helper to get DollSpeed

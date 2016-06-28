@@ -9,9 +9,7 @@ using System.Collections;
 public class AbstractAudioManager : MonoBehaviour {
 
     protected void playOneShotSound(AudioClip clip, AudioSource source, float volume) {
-		if (!source.isPlaying) {
-			source.PlayOneShot(clip, volume);
-		}
+		source.PlayOneShot(clip, volume);
     }
 
     //Use this when you want the previous sound to stop when you retrigger the sound

@@ -13,20 +13,31 @@ public class ThemeMusicManager : MusicManager {
 	//Songs
 	public AudioSource mainTheme;
 	public AudioSource mechanicalTheme;
+	public AudioSource choirTheme;
 
 	//Song Volume
 	public float mainThemeVolume;
 	public float mechanicalThemeVolume;
+	public float choirThemeVolume;
 
 	private static String[] mainThemeScenes = {"OpenScene"};
 	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
+	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b", "5a", "5b"};
 
 	void Awake() {
 		if (instance == null) {
 			DontDestroyOnLoad (transform.root.gameObject);
 			instance = this;
 		} else if (instance != this) {
-			Destroy (gameObject);
+			// Final Scene has it's own Music Manager
+			if (SceneManager.GetActiveScene ().name.Equals ("finalScene")) {
+				setTrackToFadeOut (instance.choirTheme);
+				ThemeMusicManager temp = instance;
+				instance = this;
+				Destroy (temp);
+			} else {
+				Destroy (gameObject);
+			}
 		}
 	}
 
@@ -34,12 +45,17 @@ public class ThemeMusicManager : MusicManager {
 	{
 		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
 			startMainTheme ();
-		}
-		else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-			if (currentLevel.Equals ("1a")&& instance.mainTheme.isPlaying) {
-				setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
-			} else {
+		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
+			if (currentLevel.Equals ("1a") && instance.mainTheme.isPlaying) {
+				setSongSwitch (instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
+			} else if (!instance.mechanicalTheme.isPlaying){
 				startMechanicalTheme ();
+			}
+		} else if (choirThemeScenes.ToList ().Contains (currentLevel)) {
+			if (currentLevel.Equals ("4a-i") && instance.mechanicalTheme.isPlaying) {
+				setSongSwitch (instance.mechanicalTheme, instance.choirTheme, choirThemeVolume);
+			} else if (!instance.choirTheme.isPlaying) {
+				startChoirTheme ();
 			}
 		}
 	}
@@ -54,5 +70,9 @@ public class ThemeMusicManager : MusicManager {
 
 	public void startMechanicalTheme() {
 		setTrackToFadeIn(instance.mechanicalTheme, mechanicalThemeVolume);
+	}
+
+	public void startChoirTheme() {
+		setTrackToFadeIn(instance.choirTheme, choirThemeVolume);
 	}
 }
