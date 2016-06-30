@@ -70,21 +70,12 @@ public class Controller2 : MonoBehaviour {
 
 	}
 		
-
 	void move(float moveHorizontal, float moveVertical)
 	{
-		
-		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * dollSpeed;
-		
-
-		rigidbody2D2.position = new Vector3 
-			(
-				Mathf.Clamp(rigidbody2D2.position.x, boundary.xMin, boundary.xMax), 
-				Mathf.Clamp(rigidbody2D2.position.y, boundary.yMin, boundary.yMax),
-				0.0f
-				);
-		
+		rigidbody2D2.MovePosition (new Vector2 (rigidbody2D2.position.x + (Time.deltaTime * dollSpeed * moveHorizontal), rigidbody2D2.position.y + (Time.deltaTime * dollSpeed * moveVertical)));
 	}
+
+
 
 	public void stopWalking(){
 		DollAudioManager.getInstance().stopWalkingSound();
