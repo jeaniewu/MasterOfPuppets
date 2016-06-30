@@ -25,6 +25,7 @@ public class Ditch : MonoBehaviour {
 	}
 
 	IEnumerator Fall() {
+		MechanicAudioManager.getInstance ().playFallingDownDitchSound ();
 		while (doll.transform.localScale.x >= 0) {
 			doll.GetComponent<Controller2> ().enabled = false;
 			doll.transform.Rotate (new Vector3(0,0,20));
