@@ -39,7 +39,7 @@ public class TitleScreenScript : MonoBehaviour {
             Debug.Log("Still waiting");
             yield return null;
         }
-       ThemeMusicManager.getInstance().playThemeSong("TitleScreen");
+        ThemeMusicManager.getInstance().startTitleTheme();
         yield break;
     }
 

@@ -25,7 +25,6 @@ public class ThemeMusicManager : MusicManager {
 	private static String[] mainThemeScenes = {"OpenScene"};
 	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
 	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b", "5a", "5b"};
-    private static String[] titleThemeScenes = { "TitleScreen"};
 
 	void Awake() {
 		if (instance == null) {
@@ -52,31 +51,24 @@ public class ThemeMusicManager : MusicManager {
 
 	public void playThemeSong (string currentLevel)
 	{
-		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
-            if (instance.titleTheme.isPlaying) {
-                setSongSwitch(instance.titleTheme, instance.mainTheme, mainThemeVolume);
-            } else {
-                startMainTheme();
-            }
+        if (instance.titleTheme.isPlaying) {
+            setTrackToFadeOut(instance.titleTheme);
+        } 
+        if (mainThemeScenes.ToList ().Contains (currentLevel)) { 
+            startMainTheme();
 		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
             if (currentLevel.Equals("1a") && instance.mainTheme.isPlaying) {
                 setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
-            } else if (instance.titleTheme.isPlaying) {
-                setSongSwitch(instance.titleTheme, instance.mechanicalTheme, mechanicalThemeVolume);
             } else if (!instance.mechanicalTheme.isPlaying) {
                 startMechanicalTheme();
             }
 		} else if (choirThemeScenes.ToList ().Contains (currentLevel)) {
 			if (currentLevel.Equals ("4a-i") && instance.mechanicalTheme.isPlaying) {
 				setSongSwitch (instance.mechanicalTheme, instance.choirTheme, choirThemeVolume);
-			} else if (instance.titleTheme.isPlaying) {
-                setSongSwitch(instance.titleTheme, instance.choirTheme, choirThemeVolume);
-            } else if (!instance.choirTheme.isPlaying) {
+			} else if (!instance.choirTheme.isPlaying) {
                 startChoirTheme();
             }
-        } else if (titleThemeScenes.ToList().Contains(currentLevel)) {
-            startTitleTheme();
-        }
+        } 
 	}
 
 	public static ThemeMusicManager getInstance() {
