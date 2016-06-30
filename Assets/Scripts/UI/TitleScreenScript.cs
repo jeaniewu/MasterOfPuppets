@@ -105,4 +105,9 @@ public class TitleScreenScript : MonoBehaviour {
         Application.Quit();
     }
 
+    //For Debugging Purposes there is a secret button in the top right corner
+    public void openSceneSelect() {
+        SceneManager.LoadScene("SceneSelect");
+    }
+
 }
