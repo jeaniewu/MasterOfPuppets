@@ -14,11 +14,13 @@ public class ThemeMusicManager : MusicManager {
 	public AudioSource mainTheme;
 	public AudioSource mechanicalTheme;
 	public AudioSource choirTheme;
+    public AudioSource titleTheme;
 
 	//Song Volume
 	public float mainThemeVolume;
 	public float mechanicalThemeVolume;
 	public float choirThemeVolume;
+    public float titleThemeVolume;
 
 	private static String[] mainThemeScenes = {"OpenScene"};
 	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
@@ -31,7 +33,13 @@ public class ThemeMusicManager : MusicManager {
 		} else if (instance != this) {
 			// Final Scene has it's own Music Manager
 			if (SceneManager.GetActiveScene ().name.Equals ("finalScene")) {
-				setTrackToFadeOut (instance.choirTheme);
+                //fade out the current playing song (title theme if loading the final scene from the title screen)
+                if (instance.choirTheme.isPlaying) {
+                    setTrackToFadeOut(instance.choirTheme);
+                } else if (instance.titleTheme.isPlaying) {
+                    setTrackToFadeOut(instance.titleTheme);
+                }
+				
 				ThemeMusicManager temp = instance;
 				instance = this;
 				Destroy (temp);
@@ -43,26 +51,33 @@ public class ThemeMusicManager : MusicManager {
 
 	public void playThemeSong (string currentLevel)
 	{
-		if (mainThemeScenes.ToList ().Contains (currentLevel)) {
-			startMainTheme ();
+        if (instance.titleTheme.isPlaying) {
+            setTrackToFadeOut(instance.titleTheme);
+        } 
+        if (mainThemeScenes.ToList ().Contains (currentLevel)) { 
+            startMainTheme();
 		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-			if (currentLevel.Equals ("1a") && instance.mainTheme.isPlaying) {
-				setSongSwitch (instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
-			} else if (!instance.mechanicalTheme.isPlaying){
-				startMechanicalTheme ();
-			}
+            if (currentLevel.Equals("1a") && instance.mainTheme.isPlaying) {
+                setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
+            } else if (!instance.mechanicalTheme.isPlaying) {
+                startMechanicalTheme();
+            }
 		} else if (choirThemeScenes.ToList ().Contains (currentLevel)) {
 			if (currentLevel.Equals ("4a-i") && instance.mechanicalTheme.isPlaying) {
 				setSongSwitch (instance.mechanicalTheme, instance.choirTheme, choirThemeVolume);
 			} else if (!instance.choirTheme.isPlaying) {
-				startChoirTheme ();
-			}
-		}
+                startChoirTheme();
+            }
+        } 
 	}
 
 	public static ThemeMusicManager getInstance() {
 		return (ThemeMusicManager) instance;
 	}
+
+    public void startTitleTheme() {
+        setTrackToFadeIn(instance.titleTheme, titleThemeVolume);
+    }
 
 	public void startMainTheme() {
 		setTrackToFadeIn(instance.mainTheme, mainThemeVolume);

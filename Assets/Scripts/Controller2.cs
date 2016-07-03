@@ -34,7 +34,7 @@ public class Controller2 : MonoBehaviour {
 		allowSound = true;
     }
 	
-	void Update(){
+	void FixedUpdate(){
 
 		checkGhostMode ();
 
