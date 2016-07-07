@@ -10,7 +10,7 @@ public class UITrigger : Interact {
 	public bool found = false;
 	public bool destroyOnFound;
 
-	private TextBoxManager manager;
+	protected TextBoxManager manager;
 	private bool isActive = false;
 
 	void Start () {
@@ -30,7 +30,7 @@ public class UITrigger : Interact {
 		StartCoroutine("enableSecretMessage");
     }
 
-	IEnumerator enableSecretMessage(){
+	protected IEnumerator enableSecretMessage(){
 		manager.disablePlayer ();
 		LetterCanvas.SetActive (true);
 		isActive = true;
