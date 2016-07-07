@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 
@@ -108,20 +109,63 @@ public class Controller2 : MonoBehaviour {
 			direction = new Vector3 (0, -1, 0);
 		}
 
-		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
-
-		RaycastHit2D[] hits = 
-			Physics2D.RaycastAll(this.transform.position, direction,1.5f, layer);
-		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
-
-		// prevent wall to come between player and interactive objects
-		foreach (RaycastHit2D hit in hits) {
-			if (hit.collider != null) {
-				if (hit.collider.CompareTag ("impenetrable"))
-					return;
-				hit.collider.gameObject.GetComponent<Interact> ().interact ();
-			}
+		GameObject toInteract = objectToInteract (direction);
+		if (toInteract != null) {
+			Debug.Log (toInteract.name);
+			toInteract.GetComponent<Interact> ().interact ();
 		}
+			
+	}
+
+	private GameObject objectToInteract(Vector3 direction){
+		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
+		List<GameObject> interactables = new List<GameObject> ();
+
+		// create raycast from -45 degrees to 45 degrees
+		for (int delta_degree = 1; delta_degree < 90; delta_degree++) {
+			Quaternion quartenion = Quaternion.AngleAxis (delta_degree-45, Vector3.forward);
+			RaycastHit2D[] hits = 
+				Physics2D.RaycastAll(this.transform.position, quartenion * direction,1.5f, layer);
+			Debug.DrawRay (this.transform.position ,quartenion * direction*1.5f, Color.green,0.1f);
+
+			// prevent wall to come between player and interactive objects
+			foreach (RaycastHit2D hit in hits) {
+				if (hit.collider != null) {
+					if (hit.collider != null) {
+						if (hit.collider.CompareTag ("impenetrable"))
+							break;
+						// Record interatables item
+						interactables.Add (hit.collider.gameObject);
+					}
+				}
+			}
+
+		}
+
+		if (interactables.Count == 0)
+			return null;
+
+		// most common interactable in the list is the closest one
+		return mostCommon(interactables.ToArray());
+	}
+
+	private GameObject mostCommon(GameObject[] interactables){
+		Dictionary<GameObject,int> dictionary = new Dictionary<GameObject, int> ();
+		GameObject mostCommon = interactables [0];
+		dictionary.Add(interactables[0],1);
+
+		for(int i = 1; i < interactables.Length; ++i){
+			if (dictionary.ContainsKey (interactables [i])) {
+				dictionary [interactables [i]] += 1;
+				if (dictionary [interactables [i]] > dictionary [mostCommon]) {
+					mostCommon = interactables [i];
+				}
+			} else
+				dictionary.Add (interactables [i], 1);
+
+		}
+
+		return mostCommon;
 	}
 
     //Helper to get DollSpeed
