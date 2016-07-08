@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 
 public class Controller2 : MonoBehaviour {
@@ -111,7 +112,6 @@ public class Controller2 : MonoBehaviour {
 
 		GameObject toInteract = objectToInteract (direction);
 		if (toInteract != null) {
-			Debug.Log (toInteract.name);
 			toInteract.GetComponent<Interact> ().interact ();
 		}
 			
@@ -145,27 +145,11 @@ public class Controller2 : MonoBehaviour {
 		if (interactables.Count == 0)
 			return null;
 
+		GameObject most = interactables.GroupBy(i=>i).OrderByDescending(grp=>grp.Count())
+			.Select(grp=>grp.Key).First();
+
 		// most common interactable in the list is the closest one
-		return mostCommon(interactables.ToArray());
-	}
-
-	private GameObject mostCommon(GameObject[] interactables){
-		Dictionary<GameObject,int> dictionary = new Dictionary<GameObject, int> ();
-		GameObject mostCommon = interactables [0];
-		dictionary.Add(interactables[0],1);
-
-		for(int i = 1; i < interactables.Length; ++i){
-			if (dictionary.ContainsKey (interactables [i])) {
-				dictionary [interactables [i]] += 1;
-				if (dictionary [interactables [i]] > dictionary [mostCommon]) {
-					mostCommon = interactables [i];
-				}
-			} else
-				dictionary.Add (interactables [i], 1);
-
-		}
-
-		return mostCommon;
+		return most;
 	}
 
     //Helper to get DollSpeed
