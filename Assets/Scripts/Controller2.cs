@@ -36,14 +36,15 @@ public class Controller2 : MonoBehaviour {
 	
 	void FixedUpdate(){
 
-		checkGhostMode ();
+		//manageInput ();
+		//checkGhostMode ();
 
 		if (!ghostMode) {
-			if (Input.GetButtonDown ("Interact")) {
-				startInteraction ();
-
-
-			}
+//			if (Input.GetButtonDown ("Interact")) {
+//				startInteraction ();
+//
+//
+//			}
 
 			/*ANIMATION*/
 			float input_x = canOnlyMoveUpAndDown ? 0 : Input.GetAxisRaw ("Horizontal");
@@ -69,6 +70,25 @@ public class Controller2 : MonoBehaviour {
 		}
 
 	}
+
+	void OnGUI(){
+		if (!ghostMode) {
+			if (Event.current.keyCode == KeyCode.X && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
+				ghostMode = true;
+			}
+			if (Event.current.keyCode == KeyCode.Z) {
+				startInteraction ();
+			}
+		} else {
+			if (Event.current.keyCode == KeyCode.Z){
+				ghostMode = false;
+			}
+			if (Event.current.keyCode == KeyCode.X) {
+				levelManager.GetComponent<GhostSwitchManager> ().possessCurrentSelection ();
+			}
+		}
+		Event.current.Use ();
+	}
 		
 	void move(float moveHorizontal, float moveVertical)
 	{
@@ -81,6 +101,24 @@ public class Controller2 : MonoBehaviour {
 		DollAudioManager.getInstance().stopWalkingSound();
 		anim.SetBool ("isWalking", false);
 	}
+
+//	void manageInput(){
+//		if (!ghostMode) {
+//			if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
+//				ghostMode = true;
+//			}
+//			if (Input.GetButtonDown ("Interact")) {
+//				startInteraction ();
+//			}
+//		} else {
+//			if (Input.GetButtonDown("ghostMode")){
+//				ghostMode = false;
+//			}
+//			if (Input.GetButtonDown ("Possess")) {
+//				levelManager.GetComponent<GhostSwitchManager> ().possessCurrentSelection ();
+//			}
+//		}
+//	}
 
 	void checkGhostMode() {
 
