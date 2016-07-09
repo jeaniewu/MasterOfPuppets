@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 
 public class Controller2 : MonoBehaviour {
@@ -110,20 +112,46 @@ public class Controller2 : MonoBehaviour {
 			direction = new Vector3 (0, -1, 0);
 		}
 
-		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
-
-		RaycastHit2D[] hits = 
-			Physics2D.RaycastAll(this.transform.position, direction,1.5f, layer);
-		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
-
-		// prevent wall to come between player and interactive objects
-		foreach (RaycastHit2D hit in hits) {
-			if (hit.collider != null) {
-				if (hit.collider.CompareTag ("impenetrable"))
-					return;
-				hit.collider.gameObject.GetComponent<Interact> ().interact ();
-			}
+		GameObject toInteract = objectToInteract (direction);
+		if (toInteract != null) {
+			toInteract.GetComponent<Interact> ().interact ();
 		}
+			
+	}
+
+	private GameObject objectToInteract(Vector3 direction){
+		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
+		List<GameObject> interactables = new List<GameObject> ();
+
+		// create raycast from -45 degrees to 45 degrees
+		for (int delta_degree = 1; delta_degree < 90; delta_degree++) {
+			Quaternion quartenion = Quaternion.AngleAxis (delta_degree-45, Vector3.forward);
+			RaycastHit2D[] hits = 
+				Physics2D.RaycastAll(this.transform.position, quartenion * direction,1.5f, layer);
+			Debug.DrawRay (this.transform.position ,quartenion * direction*1.5f, Color.green,0.1f);
+
+			// prevent wall to come between player and interactive objects
+			foreach (RaycastHit2D hit in hits) {
+				if (hit.collider != null) {
+					if (hit.collider != null) {
+						if (hit.collider.CompareTag ("impenetrable"))
+							break;
+						// Record interatables item
+						interactables.Add (hit.collider.gameObject);
+					}
+				}
+			}
+
+		}
+
+		if (interactables.Count == 0)
+			return null;
+
+		GameObject most = interactables.GroupBy(i=>i).OrderByDescending(grp=>grp.Count())
+			.Select(grp=>grp.Key).First();
+
+		// most common interactable in the list is the closest one
+		return most;
 	}
 
     //Helper to get DollSpeed
