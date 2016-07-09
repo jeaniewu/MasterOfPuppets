@@ -161,13 +161,6 @@ public class GhostSwitchManager : MonoBehaviour
 			}
 		}
 
-//		if (Input.GetButtonDown ("Possess")) {
-//			if (!hasGhostWall (dolls [dollIndex])) {
-//				possess (player, dolls [dollIndex]);
-//				particleSystem.gameObject.SetActive (false);
-//			}
-//		}
-
 	}
 
 	public void possessCurrentSelection(){
