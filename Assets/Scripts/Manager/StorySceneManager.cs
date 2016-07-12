@@ -29,8 +29,11 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject inputText;
 	public TextBoxManager textBoxManager;
+
+
 	public GameObject panel;
 	public GameObject whitePanel;
+    public GameObject blackPanel;
 
 	private FinalSceneMusicManager musicManager;
 
@@ -263,22 +266,16 @@ public class StorySceneManager : MonoBehaviour {
 		}
 		StartCoroutine (dimLight(dirLight, 0.005f));
 
-		enlargeTextBoxpanel (panel,1.5f);
-		changePanelFontColor (Color.red);
-
+        enableBlackPanel(Color.red);
+        
 		yield return new WaitForSeconds(3.6f);
 		showText(7);
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
-		enlargeTextBoxpanel (panel,2f);
-		showText(8);
-		while (textBoxManager.isActive) {
-			yield return null;
-		}
-
-		yield return null;
+        theEnd(blackPanel, false); //Show The End Text, the panel does not need to fade as it's black
+        yield return null;
 	}
 
 	// TRUE ENDING HEREE
@@ -575,6 +572,21 @@ public class StorySceneManager : MonoBehaviour {
 		doorToOpen.GetComponent<Animator> ().SetBool ("open", true);
 		doorToOpen.GetComponent<BoxCollider2D> ().enabled = false;
 	}
-		
-		
+
+    //Enable the black panel that is used for both endings
+    private void enableBlackPanel(Color textColor) {
+        blackPanel.SetActive(true);
+        Text panelText = blackPanel.GetComponent<Text>();
+        panelText.color = textColor;
+        
+        textBoxManager.textBox = blackPanel;
+        textBoxManager.theText = panelText;
+    }
+
+    private void theEnd(GameObject panel, bool fadeOutPanel) {
+        Animator theEndAnimator = panel.GetComponent<Animator>();
+        theEndAnimator.SetBool("fadeOutPanel", fadeOutPanel);
+        theEndAnimator.SetBool("startEnd", true);
+        //TODO: NEED TO WRITE IENUMERATOR THAT WAITS FOR ANIMATION TO END THEN SWITCHES SCENES
+    }
 }
