@@ -8,12 +8,14 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public AudioClip unlockDoorClip;
 	public AudioClip deathBySawbladeClip;
 	public AudioClip fallingDownDitchClip;
+	public AudioClip pullLeverClip;
 
     //AudioSources
     public AudioSource button;
 	public AudioSource unlockDoor;
 	public AudioSource deathBySawblade;
 	public AudioSource fallingDownDitch;
+	public AudioSource pullLever;
 
     //Volume
     public float buttonVolume;
@@ -23,6 +25,7 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public float maxSawBladeVolume;
 	public float deathBySawbladeVolume;
 	public float fallingDownDitchVolume;
+	public float pullLeverVolume;
 
 	//fadeTime
 	public float fadeTime;
@@ -62,6 +65,10 @@ public class MechanicAudioManager : AbstractAudioManager {
 
 	public void playFallingDownDitchSound() {
 		playOneShotSound(instance.fallingDownDitchClip, instance.fallingDownDitch, fallingDownDitchVolume);
+	}
+
+	public void playPullLeverSound() {
+		playOneShotSound(instance.pullLeverClip, instance.pullLever, pullLeverVolume);
 	}
 
 }

@@ -14,6 +14,9 @@ public class Lever : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (isOn ^ GetComponent<Trigger> ().isOn) // ^ is XOR
+			MechanicAudioManager.getInstance ().playPullLeverSound ();
+		
 		isOn = GetComponent<Trigger> ().isOn;
 		anim.SetBool ("isOn", isOn);
 	}
