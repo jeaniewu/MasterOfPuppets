@@ -32,10 +32,12 @@ public class Controller2 : MonoBehaviour {
 		anim.SetFloat("Y", -1); // face the front
 		allowSound = true;
     }
-	
-	void FixedUpdate(){
 
+	void Update(){
 		manageInput ();
+	}
+
+	void FixedUpdate(){
 
 		if (!ghostMode) {
 
