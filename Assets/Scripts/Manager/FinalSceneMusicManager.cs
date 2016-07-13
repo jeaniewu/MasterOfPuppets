@@ -8,7 +8,9 @@ public class FinalSceneMusicManager : MusicManager{
 
 	void Awake() {
 		if (instance != null) {
-			Debug.LogError("Multiple instances of FinalSceneMusicManager!");
+			FinalSceneMusicManager temp = instance;
+			Destroy (temp);
+			//Debug.LogError("Multiple instances of FinalSceneMusicManager!");
 		}
 		instance = this;
 	}
