@@ -8,11 +8,9 @@ using System.Linq;
 public class Controller2 : MonoBehaviour {
 
 	public GameObject levelManager;
-
 	
 	public bool ghostMode = false;
 	private int radius;
-	private DollManager.Boundary boundary;
     private float dollSpeed = 10f;
 
     //Doll Prototype Version Properties
@@ -28,7 +26,6 @@ public class Controller2 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
-		boundary = levelManager.GetComponent<DollManager>().boundary;
 		dollSpeed = levelManager.GetComponent<DollManager> ().maxSpeed - maxSpeedSlowerBy;
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
@@ -38,14 +35,9 @@ public class Controller2 : MonoBehaviour {
 	
 	void FixedUpdate(){
 
-		checkGhostMode ();
+		manageInput ();
 
 		if (!ghostMode) {
-			if (Input.GetButtonDown ("Interact")) {
-				startInteraction ();
-
-
-			}
 
 			/*ANIMATION*/
 			float input_x = canOnlyMoveUpAndDown ? 0 : Input.GetAxisRaw ("Horizontal");
@@ -76,19 +68,29 @@ public class Controller2 : MonoBehaviour {
 	{
 		rigidbody2D2.MovePosition (new Vector2 (rigidbody2D2.position.x + (Time.deltaTime * dollSpeed * moveHorizontal), rigidbody2D2.position.y + (Time.deltaTime * dollSpeed * moveVertical)));
 	}
-
-
-
+		
 	public void stopWalking(){
 		DollAudioManager.getInstance().stopWalkingSound();
 		anim.SetBool ("isWalking", false);
 	}
 
-	void checkGhostMode() {
-
-		if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
-			ghostMode = !ghostMode;
-         
+	void manageInput(){
+		if (!ghostMode) {
+			if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
+				ghostMode = true;
+				Input.ResetInputAxes();
+			}
+			if (Input.GetButtonDown ("Interact")) {
+				startInteraction ();
+			}
+		} else {
+			if (Input.GetButtonDown("cancelGhostMode")){
+				ghostMode = false;
+				Input.ResetInputAxes();
+			}
+			if (Input.GetButtonDown ("Possess")) {
+				levelManager.GetComponent<GhostSwitchManager> ().possessCurrentSelection ();
+			}
 		}
 	}
 
