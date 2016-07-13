@@ -88,6 +88,7 @@ public class Controller2 : MonoBehaviour {
 		} else {
 			if (Input.GetButtonDown("cancelGhostMode")){
 				ghostMode = false;
+				DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
 				Input.ResetInputAxes();
 			}
 			if (Input.GetButtonDown ("Possess")) {

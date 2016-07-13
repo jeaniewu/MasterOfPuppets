@@ -38,6 +38,7 @@ public class GhostSwitchManager : MonoBehaviour
 				selectPlayer ();
 				initParticleSystem ();
 			} else {
+				DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
 				setGhostMode (false);
 			}
 
