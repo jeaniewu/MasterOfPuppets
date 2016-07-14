@@ -34,6 +34,7 @@ public class StorySceneManager : MonoBehaviour {
 	public GameObject panel;
 	public GameObject whitePanel;
     public GameObject blackPanel;
+    public Text blackPanelText;
 
 	private FinalSceneMusicManager musicManager;
 
@@ -273,8 +274,11 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
+        //turn off the text (this is usually done by disabling the panel, but the panel is not disabled in this case (cause we keep the black panel))
+        textBoxManager.theText.gameObject.SetActive(false);
 
         theEnd(blackPanel, false); //Show The End Text, the panel does not need to fade as it's black
+        
         yield return null;
 	}
 
@@ -369,11 +373,11 @@ public class StorySceneManager : MonoBehaviour {
 			StartCoroutine (dimLight(light, 0.03f));
 		}
 		Coroutine dim = StartCoroutine (dimLight(dirLight, 0.005f));
-		yield return new WaitForSeconds(3f);
-		enlargeTextBoxpanel (panel,1f);
+        enableBlackPanel(Color.white);
+        yield return new WaitForSeconds(3f);
 
-		//rest of dialogue
-		for (int i = 17; i < 21; i++) {
+        //rest of dialogue
+        for (int i = 17; i < 21; i++) {
 			showText(i);
 			while (textBoxManager.isActive) {
 				yield return null;
@@ -381,26 +385,36 @@ public class StorySceneManager : MonoBehaviour {
 		}
 		StopCoroutine (dim);
 
-		whitePanel.SetActive (true);
-		textBoxManager.textBox = whitePanel;
+        //Switch to the white panel
+        blackPanel.SetActive(false);
+	    whitePanel.SetActive (true);
+
 		Coroutine brighten = StartCoroutine (brightenLight(dirLight, 0.05f, 2f));
 		yield return new WaitForSeconds(1.8f);
 
-		Text[] texts = whitePanel.GetComponentsInChildren<Text> ();
-		textBoxManager.theText = texts [0];
-		showText(21);
-		StopCoroutine (brighten);
-		yield return new WaitForSeconds(0.8f);
-		musicManager.playTrack (7,1); //E9
-		textBoxManager.theText = texts [1];
-		showText(22);
-		while (textBoxManager.isActive) {
-			yield return null;
-		}
-		texts [0].gameObject.SetActive (false);
-		texts [1].gameObject.SetActive (false);
-		textBoxManager.theText = texts [2];
-		showText(8);
+        //WHITE PANEL TEXT CODE STARTS HERE//
+        /////////////////////////////////////
+        Text[] texts = whitePanel.GetComponentsInChildren<Text>();
+
+        //"Hey youll take care of me right?"
+        textBoxManager.theText = texts[0];
+        showText(21);
+        while (textBoxManager.isActive) {
+            yield return null;
+        }
+        musicManager.playTrack(7, 1); //E9
+        textBoxManager.theText = texts[1];
+        showText(22);
+       
+        while (textBoxManager.isActive) {
+            yield return null;
+        }
+        texts[0].gameObject.SetActive(false);
+        texts[1].gameObject.SetActive(false);
+
+        /////////////////////////////////////////
+
+        theEnd(whitePanel, true); //fade out the panel, as this is the white panel
 		yield return null;
 	}
 
@@ -508,10 +522,6 @@ public class StorySceneManager : MonoBehaviour {
 		}
 	}
 
-	void enlargeTextBoxpanel(GameObject panel, float size){
-		panel.transform.localScale = new Vector3 (size, size, -10);
-		panel.transform.position = maincam.transform.position;
-	}
 
 	void changePanelFontColor(Color color) {
 		panel.GetComponentInChildren<Text> ().color = color;
@@ -576,17 +586,16 @@ public class StorySceneManager : MonoBehaviour {
     //Enable the black panel that is used for both endings
     private void enableBlackPanel(Color textColor) {
         blackPanel.SetActive(true);
-        Text panelText = blackPanel.GetComponent<Text>();
-        panelText.color = textColor;
-        
-        textBoxManager.textBox = blackPanel;
-        textBoxManager.theText = panelText;
+        blackPanelText.gameObject.SetActive(true);
+        blackPanelText.color = textColor;
+        textBoxManager.theText = blackPanelText;
     }
 
     private void theEnd(GameObject panel, bool fadeOutPanel) {
         Animator theEndAnimator = panel.GetComponent<Animator>();
         theEndAnimator.SetBool("fadeOutPanel", fadeOutPanel);
         theEndAnimator.SetBool("startEnd", true);
+        Debug.Log("The end fade start!");
         //TODO: NEED TO WRITE IENUMERATOR THAT WAITS FOR ANIMATION TO END THEN SWITCHES SCENES
     }
 }
