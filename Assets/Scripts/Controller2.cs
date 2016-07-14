@@ -32,10 +32,12 @@ public class Controller2 : MonoBehaviour {
 		anim.SetFloat("Y", -1); // face the front
 		allowSound = true;
     }
-	
-	void FixedUpdate(){
 
+	void Update(){
 		manageInput ();
+	}
+
+	void FixedUpdate(){
 
 		if (!ghostMode) {
 
@@ -86,6 +88,7 @@ public class Controller2 : MonoBehaviour {
 		} else {
 			if (Input.GetButtonDown("cancelGhostMode")){
 				ghostMode = false;
+				DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
 				Input.ResetInputAxes();
 			}
 			if (Input.GetButtonDown ("Possess")) {

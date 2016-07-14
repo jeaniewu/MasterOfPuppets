@@ -5,9 +5,15 @@ public class DollAudioManager : AbstractAudioManager {
     //AudioSources
     public AudioSource walking;
     public AudioSource ghostSwitch;
+	public AudioSource cancelGhostSwitch;
 
     //AudioClips for oneshot sounds
     public AudioClip ghostSwitchClip;
+	public AudioClip cancelGhostSwitchClip;
+
+	// AudioClip Volumes
+	public float ghostSwitchVolume;
+	public float cancelGhostSwitchVolume;
 
     //Singleton Instantiation
     public static DollAudioManager instance;
@@ -36,7 +42,11 @@ public class DollAudioManager : AbstractAudioManager {
     }
 
     public void playGhostSwitchSound() {
-		playOneShotSound(instance.ghostSwitchClip, instance.ghostSwitch, 0.5f);
+		playOneShotSound(instance.ghostSwitchClip, instance.ghostSwitch, ghostSwitchVolume);
     }
+
+	public void playCancelGhostSwitchSound() {
+		playOneShotSound(instance.cancelGhostSwitchClip, instance.cancelGhostSwitch, cancelGhostSwitchVolume);
+	}
 
 }
