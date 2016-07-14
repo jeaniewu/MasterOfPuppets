@@ -38,6 +38,7 @@ public class GhostSwitchManager : MonoBehaviour
 				selectPlayer ();
 				initParticleSystem ();
 			} else {
+				DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
 				setGhostMode (false);
 			}
 
@@ -161,13 +162,13 @@ public class GhostSwitchManager : MonoBehaviour
 			}
 		}
 
-		if (Input.GetButtonDown ("Possess")) {
-			if (!hasGhostWall (dolls [dollIndex])) {
-				possess (player, dolls [dollIndex]);
-				particleSystem.gameObject.SetActive (false);
-			}
-		}
+	}
 
+	public void possessCurrentSelection(){
+		if (!hasGhostWall (dolls [dollIndex])) {
+			possess (player, dolls [dollIndex]);
+			particleSystem.gameObject.SetActive (false);
+		}
 	}
 
 	void choose (int index){
