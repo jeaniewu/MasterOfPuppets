@@ -18,13 +18,14 @@ public class CameraFollow : MonoBehaviour
     private DollManager dollManager;
 	public GameObject player;
     
-
+	private TextBoxManager textBox;
 
     private void Start()
     {
         // Setting up the reference.
 		findPlayer();
         dollManager = FindObjectOfType<DollManager>();
+		textBox = FindObjectOfType<TextBoxManager>();
         currentDollSpeed = dollManager.maxSpeed;
     }
 
@@ -48,7 +49,7 @@ public class CameraFollow : MonoBehaviour
 		var controller2 = player.GetComponent<Controller2> ();
 		var animator = player.GetComponent<Animator> ();
 
-		if (!controller2.ghostMode) {
+		if (!controller2.ghostMode && !textBox.isActive) {
 			if (Input.GetKey (KeyCode.C)) {
 				controller2.enabled = false;
 				animator.enabled = false;
