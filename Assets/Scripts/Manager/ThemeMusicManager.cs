@@ -15,16 +15,19 @@ public class ThemeMusicManager : MusicManager {
 	public AudioSource mechanicalTheme;
 	public AudioSource choirTheme;
     public AudioSource titleTheme;
+	public AudioSource iceTheme;
 
 	//Song Volume
 	public float mainThemeVolume;
 	public float mechanicalThemeVolume;
 	public float choirThemeVolume;
     public float titleThemeVolume;
+	public float iceThemeVolume;
 
-	private static String[] mainThemeScenes = {"OpenScene"};
-	private static String[] mechanicalThemeScenes = {"1a", "1b", "2a", "2b", "3a", "3b"};
-	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b", "5a", "5b"};
+	private static String[] mainThemeScenes = {"OpenScene", "1a", "1b"};
+	private static String[] mechanicalThemeScenes = {"2a", "2b", "3a", "3b"};
+	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b"};
+	private static String[] iceThemeScenes = {"5a", "5b"};
 
 	void Awake() {
 		if (instance == null) {
@@ -55,9 +58,11 @@ public class ThemeMusicManager : MusicManager {
             setTrackToFadeOut(instance.titleTheme);
         } 
         if (mainThemeScenes.ToList ().Contains (currentLevel)) { 
-            startMainTheme();
+			if (!instance.mainTheme.isPlaying) {
+				startMainTheme();
+			}
 		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-            if (currentLevel.Equals("1a") && instance.mainTheme.isPlaying) {
+            if (currentLevel.Equals("2a") && instance.mainTheme.isPlaying) {
                 setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
             } else if (!instance.mechanicalTheme.isPlaying) {
                 startMechanicalTheme();
@@ -68,7 +73,13 @@ public class ThemeMusicManager : MusicManager {
 			} else if (!instance.choirTheme.isPlaying) {
                 startChoirTheme();
             }
-        } 
+		} else if (iceThemeScenes.ToList ().Contains (currentLevel)) {
+			if (currentLevel.Equals ("5a") && instance.choirTheme.isPlaying) {
+				setSongSwitch (instance.choirTheme, instance.iceTheme, iceThemeVolume);
+			} else if (!instance.iceTheme.isPlaying) {
+				startChoirTheme();
+			}
+		} 
 	}
 
 	public static ThemeMusicManager getInstance() {
