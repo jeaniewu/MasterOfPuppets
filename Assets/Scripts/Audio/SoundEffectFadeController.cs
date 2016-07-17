@@ -25,6 +25,8 @@ public class SoundEffectFadeController : MonoBehaviour {
 			maxVolume = MechanicAudioManager.getInstance ().maxGhostWallVolume;
 		} else if (audioSource.clip.name == "Sawblade Sound") {
 			maxVolume = MechanicAudioManager.getInstance ().maxSawBladeVolume;
+		} else if (audioSource.clip.name == "spazzing") {
+			maxVolume = 0.3f;
 		}
     }
 		
