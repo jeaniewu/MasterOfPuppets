@@ -165,7 +165,8 @@ public class StorySceneManager : MonoBehaviour {
 		StopCoroutine (movecam);
 
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
+		player.SetActive (false);
 		// "Tada! Just as promised.."
 		showText(1);
 		while (textBoxManager.isActive) {
@@ -608,8 +609,8 @@ public class StorySceneManager : MonoBehaviour {
         }
         if (musicManager.tracks[5].isPlaying) {
             musicManager.stopTrack(5);
-        } else if (musicManager.tracks[8].isPlaying) {
-            musicManager.stopTrack(8);
+        } else if (musicManager.tracks[7].isPlaying) {
+            musicManager.stopTrack(7);
         }
         SceneManager.LoadScene("EndCredits");
     }
