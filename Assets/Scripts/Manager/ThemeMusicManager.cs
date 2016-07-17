@@ -24,7 +24,7 @@ public class ThemeMusicManager : MusicManager {
     public float titleThemeVolume;
 	public float iceThemeVolume;
 
-	private static String[] mainThemeScenes = {"OpenScene", "1a", "1b"};
+	private static String[] mainThemeScenes = {"OpenScene", "1a", "1b", "EndCredits" };
 	private static String[] mechanicalThemeScenes = {"2a", "2b", "3a", "3b"};
 	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b"};
 	private static String[] iceThemeScenes = {"5a", "5b"};
@@ -93,6 +93,10 @@ public class ThemeMusicManager : MusicManager {
 	public void startMainTheme() {
 		setTrackToFadeIn(instance.mainTheme, mainThemeVolume);
 	}
+
+    public void fadeOutMainTheme() {
+        setTrackToFadeOut(instance.mainTheme);
+    }
 
 	public void startMechanicalTheme() {
 		setTrackToFadeIn(instance.mechanicalTheme, mechanicalThemeVolume);

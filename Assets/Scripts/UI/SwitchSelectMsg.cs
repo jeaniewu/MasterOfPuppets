@@ -2,18 +2,11 @@
 using System.Collections;
 
 public class SwitchSelectMsg : MonoBehaviour {
-   // public GameObject textBox;
-    public GameObject switchMessage;
-    public GameObject acceptMessage;
+
+	public GameObject[] messages;
 
 	private Controller2 controller2;
     public TextBoxManager textBoxManager;
-
-	private checkOneTimeTrigger switchTriggeredCheck;
-	private checkOneTimeTrigger acceptTriggeredCheck;
-
-	private Renderer switchMessageRenderer;
-	private Renderer acceptMessageRenderer;
 
     //this is a tutotial script for level 1a
     void Start()
@@ -21,47 +14,50 @@ public class SwitchSelectMsg : MonoBehaviour {
         controller2 = GetComponent<Controller2>();
 		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
 
-		switchTriggeredCheck = switchMessage.GetComponent<checkOneTimeTrigger> ();
-		acceptTriggeredCheck = acceptMessage.GetComponent<checkOneTimeTrigger> ();
-		switchMessageRenderer = switchMessage.GetComponent<Renderer> ();
-		acceptMessageRenderer = acceptMessage.GetComponent<Renderer> ();
-
 		disableMessages ();
 		StartCoroutine ("ghostSwitchTutorial");
     }
 
 	IEnumerator ghostSwitchTutorial(){
 		yield return new WaitForEndOfFrame();
+		while (!controller2.enabled) {
+			yield return null;
+		}
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
 
-		if(!switchTriggeredCheck.hasBeenTriggeredOnce){
-			switchMessageRenderer.enabled = true; //Press X
-			switchTriggeredCheck.setTriggered();
-		}
+		enableMessage (messages[0]); // Press X - Switch
 
 		while (!controller2.ghostMode) {
 			yield return null;
 		}
+			
+		// has entered ghostMode, disable switch tutorial
+		messages[0].GetComponent<Renderer> ().enabled = false;
 
-		switchMessageRenderer.enabled = false;
-
-		if(!acceptTriggeredCheck.hasBeenTriggeredOnce){
-			acceptMessageRenderer.enabled = true; //Press Z
-			acceptTriggeredCheck.setTriggered();
-		}
+		enableMessage (messages[1]);
 
 		while (controller2.ghostMode) {
 			yield return null;
 		}
+
 		disableMessages ();	
+	}
+
+	private void enableMessage (GameObject message){
+		checkOneTimeTrigger triggeredCheck = message.GetComponent<checkOneTimeTrigger> ();
+			
+		if(!triggeredCheck.hasBeenTriggeredOnce){
+			message.GetComponent<Renderer> ().enabled = true;
+			triggeredCheck.setTriggered();
+		}
 	}
 
 	private void disableMessages ()
 	{
-		// Disable renderer so I can do triggered check on the game object
-		switchMessageRenderer.enabled = false;
-		acceptMessageRenderer.enabled = false;
+		foreach(GameObject message in messages){
+			message.GetComponent<Renderer> ().enabled = false;
+		}
 	}
 }
