@@ -77,7 +77,7 @@ public class ThemeMusicManager : MusicManager {
 			if (currentLevel.Equals ("5a") && instance.choirTheme.isPlaying) {
 				setSongSwitch (instance.choirTheme, instance.iceTheme, iceThemeVolume);
 			} else if (!instance.iceTheme.isPlaying) {
-				startChoirTheme();
+				startIceTheme();
 			}
 		} 
 	}
@@ -100,5 +100,9 @@ public class ThemeMusicManager : MusicManager {
 
 	public void startChoirTheme() {
 		setTrackToFadeIn(instance.choirTheme, choirThemeVolume);
+	}
+
+	public void startIceTheme() {
+		setTrackToFadeIn(instance.iceTheme, iceThemeVolume);
 	}
 }
