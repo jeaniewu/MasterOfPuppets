@@ -86,6 +86,15 @@ public class ThemeMusicManager : MusicManager {
 		return (ThemeMusicManager) instance;
 	}
 
+	public void mainthemevolumeAdjuster(float totalVolume){
+		mainTheme.volume = totalVolume;
+	}
+
+	public void mechthemevolumeAdjuster(float totalVolume){
+		mechanicalTheme.volume = totalVolume;
+	}
+
+
     public void startTitleTheme() {
         setTrackToFadeIn(instance.titleTheme, titleThemeVolume);
     }
