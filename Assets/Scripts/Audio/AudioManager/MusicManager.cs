@@ -24,10 +24,11 @@ public class MusicManager : AbstractAudioManager {
     }
 
 	IEnumerator fadeIn (AudioSource source, float volume, float fadeInSpeed){
-		while (source.volume <= volume) {
+		while (source.volume < volume) {
 			source.volume += fadeInSpeed * Time.deltaTime;
 			yield return null;
 		}
+		yield break;
 	}
 
 	protected void setTrackToFadeOut(AudioSource source, float fadeOutSpeed = 0f) {
@@ -43,6 +44,7 @@ public class MusicManager : AbstractAudioManager {
 			yield return null;
 		}
 		source.Stop ();
+		yield break;
 	}
 
     public void setSongSwitch(AudioSource sourceFrom, AudioSource sourceTo, float sourceToVolume) {
