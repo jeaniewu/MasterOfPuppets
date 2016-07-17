@@ -37,8 +37,4 @@ public class FinalSceneMusicManager : MusicManager{
 	public void switchTrack(int fromIndex, int toIndex){
 		setSongSwitch (tracks [fromIndex], tracks [toIndex], trackVolume);
 	}
-
-	public void playOnce(int index){
-		tracks [index].PlayOneShot(tracks [index].clip, trackVolume);
-	}
 }

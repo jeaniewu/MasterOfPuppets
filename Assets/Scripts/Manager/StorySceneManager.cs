@@ -93,7 +93,7 @@ public class StorySceneManager : MonoBehaviour {
 		//TESTING
 		//puppetMasterAnim.SetBool ("hasSoul", true);
 		//StartCoroutine (temp ());
-		//StartCoroutine (thirdTrigger ());
+		//StartCoroutine (fifthTrigger ());
 	}
 
 	void Update(){
@@ -124,8 +124,7 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator secondTrigger(){
-		musicManager.stopTrack(0); //E1
-		musicManager.playTrack(1); //E2
+		musicManager.switchTrack (0, 1); // FROM E1 to E2
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
@@ -191,7 +190,7 @@ public class StorySceneManager : MonoBehaviour {
 		movecam = StartCoroutine (move (maincam.transform, human.transform, 0.04f));
 		humanController.enabled = true;
 		humanController.allowSound = false;
-		yield return new WaitForSeconds(6f); // allow human to escape //TODO
+		yield return new WaitForSeconds(6f); // allow human to escape
 		humanController.enabled = false;
 		StopCoroutine (movecam);
 
@@ -296,9 +295,9 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 			
-		musicManager.playOnce(4); //E4 (beginning)
+		musicManager.playTrack(4, 0.6f); //E4 (beginning)
 		yield return new WaitForSeconds(2.3f);
-		musicManager.playTrack(3,0.75f); //E4
+		musicManager.playTrack(3); //E4
 
 		foreach (Light light in spotLights) {
 			light.intensity = 1f;
@@ -306,6 +305,7 @@ public class StorySceneManager : MonoBehaviour {
 		dirLight.intensity = 0.8f;
 
 		puppetMasterAnim.SetTrigger("spazz");
+		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = true;
 		StartCoroutine (instantiateDoll ());
 
 		//“hUrrY, aNd DEstRoy tHe dOll!”
@@ -324,7 +324,10 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator sixthTrigger(){
+		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = false;
 		musicManager.stopTrack(3); //E4
+
+		musicManager.playTrack(9, 0.3f); //The crazy ASSed scream 
 		//“ArghaaehHAHhahahaHAAaaaHAHAhA!”;“Just shut up and diE already!” 
 		StartCoroutine(showTextAlternateColor (12));
 		puppetMasterAnim.SetBool ("lowerHead", true);
@@ -340,7 +343,7 @@ public class StorySceneManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		puppetMasterAnim.SetBool ("lowerHead", false);
 
-		musicManager.playTrack(8); //E6 pinao only
+		musicManager.playTrack(8, 0.7f); //E6 pinao only
 		changePanelFontColor (Color.white);
 		//“She’s gone?”
 		showText(13);
