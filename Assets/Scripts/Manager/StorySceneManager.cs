@@ -165,7 +165,8 @@ public class StorySceneManager : MonoBehaviour {
 		StopCoroutine (movecam);
 
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
+		player.SetActive (false);
 		// "Tada! Just as promised.."
 		showText(1);
 		while (textBoxManager.isActive) {
@@ -306,7 +307,6 @@ public class StorySceneManager : MonoBehaviour {
 		dirLight.intensity = 0.8f;
 
 		puppetMasterAnim.SetTrigger("spazz");
-		//puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = true; //going to disable for now, if we feel like we need the spazzing sound we can reenable it
 		StartCoroutine (instantiateDoll ());
 
 		//“hUrrY, aNd DEstRoy tHe dOll!”
@@ -325,7 +325,6 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator sixthTrigger(){
-		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = false;
 		musicManager.stopTrack(3); //E4
 
 		musicManager.playTrack(8, 0.3f); //The crazy ASSed scream 
@@ -610,8 +609,8 @@ public class StorySceneManager : MonoBehaviour {
         }
         if (musicManager.tracks[5].isPlaying) {
             musicManager.stopTrack(5);
-        } else if (musicManager.tracks[8].isPlaying) {
-            musicManager.stopTrack(8);
+        } else if (musicManager.tracks[7].isPlaying) {
+            musicManager.stopTrack(7);
         }
         SceneManager.LoadScene("EndCredits");
     }

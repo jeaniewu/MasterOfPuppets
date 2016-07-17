@@ -28,7 +28,7 @@ public class UITriggerForOneB : UITrigger {
 
         //After we show the secret item, resume the textbox to explain the notebook feature
         manager.EnableTextBox();
-        manager.currentLine = 3; //we are setting the current line to 3 because the pressed interact causes the text box manager to proceed to line 4, which is the line we want.
+        manager.currentLine = 2; //we are setting the current line to 3 because the pressed interact causes the text box manager to proceed to line 4, which is the line we want.
         Debug.Log("Finished Secret MEssage()");
     }
 

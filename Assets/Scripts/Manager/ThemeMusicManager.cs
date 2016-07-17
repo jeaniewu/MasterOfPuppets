@@ -37,8 +37,8 @@ public class ThemeMusicManager : MusicManager {
 			// Final Scene has it's own Music Manager
 			if (SceneManager.GetActiveScene ().name.Equals ("finalScene")) {
                 //fade out the current playing song (title theme if loading the final scene from the title screen)
-                if (instance.choirTheme.isPlaying) {
-                    setTrackToFadeOut(instance.choirTheme);
+                if (instance.iceTheme.isPlaying) {
+					setTrackToFadeOut(instance.iceTheme);
                 } else if (instance.titleTheme.isPlaying) {
                     setTrackToFadeOut(instance.titleTheme);
                 }

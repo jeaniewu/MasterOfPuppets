@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour {
 			DontDestroyOnLoad (transform.root.gameObject);
 			instance = this;
 			instance.secretItemFound = new bool[5];
-			instance.objectsTriggered = new Dictionary<string, bool>();
 			trueEnding = false;
 			initSceneFirstRun();
 		} else if (instance != this) {
@@ -69,6 +68,7 @@ public class GameManager : MonoBehaviour {
 	//Initialize Variables here that won't change even if you retry the scene
 	private void initSceneFirstRun(){
 		Debug.Log("first run");
+		instance.objectsTriggered = new Dictionary<string, bool>();
 		instance.firstRun = true;
 		instance.currentLevel = SceneManager.GetActiveScene ().name;
 
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public bool isTrueEnding(){
-		return trueEnding;
+		return secretItemFound.Aggregate ((curr,next) => curr && next);
 	}
 
 	public void setTrueEnding(){
