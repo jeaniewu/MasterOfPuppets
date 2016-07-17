@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class StorySceneManager : MonoBehaviour {
@@ -305,7 +306,7 @@ public class StorySceneManager : MonoBehaviour {
 		dirLight.intensity = 0.8f;
 
 		puppetMasterAnim.SetTrigger("spazz");
-		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = true;
+		//puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = true; //going to disable for now, if we feel like we need the spazzing sound we can reenable it
 		StartCoroutine (instantiateDoll ());
 
 		//“hUrrY, aNd DEstRoy tHe dOll!”
@@ -405,7 +406,7 @@ public class StorySceneManager : MonoBehaviour {
         while (textBoxManager.isActive) {
             yield return null;
         }
-        musicManager.playTrack(7, 1); //E9
+        //musicManager.playTrack(7, 1); //E9 Gonna disable this for now too cause I think the music Box sounds cheesy, espcially with the piano music playing in the back
         textBoxManager.theText = texts[1];
         showText(22);
        
@@ -596,9 +597,22 @@ public class StorySceneManager : MonoBehaviour {
 
     private void theEnd(GameObject panel, bool fadeOutPanel) {
         Animator theEndAnimator = panel.GetComponent<Animator>();
+        int theEndHash = Animator.StringToHash("Base Layer.End");
         theEndAnimator.SetBool("fadeOutPanel", fadeOutPanel);
         theEndAnimator.SetBool("startEnd", true);
         Debug.Log("The end fade start!");
-        //TODO: NEED TO WRITE IENUMERATOR THAT WAITS FOR ANIMATION TO END THEN SWITCHES SCENES
+        StartCoroutine(endThenGoToCredits(theEndAnimator, theEndHash));
+    }
+
+    IEnumerator endThenGoToCredits(Animator animator, int endHash) {
+        while (animator.GetCurrentAnimatorStateInfo(0).fullPathHash != endHash) {
+            yield return null;
+        }
+        if (musicManager.tracks[5].isPlaying) {
+            musicManager.stopTrack(5);
+        } else if (musicManager.tracks[8].isPlaying) {
+            musicManager.stopTrack(8);
+        }
+        SceneManager.LoadScene("EndCredits");
     }
 }
