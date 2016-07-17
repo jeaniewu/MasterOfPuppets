@@ -328,7 +328,7 @@ public class StorySceneManager : MonoBehaviour {
 		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = false;
 		musicManager.stopTrack(3); //E4
 
-		musicManager.playTrack(9, 0.3f); //The crazy ASSed scream 
+		musicManager.playTrack(8, 0.3f); //The crazy ASSed scream 
 		//“ArghaaehHAHhahahaHAAaaaHAHAhA!”;“Just shut up and diE already!” 
 		StartCoroutine(showTextAlternateColor (12));
 		puppetMasterAnim.SetBool ("lowerHead", true);
@@ -344,7 +344,7 @@ public class StorySceneManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		puppetMasterAnim.SetBool ("lowerHead", false);
 
-		musicManager.playTrack(8, 0.7f); //E6 pinao only
+		musicManager.playTrack(7, 0.7f); //E6 piano only
 		changePanelFontColor (Color.white);
 		//“She’s gone?”
 		showText(13);
