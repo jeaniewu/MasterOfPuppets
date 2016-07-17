@@ -62,6 +62,7 @@ public class buttonTrigger : Trigger {
 	void switchSprite ()
 	{
 		Debug.Log ("switch Sprite as secret item is found");
+		this.gameObject.layer = 0;
 		buttonPressed = secretItem.replacementSprites [0];
 		buttonUnpressed = secretItem.replacementSprites [1];
 		if (isOn) {
