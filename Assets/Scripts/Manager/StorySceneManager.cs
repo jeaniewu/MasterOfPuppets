@@ -306,7 +306,6 @@ public class StorySceneManager : MonoBehaviour {
 		dirLight.intensity = 0.8f;
 
 		puppetMasterAnim.SetTrigger("spazz");
-		//puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = true; //going to disable for now, if we feel like we need the spazzing sound we can reenable it
 		StartCoroutine (instantiateDoll ());
 
 		//“hUrrY, aNd DEstRoy tHe dOll!”
@@ -325,7 +324,6 @@ public class StorySceneManager : MonoBehaviour {
 	}
 
 	IEnumerator sixthTrigger(){
-		puppetMaster.GetComponentInChildren<SoundEffectFadeController> ().enabled = false;
 		musicManager.stopTrack(3); //E4
 
 		musicManager.playTrack(8, 0.3f); //The crazy ASSed scream 
