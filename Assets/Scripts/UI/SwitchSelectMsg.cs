@@ -5,7 +5,7 @@ public class SwitchSelectMsg : MonoBehaviour {
 
 	public GameObject[] messages;
 
-	private Controller2 controller2;
+	protected Controller2 controller2;
     public TextBoxManager textBoxManager;
 
     //this is a tutotial script for level 1a
@@ -43,9 +43,11 @@ public class SwitchSelectMsg : MonoBehaviour {
 		}
 
 		disableMessages ();	
+
+		yield break;
 	}
 
-	private void enableMessage (GameObject message){
+	protected void enableMessage (GameObject message){
 		checkOneTimeTrigger triggeredCheck = message.GetComponent<checkOneTimeTrigger> ();
 			
 		if(!triggeredCheck.hasBeenTriggeredOnce){
@@ -54,7 +56,7 @@ public class SwitchSelectMsg : MonoBehaviour {
 		}
 	}
 
-	private void disableMessages ()
+	protected void disableMessages ()
 	{
 		foreach(GameObject message in messages){
 			message.GetComponent<Renderer> ().enabled = false;

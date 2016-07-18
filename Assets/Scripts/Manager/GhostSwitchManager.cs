@@ -194,6 +194,7 @@ public class GhostSwitchManager : MonoBehaviour
 					return false;
 				} else if (hit.collider.CompareTag ("impenetrable")) {
 					Debug.Log (hit.collider.name);
+					DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
 					return true;
 				}
 			}
