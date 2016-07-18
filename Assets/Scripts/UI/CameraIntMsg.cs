@@ -1,45 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraIntMsg : MonoBehaviour {
+public class CameraIntMsg : SwitchSelectMsg {
 
-    public GameObject CameraSprite;
-    public GameObject ArrowsSide;
-    public GameObject ArrowsUp;
-    private Controller2 ghostMode;
-    private bool onlyOnce;
 
     // Use this for initialization
     void Start()
     {
-        onlyOnce = false;
-        ghostMode = GetComponentInChildren<Controller2>();
+		controller2 = GetComponent<Controller2>();
+		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
+
+		disableMessages ();
+		StartCoroutine ("cameraTutorial");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Debug.Log("hi");
-            CameraSprite.SetActive(false);
-        }
-        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
-        {
-            ArrowsSide.SetActive(false);
-            ArrowsUp.SetActive(false);
-        }
-        if (ghostMode.ghostMode && !onlyOnce)
-        {
-            ArrowsUp.SetActive(false);
-            ArrowsSide.SetActive(true);
-            onlyOnce = true;
-        }
-        if (Input.GetButton("Interact"))
-        {
+	IEnumerator cameraTutorial(){
+		yield return new WaitForEndOfFrame();
+		while (!controller2.enabled) {
+			yield return null;
+		}
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
 
-            ArrowsSide.SetActive(false);
-            ArrowsUp.SetActive(false);
-        }
-    }
+		enableMessage (messages[0]); // Press C - Switch
+
+		while (!Input.GetKeyDown (KeyCode.C)) {
+			yield return null;
+		}
+			
+		messages[0].GetComponent<Renderer> ().enabled = false;
+
+		while (!controller2.ghostMode) {
+			yield return null;
+		}
+
+		enableMessage (messages[1]);
+		enableMessage (messages[2]);
+
+		while (controller2.ghostMode) {
+			yield return null;
+		}
+
+		disableMessages ();	
+
+		yield break;
+	}
 }
