@@ -231,7 +231,7 @@ public class StorySceneManager : MonoBehaviour {
 		musicManager.stopTrack(2); //E3
 		yield return new WaitForSeconds(0.4f);
 		// need to use GameManager.getInstance ().isTrueEnding () instead
-		if (puppetMasterName.ToLower().Equals("annie")) {
+		if (puppetMasterName.ToLower().Equals("annie") && GameManager.getInstance().isTrueEnding()) {
 			StartCoroutine (fifthTrigger ());
 		} else {
 			StartCoroutine (fourthTrigger ());

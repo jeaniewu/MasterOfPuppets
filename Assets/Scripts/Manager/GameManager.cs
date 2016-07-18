@@ -79,7 +79,8 @@ public class GameManager : MonoBehaviour {
 
 	// Initialize variables needed every scenes regardless of how many retries
 	private void initScene(){
-		instance.saveText = GameObject.Find("MainCam/Canvas/Save");
+		instance.saveText = GameObject.FindGameObjectWithTag ("SaveText");
+		instance.saveText.SetActive (false);
 	}
 		
 	public static GameManager getInstance () {
