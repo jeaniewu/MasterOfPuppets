@@ -66,7 +66,7 @@ public class Navigation_Optiions : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    sound_Slider_selected.color = Color.green;
+                    sound_Slider_selected.color = Color.red;
                  
                     soundFillAmount--;
                    
@@ -75,7 +75,7 @@ public class Navigation_Optiions : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    sound_Slider_selected.color = Color.green;
+                    sound_Slider_selected.color = Color.red;
                     Debug.Log("Pressed sound");
                     soundFillAmount++;
 
@@ -99,7 +99,7 @@ public class Navigation_Optiions : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    music_Slider_selected.color = Color.green;
+                    music_Slider_selected.color = Color.red;
                     musicFillAmount--;
 
 
@@ -107,7 +107,7 @@ public class Navigation_Optiions : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    music_Slider_selected.color = Color.green;   
+                    music_Slider_selected.color = Color.red;   
                     musicFillAmount++;
 
                 }
