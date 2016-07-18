@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 public class Navigation_Optiions : MonoBehaviour {
 
 
@@ -17,13 +18,18 @@ public class Navigation_Optiions : MonoBehaviour {
     //public GameObject MusicOption;
     //private Text[] menuOptions;
     private int selectedOption;
+
+	public AudioMixer masterMixer;
+
     public float soundFillAmount = 10f;
     public float musicFillAmount = 10f;
     public Slider soundSlider;
     public Slider musicSlider;
-    public MechanicAudioManager soundAudio;
-    public DollAudioManager dollAudio;
-    public ThemeMusicManager mainMusic;
+//    public MechanicAudioManager soundAudio;
+//    public DollAudioManager dollAudio;
+//    public ThemeMusicManager mainMusic;
+
+
 
    // public AudioListener soundAudio;
 
@@ -80,14 +86,15 @@ public class Navigation_Optiions : MonoBehaviour {
                     soundFillAmount++;
 
                 }
-                soundSlider.value = soundFillAmount / 10;
-                soundAudio.buttonVolume = soundFillAmount / 10;
-                soundAudio.unlockDoorVolume = soundFillAmount / 10;
-                soundAudio.maxConveyorBeltVolume = soundFillAmount / 10;
-                soundAudio.maxGhostWallVolume = soundFillAmount / 10;
-                soundAudio.maxSawBladeVolume = soundFillAmount / 10;
-                soundAudio.deathBySawbladeVolume = soundFillAmount / 10;
-                dollAudio.ghostSwitchVolume = soundFillAmount / 10;
+				soundSlider.value = soundSlider.minValue + soundFillAmount / 10 *  (soundSlider.maxValue - soundSlider.minValue);
+				setSfxLvl (soundSlider.value);
+//                soundAudio.buttonVolume = soundFillAmount / 10;
+//                soundAudio.unlockDoorVolume = soundFillAmount / 10;
+//                soundAudio.maxConveyorBeltVolume = soundFillAmount / 10;
+//                soundAudio.maxGhostWallVolume = soundFillAmount / 10;
+//                soundAudio.maxSawBladeVolume = soundFillAmount / 10;
+//                soundAudio.deathBySawbladeVolume = soundFillAmount / 10;
+//                dollAudio.ghostSwitchVolume = soundFillAmount / 10;
                 
             }
             if (selectedOption == 1)
@@ -111,10 +118,11 @@ public class Navigation_Optiions : MonoBehaviour {
                     musicFillAmount++;
 
                 }
-                musicSlider.value = musicFillAmount / 10;
-
-				mainMusic.mainthemevolumeAdjuster(musicFillAmount/10);
-				mainMusic.mechthemevolumeAdjuster(musicFillAmount/10);	
+				musicSlider.value = soundSlider.minValue + musicFillAmount / 10 *  (soundSlider.maxValue - soundSlider.minValue);
+				setMusicLvl (musicSlider.value);
+//
+//				mainMusic.mainthemevolumeAdjuster(musicFillAmount/10);
+//				mainMusic.mechthemevolumeAdjuster(musicFillAmount/10);	
 
 
             }
@@ -184,5 +192,13 @@ public class Navigation_Optiions : MonoBehaviour {
     {
         BACK.color = Color.white;
     }
+
+	public void setSfxLvl (float sfxLvl){
+		masterMixer.SetFloat ("SFXVol", sfxLvl);
+	}
+
+	public void setMusicLvl (float musicLvl){
+		masterMixer.SetFloat ("ThemeSongVol", musicLvl);
+	}
    
 }

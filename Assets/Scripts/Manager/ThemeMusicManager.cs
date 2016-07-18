@@ -29,6 +29,8 @@ public class ThemeMusicManager : MusicManager {
 	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b"};
 	private static String[] iceThemeScenes = {"5a", "5b"};
 
+	private AudioSource currentSong;
+
 	void Awake() {
 		if (instance == null) {
 			DontDestroyOnLoad (transform.root.gameObject);
@@ -54,32 +56,44 @@ public class ThemeMusicManager : MusicManager {
 
 	public void playThemeSong (string currentLevel)
 	{
-        if (instance.titleTheme.isPlaying) {
+		if (!currentLevel.Equals("NewTitleScene") && instance.titleTheme.isPlaying) {
             setTrackToFadeOut(instance.titleTheme);
         } 
-        if (mainThemeScenes.ToList ().Contains (currentLevel)) { 
+
+		if (mainThemeScenes.ToList ().Contains (currentLevel)) { 
 			if (!instance.mainTheme.isPlaying) {
-				startMainTheme();
+				startMainTheme ();
+				instance.currentSong = instance.mainTheme;
 			}
 		} else if (mechanicalThemeScenes.ToList ().Contains (currentLevel)) {
-            if (currentLevel.Equals("2a") && instance.mainTheme.isPlaying) {
-                setSongSwitch(instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
-            } else if (!instance.mechanicalTheme.isPlaying) {
-                startMechanicalTheme();
-            }
+			if (currentLevel.Equals ("2a") && instance.mainTheme.isPlaying) {
+				setSongSwitch (instance.mainTheme, instance.mechanicalTheme, mechanicalThemeVolume);
+			} else if (!instance.mechanicalTheme.isPlaying) {
+				startMechanicalTheme ();
+			}
+			instance.currentSong = instance.mechanicalTheme;
+
 		} else if (choirThemeScenes.ToList ().Contains (currentLevel)) {
 			if (currentLevel.Equals ("4a-i") && instance.mechanicalTheme.isPlaying) {
 				setSongSwitch (instance.mechanicalTheme, instance.choirTheme, choirThemeVolume);
 			} else if (!instance.choirTheme.isPlaying) {
-                startChoirTheme();
-            }
+				startChoirTheme ();
+			}
+			instance.currentSong = instance.choirTheme;
 		} else if (iceThemeScenes.ToList ().Contains (currentLevel)) {
 			if (currentLevel.Equals ("5a") && instance.choirTheme.isPlaying) {
 				setSongSwitch (instance.choirTheme, instance.iceTheme, iceThemeVolume);
 			} else if (!instance.iceTheme.isPlaying) {
-				startIceTheme();
+				startIceTheme ();
 			}
-		} 
+			instance.currentSong = instance.iceTheme;
+		} else if (currentLevel.Equals ("NewTitleScene")) {
+			if (instance.currentSong != null) {
+				setSongSwitch (instance.currentSong, instance.titleTheme, titleThemeVolume);
+			} else {
+				startTitleTheme ();
+			}
+		}
 	}
 
 	public static ThemeMusicManager getInstance() {
