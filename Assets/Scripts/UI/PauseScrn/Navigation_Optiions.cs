@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System;
+
+
 public class Navigation_Optiions : MonoBehaviour {
 
 
@@ -21,8 +24,8 @@ public class Navigation_Optiions : MonoBehaviour {
 
 	public AudioMixer masterMixer;
 
-    public float soundFillAmount = 10f;
-    public float musicFillAmount = 10f;
+    public float soundFillAmount = 7f;
+    public float musicFillAmount = 7f;
     public Slider soundSlider;
     public Slider musicSlider;
 //    public MechanicAudioManager soundAudio;
@@ -86,8 +89,8 @@ public class Navigation_Optiions : MonoBehaviour {
                     soundFillAmount++;
 
                 }
-				soundSlider.value = soundSlider.minValue + soundFillAmount / 10 *  (soundSlider.maxValue - soundSlider.minValue);
-				setSfxLvl (soundSlider.value);
+				soundSlider.value = soundFillAmount;
+				setSfxLvl (0 - (float) Math.Pow(1.8, 7 - soundSlider.value));
 //                soundAudio.buttonVolume = soundFillAmount / 10;
 //                soundAudio.unlockDoorVolume = soundFillAmount / 10;
 //                soundAudio.maxConveyorBeltVolume = soundFillAmount / 10;
@@ -118,8 +121,8 @@ public class Navigation_Optiions : MonoBehaviour {
                     musicFillAmount++;
 
                 }
-				musicSlider.value = soundSlider.minValue + musicFillAmount / 10 *  (soundSlider.maxValue - soundSlider.minValue);
-				setMusicLvl (musicSlider.value);
+				musicSlider.value = musicFillAmount;
+				setMusicLvl (0 - (float) Math.Pow(1.8, 7 - musicSlider.value));
 //
 //				mainMusic.mainthemevolumeAdjuster(musicFillAmount/10);
 //				mainMusic.mechthemevolumeAdjuster(musicFillAmount/10);	
