@@ -25,11 +25,6 @@ public class Navigation_Notebook : MonoBehaviour
 		note2.SetActive (false);
 		note3.SetActive (false);
 		note4.SetActive (false);
-
-		if (note0.activeSelf == false && note1.activeSelf == false && note2.activeSelf == false && note3.activeSelf == false && note4.activeSelf == false) {
-			BACK.color = Color.red;
-		}
-
     }
 
     // Update is called once per frame

@@ -136,7 +136,7 @@ public class Navigation_Optiions : MonoBehaviour {
                 SoundDeSelected();
                 MusicDeSelected();
                 BackSelected();
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Interact"))
                 {
                     gameObject.SetActive(false);
                     PauseMenu.SetActive(true);

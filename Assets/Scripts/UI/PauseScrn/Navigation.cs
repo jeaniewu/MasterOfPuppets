@@ -11,6 +11,7 @@ public class Navigation : MonoBehaviour
     public Text QUIT;
 
     public GameObject NotebookOption;
+    public Button BackButton;
     public GameObject OptionsOption;
 	private TextBoxManager manager;
     //private Text[] menuOptions;
@@ -54,7 +55,7 @@ public class Navigation : MonoBehaviour
                 ResumeSelected();
                 OptionsDeSelected();
                 NotebookDeSelected();
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Interact"))
                 {
                     gameObject.SetActive(false);
 					manager.enablePlayer ();
@@ -66,9 +67,10 @@ public class Navigation : MonoBehaviour
                 ResumeDeSelected();
                 OptionsDeSelected();
                 NotebookSelected();
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Interact"))
                 {
                     NotebookOption.SetActive(true);
+                    BackButton.Select();
                     Debug.Log("pressed");
                     gameObject.SetActive(false);
                 }
@@ -78,7 +80,7 @@ public class Navigation : MonoBehaviour
                 NotebookDeSelected();
                 QuitDeSelected();
                 OptionsSelected();
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Interact"))
                 {
                     OptionsOption.SetActive(true);
                     Debug.Log("pressed");
@@ -90,7 +92,7 @@ public class Navigation : MonoBehaviour
                 OptionsDeSelected();
                 ResumeDeSelected();
                 QuitSelected();
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetButtonDown("Interact"))
                 {
                     Application.LoadLevel(0);
                     Debug.Log("pressed");
