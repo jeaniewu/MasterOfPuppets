@@ -35,6 +35,7 @@ public class StorySceneManager : MonoBehaviour {
 	public GameObject panel;
 	public GameObject whitePanel;
     public GameObject blackPanel;
+    public GameObject theEndPanel;
     public Text blackPanelText;
 
 	private FinalSceneMusicManager musicManager;
@@ -278,7 +279,7 @@ public class StorySceneManager : MonoBehaviour {
         //turn off the text (this is usually done by disabling the panel, but the panel is not disabled in this case (cause we keep the black panel))
         textBoxManager.theText.gameObject.SetActive(false);
 
-        theEnd(blackPanel, false); //Show The End Text, the panel does not need to fade as it's black
+        theEnd();
         
         yield return null;
 	}
@@ -417,7 +418,7 @@ public class StorySceneManager : MonoBehaviour {
 
         /////////////////////////////////////////
 
-        theEnd(whitePanel, true); //fade out the panel, as this is the white panel
+        theEnd(); 
 		yield return null;
 	}
 
@@ -594,11 +595,10 @@ public class StorySceneManager : MonoBehaviour {
         textBoxManager.theText = blackPanelText;
     }
 
-    private void theEnd(GameObject panel, bool fadeOutPanel) {
-        Animator theEndAnimator = panel.GetComponent<Animator>();
+    private void theEnd() {
+        theEndPanel.SetActive(true); //setting it active will automatically start the animation
+        Animator theEndAnimator = theEndPanel.GetComponent<Animator>();
         int theEndHash = Animator.StringToHash("Base Layer.End");
-        theEndAnimator.SetBool("fadeOutPanel", fadeOutPanel);
-        theEndAnimator.SetBool("startEnd", true);
         Debug.Log("The end fade start!");
         StartCoroutine(endThenGoToCredits(theEndAnimator, theEndHash));
     }
