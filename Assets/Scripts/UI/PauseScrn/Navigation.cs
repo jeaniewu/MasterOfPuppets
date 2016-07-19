@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
@@ -94,8 +95,7 @@ public class Navigation : MonoBehaviour
                 QuitSelected();
                 if (Input.GetButtonDown("Interact"))
                 {
-                    Application.LoadLevel(0);
-                    Debug.Log("pressed");
+					SceneManager.LoadScene("NewTitleScene");
                 }
             }
         }
