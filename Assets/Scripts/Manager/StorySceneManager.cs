@@ -496,7 +496,7 @@ public class StorySceneManager : MonoBehaviour {
 			light.intensity += brightSpeed;
 			yield return null;
 		}
-		yield return null;
+		yield break;
 	}
 
 

@@ -24,10 +24,12 @@ public class FinalSceneMusicManager : MusicManager{
 
 	public void playTrack(int index){
 		setTrackToFadeIn (tracks [index], trackVolume);
+		ThemeMusicManager.getInstance ().currentSong = tracks [index];
 	}
 
 	public void playTrack(int index, float customVolume){
 		setTrackToFadeIn (tracks [index], customVolume);
+		ThemeMusicManager.getInstance ().currentSong = tracks [index];
 	}
 
 	public void stopTrack(int index){
@@ -36,5 +38,6 @@ public class FinalSceneMusicManager : MusicManager{
 
 	public void switchTrack(int fromIndex, int toIndex){
 		setSongSwitch (tracks [fromIndex], tracks [toIndex], trackVolume);
+		ThemeMusicManager.getInstance ().currentSong = tracks [toIndex];
 	}
 }
