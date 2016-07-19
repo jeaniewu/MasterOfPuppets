@@ -69,15 +69,14 @@ public class Slice : MonoBehaviour
 		Animator anim = doll.GetComponent<Animator>();
 		clipLength = calculateClipLength(anim, "soullessSliceReference");
 		doll.GetComponent<DollAnimationController> ().Slice ();
-		Debug.Log (clipLength);
-		yield return new WaitForSeconds(clipLength);
 
-		dollManager.Death (doll);
+		doll.layer = 0;
 		manager.dollsUpdated = false;
 		manager.updateDolls ();
 
-
- 
+		Debug.Log (clipLength);
+		yield return new WaitForSeconds(clipLength);
+		dollManager.Death (doll);
      }
 
 	public float calculateClipLength(Animator anim, string clipName){
