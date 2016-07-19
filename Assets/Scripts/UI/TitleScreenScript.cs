@@ -39,7 +39,6 @@ public class TitleScreenScript : MonoBehaviour {
             Debug.Log("Still waiting");
             yield return null;
         }
-        ThemeMusicManager.getInstance().startTitleTheme();
         yield break;
     }
 
@@ -92,6 +91,12 @@ public class TitleScreenScript : MonoBehaviour {
     public void loadFirstScene() {
         SceneManager.LoadScene("OpenScene");
     }
+
+	//Reset Save data then load first scene
+	public void loadFirstSceneWithReset() {
+		GameManager.getInstance().secretItemFound = new bool[5];
+		loadFirstScene ();
+	}
 
     //Continue the game
     public void continueGame() {
