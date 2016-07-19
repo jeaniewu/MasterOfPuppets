@@ -110,6 +110,7 @@ public class Navigation_Notebook : MonoBehaviour
 
         selectedNotePanel.SetActive(true);
         noteBookPanel.SetActive(false);
+        selecteNotePanelBack.interactable = true;
         selecteNotePanelBack.Select(); 
         bigNotes[index].SetActive(true);
     }
