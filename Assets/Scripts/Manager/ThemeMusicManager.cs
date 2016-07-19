@@ -29,7 +29,7 @@ public class ThemeMusicManager : MusicManager {
 	private static String[] choirThemeScenes = {"4a-i", "4a-ii", "4b"};
 	private static String[] iceThemeScenes = {"5a", "5b"};
 
-	private AudioSource currentSong;
+	public AudioSource currentSong;
 
 	void Awake() {
 		if (instance == null) {
