@@ -9,14 +9,13 @@ public class Navigation : MonoBehaviour
     public Text NOTEBOOK;
     public Text OPTION;
     public Text QUIT;
-
-    public GameObject NotebookOption;
     public Button BackButton;
     public GameObject OptionsOption;
 	private TextBoxManager manager;
     //private Text[] menuOptions;
-    private int selectedOption;
+    public int selectedOption;
 
+    public Navigation_Notebook notebookManager;
 
 
     // Use this for initialization
@@ -24,11 +23,8 @@ public class Navigation : MonoBehaviour
     {
         ResumeSelected();
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
-        NotebookOption.SetActive(false);
         OptionsOption.SetActive(false);
         //menuOptions = GetComponentsInChildren<Text>();
-
-
     }
 
     // Update is called once per frame
@@ -69,9 +65,7 @@ public class Navigation : MonoBehaviour
                 NotebookSelected();
                 if (Input.GetButtonDown("Interact"))
                 {
-                    NotebookOption.SetActive(true);
-                    BackButton.Select();
-                    Debug.Log("pressed");
+                    notebookManager.startNotebook();
                     gameObject.SetActive(false);
                 }
             }
@@ -123,7 +117,7 @@ public class Navigation : MonoBehaviour
 
     }
 
-    void NotebookSelected()
+    public void NotebookSelected()
     {
         NOTEBOOK.color = Color.red;
     }
