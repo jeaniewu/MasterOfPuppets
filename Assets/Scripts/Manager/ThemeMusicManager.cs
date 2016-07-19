@@ -89,10 +89,8 @@ public class ThemeMusicManager : MusicManager {
 			instance.currentSong = instance.iceTheme;
 		} else if (currentLevel.Equals ("NewTitleScene")) {
 			if (instance.currentSong != null) {
-				setSongSwitch (instance.currentSong, instance.titleTheme, titleThemeVolume);
-			} else {
-				startTitleTheme ();
-			}
+				setTrackToFadeOut(instance.currentSong);
+			} 
 		}
 	}
 
