@@ -89,7 +89,7 @@ public class CameraFollow : MonoBehaviour
 		var controller2 = player.GetComponent<Controller2> ();
 		var animator = player.GetComponent<Animator> ();
 
-		if (!controller2.ghostMode && !textBox.isActive) {
+		if (!controller2.ghostMode && !textBox.isActive && !GameManager.getInstance().isPaused) {
 			if (Input.GetKey (KeyCode.C)) {
 				controller2.enabled = false;
 				animator.enabled = false;
