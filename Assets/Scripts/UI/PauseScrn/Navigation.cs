@@ -8,10 +8,12 @@ public class Navigation : MonoBehaviour
 
     public Text RESUME;
     public Text NOTEBOOK;
+	public Text CONTROL;
     public Text OPTION;
     public Text QUIT;
     public Button BackButton;
     public GameObject OptionsOption;
+	public GameObject controls;
 	private TextBoxManager manager;
     //private Text[] menuOptions;
     public int selectedOption;
@@ -45,12 +47,12 @@ public class Navigation : MonoBehaviour
         }
 
 
-        if (selectedOption <= 3 && selectedOption >= 0)
+        if (selectedOption <= 4 && selectedOption >= 0)
         {
-            if (selectedOption == 0)
+            if (selectedOption == 0) // RESUME
             {
                 ResumeSelected();
-                OptionsDeSelected();
+                ControlDeSelected();
                 NotebookDeSelected();
                 if (Input.GetButtonDown("Interact"))
                 {
@@ -59,10 +61,10 @@ public class Navigation : MonoBehaviour
                     Debug.Log("pressed");
                 }
             }
-            if (selectedOption == 1)
+            if (selectedOption == 1) // NOTEBOOK
             {
                 ResumeDeSelected();
-                OptionsDeSelected();
+                ControlDeSelected();
                 NotebookSelected();
                 if (Input.GetButtonDown("Interact"))
                 {
@@ -70,9 +72,20 @@ public class Navigation : MonoBehaviour
                     gameObject.SetActive(false);
                 }
             }
-            if (selectedOption == 2)
+			if (selectedOption == 2) // CONTROLS
+			{
+				ControlSelected ();
+				NotebookDeSelected();
+				OptionsDeSelected ();
+				if (Input.GetButtonDown("Interact"))
+				{
+					controls.SetActive(true);
+					gameObject.SetActive(false);
+				}
+			}
+			if (selectedOption == 3) // OPTIONS
             {
-                NotebookDeSelected();
+                ControlDeSelected();
                 QuitDeSelected();
                 OptionsSelected();
                 if (Input.GetButtonDown("Interact"))
@@ -82,7 +95,7 @@ public class Navigation : MonoBehaviour
                     gameObject.SetActive(false);
                 }
             }
-            if (selectedOption == 3)
+			if (selectedOption == 4)  // QUIT
             {
                 OptionsDeSelected();
                 ResumeDeSelected();
@@ -93,7 +106,7 @@ public class Navigation : MonoBehaviour
                 }
             }
         }
-        else if (selectedOption > 2)
+        else if (selectedOption > 4)
         {
             QuitDeSelected();
             ResumeSelected();
@@ -104,7 +117,7 @@ public class Navigation : MonoBehaviour
         {
             ResumeDeSelected();
             QuitSelected();
-            selectedOption = 3;
+            selectedOption = 4;
         }
 
     }
@@ -121,6 +134,11 @@ public class Navigation : MonoBehaviour
     {
         NOTEBOOK.color = Color.red;
     }
+
+	public void ControlSelected()
+	{
+		CONTROL.color = Color.red;
+	}
 
     void OptionsSelected()
     {
@@ -140,6 +158,11 @@ public class Navigation : MonoBehaviour
     {
         NOTEBOOK.color = Color.white;
     }
+
+	public void ControlDeSelected()
+	{
+		CONTROL.color = Color.white;
+	}
 
     void OptionsDeSelected()
     {
