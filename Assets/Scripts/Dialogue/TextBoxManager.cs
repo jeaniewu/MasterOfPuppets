@@ -61,7 +61,7 @@ public class TextBoxManager : MonoBehaviour
 				//Debug.Log ("rendering: " + currentLine);
 				theText.text = textLines [currentLine];
 			}
-			if (Input.GetButtonDown ("Interact"))
+			if (Input.GetButtonDown ("Interact") && !GameManager.getInstance().isPaused)
 			{
 				currentLine += 1;
 				//Debug.Log ("currentLine increased! now: " + currentLine);
