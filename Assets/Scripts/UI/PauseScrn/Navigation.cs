@@ -33,6 +33,7 @@ public class Navigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		GameManager.getInstance ().isPaused = true;
         //Debug.Log("Length of options:" + menuOptions.Length);
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -57,6 +58,7 @@ public class Navigation : MonoBehaviour
                 if (Input.GetButtonDown("Interact"))
                 {
                     gameObject.SetActive(false);
+					GameManager.getInstance ().isPaused = false;
 					manager.enablePlayer ();
                     Debug.Log("pressed");
                 }
@@ -102,6 +104,7 @@ public class Navigation : MonoBehaviour
                 QuitSelected();
                 if (Input.GetButtonDown("Interact"))
                 {
+					GameManager.getInstance ().isPaused = false;
 					SceneManager.LoadScene("NewTitleScene");
                 }
             }

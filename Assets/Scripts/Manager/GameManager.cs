@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
 	public bool firstRun;
 	public Dictionary<string, bool> objectsTriggered;
 
+	public bool isPaused;
+
 	public float SFXSliderValue = 10f;
 	public float MusicSliderValue = 10f;
 
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour {
 			instance = this;
 			instance.secretItemFound = new bool[5];
 			trueEnding = false;
+			isPaused = false;
 			initSceneFirstRun();
 		} else if (instance != this) {
 			Destroy (gameObject);
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update(){
-		if (Input.GetButton ("Restart") && !cannotRestartScenes.ToList().Contains(instance.currentLevel)) {
+		if (Input.GetButton ("Restart") && !cannotRestartScenes.ToList().Contains(instance.currentLevel) && !isPaused) {
 			SceneManager.LoadScene (instance.currentLevel);
 		}
 	}
