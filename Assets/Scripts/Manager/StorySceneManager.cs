@@ -262,16 +262,19 @@ public class StorySceneManager : MonoBehaviour {
 			yield return null;
 		}
 		musicManager.playTrack (6); //E6 (Scream)
-		StartCoroutine(showRedEyesThenFade (3f));
+		StartCoroutine(showRedEyesThenFade (3.5f));
 		yield return new WaitForSeconds(0.8f);
 		foreach (Light light in spotLights) {
 			StartCoroutine (dimLight(light, 0.03f));
 		}
 		StartCoroutine (dimLight(dirLight, 0.005f));
-
-        enableBlackPanel(Color.red);
         
-		yield return new WaitForSeconds(3.6f);
+		yield return new WaitForSeconds(3.3f);
+
+		enableBlackPanel(Color.red);
+
+		yield return new WaitForSeconds(1f);
+
 		showText(7);
 		while (textBoxManager.isActive) {
 			yield return null;
