@@ -71,6 +71,7 @@ public class Slice : MonoBehaviour
 		doll.GetComponent<DollAnimationController> ().Slice ();
 
 		doll.layer = 0;
+		doll.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 		manager.dollsUpdated = false;
 		manager.updateDolls ();
 
