@@ -60,9 +60,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start(){
-        //Disabling the cursor and locking it, as we have no mouse interaction in the game.
+        //Disabling the cursor, as we have no mouse interaction in the game.
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void Update(){
