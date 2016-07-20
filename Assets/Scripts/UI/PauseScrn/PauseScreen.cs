@@ -61,9 +61,8 @@ public class PauseScreen : MonoBehaviour {
 
     //This will hide the mouse when reselecting the game and also select the appropriate button if you are on the pause screen
     public void hideMouse() {
-        //Disabling the cursor and locking it, as we have no mouse interaction in the game.
+        //Disabling the cursor, as we have no mouse interaction in the game.
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
 
         if (notebook_panel.activeSelf) {
             notebookBackButton.Select();
