@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour {
 	public bool firstRun;
 	public Dictionary<string, bool> objectsTriggered;
 
+	public float SFXSliderValue = 10f;
+	public float MusicSliderValue = 10f;
+
 	public GameObject saveText;
 
 	private static String[] canSaveScenes = {"OpenScene", "1a", "1b", "2a", "2b", "3a", "3b", "4a-i", "4a-ii", "4b","5a","5b","finalScene"};

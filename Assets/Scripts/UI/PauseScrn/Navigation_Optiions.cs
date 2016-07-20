@@ -7,8 +7,6 @@ using System;
 
 public class Navigation_Optiions : MonoBehaviour {
 
-
-
     public Text SOUND;
     public Text MUSIC;
     public Text BACK;
@@ -24,27 +22,22 @@ public class Navigation_Optiions : MonoBehaviour {
 
 	public AudioMixer masterMixer;
 
-    public float soundFillAmount = 7f;
-    public float musicFillAmount = 7f;
+	public float soundFillAmount;
+	public float musicFillAmount;
     public Slider soundSlider;
     public Slider musicSlider;
-//    public MechanicAudioManager soundAudio;
-//    public DollAudioManager dollAudio;
-//    public ThemeMusicManager mainMusic;
 
-
-
-   // public AudioListener soundAudio;
-
+	private static float MAXVAL = 10f;
 
 
     // Use this for initialization
     void Start()
     {
+		soundFillAmount = GameManager.getInstance ().SFXSliderValue;
+		soundSlider.value = soundFillAmount;
+		musicFillAmount = GameManager.getInstance ().MusicSliderValue;
+		musicSlider.value = musicFillAmount;
         SoundSelected();
-
-
-
     }
 
     // Update is called once per frame
@@ -76,29 +69,19 @@ public class Navigation_Optiions : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     sound_Slider_selected.color = Color.red;
-                 
-                    soundFillAmount--;
-                   
-                   
+                    soundFillAmount--; 
                      
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     sound_Slider_selected.color = Color.red;
-                    Debug.Log("Pressed sound");
-                    soundFillAmount++;
+					if (soundFillAmount < MAXVAL)
+                    	soundFillAmount++;
 
                 }
 				soundSlider.value = soundFillAmount;
-				setSfxLvl (0 - (float) Math.Pow(1.8, 7 - soundSlider.value));
-//                soundAudio.buttonVolume = soundFillAmount / 10;
-//                soundAudio.unlockDoorVolume = soundFillAmount / 10;
-//                soundAudio.maxConveyorBeltVolume = soundFillAmount / 10;
-//                soundAudio.maxGhostWallVolume = soundFillAmount / 10;
-//                soundAudio.maxSawBladeVolume = soundFillAmount / 10;
-//                soundAudio.deathBySawbladeVolume = soundFillAmount / 10;
-//                dollAudio.ghostSwitchVolume = soundFillAmount / 10;
-                
+				setSfxLvl (0 - (70/MAXVAL) * (MAXVAL - soundFillAmount));
+				GameManager.getInstance ().SFXSliderValue = soundFillAmount;
             }
             if (selectedOption == 1)
             {
@@ -117,17 +100,14 @@ public class Navigation_Optiions : MonoBehaviour {
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    music_Slider_selected.color = Color.red;   
-                    musicFillAmount++;
+                    music_Slider_selected.color = Color.red;
+					if (musicFillAmount < MAXVAL)
+                    	musicFillAmount++;
 
                 }
 				musicSlider.value = musicFillAmount;
-				setMusicLvl (0 - (float) Math.Pow(1.8, 7 - musicSlider.value));
-//
-//				mainMusic.mainthemevolumeAdjuster(musicFillAmount/10);
-//				mainMusic.mechthemevolumeAdjuster(musicFillAmount/10);	
-
-
+				setMusicLvl (0 - (70/MAXVAL) * (MAXVAL -  musicFillAmount));
+				GameManager.getInstance ().MusicSliderValue = musicFillAmount;
             }
             if (selectedOption == 2)
             {

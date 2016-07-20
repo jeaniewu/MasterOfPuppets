@@ -9,7 +9,19 @@ public class PauseScreen : MonoBehaviour {
 	private TextBoxManager manager;
 
     public Navigation_Notebook notebookManager;
-	// Use this for initialization
+
+	//Singleton Instantiation
+	public static PauseScreen instance;   
+
+	void Awake()
+	{
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+			Debug.Log ("destroy Pause Screen duplicate on Awake");
+		}
+	}
 
 	void Start () {
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
