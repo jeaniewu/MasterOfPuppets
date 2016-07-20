@@ -16,6 +16,9 @@ public class TitleScreenScript : MonoBehaviour {
     static int logoFadeStateHash;
     static int doneStateHash;
 
+    public GameObject newGameWarning;
+    public GameObject bottomButtons;
+
     // Use this for initialization
     void Start () {
         //Get animator and set the animation states hashes
@@ -101,8 +104,6 @@ public class TitleScreenScript : MonoBehaviour {
 
     //Continue the game
     public void continueGame() {
-
-        
         GameManager.getInstance().Load();
     }
     
@@ -114,6 +115,20 @@ public class TitleScreenScript : MonoBehaviour {
     //For Debugging Purposes there is a secret button in the top right corner
     public void openSceneSelect() {
         SceneManager.LoadScene("SceneSelect");
+    }
+
+    //This is used to rehide the mouse, if the player exits the app and comes back to the title screen
+    public void hideMouseAgainAndSelect() {
+        //Disabling the cursor and locking it, as we have no mouse interaction in the game.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        //select either the newGameButton or the No button
+        if (newGameWarning.activeSelf) {
+            noButton.Select();
+        } else if (bottomButtons.activeSelf){
+            newGameButton.Select();
+        }
     }
 
 }
