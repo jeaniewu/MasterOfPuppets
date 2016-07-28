@@ -12,6 +12,7 @@ public class Navigation_Notebook : MonoBehaviour
 
     public Button noteBookPanelBack;
     public Button selecteNotePanelBack;
+	public Button pausePanel_resume;
 
 
     public GameObject[] smallNotes;
@@ -77,6 +78,7 @@ public class Navigation_Notebook : MonoBehaviour
         selectedNotePanel.SetActive(false);
         noteBookPanel.SetActive(false);
         noteBookPanelBack.interactable = false;
+		pausePanel_resume.Select ();
 
         PauseMenu.SetActive(true);
     }
