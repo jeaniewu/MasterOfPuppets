@@ -9,6 +9,7 @@ public class Navigation : MonoBehaviour
 	private TextBoxManager manager;
 	public GameObject Options_Panel;
 	public GameObject Control_Panel;
+	public GameObject OptionsOption;
 	public Navigation_Notebook notebookManager;
 
 	// Use this for initialization
@@ -32,12 +33,12 @@ public class Navigation : MonoBehaviour
 	}
 
 	public void selectOptions(){
-		Options_Panel.SetActive(true);
+		Options_Panel.SetActive (true);
 		gameObject.SetActive(false);
 	}
+
+
 	public void selectQuit(){
 		SceneManager.LoadScene("NewTitleScene");
 	}
 }
-
-
