@@ -90,12 +90,12 @@ public class CameraFollow : MonoBehaviour
 		var animator = player.GetComponent<Animator> ();
 
 		if (!controller2.ghostMode && !textBox.isActive && !GameManager.getInstance().isPaused) {
-			if (Input.GetKey (KeyCode.C)) {
+			if (Input.GetButton("Camera")) {
 				controller2.enabled = false;
 				animator.enabled = false;
 				DollAudioManager.getInstance ().stopWalkingSound ();
 				moveCamera ();
-			} else if (Input.GetKeyUp (KeyCode.C)) {
+			} else if (Input.GetButtonUp("Camera")) {
 				controller2.enabled = true;
 				animator.enabled = true;
 				TrackPlayer ();
@@ -160,14 +160,5 @@ public class CameraFollow : MonoBehaviour
 		float targetY = Mathf.Lerp(transform.position.y, position.y, ySmooth*Time.deltaTime);
 		transform.position = new Vector3(targetX, targetY, transform.position.z);
 	}
-
-    public void zoomOut()
-    {
-        if (Input.GetKey(KeyCode.C))
-        {
-            Camera.main.orthographicSize = 12;
-
-        }
-    }
 }
 
