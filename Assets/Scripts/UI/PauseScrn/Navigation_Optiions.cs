@@ -106,7 +106,7 @@ public class Navigation_Optiions : MonoBehaviour {
 
                 }
 				musicSlider.value = musicFillAmount;
-				setMusicLvl (0 - (70/MAXVAL) * (MAXVAL -  musicFillAmount));
+				setMusicLvl (0 - (40/MAXVAL) * (MAXVAL -  musicFillAmount));
 				GameManager.getInstance ().MusicSliderValue = musicFillAmount;
             }
             if (selectedOption == 2)
