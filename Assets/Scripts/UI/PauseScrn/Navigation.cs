@@ -9,7 +9,7 @@ public class Navigation : MonoBehaviour
 	private TextBoxManager manager;
 	public GameObject Options_Panel;
 	public GameObject Control_Panel;
-	public GameObject OptionsOption;
+	public GameObject Notebook_Option;
 	public Navigation_Notebook notebookManager;
 
 	// Use this for initialization
@@ -21,6 +21,7 @@ public class Navigation : MonoBehaviour
 	public void selectResume(){
 		gameObject.SetActive(false);
 		manager.enablePlayer ();
+		GameManager.getInstance().isPaused = false;
 	}
 
 	public void selectNotebook(){

@@ -51,11 +51,12 @@ public class PauseScreen : MonoBehaviour {
             notebookManager.closeEverything();
 			options_panel.SetActive (false);
             controls_panel.SetActive(false);
-            GameManager.getInstance().isPaused = false;
+			GameManager.getInstance().isPaused = false;
 			manager.enablePlayer ();
 		} else {
 			pauseScrn_panel.SetActive (true);
 			manager.disablePlayer ();
+			GameManager.getInstance().isPaused = true;
 		}
     }
 
