@@ -10,7 +10,10 @@ public class CameraIntMsg : SwitchSelectMsg {
 		controller2 = GetComponent<Controller2>();
 		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
 
-		disableMessages ();
+		currentMessages = (Input.GetJoystickNames ().Length == 0) ? tutorialMessages : joyStickMessages;
+
+		disableMessages (tutorialMessages);
+		disableMessages (joyStickMessages);
 		StartCoroutine ("cameraTutorial");
     }
 
@@ -23,26 +26,26 @@ public class CameraIntMsg : SwitchSelectMsg {
 			yield return null;
 		}
 
-		enableMessage (messages[0]); // Press C - Switch
+		enableMessage (currentMessages[0]); // Press C - Switch
 
-		while (!Input.GetKeyDown (KeyCode.C)) {
+		while (!Input.GetButtonDown("Camera")) {
 			yield return null;
 		}
 			
-		messages[0].GetComponent<Renderer> ().enabled = false;
+		currentMessages[0].GetComponent<Renderer> ().enabled = false;
 
 		while (!controller2.ghostMode) {
 			yield return null;
 		}
 
-		enableMessage (messages[1]);
-		enableMessage (messages[2]);
+		enableMessage (currentMessages[1]);
+		enableMessage (currentMessages[2]);
 
 		while (controller2.ghostMode) {
 			yield return null;
 		}
 
-		disableMessages ();	
+		disableMessages (currentMessages);	
 
 		yield break;
 	}

@@ -69,7 +69,8 @@ public class Navigation_Optiions : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     sound_Slider_selected.color = Color.red;
-                    soundFillAmount--; 
+					if (soundFillAmount > 0)
+						soundFillAmount--; 
                      
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -93,9 +94,8 @@ public class Navigation_Optiions : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     music_Slider_selected.color = Color.red;
-                    musicFillAmount--;
-
-
+					if (musicFillAmount > 0)
+						musicFillAmount--;
 
                 }
                 if (Input.GetKeyDown(KeyCode.RightArrow))
