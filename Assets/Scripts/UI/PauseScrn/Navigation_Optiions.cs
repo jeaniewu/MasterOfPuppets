@@ -12,6 +12,8 @@ public class Navigation_Optiions : MonoBehaviour {
 	public float musicFillAmount = 10f;
 	public GameObject PauseMenu;
 	public Button ResumeBtn;
+	public Text SFXtxt;
+	public Text MscText;
 
 
 
@@ -31,13 +33,20 @@ public class Navigation_Optiions : MonoBehaviour {
 	public void AdjustSFX(float newFillAmnt){
 		Debug.Log (newFillAmnt);
 		soundFillAmount = newFillAmnt ;
+		SFXtxt.color = Color.red;
+		MscText.color = Color.white;
+
 	}
 
 	public void AdjustMusic(float newFillAmnt){
+		SFXtxt.color = Color.white;
+		MscText.color = Color.red;
 		musicFillAmount = newFillAmnt;
 	}
 
 	public void Back(){
+		SFXtxt.color = Color.white;
+		MscText.color = Color.white;
 		gameObject.SetActive(false);
 		PauseMenu.SetActive(true);
 		ResumeBtn.Select ();
