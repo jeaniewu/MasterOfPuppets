@@ -151,17 +151,17 @@ public class GhostSwitchManager : MonoBehaviour
 		moveCamera (dolls [dollIndex].transform.position);
 
 		if (dolls.Length > 1) {
-			if (Input.GetAxis("Ghost Selection Axis") > 0) {
+			if (Input.GetAxis("Ghost Selection Axis") > 0.98f) {
+				Debug.Log (Input.GetAxis ("Ghost Selection Axis"));
 				notHighlight (dolls [dollIndex]);
 				if (dollIndex - 1 < 0)
 					dollIndex = dolls.Length;
 				choose (dollIndex - 1);
-				Debug.Log (Input.GetAxis ("Ghost Selection Axis"));
 				Input.ResetInputAxes ();
-			} else if (Input.GetAxis("Ghost Selection Axis") < 0) {
+			} else if (Input.GetAxis("Ghost Selection Axis") < -0.98f) {
+				Debug.Log (Input.GetAxis ("Ghost Selection Axis"));
 				notHighlight (dolls [dollIndex]);
 				choose (dollIndex + 1);
-				Debug.Log (Input.GetAxis ("Ghost Selection Axis"));
 				Input.ResetInputAxes ();
 			}
 		}
