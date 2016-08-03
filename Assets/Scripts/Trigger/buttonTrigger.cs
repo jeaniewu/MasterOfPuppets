@@ -10,8 +10,14 @@ public class buttonTrigger : Trigger {
 	public Sprite buttonPressed;
 	public Sprite buttonUnpressed;
 
+	private UITrigger secretItem;
+
 	// Use this for initialization
 	void Start () {
+		secretItem = GetComponent<UITrigger> ();
+		if (secretItem != null && secretItem.found) {
+			switchSprite ();
+		}
 	}
 	
 	// Update is called once per frame
@@ -21,13 +27,16 @@ public class buttonTrigger : Trigger {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag ("Player") || other.CompareTag ("Doll")) {
-			if (!objects.Contains (other.gameObject)) 
-				objects.Add (other.gameObject);
-			if (!isOn) {
-				switchTriggerOn ();
-				MechanicAudioManager.getInstance ().playButtonSound ();
-			}
-            GetComponent<SpriteRenderer>().sprite = buttonPressed;
+            bool canPushButtons = other.GetComponent<Controller2>().canPushButtons;
+            if (canPushButtons) {
+                if (!objects.Contains(other.gameObject))
+                    objects.Add(other.gameObject);
+                if (!isOn) {
+                    switchTriggerOn();
+                    MechanicAudioManager.getInstance().playButtonSound();
+                }
+                GetComponent<SpriteRenderer>().sprite = buttonPressed;
+            }
 		}
 	}
 		
@@ -44,18 +53,23 @@ public class buttonTrigger : Trigger {
 
 	public override void interact()
 	{
-		UITrigger secretItem = GetComponent<UITrigger> ();
 		if (secretItem != null && !secretItem.found) {
 			secretItem.interact ();
-			buttonPressed = secretItem.replacementSprites [0];
-			buttonUnpressed = secretItem.replacementSprites [1];
-
-			if (isOn) {
-				GetComponent<SpriteRenderer>().sprite = buttonPressed;
-			} else {
-				GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
-			}
+			switchSprite ();
 		}
 	}
 
+	void switchSprite ()
+	{
+		Debug.Log ("switch Sprite as secret item is found");
+		this.gameObject.layer = 0;
+		buttonPressed = secretItem.replacementSprites [0];
+		buttonUnpressed = secretItem.replacementSprites [1];
+		if (isOn) {
+			GetComponent<SpriteRenderer> ().sprite = buttonPressed;
+		}
+		else {
+			GetComponent<SpriteRenderer> ().sprite = buttonUnpressed;
+		}
+	}
 }

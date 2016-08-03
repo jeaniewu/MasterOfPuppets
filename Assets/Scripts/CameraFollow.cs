@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-	public float maxSpeed = 10f;
 	public float xMargin = 1f; // Distance in the x axis the player can move before the camera follows.
     public float yMargin = 1f; // Distance in the y axis the player can move before the camera follows.
     public float xSmooth = 8f; // How smoothly the camera catches up with it's target movement in the x axis.
@@ -14,16 +13,60 @@ public class CameraFollow : MonoBehaviour
     public Vector2 maxXAndY; // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY; // The minimum x and y coordinates the camera can have.
 
+    private float currentDollSpeed;
     private Transform m_Player; // Reference to the player's transform.
+    private DollManager dollManager;
 	public GameObject player;
     
-
+	private TextBoxManager textBox;
 
     private void Start()
     {
         // Setting up the reference.
 		findPlayer();
+        dollManager = FindObjectOfType<DollManager>();
+		textBox = FindObjectOfType<TextBoxManager>();
+        currentDollSpeed = dollManager.maxSpeed;
 
+		// set the desired aspect ratio (the values in this example are
+		// hard-coded for 16:9, but you could make them into public
+		// variables instead so you can set them at design time)
+		float targetaspect = 16.0f / 9.0f;
+
+		// determine the game window's current aspect ratio
+		float windowaspect = (float)Screen.width / (float)Screen.height;
+
+		// current viewport height should be scaled by this amount
+		float scaleheight = windowaspect / targetaspect;
+
+		// obtain camera component so we can modify its viewport
+		Camera camera = GetComponent<Camera>();
+
+		// if scaled height is less than current height, add letterbox
+		if (scaleheight < 1.0f)
+		{  
+			Rect rect = camera.rect;
+
+			rect.width = 1.0f;
+			rect.height = scaleheight;
+			rect.x = 0;
+			rect.y = (1.0f - scaleheight) / 2.0f;
+
+			camera.rect = rect;
+		}
+		else // add pillarbox
+		{
+			float scalewidth = 1.0f / scaleheight;
+
+			Rect rect = camera.rect;
+
+			rect.width = scalewidth;
+			rect.height = 1.0f;
+			rect.x = (1.0f - scalewidth) / 2.0f;
+			rect.y = 0;
+
+			camera.rect = rect;
+		}
     }
 
 
@@ -46,7 +89,7 @@ public class CameraFollow : MonoBehaviour
 		var controller2 = player.GetComponent<Controller2> ();
 		var animator = player.GetComponent<Animator> ();
 
-		if (!controller2.ghostMode) {
+		if (!controller2.ghostMode && !textBox.isActive && !GameManager.getInstance().isPaused) {
 			if (Input.GetKey (KeyCode.C)) {
 				controller2.enabled = false;
 				animator.enabled = false;
@@ -94,6 +137,7 @@ public class CameraFollow : MonoBehaviour
 
 	public void findPlayer(){
 		player = GameObject.FindGameObjectWithTag("Player");
+        currentDollSpeed = player.GetComponent<Controller2>().getDollSpeed();
 		m_Player = player.transform;
 	}
 
@@ -101,7 +145,7 @@ public class CameraFollow : MonoBehaviour
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
-		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
+		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * currentDollSpeed;
 
 		transform.position = new Vector3 
 			(

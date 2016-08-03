@@ -61,16 +61,16 @@ public class TextBoxManager : MonoBehaviour
 				//Debug.Log ("rendering: " + currentLine);
 				theText.text = textLines [currentLine];
 			}
-			if (Input.GetButtonDown ("Interact"))
+			if (Input.GetButtonDown ("Interact") && !GameManager.getInstance().isPaused)
 			{
 				currentLine += 1;
 				//Debug.Log ("currentLine increased! now: " + currentLine);
 			}
 
-			if (currentLine >= endAtLine)
-			{
-				DisableTextBox();
-			}
+//			if (currentLine >= endAtLine)
+//			{
+//				DisableTextBox();
+//			}
 
         }
 			
@@ -79,7 +79,9 @@ public class TextBoxManager : MonoBehaviour
     public void EnableTextBox()
     {
 		DollAudioManager.getInstance().stopWalkingSound();
-        textBox.SetActive(true);
+		currentLine = 0;
+		endAtLine = textLines.Length - 1;
+		textBox.SetActive(true);
         isActive = true;
 		theText.text = textLines[currentLine];
     }
@@ -101,14 +103,25 @@ public class TextBoxManager : MonoBehaviour
         }
     }
 
+
+	public void reloadText(string text)
+	{
+		if (text != null) {
+			textLines = new string[1];
+			textLines [0] = text;
+		}
+	}
+
 	public void enablePlayer(){
 		player.GetComponent<Controller2> ().enabled = true; 
 		player.GetComponent<Animator> ().enabled = true;
 	}
 
 	public void disablePlayer(){
-		player.GetComponent<Controller2> ().anim.SetBool("isWalking", false);
+		if (player.GetComponent<Controller2> ().enabled) {
+			player.GetComponent<Controller2> ().anim.SetBool ("isWalking", false);
+			player.GetComponent<Controller2> ().enabled = false;
+		}
 		player.GetComponent<Animator> ().enabled = false;
-		player.GetComponent<Controller2> ().enabled = false;
 	}
 }

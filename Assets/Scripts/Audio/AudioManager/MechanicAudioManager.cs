@@ -6,14 +6,16 @@ public class MechanicAudioManager : AbstractAudioManager {
     //Audioclips
     public AudioClip buttonClip;
 	public AudioClip unlockDoorClip;
-
 	public AudioClip deathBySawbladeClip;
+	public AudioClip fallingDownDitchClip;
+	public AudioClip pullLeverClip;
 
     //AudioSources
     public AudioSource button;
 	public AudioSource unlockDoor;
-
 	public AudioSource deathBySawblade;
+	public AudioSource fallingDownDitch;
+	public AudioSource pullLever;
 
     //Volume
     public float buttonVolume;
@@ -22,6 +24,8 @@ public class MechanicAudioManager : AbstractAudioManager {
 	public float maxGhostWallVolume;
 	public float maxSawBladeVolume;
 	public float deathBySawbladeVolume;
+	public float fallingDownDitchVolume;
+	public float pullLeverVolume;
 
 	//fadeTime
 	public float fadeTime;
@@ -32,10 +36,11 @@ public class MechanicAudioManager : AbstractAudioManager {
     public static MechanicAudioManager instance;
 
     void Awake() {
-        if (instance != null) {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        instance = this;
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
     }
 
 	void Start(){
@@ -47,15 +52,23 @@ public class MechanicAudioManager : AbstractAudioManager {
     }
 
     public void playButtonSound() {
-        playOneShotSound(buttonClip, button, buttonVolume);
+		playOneShotSound(instance.buttonClip, instance.button, buttonVolume);
     }
 		
 	public void playUnlockDoorSound() {
-		playOneShotSound(unlockDoorClip, unlockDoor, unlockDoorVolume);
+		playOneShotSound(instance.unlockDoorClip, instance.unlockDoor, unlockDoorVolume);
 	}
 
 	public void playDeathBySawBlade() {
-		playOneShotSound(deathBySawbladeClip, deathBySawblade, deathBySawbladeVolume);
+		playOneShotSound(instance.deathBySawbladeClip, instance.deathBySawblade, deathBySawbladeVolume);
+	}
+
+	public void playFallingDownDitchSound() {
+		playOneShotSound(instance.fallingDownDitchClip, instance.fallingDownDitch, fallingDownDitchVolume);
+	}
+
+	public void playPullLeverSound() {
+		playOneShotSound(instance.pullLeverClip, instance.pullLever, pullLeverVolume);
 	}
 
 }

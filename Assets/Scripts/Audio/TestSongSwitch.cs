@@ -5,7 +5,7 @@ public class TestSongSwitch : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player") || other.CompareTag("Doll")) {
-            MusicManager musicManager = MusicManager.getInstance();
+            ThemeMusicManager musicManager = ThemeMusicManager.getInstance();
             musicManager.setSongSwitch(musicManager.mainTheme, musicManager.mechanicalTheme, musicManager.mechanicalThemeVolume);
         }
     }

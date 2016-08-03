@@ -53,7 +53,7 @@ public class Slice : MonoBehaviour
     IEnumerator SoulSlice()
     {
 		Animator anim = doll.GetComponent<Animator>();
-		clipLength = calculateClipLength(anim, "right-soul-sliced");
+		clipLength = calculateClipLength(anim, "soulSliceReference");
 		doll.GetComponent<DollAnimationController> ().Slice ();
 		Debug.Log (clipLength);
 		yield return new WaitForSeconds(clipLength);
@@ -67,17 +67,17 @@ public class Slice : MonoBehaviour
     IEnumerator NoSoulSlice()
     {
 		Animator anim = doll.GetComponent<Animator>();
-		clipLength = calculateClipLength(anim, "right-soulless-sliced");
+		clipLength = calculateClipLength(anim, "soullessSliceReference");
 		doll.GetComponent<DollAnimationController> ().Slice ();
-		Debug.Log (clipLength);
-		yield return new WaitForSeconds(clipLength);
 
-		dollManager.Death (doll);
+		doll.layer = 0;
+		doll.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 		manager.dollsUpdated = false;
 		manager.updateDolls ();
 
-
- 
+		Debug.Log (clipLength);
+		yield return new WaitForSeconds(clipLength);
+		dollManager.Death (doll);
      }
 
 	public float calculateClipLength(Animator anim, string clipName){

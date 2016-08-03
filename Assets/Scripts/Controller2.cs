@@ -1,50 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 
 public class Controller2 : MonoBehaviour {
 
 	public GameObject levelManager;
-
-	private float maxSpeed = 10f;
+	
 	public bool ghostMode = false;
 	private int radius;
-	private DollManager.Boundary boundary;
+    private float dollSpeed = 10f;
 
-	public RaycastHit2D hit;
+    //Doll Prototype Version Properties
+    public float maxSpeedSlowerBy = 0;
+    public bool canPushButtons = true;
+    public bool canOnlyMoveUpAndDown = false;
 
     public Animator anim;
 	private Rigidbody2D rigidbody2D2;
 
+	public bool allowSound;
 	
 	// Use this for initialization
 	void Start () {
-
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager");
-		boundary = levelManager.GetComponent<DollManager>().boundary;
-		maxSpeed = levelManager.GetComponent<DollManager> ().maxSpeed;
+		dollSpeed = levelManager.GetComponent<DollManager> ().maxSpeed - maxSpeedSlowerBy;
 		anim = GetComponent<Animator>();
 		rigidbody2D2 = GetComponent<Rigidbody2D> ();
 		anim.SetFloat("Y", -1); // face the front
-
+		allowSound = true;
     }
-	
-	void Update(){
 
-		checkGhostMode ();
-		if (Input.GetButton("Restart"))
-			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+	void Update(){
+		manageInput ();
+	}
+
+	void FixedUpdate(){
 
 		if (!ghostMode) {
-			if (Input.GetButtonDown ("Interact")) {
-				startInteraction ();
-
-
-			}
 
 			/*ANIMATION*/
-			float input_x = Input.GetAxisRaw ("Horizontal");
+			float input_x = canOnlyMoveUpAndDown ? 0 : Input.GetAxisRaw ("Horizontal");
 			float input_y = Input.GetAxisRaw ("Vertical");
 			move (input_x,input_y);
 			bool isWalking = (Mathf.Abs (input_x) + Mathf.Abs (input_y)) > 0;
@@ -54,40 +52,48 @@ public class Controller2 : MonoBehaviour {
 			if (isWalking) {
 				anim.SetFloat ("X", input_x);
 				anim.SetFloat ("Y", input_y);
-				DollAudioManager.getInstance ().playWalkingSound ();
+				if(allowSound)
+					DollAudioManager.getInstance ().playWalkingSound ();
 			} else {
 				DollAudioManager.getInstance().stopWalkingSound();
 			}
 		}
       
         else {
-			DollAudioManager.getInstance().stopWalkingSound();
-			anim.SetBool ("isWalking", false);
+			stopWalking ();
+
 		}
 
 	}
 		
-
 	void move(float moveHorizontal, float moveVertical)
 	{
+		rigidbody2D2.MovePosition (new Vector2 (rigidbody2D2.position.x + (Time.deltaTime * dollSpeed * moveHorizontal), rigidbody2D2.position.y + (Time.deltaTime * dollSpeed * moveVertical)));
+	}
 		
-		transform.position += new Vector3 (moveHorizontal, moveVertical, 0).normalized * Time.deltaTime * maxSpeed;
-		
-
-		rigidbody2D2.position = new Vector3 
-			(
-				Mathf.Clamp(rigidbody2D2.position.x, boundary.xMin, boundary.xMax), 
-				Mathf.Clamp(rigidbody2D2.position.y, boundary.yMin, boundary.yMax),
-				0.0f
-				);
-		
+	public void stopWalking(){
+		DollAudioManager.getInstance().stopWalkingSound();
+		anim.SetBool ("isWalking", false);
 	}
 
-	void checkGhostMode() {
-
-		if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
-			ghostMode = !ghostMode;
-         
+	void manageInput(){
+		if (!ghostMode) {
+			if (Input.GetButtonDown("ghostMode") && !SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("OpenScene"))){
+				ghostMode = true;
+				Input.ResetInputAxes();
+			}
+			if (Input.GetButtonDown ("Interact")) {
+				startInteraction ();
+			}
+		} else {
+			if (Input.GetButtonDown("cancelGhostMode")){
+				ghostMode = false;
+				DollAudioManager.getInstance ().playCancelGhostSwitchSound ();
+				Input.ResetInputAxes();
+			}
+			if (Input.GetButtonDown ("Possess")) {
+				levelManager.GetComponent<GhostSwitchManager> ().possessCurrentSelection ();
+			}
 		}
 	}
 
@@ -109,16 +115,52 @@ public class Controller2 : MonoBehaviour {
 			direction = new Vector3 (0, -1, 0);
 		}
 
-		hit = 
-			Physics2D.Raycast(this.transform.position, direction,1.5f, 1 << LayerMask.NameToLayer ("Interactive"));
-		Debug.DrawRay (this.transform.position ,direction*1.5f, Color.green,0.2f);
+		GameObject toInteract = objectToInteract (direction);
+		if (toInteract != null) {
+			toInteract.GetComponent<Interact> ().interact ();
+		}
+			
+	}
 
-		if (hit.collider != null && hit.collider.name != "wall") {
-			hit.collider.gameObject.GetComponent<Interact> ().interact ();
+	private GameObject objectToInteract(Vector3 direction){
+		LayerMask layer = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
+		List<GameObject> interactables = new List<GameObject> ();
+
+		// create raycast from -45 degrees to 45 degrees
+		for (int delta_degree = 1; delta_degree < 90; delta_degree++) {
+			Quaternion quartenion = Quaternion.AngleAxis (delta_degree-45, Vector3.forward);
+			RaycastHit2D[] hits = 
+				Physics2D.RaycastAll(this.transform.position, quartenion * direction,1.5f, layer);
+			Debug.DrawRay (this.transform.position ,quartenion * direction*1.5f, Color.green,0.1f);
+
+			// prevent wall to come between player and interactive objects
+			foreach (RaycastHit2D hit in hits) {
+				if (hit.collider != null) {
+					if (hit.collider != null) {
+						if (hit.collider.CompareTag ("impenetrable"))
+							break;
+						// Record interatables item
+						interactables.Add (hit.collider.gameObject);
+					}
+				}
+			}
+
 		}
 
+		if (interactables.Count == 0)
+			return null;
 
+		GameObject most = interactables.GroupBy(i=>i).OrderByDescending(grp=>grp.Count())
+			.Select(grp=>grp.Key).First();
+
+		// most common interactable in the list is the closest one
+		return most;
 	}
+
+    //Helper to get DollSpeed
+    public float getDollSpeed() {
+        return dollSpeed;
+    }
 
 		
 }

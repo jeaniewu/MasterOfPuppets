@@ -6,42 +6,51 @@ public class UITrigger : Interact {
 
     public GameObject LetterCanvas;
 	public Sprite[] replacementSprites;
+	public int index;
 	public bool found = false;
 	public bool destroyOnFound;
 
-	private TextBoxManager manager;
+	protected TextBoxManager manager;
 	private bool isActive = false;
 
-	// Use this for initialization
 	void Start () {
-		manager = GameObject.FindGameObjectWithTag("TextBoxManager").GetComponent<TextBoxManager>();
-    }
+		found = GameManager.getInstance ().secretItemFound [index];
+		checkDestroy ();
+		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
+	}
 
-    public void Update()
-    {
-		if (isActive){
-			DollAudioManager.getInstance().stopWalkingSound();
-			if (Input.GetButtonDown ("Interact")) {
-				LetterCanvas.SetActive (false);
-				isActive = false;
-				manager.enablePlayer ();
-				if (destroyOnFound) {
-					DestroyObject (this);
-				}
-			}
+	private void checkDestroy(){
+		if (destroyOnFound && found) {
+			DestroyObject (this.gameObject);
 		}
-    }
-
-
+	}
 
     public override void interact()
     {
+		StartCoroutine("enableSecretMessage");
+    }
+
+	protected IEnumerator enableSecretMessage(){
 		manager.disablePlayer ();
 		LetterCanvas.SetActive (true);
 		isActive = true;
 		found = true;
-    }
+		GameManager.getInstance ().secretItemFound [index] = found;
+		GameManager.getInstance ().Save ();
 
+		yield return new WaitForSeconds(0.3f);
 
+		while (isActive) {
+			DollAudioManager.getInstance().stopWalkingSound();
+			if (Input.GetButtonUp ("Interact")) {
+				LetterCanvas.SetActive (false);
+				isActive = false;
+				manager.enablePlayer ();
+				checkDestroy ();
+			} else {
+				yield return null;
+			}
+		}
+	}
  
 }

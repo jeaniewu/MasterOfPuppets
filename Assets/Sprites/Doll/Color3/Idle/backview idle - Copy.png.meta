@@ -1,0 +1,1400 @@
+fileFormatVersion: 2
+guid: 4f70153395b4c0742af53b1afed1d3c5
+timeCreated: 1465451884
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: backview idle - Copy_0
+    21300002: backview idle - Copy_1
+    21300004: backview idle - Copy_2
+    21300006: backview idle - Copy_3
+    21300008: backview idle - Copy_4
+    21300010: backview idle - Copy_5
+    21300012: backview idle - Copy_6
+    21300014: backview idle - Copy_7
+    21300016: backview idle - Copy_8
+    21300018: backview idle - Copy_9
+    21300020: backview idle - Copy_10
+    21300022: backview idle - Copy_11
+    21300024: backview idle - Copy_12
+    21300026: backview idle - Copy_13
+    21300028: backview idle - Copy_14
+    21300030: backview idle - Copy_15
+    21300032: backview idle - Copy_16
+    21300034: backview idle - Copy_17
+    21300036: backview idle - Copy_18
+    21300038: backview idle - Copy_19
+    21300040: backview idle - Copy_20
+    21300042: backview idle - Copy_21
+    21300044: backview idle - Copy_22
+    21300046: backview idle - Copy_23
+    21300048: backview idle - Copy_24
+    21300050: backview idle - Copy_25
+    21300052: backview idle - Copy_26
+    21300054: backview idle - Copy_27
+    21300056: backview idle - Copy_28
+    21300058: backview idle - Copy_29
+    21300060: backview idle - Copy_30
+    21300062: backview idle - Copy_31
+    21300064: backview idle - Copy_32
+    21300066: backview idle - Copy_33
+    21300068: backview idle - Copy_34
+    21300070: backview idle - Copy_35
+    21300072: backview idle - Copy_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 80
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: backview idle - Copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49, y: 75}
+        - {x: -49, y: -25}
+        - {x: -43, y: -80}
+        - {x: 18, y: -80}
+        - {x: 40, y: -66}
+        - {x: 51, y: -1}
+        - {x: 51, y: 67}
+        - {x: 49, y: 75}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 26}
+        - {x: -51, y: 21}
+        - {x: -46, y: 21}
+        - {x: -46, y: 44}
+        - {x: -49, y: 47}
+      - - {x: 49, y: 47}
+        - {x: 45, y: 47}
+        - {x: 44, y: 46}
+        - {x: 44, y: 36}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 46}
+    - name: backview idle - Copy_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 75}
+        - {x: -48, y: 75}
+        - {x: -48, y: -45}
+        - {x: -19, y: -82}
+        - {x: 34, y: -82}
+        - {x: 46, y: -60}
+        - {x: 51, y: -9}
+        - {x: 51, y: 39}
+        - {x: 30, y: 60}
+      - - {x: -50, y: 47}
+        - {x: -53, y: 44}
+        - {x: -53, y: 23}
+        - {x: -50, y: 22}
+        - {x: -46, y: 22}
+        - {x: -46, y: 46}
+        - {x: -49, y: 47}
+      - - {x: 47, y: 41}
+        - {x: 45, y: 39}
+        - {x: 45, y: 37}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 39}
+        - {x: 49, y: 41}
+      - - {x: 45, y: 47}
+        - {x: 44, y: 44}
+        - {x: 44, y: 43}
+        - {x: 46, y: 41}
+        - {x: 50, y: 41}
+        - {x: 51, y: 43}
+        - {x: 51, y: 46}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: -57}
+        - {x: 27, y: -53}
+        - {x: 51, y: -24}
+        - {x: 51, y: 48}
+        - {x: 46, y: 66}
+        - {x: 33, y: 75}
+        - {x: -48, y: 75}
+        - {x: -48, y: 9}
+        - {x: -27, y: -70}
+        - {x: -5, y: -82}
+        - {x: 24, y: -82}
+        - {x: 33, y: -58}
+        - {x: 24, y: -57}
+        - {x: 18, y: -57}
+      - - {x: -49, y: 47}
+        - {x: -52, y: 46}
+        - {x: -53, y: 35}
+        - {x: -52, y: 25}
+        - {x: -51, y: 22}
+        - {x: -48, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 43}
+        - {x: -47, y: 45}
+      - - {x: 47, y: 41}
+        - {x: 45, y: 39}
+        - {x: 45, y: 37}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 39}
+        - {x: 49, y: 41}
+      - - {x: 45, y: 47}
+        - {x: 44, y: 44}
+        - {x: 44, y: 43}
+        - {x: 46, y: 41}
+        - {x: 50, y: 41}
+        - {x: 51, y: 43}
+        - {x: 51, y: 46}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 76}
+        - {x: -20, y: 76}
+        - {x: -47, y: 71}
+        - {x: -47, y: -55}
+        - {x: -38, y: -82}
+        - {x: 34, y: -82}
+        - {x: 42, y: -60}
+        - {x: 51, y: -16}
+        - {x: 51, y: 52}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 23}
+        - {x: -51, y: 22}
+        - {x: -48, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 43}
+        - {x: -48, y: 46}
+      - - {x: 46, y: 47}
+        - {x: 44, y: 46}
+        - {x: 44, y: 43}
+        - {x: 45, y: 41}
+        - {x: 48, y: 41}
+        - {x: 50, y: 43}
+        - {x: 50, y: 45}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 59}
+        - {x: 10, y: 76}
+        - {x: -47, y: 76}
+        - {x: -47, y: 8}
+        - {x: -25, y: -51}
+        - {x: -17, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -21, y: -62}
+        - {x: -24, y: -69}
+        - {x: -1, y: -82}
+        - {x: 31, y: -82}
+        - {x: 48, y: -37}
+        - {x: 51, y: -13}
+        - {x: 51, y: 43}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 22}
+        - {x: -47, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+      - - {x: 45, y: 43}
+        - {x: 47, y: 41}
+        - {x: 50, y: 42}
+        - {x: 50, y: 45}
+        - {x: 48, y: 47}
+        - {x: 45, y: 46}
+    - name: backview idle - Copy_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: -57}
+        - {x: 28, y: -54}
+        - {x: 51, y: -10}
+        - {x: 51, y: 57}
+        - {x: 18, y: 76}
+        - {x: -46, y: 76}
+        - {x: -46, y: -18}
+        - {x: -39, y: -61}
+        - {x: -3, y: -82}
+        - {x: 23, y: -82}
+        - {x: 27, y: -81}
+        - {x: 33, y: -60}
+        - {x: 26, y: -57}
+        - {x: 18, y: -57}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 22}
+        - {x: -47, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+    - name: backview idle - Copy_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 77}
+        - {x: -46, y: 77}
+        - {x: -46, y: -2}
+        - {x: -32, y: -56}
+        - {x: -18, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -23, y: -63}
+        - {x: -21, y: -72}
+        - {x: -5, y: -82}
+        - {x: 24, y: -82}
+        - {x: 27, y: -81}
+        - {x: 47, y: -37}
+        - {x: 51, y: -14}
+        - {x: 51, y: 65}
+      - - {x: -51, y: 46}
+        - {x: -53, y: 45}
+        - {x: -53, y: 24}
+        - {x: -49, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+    - name: backview idle - Copy_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 77}
+        - {x: -45, y: 77}
+        - {x: -46, y: 76}
+        - {x: -46, y: -33}
+        - {x: -32, y: -78}
+        - {x: -20, y: -82}
+        - {x: 31, y: -82}
+        - {x: 50, y: -20}
+        - {x: 50, y: 52}
+        - {x: 38, y: 61}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 27}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 45}
+        - {x: -49, y: 48}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 47}
+        - {x: 44, y: 37}
+        - {x: 46, y: 36}
+        - {x: 51, y: 36}
+        - {x: 51, y: 47}
+        - {x: 48, y: 48}
+    - name: backview idle - Copy_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 77}
+        - {x: -46, y: -19}
+        - {x: -36, y: -79}
+        - {x: -26, y: -82}
+        - {x: 32, y: -82}
+        - {x: 51, y: -29}
+        - {x: 51, y: 57}
+        - {x: 11, y: 77}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 30}
+        - {x: -51, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 46}
+        - {x: -49, y: 48}
+      - - {x: 47, y: 42}
+        - {x: 45, y: 40}
+        - {x: 45, y: 38}
+        - {x: 47, y: 36}
+        - {x: 49, y: 36}
+        - {x: 51, y: 38}
+        - {x: 51, y: 40}
+        - {x: 49, y: 42}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 45}
+        - {x: 44, y: 44}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 51, y: 44}
+        - {x: 51, y: 47}
+        - {x: 49, y: 48}
+    - name: backview idle - Copy_9
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 78}
+        - {x: -12, y: 73}
+        - {x: -13, y: 69}
+        - {x: -35, y: 76}
+        - {x: -46, y: 72}
+        - {x: -46, y: -12}
+        - {x: -23, y: -74}
+        - {x: -8, y: -82}
+        - {x: 30, y: -82}
+        - {x: 51, y: -5}
+        - {x: 51, y: 45}
+        - {x: 12, y: 78}
+      - - {x: -48, y: 47}
+        - {x: -53, y: 47}
+        - {x: -53, y: 27}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 46}
+      - - {x: 47, y: 42}
+        - {x: 45, y: 40}
+        - {x: 45, y: 38}
+        - {x: 47, y: 36}
+        - {x: 49, y: 36}
+        - {x: 51, y: 38}
+        - {x: 51, y: 40}
+        - {x: 49, y: 42}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 45}
+        - {x: 44, y: 44}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 51, y: 44}
+        - {x: 51, y: 47}
+        - {x: 49, y: 48}
+    - name: backview idle - Copy_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 78}
+        - {x: -41, y: 78}
+        - {x: -46, y: 75}
+        - {x: -46, y: -40}
+        - {x: -16, y: -82}
+        - {x: 38, y: -82}
+        - {x: 41, y: -80}
+        - {x: 51, y: -51}
+        - {x: 51, y: 51}
+        - {x: 45, y: 70}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 24}
+        - {x: -51, y: 23}
+        - {x: -48, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 44}
+        - {x: -48, y: 47}
+      - - {x: 46, y: 48}
+        - {x: 44, y: 47}
+        - {x: 44, y: 43}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 50, y: 48}
+    - name: backview idle - Copy_11
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -2}
+        - {x: 51, y: 2}
+        - {x: 51, y: 50}
+        - {x: 12, y: 78}
+        - {x: -46, y: 78}
+        - {x: -46, y: -82}
+        - {x: 21, y: -82}
+        - {x: 35, y: -76}
+        - {x: 33, y: -60}
+        - {x: 27, y: -57}
+        - {x: 30, y: -35}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 23}
+        - {x: -48, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+      - - {x: 45, y: 44}
+        - {x: 47, y: 42}
+        - {x: 50, y: 43}
+        - {x: 50, y: 46}
+        - {x: 48, y: 48}
+        - {x: 45, y: 47}
+    - name: backview idle - Copy_12
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 340
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 78}
+        - {x: -44, y: 74}
+        - {x: -45, y: 70}
+        - {x: -45, y: -24}
+        - {x: -33, y: -82}
+        - {x: 35, y: -82}
+        - {x: 51, y: -57}
+        - {x: 51, y: 64}
+        - {x: 43, y: 78}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 45}
+        - {x: -53, y: 26}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+    - name: backview idle - Copy_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 78}
+        - {x: -46, y: -1}
+        - {x: -36, y: -82}
+        - {x: 36, y: -82}
+        - {x: 51, y: -28}
+        - {x: 51, y: 55}
+        - {x: 20, y: 78}
+      - - {x: -52, y: 47}
+        - {x: -53, y: 45}
+        - {x: -53, y: 25}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+    - name: backview idle - Copy_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 79}
+        - {x: -10, y: 76}
+        - {x: -11, y: 70}
+        - {x: -32, y: 78}
+        - {x: -41, y: 79}
+        - {x: -45, y: 70}
+        - {x: -45, y: -50}
+        - {x: -41, y: -82}
+        - {x: 38, y: -82}
+        - {x: 51, y: -47}
+        - {x: 51, y: 61}
+        - {x: 11, y: 79}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -49, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+    - name: backview idle - Copy_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 79}
+        - {x: -38, y: 79}
+        - {x: -45, y: 77}
+        - {x: -45, y: -48}
+        - {x: -20, y: -82}
+        - {x: 35, y: -82}
+        - {x: 47, y: -69}
+        - {x: 50, y: -49}
+        - {x: 50, y: 42}
+        - {x: 45, y: 62}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -49, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 46}
+        - {x: 45, y: 38}
+        - {x: 47, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+    - name: backview idle - Copy_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 79}
+        - {x: -38, y: 79}
+        - {x: -46, y: 74}
+        - {x: -46, y: -37}
+        - {x: -22, y: -83}
+        - {x: 20, y: -83}
+        - {x: 33, y: -65}
+        - {x: 50, y: 5}
+        - {x: 50, y: 44}
+        - {x: 36, y: 58}
+      - - {x: -53, y: 48}
+        - {x: -53, y: 27}
+        - {x: -51, y: 24}
+        - {x: -48, y: 24}
+        - {x: -46, y: 25}
+        - {x: -46, y: 46}
+        - {x: -49, y: 49}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 46}
+        - {x: 45, y: 38}
+        - {x: 47, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+    - name: backview idle - Copy_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 79}
+        - {x: -42, y: 76}
+        - {x: -45, y: 69}
+        - {x: -45, y: -61}
+        - {x: -42, y: -75}
+        - {x: -25, y: -83}
+        - {x: 21, y: -83}
+        - {x: 47, y: -69}
+        - {x: 50, y: -44}
+        - {x: 50, y: 47}
+        - {x: 8, y: 79}
+      - - {x: -50, y: 49}
+        - {x: -53, y: 48}
+        - {x: -53, y: 31}
+        - {x: -51, y: 24}
+        - {x: -46, y: 24}
+        - {x: -46, y: 48}
+        - {x: -48, y: 49}
+      - - {x: 45, y: 49}
+        - {x: 44, y: 48}
+        - {x: 44, y: 38}
+        - {x: 46, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+        - {x: 48, y: 49}
+    - name: backview idle - Copy_18
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 79}
+        - {x: -42, y: 76}
+        - {x: -45, y: 51}
+        - {x: -45, y: -5}
+        - {x: -43, y: -9}
+        - {x: -31, y: -73}
+        - {x: -3, y: -83}
+        - {x: 20, y: -83}
+        - {x: 36, y: -66}
+        - {x: 50, y: -7}
+        - {x: 50, y: 48}
+        - {x: 14, y: 79}
+      - - {x: -53, y: 48}
+        - {x: -53, y: 31}
+        - {x: -51, y: 24}
+        - {x: -48, y: 24}
+        - {x: -46, y: 25}
+        - {x: -46, y: 46}
+        - {x: -49, y: 49}
+      - - {x: 45, y: 49}
+        - {x: 44, y: 48}
+        - {x: 44, y: 38}
+        - {x: 46, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+        - {x: 48, y: 49}
+    - name: backview idle - Copy_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 79}
+        - {x: -45, y: 73}
+        - {x: -45, y: -65}
+        - {x: -39, y: -81}
+        - {x: -24, y: -83}
+        - {x: 20, y: -83}
+        - {x: 36, y: -66}
+        - {x: 50, y: -15}
+        - {x: 50, y: 56}
+        - {x: 27, y: 79}
+      - - {x: -50, y: 49}
+        - {x: -53, y: 48}
+        - {x: -53, y: 31}
+        - {x: -51, y: 24}
+        - {x: -46, y: 24}
+        - {x: -46, y: 48}
+        - {x: -48, y: 49}
+      - - {x: 45, y: 49}
+        - {x: 44, y: 48}
+        - {x: 44, y: 38}
+        - {x: 46, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+        - {x: 48, y: 49}
+    - name: backview idle - Copy_20
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 79}
+        - {x: -46, y: 79}
+        - {x: -46, y: -18}
+        - {x: -38, y: -80}
+        - {x: -14, y: -83}
+        - {x: 19, y: -83}
+        - {x: 33, y: -65}
+        - {x: 50, y: -2}
+        - {x: 50, y: 46}
+      - - {x: -53, y: 48}
+        - {x: -53, y: 27}
+        - {x: -51, y: 24}
+        - {x: -48, y: 24}
+        - {x: -46, y: 25}
+        - {x: -46, y: 46}
+        - {x: -49, y: 49}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 46}
+        - {x: 45, y: 38}
+        - {x: 47, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+    - name: backview idle - Copy_21
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 79}
+        - {x: -45, y: 62}
+        - {x: -45, y: -32}
+        - {x: -36, y: -78}
+        - {x: -20, y: -83}
+        - {x: 32, y: -83}
+        - {x: 50, y: -29}
+        - {x: 50, y: 61}
+        - {x: 23, y: 79}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -49, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 46}
+        - {x: 45, y: 38}
+        - {x: 47, y: 37}
+        - {x: 51, y: 37}
+        - {x: 51, y: 48}
+    - name: backview idle - Copy_22
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 79}
+        - {x: -8, y: 79}
+        - {x: -10, y: 76}
+        - {x: -11, y: 70}
+        - {x: -32, y: 78}
+        - {x: -41, y: 79}
+        - {x: -45, y: 67}
+        - {x: -45, y: -34}
+        - {x: -39, y: -81}
+        - {x: -32, y: -83}
+        - {x: 32, y: -83}
+        - {x: 50, y: -39}
+        - {x: 51, y: -31}
+        - {x: 51, y: 64}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -49, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+    - name: backview idle - Copy_23
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 78}
+        - {x: -46, y: 77}
+        - {x: -46, y: -20}
+        - {x: -25, y: -83}
+        - {x: 28, y: -83}
+        - {x: 51, y: -23}
+        - {x: 51, y: 54}
+        - {x: 7, y: 78}
+      - - {x: -52, y: 47}
+        - {x: -53, y: 45}
+        - {x: -53, y: 25}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+    - name: backview idle - Copy_24
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 170
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 78}
+        - {x: -45, y: -29}
+        - {x: -30, y: -82}
+        - {x: 27, y: -82}
+        - {x: 51, y: -20}
+        - {x: 51, y: 58}
+        - {x: 28, y: 78}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 27}
+        - {x: -50, y: 23}
+        - {x: -48, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 47}
+    - name: backview idle - Copy_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 78}
+        - {x: -39, y: 78}
+        - {x: -41, y: 77}
+        - {x: -43, y: 69}
+        - {x: -46, y: 53}
+        - {x: -46, y: -17}
+        - {x: -32, y: -75}
+        - {x: -4, y: -82}
+        - {x: 29, y: -82}
+        - {x: 45, y: -68}
+        - {x: 51, y: -35}
+        - {x: 51, y: 50}
+      - - {x: -51, y: 47}
+        - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 23}
+        - {x: -48, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 45}
+        - {x: -47, y: 47}
+      - - {x: 45, y: 44}
+        - {x: 47, y: 42}
+        - {x: 50, y: 43}
+        - {x: 50, y: 46}
+        - {x: 48, y: 48}
+        - {x: 45, y: 47}
+    - name: backview idle - Copy_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: -82}
+        - {x: 32, y: -82}
+        - {x: 51, y: -54}
+        - {x: 51, y: 75}
+        - {x: 50, y: 77}
+        - {x: 40, y: 78}
+        - {x: -46, y: 78}
+        - {x: -46, y: -52}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 24}
+        - {x: -51, y: 23}
+        - {x: -48, y: 23}
+        - {x: -46, y: 24}
+        - {x: -46, y: 44}
+        - {x: -48, y: 47}
+      - - {x: 46, y: 48}
+        - {x: 44, y: 47}
+        - {x: 44, y: 43}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 50, y: 48}
+    - name: backview idle - Copy_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 78}
+        - {x: -10, y: 78}
+        - {x: -12, y: 73}
+        - {x: -13, y: 69}
+        - {x: -35, y: 76}
+        - {x: -46, y: 72}
+        - {x: -46, y: -23}
+        - {x: -32, y: -76}
+        - {x: -10, y: -82}
+        - {x: 44, y: -82}
+        - {x: 51, y: -73}
+        - {x: 51, y: 67}
+        - {x: 49, y: 77}
+      - - {x: -48, y: 47}
+        - {x: -53, y: 47}
+        - {x: -53, y: 27}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 46}
+      - - {x: 47, y: 42}
+        - {x: 45, y: 40}
+        - {x: 45, y: 38}
+        - {x: 47, y: 36}
+        - {x: 49, y: 36}
+        - {x: 51, y: 38}
+        - {x: 51, y: 40}
+        - {x: 49, y: 42}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 45}
+        - {x: 44, y: 44}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 51, y: 44}
+        - {x: 51, y: 47}
+        - {x: 49, y: 48}
+    - name: backview idle - Copy_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 77}
+        - {x: -46, y: 77}
+        - {x: -46, y: -22}
+        - {x: -38, y: -80}
+        - {x: -27, y: -82}
+        - {x: 26, y: -82}
+        - {x: 35, y: -59}
+        - {x: 51, y: -1}
+        - {x: 51, y: 46}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 30}
+        - {x: -51, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 46}
+        - {x: -49, y: 48}
+      - - {x: 47, y: 42}
+        - {x: 45, y: 40}
+        - {x: 45, y: 38}
+        - {x: 47, y: 36}
+        - {x: 49, y: 36}
+        - {x: 51, y: 38}
+        - {x: 51, y: 40}
+        - {x: 49, y: 42}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 45}
+        - {x: 44, y: 44}
+        - {x: 46, y: 42}
+        - {x: 50, y: 42}
+        - {x: 51, y: 44}
+        - {x: 51, y: 47}
+        - {x: 49, y: 48}
+    - name: backview idle - Copy_29
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 77}
+        - {x: -46, y: -16}
+        - {x: -33, y: -82}
+        - {x: 33, y: -82}
+        - {x: 50, y: -11}
+        - {x: 50, y: 77}
+      - - {x: -53, y: 47}
+        - {x: -53, y: 27}
+        - {x: -52, y: 23}
+        - {x: -46, y: 23}
+        - {x: -46, y: 45}
+        - {x: -49, y: 48}
+      - - {x: 45, y: 48}
+        - {x: 44, y: 47}
+        - {x: 44, y: 37}
+        - {x: 46, y: 36}
+        - {x: 51, y: 36}
+        - {x: 51, y: 47}
+        - {x: 48, y: 48}
+    - name: backview idle - Copy_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 77}
+        - {x: -46, y: -2}
+        - {x: -32, y: -56}
+        - {x: -18, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -22, y: -64}
+        - {x: -24, y: -70}
+        - {x: -13, y: -82}
+        - {x: 28, y: -82}
+        - {x: 48, y: -73}
+        - {x: 51, y: -43}
+        - {x: 51, y: 56}
+        - {x: 10, y: 77}
+      - - {x: -51, y: 46}
+        - {x: -53, y: 45}
+        - {x: -53, y: 24}
+        - {x: -49, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+    - name: backview idle - Copy_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 76}
+        - {x: -46, y: -3}
+        - {x: -25, y: -51}
+        - {x: -18, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -23, y: -63}
+        - {x: -21, y: -72}
+        - {x: -13, y: -82}
+        - {x: 26, y: -82}
+        - {x: 51, y: -70}
+        - {x: 51, y: 62}
+        - {x: -3, y: 76}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 22}
+        - {x: -47, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+    - name: backview idle - Copy_32
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 76}
+        - {x: -47, y: 8}
+        - {x: -25, y: -51}
+        - {x: -17, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -21, y: -62}
+        - {x: -22, y: -65}
+        - {x: -23, y: -70}
+        - {x: -13, y: -82}
+        - {x: 26, y: -82}
+        - {x: 51, y: -67}
+        - {x: 51, y: 50}
+        - {x: 19, y: 76}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 25}
+        - {x: -51, y: 22}
+        - {x: -47, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 44}
+        - {x: -47, y: 46}
+      - - {x: 45, y: 43}
+        - {x: 47, y: 41}
+        - {x: 50, y: 42}
+        - {x: 50, y: 45}
+        - {x: 48, y: 47}
+        - {x: 45, y: 46}
+    - name: backview idle - Copy_33
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: -82}
+        - {x: 32, y: -82}
+        - {x: 51, y: -51}
+        - {x: 51, y: 62}
+        - {x: 46, y: 75}
+        - {x: 38, y: 76}
+        - {x: -47, y: 76}
+        - {x: -47, y: -77}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 23}
+        - {x: -51, y: 22}
+        - {x: -48, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 43}
+        - {x: -48, y: 46}
+      - - {x: 46, y: 47}
+        - {x: 44, y: 46}
+        - {x: 44, y: 43}
+        - {x: 45, y: 41}
+        - {x: 48, y: 41}
+        - {x: 50, y: 43}
+        - {x: 50, y: 45}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_34
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 75}
+        - {x: -48, y: 75}
+        - {x: -48, y: 12}
+        - {x: -34, y: -58}
+        - {x: -15, y: -58}
+        - {x: -17, y: -58}
+        - {x: -23, y: -62}
+        - {x: -21, y: -76}
+        - {x: 1, y: -82}
+        - {x: 25, y: -82}
+        - {x: 35, y: -69}
+        - {x: 51, y: -45}
+        - {x: 51, y: 52}
+      - - {x: -49, y: 47}
+        - {x: -52, y: 46}
+        - {x: -53, y: 35}
+        - {x: -52, y: 25}
+        - {x: -51, y: 22}
+        - {x: -48, y: 22}
+        - {x: -46, y: 23}
+        - {x: -46, y: 43}
+        - {x: -47, y: 45}
+      - - {x: 47, y: 41}
+        - {x: 45, y: 39}
+        - {x: 45, y: 37}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 39}
+        - {x: 49, y: 41}
+      - - {x: 45, y: 47}
+        - {x: 44, y: 44}
+        - {x: 44, y: 43}
+        - {x: 46, y: 41}
+        - {x: 50, y: 41}
+        - {x: 51, y: 43}
+        - {x: 51, y: 46}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_35
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 75}
+        - {x: -48, y: 1}
+        - {x: -36, y: -82}
+        - {x: 36, y: -82}
+        - {x: 51, y: -24}
+        - {x: 51, y: 52}
+        - {x: 17, y: 75}
+      - - {x: -50, y: 47}
+        - {x: -53, y: 44}
+        - {x: -53, y: 23}
+        - {x: -50, y: 22}
+        - {x: -46, y: 22}
+        - {x: -46, y: 46}
+        - {x: -49, y: 47}
+      - - {x: 47, y: 41}
+        - {x: 45, y: 39}
+        - {x: 45, y: 37}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 39}
+        - {x: 49, y: 41}
+      - - {x: 45, y: 47}
+        - {x: 44, y: 44}
+        - {x: 44, y: 43}
+        - {x: 46, y: 41}
+        - {x: 50, y: 41}
+        - {x: 51, y: 43}
+        - {x: 51, y: 46}
+        - {x: 49, y: 47}
+    - name: backview idle - Copy_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 0
+        width: 130
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49, y: 75}
+        - {x: -49, y: -25}
+        - {x: -43, y: -80}
+        - {x: 18, y: -80}
+        - {x: 40, y: -66}
+        - {x: 51, y: -1}
+        - {x: 51, y: 67}
+        - {x: 49, y: 75}
+      - - {x: -53, y: 46}
+        - {x: -53, y: 26}
+        - {x: -51, y: 21}
+        - {x: -46, y: 21}
+        - {x: -46, y: 44}
+        - {x: -49, y: 47}
+      - - {x: 49, y: 47}
+        - {x: 45, y: 47}
+        - {x: 44, y: 46}
+        - {x: 44, y: 36}
+        - {x: 47, y: 35}
+        - {x: 49, y: 35}
+        - {x: 51, y: 37}
+        - {x: 51, y: 46}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

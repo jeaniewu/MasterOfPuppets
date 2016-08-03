@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 51982376742a5423ba4c62b2d9815d1e
+timeCreated: 1465060666
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Puppetmaster- FRONT idle body_0
+    21300002: Puppetmaster- FRONT idle body_1
+    21300004: Puppetmaster- FRONT idle body_2
+    21300006: Puppetmaster- FRONT idle body_3
+    21300008: Puppetmaster- FRONT idle body_4
+    21300010: Puppetmaster- FRONT idle body_5
+    21300012: Puppetmaster- FRONT idle body_6
+    21300014: Puppetmaster- FRONT idle body_7
+    21300016: Puppetmaster- FRONT idle body_8
+    21300018: Puppetmaster- FRONT idle body_9
+    21300020: Puppetmaster- FRONT idle body_10
+    21300022: Puppetmaster- FRONT idle body_11
+    21300024: Puppetmaster- FRONT idle body_12
+    21300026: Puppetmaster- FRONT idle body_13
+    21300028: Puppetmaster- FRONT idle body_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Puppetmaster- FRONT idle body_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 81}
+        - {x: -47.5, y: 59}
+        - {x: -51.5, y: 38}
+        - {x: -51.5, y: -32}
+        - {x: -31.5, y: -72}
+        - {x: 51.5, y: -72}
+        - {x: 51.5, y: 81}
+    - name: Puppetmaster- FRONT idle body_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 80}
+        - {x: -51.5, y: 70}
+        - {x: -51.5, y: -32}
+        - {x: -21.5, y: -72}
+        - {x: 50.5, y: -72}
+        - {x: 51.5, y: -64}
+        - {x: 51.5, y: 52}
+        - {x: 27.5, y: 80}
+    - name: Puppetmaster- FRONT idle body_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 80}
+        - {x: -38.5, y: 77}
+        - {x: -51.5, y: 32}
+        - {x: -51.5, y: -33}
+        - {x: -19.5, y: -72}
+        - {x: 30.5, y: -72}
+        - {x: 51.5, y: -46}
+        - {x: 51.5, y: 54}
+        - {x: 36.5, y: 80}
+    - name: Puppetmaster- FRONT idle body_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 79}
+        - {x: -50.5, y: 78}
+        - {x: -51.5, y: 68}
+        - {x: -51.5, y: -23}
+        - {x: -37.5, y: -45}
+        - {x: -17.5, y: -72}
+        - {x: 34.5, y: -72}
+        - {x: 51.5, y: -38}
+        - {x: 51.5, y: 47}
+        - {x: 36.5, y: 79}
+    - name: Puppetmaster- FRONT idle body_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: -24}
+        - {x: 51.5, y: 20}
+        - {x: 36.5, y: 68}
+        - {x: 18.5, y: 78}
+        - {x: -26.5, y: 78}
+        - {x: -51.5, y: 55}
+        - {x: -51.5, y: -51}
+        - {x: -26.5, y: -72}
+        - {x: 24.5, y: -72}
+        - {x: 26.5, y: -69}
+        - {x: 26.5, y: -66}
+        - {x: 39.5, y: -43}
+    - name: Puppetmaster- FRONT idle body_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.5, y: 78}
+        - {x: -42.5, y: 68}
+        - {x: -51.5, y: 20}
+        - {x: -51.5, y: -20}
+        - {x: -21.5, y: -72}
+        - {x: 33.5, y: -72}
+        - {x: 52.5, y: -33}
+        - {x: 52.5, y: 26}
+        - {x: 31.5, y: 78}
+    - name: Puppetmaster- FRONT idle body_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.5, y: 78}
+        - {x: -51.5, y: 73}
+        - {x: -51.5, y: -28}
+        - {x: -36.5, y: -72}
+        - {x: 52.5, y: -72}
+        - {x: 52.5, y: 78}
+    - name: Puppetmaster- FRONT idle body_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 162
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 77}
+        - {x: -26.5, y: 77}
+        - {x: -50.5, y: 70}
+        - {x: -50.5, y: -43}
+        - {x: -29.5, y: -72}
+        - {x: 26.5, y: -72}
+        - {x: 52.5, y: -25}
+        - {x: 52.5, y: 18}
+        - {x: 39.5, y: 57}
+    - name: Puppetmaster- FRONT idle body_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: 78}
+        - {x: -49.5, y: 78}
+        - {x: -51.5, y: 77}
+        - {x: -51.5, y: -72}
+        - {x: 42.5, y: -72}
+        - {x: 51.5, y: -40}
+        - {x: 51.5, y: 26}
+        - {x: 40.5, y: 71}
+    - name: Puppetmaster- FRONT idle body_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.5, y: 77}
+        - {x: 15.5, y: 78}
+        - {x: -30.5, y: 78}
+        - {x: -51.5, y: 57}
+        - {x: -51.5, y: -29}
+        - {x: -48.5, y: -51}
+        - {x: -18.5, y: -72}
+        - {x: 21.5, y: -72}
+        - {x: 29.5, y: -71}
+        - {x: 51.5, y: -13}
+        - {x: 51.5, y: 8}
+        - {x: 38.5, y: 55}
+    - name: Puppetmaster- FRONT idle body_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 78}
+        - {x: -51.5, y: 41}
+        - {x: -51.5, y: -42}
+        - {x: -21.5, y: -72}
+        - {x: 39.5, y: -72}
+        - {x: 51.5, y: -64}
+        - {x: 51.5, y: 46}
+        - {x: 45.5, y: 78}
+    - name: Puppetmaster- FRONT idle body_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37.5, y: 79}
+        - {x: -37.5, y: 79}
+        - {x: -42.5, y: 65}
+        - {x: -51.5, y: 2}
+        - {x: -51.5, y: -15}
+        - {x: -35.5, y: -44}
+        - {x: -17.5, y: -72}
+        - {x: 35.5, y: -72}
+        - {x: 51.5, y: -16}
+        - {x: 51.5, y: 42}
+        - {x: 47.5, y: 77}
+    - name: Puppetmaster- FRONT idle body_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 75}
+        - {x: 12.5, y: 80}
+        - {x: -37.5, y: 80}
+        - {x: -51.5, y: 36}
+        - {x: -51.5, y: -40}
+        - {x: -21.5, y: -72}
+        - {x: 38.5, y: -72}
+        - {x: 51.5, y: -44}
+        - {x: 51.5, y: 30}
+        - {x: 38.5, y: 62}
+    - name: Puppetmaster- FRONT idle body_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 80}
+        - {x: -19.5, y: 80}
+        - {x: -40.5, y: 73}
+        - {x: -51.5, y: 24}
+        - {x: -51.5, y: -26}
+        - {x: -20.5, y: -72}
+        - {x: 41.5, y: -72}
+        - {x: 52.5, y: -64}
+        - {x: 52.5, y: 47}
+        - {x: 48.5, y: 77}
+    - name: Puppetmaster- FRONT idle body_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128.5
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 81}
+        - {x: -9.5, y: 81}
+        - {x: -24.5, y: 78}
+        - {x: -40.5, y: 68}
+        - {x: -51.5, y: 18}
+        - {x: -51.5, y: -22}
+        - {x: -19.5, y: -72}
+        - {x: 32.5, y: -72}
+        - {x: 52.5, y: -53}
+        - {x: 52.5, y: 12}
+        - {x: 45.5, y: 63}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
