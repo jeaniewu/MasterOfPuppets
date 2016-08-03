@@ -151,14 +151,16 @@ public class GhostSwitchManager : MonoBehaviour
 		moveCamera (dolls [dollIndex].transform.position);
 
 		if (dolls.Length > 1) {
-			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetAxis("Horizontal") > 0) {
 				notHighlight (dolls [dollIndex]);
 				if (dollIndex - 1 < 0)
 					dollIndex = dolls.Length;
 				choose (dollIndex - 1);
-			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				Input.ResetInputAxes ();
+			} else if (Input.GetAxis("Horizontal") < 0) {
 				notHighlight (dolls [dollIndex]);
 				choose (dollIndex + 1);
+				Input.ResetInputAxes ();
 			}
 		}
 
