@@ -11,6 +11,9 @@ public class Navigation : MonoBehaviour
 	public GameObject Control_Panel;
 	public GameObject Notebook_Option;
 	public Navigation_Notebook notebookManager;
+	public Slider SFXSlider;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +37,7 @@ public class Navigation : MonoBehaviour
 	}
 
 	public void selectOptions(){
+		SFXSlider.Select ();
 		Options_Panel.SetActive (true);
 		gameObject.SetActive(false);
 	}
