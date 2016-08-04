@@ -8,17 +8,21 @@ public class Navigation : MonoBehaviour
 	public Button btnResume;
 	private TextBoxManager manager;
 	public GameObject Options_Panel;
-	public GameObject Control_Panel;
+	public GameObject Control_Panel_KB;
+	public GameObject Control_Panel_JS;
 	public GameObject Notebook_Option;
 	public Navigation_Notebook notebookManager;
 	public Slider SFXSlider;
+	public Button controlBtnKB;
+	public Button controlBtnJS;
     public Button[] allButtons; //All buttons to reselect and deselect in order for the selecting glitch to not happen. 
-	public Button controlBackBtn;
+
 
     // Use this for initialization
     void Start () {
 		btnResume.Select ();
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
+		Debug.Log (Input.GetJoystickNames().Length);
 	}
 
 	public void selectResume(){
@@ -34,10 +38,11 @@ public class Navigation : MonoBehaviour
 		gameObject.SetActive(false);
 	}
 	public void selectControls(){
-        resetSelection();
-        Control_Panel.SetActive(true);
-		controlBackBtn.Select ();
-		gameObject.SetActive(false);
+			resetSelection ();
+			Control_Panel_KB.SetActive (true);
+			controlBtnKB.Select ();
+			gameObject.SetActive (false);
+		
 	}
 
 	public void selectOptions(){
@@ -64,4 +69,24 @@ public class Navigation : MonoBehaviour
             button.interactable = true;
         }
     }
+
+	public void selectJSControl(){
+		resetSelection ();
+		gameObject.SetActive (false);
+		Control_Panel_JS.SetActive (true);
+		controlBtnJS.Select ();
+
+	}
+
+	public void SelectKBControl(){
+		if (Control_Panel_JS.activeSelf) {
+			Control_Panel_JS.SetActive (false);
+			Control_Panel_KB.SetActive (true);
+			controlBtnKB.Select ();
+
+		}
+			
+	}
+
+
 }

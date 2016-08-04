@@ -6,6 +6,8 @@ public class NavigationControl : MonoBehaviour {
 
 	public GameObject PauseMenu;
 	public Button controlBtn;
+	public GameObject joystickControl;
+	public GameObject keyboardControl;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,8 @@ public class NavigationControl : MonoBehaviour {
 	public void BackSelect () {
 
 			PauseMenu.SetActive(true);
-			gameObject.SetActive(false);
+			keyboardControl.SetActive(false);
+			joystickControl.SetActive (false);
 			controlBtn.Select ();
 	}
 }
