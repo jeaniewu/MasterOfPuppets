@@ -14,7 +14,12 @@ public class CameraIntMsg : SwitchSelectMsg {
 
 		disableMessages (tutorialMessages);
 		disableMessages (joyStickMessages);
-		StartCoroutine ("cameraTutorial");
+
+		if (currentMessages[0].name.Contains("Camera")){
+			StartCoroutine ("cameraTutorial");
+		} else {
+			StartCoroutine ("ghostSelectTutorial");
+		}
     }
 
 	IEnumerator cameraTutorial(){
@@ -28,7 +33,7 @@ public class CameraIntMsg : SwitchSelectMsg {
 
 		enableMessage (currentMessages[0]); // Press C - Switch
 
-		while (!Input.GetButtonDown("Camera")) {
+		while (!Input.GetButtonDown("Camera") && !controller2.ghostMode) {
 			yield return null;
 		}
 			
@@ -48,5 +53,30 @@ public class CameraIntMsg : SwitchSelectMsg {
 		disableMessages (currentMessages);	
 
 		yield break;
+	}
+
+	IEnumerator ghostSelectTutorial(){
+		yield return new WaitForEndOfFrame();
+		while (!controller2.enabled) {
+			yield return null;
+		}
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		while (!controller2.ghostMode) {
+			yield return null;
+		}
+
+		enableMessage (currentMessages[0]);
+		enableMessage (currentMessages[1]);
+
+		while (controller2.ghostMode) {
+			yield return null;
+		}
+
+		disableMessages (currentMessages);	
+
+		yield break;		
 	}
 }
