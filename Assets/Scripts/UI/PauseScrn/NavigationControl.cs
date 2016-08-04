@@ -4,20 +4,22 @@ using UnityEngine.UI;
 
 public class NavigationControl : MonoBehaviour {
 
-	public Text BACK;
 	public GameObject PauseMenu;
+	public Button controlBtn;
+	public GameObject joystickControl;
+	public GameObject keyboardControl;
 
 	// Use this for initialization
 	void Start () {
-		BACK.color = Color.red;
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown("Interact"))
-		{
+	public void BackSelect () {
+
 			PauseMenu.SetActive(true);
-			gameObject.SetActive(false);
-		}
+			keyboardControl.SetActive(false);
+			joystickControl.SetActive (false);
+			controlBtn.Select ();
 	}
 }

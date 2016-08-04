@@ -5,175 +5,88 @@ using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
-
-    public Text RESUME;
-    public Text NOTEBOOK;
-	public Text CONTROL;
-    public Text OPTION;
-    public Text QUIT;
-    public Button BackButton;
-    public GameObject OptionsOption;
-	public GameObject controls;
+	public Button btnResume;
 	private TextBoxManager manager;
-    //private Text[] menuOptions;
-    public int selectedOption;
-
-    public Navigation_Notebook notebookManager;
+	public GameObject Options_Panel;
+	public GameObject Control_Panel_KB;
+	public GameObject Control_Panel_JS;
+	public GameObject Notebook_Option;
+	public Navigation_Notebook notebookManager;
+	public Slider SFXSlider;
+	public Button controlBtnKB;
+	public Button controlBtnJS;
+    public Button[] allButtons; //All buttons to reselect and deselect in order for the selecting glitch to not happen. 
 
 
     // Use this for initialization
-    void Start()
-    {
-        ResumeSelected();
+    void Start () {
+		btnResume.Select ();
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
-        OptionsOption.SetActive(false);
-        //menuOptions = GetComponentsInChildren<Text>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		GameManager.getInstance ().isPaused = true;
-        //Debug.Log("Length of options:" + menuOptions.Length);
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            selectedOption++;
-            Debug.Log("Option is" + selectedOption);
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            selectedOption--;
-            Debug.Log("Option is" + selectedOption);
-        }
-
-
-        if (selectedOption <= 4 && selectedOption >= 0)
-        {
-            if (selectedOption == 0) // RESUME
-            {
-                ResumeSelected();
-                ControlDeSelected();
-                NotebookDeSelected();
-                if (Input.GetButtonDown("Interact"))
-                {
-                    gameObject.SetActive(false);
-					GameManager.getInstance ().isPaused = false;
-					manager.enablePlayer ();
-                    Debug.Log("pressed");
-                }
-            }
-            if (selectedOption == 1) // NOTEBOOK
-            {
-                ResumeDeSelected();
-                ControlDeSelected();
-                NotebookSelected();
-                if (Input.GetButtonDown("Interact"))
-                {
-                    notebookManager.startNotebook();
-                    gameObject.SetActive(false);
-                }
-            }
-			if (selectedOption == 2) // CONTROLS
-			{
-				ControlSelected ();
-				NotebookDeSelected();
-				OptionsDeSelected ();
-				if (Input.GetButtonDown("Interact"))
-				{
-					controls.SetActive(true);
-					gameObject.SetActive(false);
-				}
-			}
-			if (selectedOption == 3) // OPTIONS
-            {
-                ControlDeSelected();
-                QuitDeSelected();
-                OptionsSelected();
-                if (Input.GetButtonDown("Interact"))
-                {
-                    OptionsOption.SetActive(true);
-                    Debug.Log("pressed");
-                    gameObject.SetActive(false);
-                }
-            }
-			if (selectedOption == 4)  // QUIT
-            {
-                OptionsDeSelected();
-                ResumeDeSelected();
-                QuitSelected();
-                if (Input.GetButtonDown("Interact"))
-                {
-					GameManager.getInstance ().isPaused = false;
-					SceneManager.LoadScene("NewTitleScene");
-                }
-            }
-        }
-        else if (selectedOption > 4)
-        {
-            QuitDeSelected();
-            ResumeSelected();
-            NotebookDeSelected();
-            selectedOption = 0;
-        }
-        else if (selectedOption < 0)
-        {
-            ResumeDeSelected();
-            QuitSelected();
-            selectedOption = 4;
-        }
-
-    }
-
-
-
-    void ResumeSelected()
-    {
-        RESUME.color = Color.red;
-
-    }
-
-    public void NotebookSelected()
-    {
-        NOTEBOOK.color = Color.red;
-    }
-
-	public void ControlSelected()
-	{
-		CONTROL.color = Color.red;
+		Debug.Log (Input.GetJoystickNames().Length);
 	}
 
-    void OptionsSelected()
-    {
-        OPTION.color = Color.red;
-    }
-
-    void QuitSelected()
-    {
-        QUIT.color = Color.red;
-    }
-    void ResumeDeSelected()
-    {
-        RESUME.color = Color.white;
-    }
-
-    void NotebookDeSelected()
-    {
-        NOTEBOOK.color = Color.white;
-    }
-
-	public void ControlDeSelected()
-	{
-		CONTROL.color = Color.white;
+	public void selectResume(){
+        resetSelection();
+        gameObject.SetActive(false);
+		manager.enablePlayer ();
+		GameManager.getInstance().isPaused = false;
 	}
 
-    void OptionsDeSelected()
-    {
-        OPTION.color = Color.white;
+	public void selectNotebook(){
+        resetSelection();
+        notebookManager.startNotebook();
+		gameObject.SetActive(false);
+	}
+	public void selectControls(){
+			resetSelection ();
+			Control_Panel_KB.SetActive (true);
+			controlBtnKB.Select ();
+			gameObject.SetActive (false);
+		
+	}
+
+	public void selectOptions(){
+        resetSelection();
+		Options_Panel.SetActive (true);
+		SFXSlider.Select ();
+        resetSelection();
+        Options_Panel.SetActive (true);
+		gameObject.SetActive(false);
+	}
+
+
+	public void selectQuit(){
+        resetSelection();
+        SceneManager.LoadScene("NewTitleScene");
+	}
+
+    //Go through all the buttons to "unselect them"
+    //This is so we don't select an "already selected" button. (This can happen when you disable the parent, and you
+    //reanable it. The button will not have the selected color, but the event system will think that it is selected). 
+    public void resetSelection() {
+        foreach (Button button in allButtons) {
+            button.interactable = false;
+            button.interactable = true;
+        }
     }
 
-    void QuitDeSelected()
-    {
-        QUIT.color = Color.white;
-    }
+	public void selectJSControl(){
+		resetSelection ();
+		gameObject.SetActive (false);
+		Control_Panel_JS.SetActive (true);
+		controlBtnJS.Select ();
+
+	}
+
+	public void SelectKBControl(){
+		if (Control_Panel_JS.activeSelf) {
+			Control_Panel_JS.SetActive (false);
+			Control_Panel_KB.SetActive (true);
+			controlBtnKB.Select ();
+
+		}
+			
+	}
+
+
 }
