@@ -13,6 +13,7 @@ public class Navigation : MonoBehaviour
 	public Navigation_Notebook notebookManager;
 	public Slider SFXSlider;
     public Button[] allButtons; //All buttons to reselect and deselect in order for the selecting glitch to not happen. 
+	public Button controlBackBtn;
 
     // Use this for initialization
     void Start () {
@@ -35,13 +36,14 @@ public class Navigation : MonoBehaviour
 	public void selectControls(){
         resetSelection();
         Control_Panel.SetActive(true);
+		controlBackBtn.Select ();
 		gameObject.SetActive(false);
 	}
 
 	public void selectOptions(){
         resetSelection();
-		SFXSlider.Select ();
 		Options_Panel.SetActive (true);
+		SFXSlider.Select ();
         resetSelection();
         Options_Panel.SetActive (true);
 		gameObject.SetActive(false);

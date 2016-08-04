@@ -11,7 +11,7 @@ public class Navigation_Optiions : MonoBehaviour {
 	public float soundFillAmount = 10f;
 	public float musicFillAmount = 10f;
 	public GameObject PauseMenu;
-	public Button ResumeBtn;
+	public Button OptionsBtn;
 
 
 
@@ -43,7 +43,7 @@ public class Navigation_Optiions : MonoBehaviour {
 	public void Back(){
 		gameObject.SetActive(false);
 		PauseMenu.SetActive(true);
-		ResumeBtn.Select ();
+		OptionsBtn.Select ();
 	}
 
 
