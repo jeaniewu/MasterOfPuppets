@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 
 	private static String[] canSaveScenes = {"OpenScene", "1a", "1b", "2a", "2b", "3a", "3b", "4a-i", "4a-ii", "4b","5a","5b","finalScene"};
 
-	private static String[] cannotRestartScenes = {"OpenScene","finalScene"};
+	private static String[] cannotRestartScenes = {"NewTitleScene","OpenScene","finalScene", "EndCredits"};
 
 	//Awake is always called before any Start functions
 	void Awake()
