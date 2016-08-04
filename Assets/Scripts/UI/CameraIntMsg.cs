@@ -45,6 +45,7 @@ public class CameraIntMsg : SwitchSelectMsg {
 
 		enableMessage (currentMessages[1]);
 		enableMessage (currentMessages[2]);
+		enableMessage (currentMessages[3]);
 
 		while (controller2.ghostMode) {
 			yield return null;
@@ -70,6 +71,7 @@ public class CameraIntMsg : SwitchSelectMsg {
 
 		enableMessage (currentMessages[0]);
 		enableMessage (currentMessages[1]);
+		enableMessage (currentMessages[2]);
 
 		while (controller2.ghostMode) {
 			yield return null;
