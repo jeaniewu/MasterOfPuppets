@@ -45,7 +45,7 @@ public class Navigation_Optiions : MonoBehaviour {
 		PauseMenu.SetActive(true);
 		OptionsBtn.Select ();
 	}
-
+		
 
 	void Music(){
 		setMusicLvl (0 - (60/MAXVAL) * (MAXVAL -  musicFillAmount));
@@ -56,6 +56,7 @@ public class Navigation_Optiions : MonoBehaviour {
 		setSfxLvl (0 - (70/MAXVAL) * (MAXVAL - soundFillAmount));
 		GameManager.getInstance ().SFXSliderValue = soundFillAmount;
 	}
+ 
 
 	public void setSfxLvl (float sfxLvl){
 		masterMixer.SetFloat ("SFXVol", sfxLvl);

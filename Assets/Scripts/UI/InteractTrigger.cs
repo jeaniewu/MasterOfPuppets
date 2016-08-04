@@ -3,7 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class InteractTrigger : MonoBehaviour {
-    public GameObject interactButton;
+
+	public string customObjectName = ""; // Used for 1b so that UI only show up for buttons
+
+	public GameObject interactButton;
+
+	public GameObject joyStickInteractButton;
+
+    private GameObject currentInteractButton;
 
 	public List<GameObject> objects = new List<GameObject> ();
 
@@ -12,15 +19,12 @@ public class InteractTrigger : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+		currentInteractButton =  (Input.GetJoystickNames ().Length == 0) ? interactButton : joyStickInteractButton;
         interactButton.SetActive(false);
+		joyStickInteractButton.SetActive (false);
+
 		mask = 1 << LayerMask.NameToLayer ("Interactive") | 1 << LayerMask.NameToLayer ("Wall");
     }
-
-    // Update is called once per frame
-    void Update()
-	{
-
-	}
 
 	void OnTriggerEnter2D (Collider2D col){
 		if (!objects.Contains(col.gameObject) && collideWithLayer(col))
@@ -31,13 +35,13 @@ public class InteractTrigger : MonoBehaviour {
 	{
 		// check if there is wall between player and interactive objects
 		if (objects.Exists (o => o.layer == LayerMask.NameToLayer ("Wall"))) {
-			interactButton.SetActive(false);
+			currentInteractButton.SetActive(false);
 			return;
 		}
 
-		if (col.gameObject.layer == LayerMask.NameToLayer ("Interactive"))
+		if (col.gameObject.layer == LayerMask.NameToLayer ("Interactive") && col.gameObject.name.Contains(customObjectName))
         {
-            interactButton.SetActive(true);
+            currentInteractButton.SetActive(true);
         }
 
     }
@@ -46,7 +50,7 @@ public class InteractTrigger : MonoBehaviour {
     {
 		if (collideWithLayer(col))
         {
-            interactButton.SetActive(false);
+            currentInteractButton.SetActive(false);
 			objects.Remove (col.gameObject);
         }
     }

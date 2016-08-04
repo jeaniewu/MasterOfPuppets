@@ -10,8 +10,16 @@ public class CameraIntMsg : SwitchSelectMsg {
 		controller2 = GetComponent<Controller2>();
 		textBoxManager = GameObject.FindObjectOfType<TextBoxManager> ();
 
-		disableMessages ();
-		StartCoroutine ("cameraTutorial");
+		currentMessages = (Input.GetJoystickNames ().Length == 0) ? tutorialMessages : joyStickMessages;
+
+		disableMessages (tutorialMessages);
+		disableMessages (joyStickMessages);
+
+		if (currentMessages[0].name.Contains("Camera")){
+			StartCoroutine ("cameraTutorial");
+		} else {
+			StartCoroutine ("ghostSelectTutorial");
+		}
     }
 
 	IEnumerator cameraTutorial(){
@@ -23,27 +31,54 @@ public class CameraIntMsg : SwitchSelectMsg {
 			yield return null;
 		}
 
-		enableMessage (messages[0]); // Press C - Switch
+		enableMessage (currentMessages[0]); // Press C - Switch
 
-		while (!Input.GetKeyDown (KeyCode.C)) {
+		while (!Input.GetButtonDown("Camera") && !controller2.ghostMode) {
 			yield return null;
 		}
 			
-		messages[0].GetComponent<Renderer> ().enabled = false;
+		currentMessages[0].GetComponent<Renderer> ().enabled = false;
 
 		while (!controller2.ghostMode) {
 			yield return null;
 		}
 
-		enableMessage (messages[1]);
-		enableMessage (messages[2]);
+		enableMessage (currentMessages[1]);
+		enableMessage (currentMessages[2]);
+		enableMessage (currentMessages[3]);
 
 		while (controller2.ghostMode) {
 			yield return null;
 		}
 
-		disableMessages ();	
+		disableMessages (currentMessages);	
 
 		yield break;
+	}
+
+	IEnumerator ghostSelectTutorial(){
+		yield return new WaitForEndOfFrame();
+		while (!controller2.enabled) {
+			yield return null;
+		}
+		while (textBoxManager.isActive) {
+			yield return null;
+		}
+
+		while (!controller2.ghostMode) {
+			yield return null;
+		}
+
+		enableMessage (currentMessages[0]);
+		enableMessage (currentMessages[1]);
+		enableMessage (currentMessages[2]);
+
+		while (controller2.ghostMode) {
+			yield return null;
+		}
+
+		disableMessages (currentMessages);	
+
+		yield break;		
 	}
 }

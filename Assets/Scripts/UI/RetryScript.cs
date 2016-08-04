@@ -3,24 +3,29 @@ using System.Collections;
 
 public class RetryScript : MonoBehaviour {
 
-    public GameObject Retry;
+    public GameObject restart;
+	public GameObject restartJoyStick;
+	private GameObject currentRestart;
     // Use this for initialization
     void Start()
     {
-        Retry.SetActive(false);
-    }
+		currentRestart = (Input.GetJoystickNames ().Length == 0) ? restart : restartJoyStick;
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        restart.SetActive(false);
+		restartJoyStick.SetActive (false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            Retry.SetActive(true);
+			currentRestart.SetActive(true);
+			Invoke ("deactivate", 1f);
         }
     }
+
+	void deactivate(){
+		currentRestart.SetActive(false);
+		Destroy(this.gameObject);
+	}
 }
