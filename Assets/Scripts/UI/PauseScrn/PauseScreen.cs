@@ -15,6 +15,8 @@ public class PauseScreen : MonoBehaviour {
 
     public Navigation_Notebook notebookManager;
 
+    public Button resumeButton; //This is the first button that will always be selected
+
 	//Singleton Instantiation
 	public static PauseScreen instance;   
 
@@ -47,7 +49,8 @@ public class PauseScreen : MonoBehaviour {
     void TogglePause()
     {
 		if (pauseScrn_panel.activeSelf||notebook_panel.activeSelf||options_panel.activeSelf || selectedNote_panel.activeSelf || controls_panel.activeSelf) {
-			pauseScrn_panel.SetActive (false);
+            resetResumeButton();
+            pauseScrn_panel.SetActive (false);
             notebookManager.closeEverything();
 			options_panel.SetActive (false);
             controls_panel.SetActive(false);
@@ -55,8 +58,9 @@ public class PauseScreen : MonoBehaviour {
 			manager.enablePlayer ();
 		} else {
 			pauseScrn_panel.SetActive (true);
+            resumeButton.Select(); //Select the resume button
 			manager.disablePlayer ();
-			GameManager.getInstance().isPaused = true;
+			GameManager.getInstance().isPaused = true;         
 		}
     }
 
@@ -71,4 +75,11 @@ public class PauseScreen : MonoBehaviour {
             selectedNoteBackButton.Select();
         } 
     }
+
+    //Resets the resume button so that it can be re selected
+    private void resetResumeButton() {
+        resumeButton.interactable = false;
+        resumeButton.interactable = true;
+    }
+
 }
