@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Navigation : MonoBehaviour
 {
-	public Button btnResume;
 	private TextBoxManager manager;
 	public GameObject Options_Panel;
 	public GameObject Control_Panel_KB;
@@ -20,7 +19,6 @@ public class Navigation : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-		btnResume.Select ();
 		manager = GameObject.FindGameObjectWithTag ("TextBoxManager").GetComponent<TextBoxManager> ();
 		Debug.Log (Input.GetJoystickNames().Length);
 	}
