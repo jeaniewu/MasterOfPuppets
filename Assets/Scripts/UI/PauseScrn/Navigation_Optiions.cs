@@ -12,13 +12,19 @@ public class Navigation_Optiions : MonoBehaviour {
 	public float musicFillAmount = 10f;
 	public GameObject PauseMenu;
 	public Button OptionsBtn;
-
-
+	public GameObject soundSlider;
+	public GameObject musicSlider;
 
 
 	// Use this for initialization
 	void Start () {
+		musicFillAmount = GameManager.getInstance ().MusicSliderValue;
+		setMusicLvl (musicFillAmount);
+		musicSlider.GetComponent<Slider> ().value = musicFillAmount;
 
+		soundFillAmount = GameManager.getInstance ().SFXSliderValue;
+		setSfxLvl (soundFillAmount);
+		soundSlider.GetComponent<Slider> ().value = soundFillAmount;
 	}
 
 	// Update is called once per frame
