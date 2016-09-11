@@ -30,6 +30,8 @@ public class StorySceneManager : MonoBehaviour {
 
 	public GameObject inputText;
 	public TextBoxManager textBoxManager;
+    public GameObject[] inputNotes;
+    public GameObject controllerLetterInput; //The letter object for inputting text with a controller
 
 
 	public GameObject panel;
@@ -225,24 +227,93 @@ public class StorySceneManager : MonoBehaviour {
 		}
 
 		puppetMasterFace("forward");
-		StartCoroutine (askPuppetMasterName());
-		while (!isNameUpdated) {
-			yield return null;
-		}
-		musicManager.stopTrack(2); //E3
-		yield return new WaitForSeconds(0.4f);
-		// need to use GameManager.getInstance ().isTrueEnding () instead
-		if (puppetMasterName.ToLower().Equals("annie") && GameManager.getInstance().isTrueEnding()) {
-			StartCoroutine (fifthTrigger ());
-		} else {
-			StartCoroutine (fourthTrigger ());
-		}
 
-		yield return null;
+        //Initiate the puppet master input sequence to ask for the puppet master's name
+        StartCoroutine(initiatePuppetMasterInput());
+
+         yield return null;
 	}
 
-	// BAD ENDING HEREEEE
-	IEnumerator fourthTrigger(){
+    //Here are the options for this part...
+    // 1. If a controller is not plugged in, just play the regular puppet master input...
+    // 2. If there is a controller attached
+    //  a. If there are no notes, skip the whole input part
+    //  b. If there are 1 or more notes show the input part with the notes as input. 
+    private IEnumerator initiatePuppetMasterInput() {
+        //Check if there are any joystick inputs
+        if (Input.GetJoystickNames().Length == 0) {
+            Debug.Log("No joysticks detected");
+            StartCoroutine(askPuppetMasterNamePC());
+        } else {
+            puppetMasterName = ""; //Set the string to an empty string in case we skip the input
+            bool isThereAnyItemsFound = false;
+            inputText.GetComponent<InputField>().interactable = false; //set the input field to be non interactable so you cannot select it with the controller
+            //Go through each note found and activate the notes that are found. 
+            for(int i =0; i<5; i++) {
+                if (GameManager.instance.secretItemFound[i]) {
+                    //For the first item found, we should set the isThereAnyItemsFound to true and activate the input text
+                    if (!isThereAnyItemsFound) {
+                        isThereAnyItemsFound = true;
+                        inputText.SetActive(true);
+                        controllerLetterInput.SetActive(true);
+                        inputNotes[i].SetActive(true);
+                        inputNotes[i].GetComponent<Button>().Select(); //select the first note that the player has
+                    } else {
+                        inputNotes[i].SetActive(true);
+                    }
+                }
+            }
+            //If the player has not found any of the items, skip the input and proceed to the badEnding
+            if (!isThereAnyItemsFound) {
+                isNameUpdated = true; //set it
+            } else {
+                StartCoroutine(askPuppetMasterNameController());
+            }
+        }
+
+        //Wait for the input to finish
+        while (!isNameUpdated) {
+            yield return null;
+        }
+        musicManager.stopTrack(2); //E3
+        yield return new WaitForSeconds(0.4f);
+        // need to use GameManager.getInstance ().isTrueEnding () instead
+        if (puppetMasterName.ToLower().Equals("annie") && GameManager.getInstance().isTrueEnding()) {
+            StartCoroutine(fifthTrigger());
+        } else {
+            StartCoroutine(fourthTrigger());
+        }
+    }
+
+    //Text Input for PC
+    IEnumerator askPuppetMasterNamePC() {
+        inputText.SetActive(true);
+        inputText.GetComponent<TextField>().selectTextInput();
+        while (inputText.GetComponent<TextField>().isActive) {
+            yield return null;
+        }
+        puppetMasterName = inputText.GetComponent<TextField>().mainInputField.text;
+        inputText.SetActive(false);
+        Debug.Log(puppetMasterName);
+        isNameUpdated = true;
+    }
+
+    //Text Input for controller using the notes
+    IEnumerator askPuppetMasterNameController() {
+        ControllerNotesInput notesInput = controllerLetterInput.GetComponent<ControllerNotesInput>();
+        //Wait for the input to be done
+        while (!notesInput.getIsInputDone()) {
+            yield return null;
+        }
+        //Now that the input is done trigger next part
+        puppetMasterName = inputText.GetComponent<TextField>().mainInputField.text;
+        inputText.SetActive(false);
+        Debug.Log(puppetMasterName);
+        isNameUpdated = true;
+    }
+
+    // BAD ENDING HEREEEE
+    IEnumerator fourthTrigger(){
 		momentaryJail.SetActive(false); 
 		yield return new WaitForSeconds(1f);
 		musicManager.playTrack (5); //E6
@@ -423,18 +494,6 @@ public class StorySceneManager : MonoBehaviour {
 
         theEnd(); 
 		yield return null;
-	}
-
-	IEnumerator askPuppetMasterName(){
-		inputText.SetActive (true);
-		inputText.GetComponent<TextField> ().selectTextInput ();
-		while (inputText.GetComponent<TextField> ().isActive) {
-			yield return null;
-		}
-		puppetMasterName = inputText.GetComponent<TextField> ().mainInputField.text;
-		inputText.SetActive (false);
-		Debug.Log (puppetMasterName);
-		isNameUpdated = true;
 	}
 
 	IEnumerator simulatePuppetMasterWalking (Vector3 posFromTarget, float waitingTime){
