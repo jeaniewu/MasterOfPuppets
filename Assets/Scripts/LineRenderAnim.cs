@@ -19,7 +19,7 @@ public class LineRenderAnim : MonoBehaviour {
 		// Set Line Renderer to the correct layer and order
 		currentLine = GetComponent<LineRenderer> ();
 		currentLine.sortingLayerName = "Collider";
-		currentLine.sortingOrder = 1;
+		currentLine.sortingOrder = 5;
 
 		// Set the length of the line renderer relative to the location of ghsot wall projector
 		lengthOfLineRenderer = (int) Math.Floor(computeLength (startTransform.localPosition, endTransform.localPosition));
