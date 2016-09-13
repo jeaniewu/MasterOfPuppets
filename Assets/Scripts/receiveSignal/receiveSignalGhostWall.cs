@@ -4,13 +4,11 @@ using System.Collections;
 public class receiveSignalGhostWall : receiveSignal {
 
 	public AudioSource[] ghostWallAudioSources;
-    private ParticleSystem particleSystem;
-	private ParticleSystemRenderer renderer;
+	private Renderer renderer;
    
 
 	void Start(){
-		particleSystem = GetComponentInChildren<ParticleSystem> ();
-		renderer = particleSystem.GetComponent<ParticleSystemRenderer> ();
+		renderer = GetComponent<Renderer> ();
 
 		GameObject parent = transform.parent.gameObject;
 		ghostWallAudioSources = parent.GetComponentsInChildren<AudioSource>();
