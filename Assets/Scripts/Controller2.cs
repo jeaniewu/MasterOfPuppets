@@ -8,7 +8,8 @@ using System.Linq;
 public class Controller2 : MonoBehaviour {
 
 	public GameObject levelManager;
-	
+
+    public bool allowInput = true; //Allow input for the doll. Set to false for final scene doll.
 	public bool ghostMode = false;
 	private int radius;
     private float dollSpeed = 10f;
@@ -34,7 +35,9 @@ public class Controller2 : MonoBehaviour {
     }
 
 	void Update(){
-		manageInput ();
+        if (allowInput) {
+            manageInput();
+        }
 	}
 
 	void FixedUpdate(){
