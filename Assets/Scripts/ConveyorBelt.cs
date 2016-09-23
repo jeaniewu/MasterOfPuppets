@@ -4,7 +4,7 @@ using System.Collections;
 public class ConveyorBelt : MonoBehaviour {
 
 	public string direction;
-	public int speed;
+	public float speed;
 
 	private bool isSwitched;
 	private ConveyorBeltPiece[] pieces;
