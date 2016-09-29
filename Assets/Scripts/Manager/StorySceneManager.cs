@@ -33,7 +33,6 @@ public class StorySceneManager : MonoBehaviour {
     public GameObject[] inputNotes;
     public GameObject controllerLetterInput; //The letter object for inputting text with a controller
 
-
 	public GameObject panel;
 	public GameObject whitePanel;
     public GameObject blackPanel;
@@ -371,6 +370,8 @@ public class StorySceneManager : MonoBehaviour {
 		while (textBoxManager.isActive) {
 			yield return null;
 		}
+
+        humanController.allowInput = true; //Set allow input to true so the player can exit the human doll
 			
 		musicManager.playTrack(4, 0.6f); //E4 (beginning)
 		yield return new WaitForSeconds(2.3f);
