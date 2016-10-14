@@ -7,6 +7,7 @@ public class PauseScreen : MonoBehaviour {
     public GameObject notebook_panel;
     public GameObject selectedNote_panel;
     public GameObject controls_panel;
+    public GameObject controls_panel_joystick;
     public GameObject options_panel;
 	private TextBoxManager manager;
 
@@ -48,12 +49,13 @@ public class PauseScreen : MonoBehaviour {
 
     void TogglePause()
     {
-		if (pauseScrn_panel.activeSelf||notebook_panel.activeSelf||options_panel.activeSelf || selectedNote_panel.activeSelf || controls_panel.activeSelf) {
+		if (pauseScrn_panel.activeSelf||notebook_panel.activeSelf||options_panel.activeSelf || selectedNote_panel.activeSelf || controls_panel.activeSelf || controls_panel_joystick.activeSelf) {
             resetResumeButton();
             pauseScrn_panel.SetActive (false);
             notebookManager.closeEverything();
 			options_panel.SetActive (false);
             controls_panel.SetActive(false);
+            controls_panel_joystick.SetActive(false);
 			GameManager.getInstance().isPaused = false;
 			manager.enablePlayer ();
 		} else {
