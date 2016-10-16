@@ -55,6 +55,7 @@ public class Navigation : MonoBehaviour
 
 	public void selectQuit(){
         resetSelection();
+        GameManager.getInstance().isPaused = false; //Set paused to false as you exit the pause screen when exiting the game. 
         SceneManager.LoadScene("NewTitleScene");
 	}
 
