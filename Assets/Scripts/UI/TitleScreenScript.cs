@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class TitleScreenScript : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class TitleScreenScript : MonoBehaviour {
     public GameObject newGameWarning;
     public GameObject bottomButtons;
 
+    private GameObject lastSelectedComponent;
+
     // Use this for initialization
     void Start () {
         //Get animator and set the animation states hashes
@@ -33,6 +36,16 @@ public class TitleScreenScript : MonoBehaviour {
         StartCoroutine(waitForLogoAndStartMusic());
         StartCoroutine(waitForNewGameButtonAndSelect());
         titleAnimator.SetBool("isGameReady", true);
+    }
+
+    //This update is here so that if the user exits the game in the start screen, the last selected UI component will be reselected
+    void Update() {
+        if (EventSystem.current.currentSelectedGameObject == null) {
+            Debug.Log("Reselecting first input");
+            EventSystem.current.SetSelectedGameObject(lastSelectedComponent);
+        } else {
+            lastSelectedComponent = EventSystem.current.currentSelectedGameObject;
+        }
     }
 
    

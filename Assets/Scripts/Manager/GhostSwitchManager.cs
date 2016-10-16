@@ -31,7 +31,7 @@ public class GhostSwitchManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (isGhostMode ()) {
+		if (isGhostMode () && !GameManager.getInstance().isPaused) {
 			DollAudioManager.getInstance ().stopWalkingSound ();
 			updateDolls (); //find the dolls you can possess
 			if (dolls.Length > 0) {

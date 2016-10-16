@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseScreen : MonoBehaviour {
     public GameObject pauseScrn_panel;
     public GameObject notebook_panel;
     public GameObject selectedNote_panel;
     public GameObject controls_panel;
+    public GameObject controls_panel_joystick;
     public GameObject options_panel;
 	private TextBoxManager manager;
 
@@ -16,6 +18,8 @@ public class PauseScreen : MonoBehaviour {
     public Navigation_Notebook notebookManager;
 
     public Button resumeButton; //This is the first button that will always be selected
+
+    private GameObject lastSelectedComponent; //The last selected UI component
 
 	//Singleton Instantiation
 	public static PauseScreen instance;   
@@ -41,19 +45,39 @@ public class PauseScreen : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Pause"))
         {
-			
             TogglePause();
         }
-	}
+
+        //If the pause screen is up, update the selection
+        //This is so that the last selected component will be remembered and reselected if the player exits the game while having the pause screen up. 
+        if (isPauseScreenUp()) {
+            updateSelection();
+        }
+    }
+
+    private void updateSelection() {
+        if (EventSystem.current.currentSelectedGameObject == null) {
+            Debug.Log("Reselecting first input");
+            EventSystem.current.SetSelectedGameObject(lastSelectedComponent);
+        } else {
+            lastSelectedComponent = EventSystem.current.currentSelectedGameObject;
+        }
+    }
+
+    //Checks the different pause screen panels to see if the pause screen is on
+    private bool isPauseScreenUp() {
+        return (pauseScrn_panel.activeSelf || notebook_panel.activeSelf || options_panel.activeSelf || selectedNote_panel.activeSelf || controls_panel.activeSelf || controls_panel_joystick.activeSelf);
+    }
 
     void TogglePause()
     {
-		if (pauseScrn_panel.activeSelf||notebook_panel.activeSelf||options_panel.activeSelf || selectedNote_panel.activeSelf || controls_panel.activeSelf) {
+		if (isPauseScreenUp()) {
             resetResumeButton();
             pauseScrn_panel.SetActive (false);
             notebookManager.closeEverything();
 			options_panel.SetActive (false);
             controls_panel.SetActive(false);
+            controls_panel_joystick.SetActive(false);
 			GameManager.getInstance().isPaused = false;
 			manager.enablePlayer ();
 		} else {

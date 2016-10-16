@@ -16,7 +16,7 @@ public class ConveyorBelt : MonoBehaviour {
     }
 
     void OnTriggerStay2D(Collider2D other) {
-		if (other.CompareTag("Doll") || other.CompareTag("Player")){
+		if ((other.CompareTag("Doll") || other.CompareTag("Player")) && !GameManager.getInstance().isPaused){
 			if (direction == "up"){
 				other.gameObject.transform.position += new Vector3 (0, 1,0) * Time.deltaTime * speed;
 			}else if (direction == "down") {
